@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "id": "augment_instruction_prompt",
+    "name": "Augment Instruction Prompt",
+    "description": "Instruction prompt for the Augment AI coding assistant",
+    "version": "1.0.0",
+    "author": "Augment",
+    "created_at": "2025-05-17T00:00:00Z",
+    "updated_at": "2025-05-17T00:00:00Z",
+    "tags": ["coding", "augment", "ai_assistant", "instruction"],
+    "source": "Augment AI",
+    "license": "Apache-2.0",
+    "model_compatibility": ["gpt-4", "claude-3", "llama-3"],
+    "prompt_type": "user",
+    "prompt_format": "text",
+    "prompt_category": "coding"
+  },
+  "content": "<uploaded_files>\n{location}\n</uploaded_files>\nI've uploaded a python code repository in the directory {location} (not in /tmp/inputs). Consider the following PR description:\n\n<pr_description>\n{pr_description}\n</pr_description>\n\nCan you help me implement the necessary changes to the repository so that the requirements specified in the <pr_description> are met?\nI've already taken care of all changes to any of the test files described in the <pr_description>. This means you DON'T have to modify the testing logic or any of the tests in any way!\n\nYour task is to make the minimal changes to non-tests files in the {location} directory to ensure the <pr_description> is satisfied.\n\nFollow these steps to resolve the issue:\n1. As a first step, it would be a good idea to explore the repo to familiarize yourself with its structure.\n2. Create a script to reproduce the error and execute it with `python <filename.py>` using the BashTool, to confirm the error\n3. Use the sequential_thinking tool to plan your fix. Reflect on 5-7 different possible sources of the problem, distill those down to 1-2 most likely sources, and then add logs to validate your assumptions before moving onto implementing the actual code fix\n4. Edit the sourcecode of the repo to resolve the issue\n5. Rerun your reproduce script and confirm that the error is fixed!\n6. Think about edgecases and make sure your fix handles them as well\n7. Run select tests from the repo to make sure that your fix doesn't break anything else.",
+  "variables": [
+    {
+      "name": "location",
+      "description": "The location of the repository",
+      "default_value": null,
+      "required": true
+    },
+    {
+      "name": "pr_description",
+      "description": "The pull request description",
+      "default_value": null,
+      "required": true
+    }
+  ]
+}

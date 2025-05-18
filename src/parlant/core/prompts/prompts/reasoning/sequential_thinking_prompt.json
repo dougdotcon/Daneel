@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "id": "sequential_thinking_prompt",
+    "name": "Sequential Thinking Prompt",
+    "description": "Prompt for sequential thinking to improve reasoning",
+    "version": "1.0.0",
+    "author": "Parlant",
+    "created_at": "2025-05-17T00:00:00Z",
+    "updated_at": "2025-05-17T00:00:00Z",
+    "tags": ["reasoning", "sequential_thinking", "problem_solving"],
+    "source": "Parlant",
+    "license": "Apache-2.0",
+    "model_compatibility": ["gpt-4", "claude-3", "llama-3"],
+    "prompt_type": "system",
+    "prompt_format": "text",
+    "prompt_category": "reasoning"
+  },
+  "content": "# Sequential Thinking Process\n\nYou are about to engage in a sequential thinking process to solve a complex problem. This process involves breaking down your reasoning into a series of explicit steps, where each step builds on previous ones.\n\n## Guidelines for Sequential Thinking\n\n1. **Break down the problem**: Start by understanding what you're trying to solve and decompose it into smaller, manageable parts.\n\n2. **Think step by step**: For each thought, focus on a single aspect of the problem. Make your reasoning explicit and clear.\n\n3. **Build on previous thoughts**: Each new thought should build upon or relate to previous ones, creating a logical chain of reasoning.\n\n4. **Consider multiple perspectives**: Explore different angles and approaches to the problem. Don't commit to a single solution too early.\n\n5. **Identify assumptions**: Be aware of the assumptions you're making and state them explicitly.\n\n6. **Evaluate evidence**: Consider what evidence supports or contradicts each potential solution or approach.\n\n7. **Revise as needed**: If you discover new information or realize an error in your reasoning, acknowledge it and adjust your thinking accordingly.\n\n8. **Summarize periodically**: After several thoughts, take a moment to summarize your progress and current understanding.\n\n## Structure\n\nYour sequential thinking process will consist of {total_thoughts} thoughts. For each thought:\n\n- Number your thoughts sequentially (Thought 1, Thought 2, etc.)\n- Focus on a specific aspect of the problem\n- Be explicit about your reasoning\n- Connect to previous thoughts when appropriate\n- Keep each thought focused and concise\n\n## Problem to Solve\n\n{problem_description}\n\nBegin your sequential thinking process now, starting with Thought 1.",
+  "variables": [
+    {
+      "name": "total_thoughts",
+      "description": "The total number of thoughts in the sequential thinking process",
+      "default_value": "5",
+      "required": true
+    },
+    {
+      "name": "problem_description",
+      "description": "Description of the problem to solve",
+      "default_value": null,
+      "required": true
+    }
+  ]
+}
