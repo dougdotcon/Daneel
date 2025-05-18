@@ -1,7 +1,7 @@
 > **Nota:** Este projeto está sendo renomeado de PARLANT para ASIMOV-AGENTS. A identidade visual (logo, banner) e os nomes dos pacotes serão atualizados em versões futuras.
 
 <div align="center">
-<img alt="Banner ASIMOV-AGENTS" src="https://github.com/emcie-co/parlant/blob/develop/banner.png?raw=true" />
+<img alt="Banner ASIMOV-AGENTS" src="logo.png" />
   <h3>ASIMOV-AGENTS: O Motor de Modelagem de Conversas 💬 ✅</h3>
   <p>
     <a href="https://www.parlant.io/" target="_blank">Site</a> —
@@ -21,7 +21,7 @@
 </div>
 
 
-[![Introdução ao ASIMOV-AGENTS](https://github.com/emcie-co/parlant/blob/develop/yt-preview.png?raw=true)](https://www.youtube.com/watch?v=_39ERIb0100)
+[![Introdução ao ASIMOV-AGENTS](yt-preview.png)](https://www.youtube.com/watch?v=_39ERIb0100)
 
 ## O que é Modelagem de Conversas?
 Você construiu um agente de IA—isso é ótimo! No entanto, quando você realmente o testa, percebe que ele não está lidando adequadamente com muitas interações de clientes, e seus especialistas de negócios estão insatisfeitos. O que fazer?
