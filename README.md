@@ -31,15 +31,6 @@ O Motor de Modelagem de Conversas Inteligente
 </a>
 </div>
 
-</div>
-
-<!-- Seção de Avisos Importantes -->
-<div align="center" style="margin: 40px 0;">
-> ### 🎉 **Novidades da v2.0.0 (Janeiro 2025)**
-> ✨ Sistema avançado de tags • 🔗 Relacionamentos entre diretrizes • 📊 Logs em tempo real  
-> 🗣️ API de Utterances • 🔄 Migração automática • 🛠️ Tool Insights aprimorados
-
-</div>
 
 ---
 
