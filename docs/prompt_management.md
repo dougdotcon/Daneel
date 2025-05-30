@@ -1,28 +1,28 @@
-# Prompt Management System
+# Sistema de Gerenciamento de Prompts
 
-This document describes the prompt management system in the Parlant framework.
+Este documento descreve o sistema de gerenciamento de prompts no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The prompt management system provides a way to create, manage, and use prompts in Parlant. It supports:
+O sistema de gerenciamento de prompts fornece uma maneira de criar, gerenciar e usar prompts no Parlant. Ele suporta:
 
-1. Loading and saving prompts in various formats (JSON, YAML, text)
-2. Managing prompt metadata and variables
-3. Rendering prompts with variable substitution
-4. Advanced templating with Jinja2
-5. Organizing prompts by category and type
+1. Carregamento e salvamento de prompts em vários formatos (JSON, YAML, texto)
+2. Gerenciamento de metadados e variáveis de prompts
+3. Renderização de prompts com substituição de variáveis
+4. Templating avançado com Jinja2
+5. Organização de prompts por categoria e tipo
 
-## Components
+## Componentes
 
 ### Prompt
 
-The `Prompt` class represents a prompt with metadata and content. It supports:
+A classe `Prompt` representa um prompt com metadados e conteúdo. Ela suporta:
 
-- Basic variable substitution with `{variable_name}` syntax
-- Metadata for tracking prompt information
-- Variables with descriptions and default values
+- Substituição básica de variáveis com sintaxe `{variable_name}`
+- Metadados para rastrear informações do prompt
+- Variáveis com descrições e valores padrão
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.core.prompts import Prompt, PromptMetadata, PromptVariable, PromptType
@@ -62,14 +62,14 @@ print(rendered)  # Output: Hello, John! Welcome to Parlant.
 
 ### PromptManager
 
-The `PromptManager` class handles loading, saving, and managing prompts. It supports:
+A classe `PromptManager` lida com o carregamento, salvamento e gerenciamento de prompts. Ela suporta:
 
-- Loading prompts from files in various formats
-- Saving prompts to files
-- Creating, updating, and deleting prompts
-- Listing prompts by type, category, or tags
+- Carregamento de prompts de arquivos em vários formatos
+- Salvamento de prompts em arquivos
+- Criação, atualização e exclusão de prompts
+- Listagem de prompts por tipo, categoria ou tags
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.core.prompts import PromptManager, PromptType, PromptCategory
@@ -106,14 +106,14 @@ manager.delete_prompt("greeting_prompt")
 
 ### PromptTemplate
 
-The `PromptTemplate` class provides advanced templating using Jinja2. It supports:
+A classe `PromptTemplate` fornece templating avançado usando Jinja2. Ela suporta:
 
-- Conditional logic with `{% if %}` statements
-- Loops with `{% for %}` statements
-- Filters and functions
-- Variable substitution with `{{ variable_name }}` syntax
+- Lógica condicional com declarações `{% if %}`
+- Loops com declarações `{% for %}`
+- Filtros e funções
+- Substituição de variáveis com sintaxe `{{ variable_name }}`
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.core.prompts import Prompt, PromptMetadata, PromptTemplate
@@ -147,18 +147,18 @@ print(rendered)  # Output: Hello, John! Welcome to Parlant.
 
 ### PromptTemplateManager
 
-The `PromptTemplateManager` class manages prompt templates. It supports:
+A classe `PromptTemplateManager` gerencia templates de prompt. Ela suporta:
 
-- Creating templates from prompts
-- Getting templates by ID
-- Listing templates
-- Rendering templates with variables
+- Criação de templates a partir de prompts
+- Obtenção de templates por ID
+- Listagem de templates
+- Renderização de templates com variáveis
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.core.prompts import PromptTemplateManager
-from parlant.core.loggers import ConsoleLogger
+from parlat.core.loggers import ConsoleLogger
 
 # Create a template manager
 manager = PromptTemplateManager(logger=ConsoleLogger())
@@ -180,31 +180,31 @@ rendered = manager.render_template("greeting_template", {
 })
 ```
 
-## Prompt Organization
+## Organização de Prompts
 
-Prompts are organized by category and type:
+Os prompts são organizados por categoria e tipo:
 
-### Categories
+### Categorias
 
-- `general`: General-purpose prompts
-- `coding`: Prompts for coding tasks
-- `reasoning`: Prompts for reasoning tasks
-- `conversation`: Prompts for conversation
-- `tool_use`: Prompts for tool use
-- `agent`: Prompts for agents
-- `custom`: Custom prompts
+- `general`: Prompts de propósito geral
+- `coding`: Prompts para tarefas de codificação
+- `reasoning`: Prompts para tarefas de raciocínio
+- `conversation`: Prompts para conversação
+- `tool_use`: Prompts para uso de ferramentas
+- `agent`: Prompts para agentes
+- `custom`: Prompts personalizados
 
-### Types
+### Tipos
 
-- `system`: System prompts
-- `user`: User prompts
-- `assistant`: Assistant prompts
-- `tool`: Tool prompts
-- `template`: Template prompts
+- `system`: Prompts do sistema
+- `user`: Prompts do usuário
+- `assistant`: Prompts do assistente
+- `tool`: Prompts de ferramentas
+- `template`: Prompts de template
 
-## File Formats
+## Formatos de Arquivo
 
-Prompts can be stored in various formats:
+Os prompts podem ser armazenados em vários formatos:
 
 ### JSON
 
@@ -248,56 +248,66 @@ metadata:
   description: A prompt for greeting users
   version: 1.0.0
   author: Parlant
-  created_at: '2025-01-01T00:00:00Z'
-  updated_at: '2025-01-01T00:00:00Z'
+  created_at: 2025-01-01T00:00:00Z
+  updated_at: 2025-01-01T00:00:00Z
   prompt_type: system
   prompt_format: text
   prompt_category: general
-content: 'Hello, {name}! Welcome to {service}.'
+content: "Hello, {name}! Welcome to {service}."
 variables:
-- name: name
-  description: User's name
-  required: true
-- name: service
-  description: Service name
-  default_value: Parlant
-  required: false
+  - name: name
+    description: User's name
+    required: true
+  - name: service
+    description: Service name
+    default_value: Parlant
+    required: false
 ```
 
-### Text with YAML Frontmatter
+## Integração com Parlant
 
-```
----
-id: greeting_prompt
-name: Greeting Prompt
-description: A prompt for greeting users
-version: 1.0.0
-author: Parlant
-created_at: '2025-01-01T00:00:00Z'
-updated_at: '2025-01-01T00:00:00Z'
-prompt_type: system
-prompt_format: text
-prompt_category: general
----
+O sistema de gerenciamento de prompts está integrado com o framework Parlant:
 
-Hello, {name}! Welcome to {service}.
-```
+1. **Modelos**: Os prompts são usados para guiar o comportamento dos modelos
+2. **Agentes**: Os agentes usam prompts para suas interações
+3. **Ferramentas**: As ferramentas podem ter prompts associados
+4. **Conversas**: As conversas são estruturadas usando prompts
 
-## Integration with Parlant
+## Detalhes de Implementação
 
-The prompt management system is integrated with the Parlant framework:
+### Gerenciamento de Estado
 
-1. **Core Engine**: The core engine uses prompts for generating responses
-2. **Agents**: Agents use prompts for their behavior
-3. **Tools**: Tools use prompts for their instructions
-4. **Adapters**: Adapters use prompts for connecting to external systems
+O sistema gerencia:
 
-## Future Enhancements
+- Carregamento e recarregamento de prompts
+- Cache de prompts e templates
+- Validação de variáveis
+- Histórico de versões
 
-Future enhancements to the prompt management system may include:
+### Segurança
 
-1. **Prompt Versioning**: Track changes to prompts over time
-2. **Prompt Testing**: Test prompts with different variables
-3. **Prompt Optimization**: Optimize prompts for different models
-4. **Prompt Sharing**: Share prompts between Parlant instances
-5. **Prompt Marketplace**: Discover and use prompts from a marketplace
+O sistema inclui:
+
+- Validação de entrada
+- Escape de variáveis
+- Controle de acesso
+- Registro de uso
+
+### Desempenho
+
+O sistema otimiza:
+
+- Cache de templates
+- Compilação de templates
+- Carregamento sob demanda
+- Reutilização de prompts
+
+## Melhorias Futuras
+
+Possíveis melhorias futuras para o sistema de gerenciamento de prompts:
+
+1. **Versionamento**: Melhor controle de versão de prompts
+2. **Validação**: Validação mais avançada de prompts
+3. **Personalização**: Mais opções de personalização
+4. **Internacionalização**: Suporte para múltiplos idiomas
+5. **Análise**: Ferramentas para análise de uso de prompts

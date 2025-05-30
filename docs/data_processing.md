@@ -1,38 +1,38 @@
-# Data Processing and Analysis
+# Processamento e Análise de Dados
 
-This document describes the data processing and analysis functionality in the Parlant framework.
+Este documento descreve a funcionalidade de processamento e análise de dados no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The data processing and analysis module provides a comprehensive set of tools for working with data, including:
+O módulo de processamento e análise de dados fornece um conjunto abrangente de ferramentas para trabalhar com dados, incluindo:
 
-1. Data loading from various formats
-2. Data preprocessing and cleaning
-3. Tabular data analysis
-4. Data visualization
-5. Machine learning integration
+1. Carregamento de dados de vários formatos
+2. Pré-processamento e limpeza de dados
+3. Análise de dados tabulares
+4. Visualização de dados
+5. Integração com machine learning
 
-## Components
+## Componentes
 
-### Data Loading
+### Carregamento de Dados
 
-The `DataLoader` class provides functionality for loading data from various file formats:
+A classe `DataLoader` fornece funcionalidade para carregar dados de vários formatos de arquivo:
 
 - CSV
 - JSON
 - Excel
 - Parquet
 - SQL
-- Text
+- Texto
 - XML
 - HTML
 - YAML
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.data import DataLoader, DataLoaderOptions
-from parlant.core.loggers import ConsoleLogger
+from parlat.data import DataLoader, DataLoaderOptions
+from parlat.core.loggers import ConsoleLogger
 
 # Create a data loader
 loader = DataLoader(ConsoleLogger())
@@ -50,21 +50,21 @@ options = DataLoaderOptions(
 df = loader.load_file("data.csv", options)
 ```
 
-### Data Preprocessing
+### Pré-processamento de Dados
 
-The `DataCleaner` class provides functionality for cleaning and preprocessing data:
+A classe `DataCleaner` fornece funcionalidade para limpar e pré-processar dados:
 
-- Handling missing values
-- Detecting and handling outliers
-- Converting data types
-- Cleaning text data
-- Removing duplicates
+- Tratamento de valores ausentes
+- Detecção e tratamento de outliers
+- Conversão de tipos de dados
+- Limpeza de dados de texto
+- Remoção de duplicatas
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.data import DataCleaner, DataCleaningOptions
-from parlant.core.loggers import ConsoleLogger
+from parlat.data import DataCleaner, DataCleaningOptions
+from parlat.core.loggers import ConsoleLogger
 
 # Create a data cleaner
 cleaner = DataCleaner(ConsoleLogger())
@@ -85,19 +85,19 @@ options = DataCleaningOptions(
 cleaned_df = cleaner.clean_data(df, options)
 ```
 
-### Data Analysis
+### Análise de Dados
 
-The `DataAnalyzer` class provides functionality for analyzing tabular data:
+A classe `DataAnalyzer` fornece funcionalidade para analisar dados tabulares:
 
-- Descriptive statistics
-- Correlation analysis
-- Feature importance
+- Estatísticas descritivas
+- Análise de correlação
+- Importância de features
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.data import DataAnalyzer, DataAnalysisOptions
-from parlant.core.loggers import ConsoleLogger
+from parlat.data import DataAnalyzer, DataAnalysisOptions
+from parlat.core.loggers import ConsoleLogger
 
 # Create a data analyzer
 analyzer = DataAnalyzer(ConsoleLogger())
@@ -124,26 +124,26 @@ print(f"Correlation: {analysis['correlation']}")
 print(f"Feature importance: {analysis['feature_importance']}")
 ```
 
-### Data Visualization
+### Visualização de Dados
 
-The `DataVisualizer` class provides functionality for creating visualizations from tabular data:
+A classe `DataVisualizer` fornece funcionalidade para criar visualizações a partir de dados tabulares:
 
-- Bar charts
-- Line charts
-- Scatter plots
-- Pie charts
-- Histograms
+- Gráficos de barras
+- Gráficos de linha
+- Gráficos de dispersão
+- Gráficos de pizza
+- Histogramas
 - Box plots
 - Violin plots
-- Heatmaps
-- Pair plots
-- Joint plots
+- Mapas de calor
+- Gráficos de pares
+- Gráficos conjuntos
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.data import DataVisualizer, VisualizationOptions, ChartType
-from parlant.core.loggers import ConsoleLogger
+from parlat.data import DataVisualizer, VisualizationOptions, ChartType
+from parlat.core.loggers import ConsoleLogger
 
 # Create a data visualizer
 visualizer = DataVisualizer(ConsoleLogger())
@@ -174,20 +174,20 @@ chart = visualizer.create_visualization(
 
 ### Machine Learning
 
-The `ModelTrainer` class provides functionality for training and evaluating machine learning models:
+A classe `ModelTrainer` fornece funcionalidade para treinar e avaliar modelos de machine learning:
 
-- Classification
-- Regression
+- Classificação
+- Regressão
 - Clustering
-- Model evaluation
-- Feature importance
-- Model saving and loading
+- Avaliação de modelos
+- Importância de features
+- Salvamento e carregamento de modelos
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.data import ModelTrainer, ModelTrainingOptions, ModelType
-from parlant.core.loggers import ConsoleLogger
+from parlat.data import ModelTrainer, ModelTrainingOptions, ModelType
+from parlat.core.loggers import ConsoleLogger
 
 # Create a model trainer
 trainer = ModelTrainer(ConsoleLogger())
@@ -228,32 +228,61 @@ trainer.save_model(model_result, "model.pkl")
 loaded_model = trainer.load_model("model.pkl")
 ```
 
-## Integration with Parlant
+## Integração com Parlant
 
-The data processing and analysis functionality is integrated with the Parlant framework:
+A funcionalidade de processamento e análise de dados está integrada com o framework Parlant:
 
-1. **Agent Tools**: The data processing components can be used as tools for agents
-2. **UI Components**: The visualization components can be used in the UI
-3. **Analysis**: The data analysis components can be used for analyzing agent behavior
-4. **Machine Learning**: The machine learning components can be used for enhancing agent capabilities
+1. **Ferramentas de Agente**: Os componentes de processamento de dados podem ser usados como ferramentas para agentes
+2. **Componentes de UI**: Os componentes de visualização podem ser usados na interface do usuário
+3. **Análise**: Os componentes de análise de dados podem ser usados para analisar o comportamento dos agentes
+4. **Machine Learning**: Os componentes de machine learning podem ser usados para aprimorar as capacidades dos agentes
 
-## Dependencies
+## Dependências
 
-The data processing and analysis module depends on the following libraries:
+O módulo de processamento e análise de dados depende das seguintes bibliotecas:
 
-- pandas: For data manipulation
-- numpy: For numerical operations
-- matplotlib: For creating visualizations
-- seaborn: For enhanced visualizations
-- scikit-learn: For machine learning
-- kneed: For finding optimal number of clusters
+- pandas: Para manipulação de dados
+- numpy: Para operações numéricas
+- matplotlib: Para criar visualizações
+- seaborn: Para visualizações aprimoradas
+- scikit-learn: Para machine learning
+- kneed: Para encontrar o número ótimo de clusters
 
-## Future Enhancements
+## Detalhes de Implementação
 
-Potential future enhancements for the data processing and analysis module:
+### Processamento de Dados
 
-1. **Natural Language Queries**: Add support for querying data using natural language
-2. **Automated Machine Learning**: Add support for automated model selection and hyperparameter tuning
-3. **Time Series Analysis**: Add support for time series data analysis and forecasting
-4. **Deep Learning Integration**: Add support for deep learning models
-5. **Interactive Visualizations**: Add support for interactive visualizations
+O módulo de processamento de dados inclui:
+
+- Carregamento eficiente de grandes conjuntos de dados
+- Tratamento automático de tipos de dados
+- Validação de dados de entrada
+- Tratamento de erros robusto
+
+### Análise de Dados
+
+O módulo de análise de dados fornece:
+
+- Análise estatística abrangente
+- Detecção automática de padrões
+- Geração de relatórios
+- Exportação de resultados
+
+### Visualização de Dados
+
+O módulo de visualização de dados oferece:
+
+- Temas personalizáveis
+- Layouts responsivos
+- Interatividade
+- Exportação em vários formatos
+
+## Melhorias Futuras
+
+Possíveis melhorias futuras para o módulo de processamento e análise de dados:
+
+1. **Processamento em Tempo Real**: Adicionar suporte para processamento de dados em streaming
+2. **Análise Avançada**: Implementar técnicas mais sofisticadas de análise
+3. **Visualização Interativa**: Melhorar a interatividade das visualizações
+4. **Integração com Big Data**: Adicionar suporte para processamento distribuído
+5. **AutoML**: Implementar seleção automática de modelos e otimização de hiperparâmetros

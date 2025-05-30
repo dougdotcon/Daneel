@@ -1,10 +1,10 @@
-# Interaction Flow
+# Fluxo de Interação
 
-## Motivation
+## Motivação
 
-The first thing that's important to understand about the design of the Human/AI interface in Parlant is that it's meant to facilitate conversations that aren't only natural in content, but also in their flow.
+A primeira coisa importante a entender sobre o design da interface Humano/IA no Parlant é que ela foi projetada para facilitar conversas que são naturais não apenas em conteúdo, mas também em seu fluxo.
 
-Most traditional chatbot systems (and most LLM interfaces) rely on a request-reply mechanism based on a single last message.
+A maioria dos sistemas tradicionais de chatbot (e a maioria das interfaces LLM) depende de um mecanismo de requisição-resposta baseado em uma única última mensagem.
 
 ```mermaid
 stateDiagram
@@ -14,10 +14,10 @@ stateDiagram
     AIMessage --> HumanMessage: Human replies
 ```
 
-However, these days we know that a natural text interface must allow for a few things that are unsupported by that traditional model:
+No entanto, hoje sabemos que uma interface de texto natural deve permitir algumas coisas que não são suportadas por esse modelo tradicional:
 
-1. A human often expresses themselves in more than a single message event, before they're fully ready for a reply from the other party.
-1. Information regarding their intent needs to be captured from not only their last N messages, but from the conversation as a whole.
+1. Um humano frequentemente se expressa em mais de um evento de mensagem, antes de estar totalmente pronto para uma resposta da outra parte.
+1. As informações sobre sua intenção precisam ser capturadas não apenas de suas últimas N mensagens, mas da conversa como um todo.
 
 ```mermaid
 stateDiagram
@@ -27,13 +27,13 @@ stateDiagram
     AIMessage --> MultipleHumanMessages: Human replies in one or more messages
 ```
 
-Moreover, the agent may need to respond not just when triggered by a human message; for example, when it needs to follow-up with the user to ensure their message was received, to try another engagement tactic, or to buy time before replying with further information, e.g., "Let me check that and get back to you in a minute."
+Além disso, o agente pode precisar responder não apenas quando acionado por uma mensagem humana; por exemplo, quando precisa fazer um acompanhamento com o usuário para garantir que sua mensagem foi recebida, para tentar outra tática de engajamento, ou para ganhar tempo antes de responder com mais informações, por exemplo, "Deixe-me verificar isso e voltar em um minuto."
 
-## Solution
+## Solução
 
-Parlant's API and engine is meant to work in an asynchronous fashion with respect to the interaction session. In simple terms, this means that both the human customer and the AI agent are free to add events (messages) to the session at any point in time, and in any number—just like in a real IM App conversation between two people.
+A API e o motor do Parlant foram projetados para funcionar de forma assíncrona em relação à sessão de interação. Em termos simples, isso significa que tanto o cliente humano quanto o agente de IA são livres para adicionar eventos (mensagens) à sessão a qualquer momento e em qualquer número—assim como em uma conversa real por mensagens instantâneas entre duas pessoas.
 
-### Sending Messages
+### Enviando Mensagens
 
 ```mermaid
 graph LR
@@ -45,16 +45,16 @@ graph LR
     CheckEventType -->|Is Human Agent Message| AddHumanAgentMessage[Add a pre-written message on behalf of the AI agent]
 ```
 
-The diagram above shows the API flows for initiating changes to a session.
-1. **Customer Message:** This request adds a new message to a session on behalf of the customer, and triggers the AI agent to respond asynchronously. This means that the *Created Event* does not in fact contain the agent's reply—that will come in time—but rather the ID (and other details) of the created and persisted customer event.
-1. **AI Agent Message:** This request directly activates the full reaction engine. The agent will match and activate the relevant guidelines and tools, and produce a reply. The *Created Event* here, however, is not the agent's message, since that may take some time. Instead, it returns a *status event* containing the same *Correlation ID* as the eventual agent's message event. It's important to note here that, in most frontend clients, this created event is usually ignored, and is provided mainly for diagnostic purposes.
-1. **Human Agent Message:** Sometimes it makes sense for a human (perhaps a  developer) to manually add messages on behalf of the AI agent. This request allows you to do that. The *Created Event* here is the created and persisted manually-written agent message.
+O diagrama acima mostra os fluxos da API para iniciar mudanças em uma sessão.
+1. **Mensagem do Cliente:** Esta requisição adiciona uma nova mensagem a uma sessão em nome do cliente e aciona o agente de IA para responder de forma assíncrona. Isso significa que o *Evento Criado* não contém de fato a resposta do agente—isso virá com o tempo—mas sim o ID (e outros detalhes) do evento do cliente criado e persistido.
+1. **Mensagem do Agente de IA:** Esta requisição ativa diretamente o motor de reação completo. O agente irá corresponder e ativar as diretrizes e ferramentas relevantes, e produzir uma resposta. O *Evento Criado* aqui, no entanto, não é a mensagem do agente, já que isso pode levar algum tempo. Em vez disso, retorna um *evento de status* contendo o mesmo *ID de Correlação* que o eventual evento de mensagem do agente. É importante notar aqui que, na maioria dos clientes frontend, este evento criado é geralmente ignorado e é fornecido principalmente para fins de diagnóstico.
+1. **Mensagem do Agente Humano:** Às vezes faz sentido que um humano (talvez um desenvolvedor) adicione manualmente mensagens em nome do agente de IA. Esta requisição permite que você faça isso. O *Evento Criado* aqui é a mensagem do agente escrita manualmente, criada e persistida.
 
-### Receiving Messages
+### Recebendo Mensagens
 
-Since messages are sent asyncrhonously, and potentially simultaneously, receiving them must be done in asynchronous fashion as well. In essence, we are to always wait for new messages, which may arrive at any time, from any party.
+Como as mensagens são enviadas de forma assíncrona e potencialmente simultânea, recebê-las também deve ser feito de forma assíncrona. Em essência, devemos sempre esperar por novas mensagens, que podem chegar a qualquer momento, de qualquer parte.
 
-Parlant implements this functionality with a long-polling, timeout-restricted API endpoint for listing new events. This is what it does behind the scenes:
+O Parlant implementa esta funcionalidade com um endpoint de API de long-polling com timeout restrito para listar novos eventos. Isto é o que ele faz nos bastidores:
 
 ```mermaid
 graph LR
@@ -64,6 +64,6 @@ graph LR
     SessionListener -.->|true/false| API
 ```
 
-When it receives a request for new messages, that request generally has 2 important components: 1) The session ID; and 2) The minimum event offset to return. Normally, when making a request to this endpoint, the frontend client is expected to pass the session ID at hand, and *1 + the offset of its last-known event*. This will make this endpoint return only when *new* messages arrive. It's normal to run this long-polling request in a loop, timing-out every 60 seconds or so and renewing the request while the session is open on the UI. It's this loop that continuously keeps your UI updated with the latest messages, regardless of when they arrive or what caused them to arrive.
+Quando recebe uma requisição por novas mensagens, essa requisição geralmente tem 2 componentes importantes: 1) O ID da sessão; e 2) O offset mínimo do evento a retornar. Normalmente, ao fazer uma requisição para este endpoint, espera-se que o cliente frontend passe o ID da sessão em questão e *1 + o offset de seu último evento conhecido*. Isso fará com que este endpoint retorne apenas quando *novas* mensagens chegarem. É normal executar esta requisição de long-polling em um loop, com timeout a cada 60 segundos ou algo assim e renovando a requisição enquanto a sessão estiver aberta na UI. É este loop que mantém continuamente sua UI atualizada com as últimas mensagens, independentemente de quando elas chegam ou o que causou sua chegada.
 
-In summary, Parlant implements a flexible conversational API that supports natural, modern Human/AI interactions.
+Em resumo, o Parlant implementa uma API conversacional flexível que suporta interações Humano/IA naturais e modernas.

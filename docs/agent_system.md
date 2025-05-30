@@ -1,35 +1,35 @@
-# Agent System
+# Sistema de Agentes
 
-This document describes the agent system in the Parlant framework.
+Este documento descreve o sistema de agentes no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The agent system provides a way to create, manage, and use agents in Parlant. It supports:
+O sistema de agentes fornece uma maneira de criar, gerenciar e usar agentes no Parlant. Ele suporta:
 
-1. Different types of agents (CLI, terminal, web)
-2. Agent configuration and context
-3. Agent state management
-4. Secure code execution through sandboxing
-5. Message handling and formatting
+1. Diferentes tipos de agentes (CLI, terminal, web)
+2. Configuração e contexto de agentes
+3. Gerenciamento de estado de agentes
+4. Execução segura de código através de sandboxing
+5. Manipulação e formatação de mensagens
 
-## Components
+## Componentes
 
 ### AgentSystem
 
-The `AgentSystem` class is the base class for all agent implementations. It provides common functionality for:
+A classe `AgentSystem` é a classe base para todas as implementações de agentes. Ela fornece funcionalidade comum para:
 
-- Initializing agents
-- Running agents with instructions
-- Managing agent state (running, paused, stopped)
-- Handling interruptions
-- Cleaning up resources
+- Inicialização de agentes
+- Execução de agentes com instruções
+- Gerenciamento de estado de agentes (em execução, pausado, parado)
+- Tratamento de interrupções
+- Limpeza de recursos
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.core.agents import AgentConfig, AgentType
 from parlant.core.agents.cli import CLIAgent
-from parlant.core.loggers import ConsoleLogger
+from semblant.core.loggers import ConsoleLogger
 
 # Create an agent configuration
 config = AgentConfig(
@@ -67,19 +67,19 @@ await agent.cleanup()
 
 ### AgentSystemFactory
 
-The `AgentSystemFactory` class provides a way to create agents of different types. It supports:
+A classe `AgentSystemFactory` fornece uma maneira de criar agentes de diferentes tipos. Ela suporta:
 
-- Registering agent system types
-- Creating agents with configurations
-- Managing agent dependencies
+- Registro de tipos de sistema de agentes
+- Criação de agentes com configurações
+- Gerenciamento de dependências de agentes
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.core.agents import AgentConfig, AgentSystemFactory, AgentType
-from parlant.core.agents.cli import CLIAgent
-from parlant.core.agents.terminal import TerminalAgent
-from parlant.core.loggers import ConsoleLogger
+from parlat.core.agents import AgentConfig, AgentSystemFactory, AgentType
+from parlat.core.agents.cli import CLIAgent
+from parlat.core.agents.terminal import TerminalAgent
+from parlat.core.loggers import ConsoleLogger
 
 # Create a factory
 factory = AgentSystemFactory(
@@ -115,19 +115,19 @@ terminal_agent = await factory.create_agent_system("agent2", terminal_config)
 
 ### CLIAgent
 
-The `CLIAgent` class implements a command-line interface agent. It supports:
+A classe `CLIAgent` implementa um agente de interface de linha de comando. Ela suporta:
 
-- Processing user instructions
-- Calling tools to perform actions
-- Generating responses
-- Managing conversation history
+- Processamento de instruções do usuário
+- Chamada de ferramentas para executar ações
+- Geração de respostas
+- Gerenciamento de histórico de conversas
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.core.agents import AgentConfig, AgentType
-from parlant.core.agents.cli import CLIAgent
-from parlant.core.loggers import ConsoleLogger
+from parlat.core.agents import AgentConfig, AgentType
+from parlat.core.agents.cli import CLIAgent
+from parlat.core.loggers import ConsoleLogger
 
 # Create a CLI agent
 agent = CLIAgent(
@@ -155,19 +155,19 @@ print(result)
 
 ### TerminalAgent
 
-The `TerminalAgent` class implements a terminal-based agent. It supports:
+A classe `TerminalAgent` implementa um agente baseado em terminal. Ela suporta:
 
-- Interacting with a terminal session
-- Executing commands in the terminal
-- Reading terminal output
-- Managing terminal state
+- Interação com uma sessão de terminal
+- Execução de comandos no terminal
+- Leitura de saída do terminal
+- Gerenciamento de estado do terminal
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.core.agents import AgentConfig, AgentType
-from parlant.core.agents.terminal import TerminalAgent
-from parlant.core.loggers import ConsoleLogger
+from parlat.core.agents import AgentConfig, AgentType
+from parlat.core.agents.terminal import TerminalAgent
+from parlat.core.loggers import ConsoleLogger
 
 # Create a terminal agent
 agent = TerminalAgent(
@@ -195,18 +195,18 @@ print(result)
 
 ### Sandbox
 
-The `Sandbox` class provides a secure environment for executing code. It supports:
+A classe `Sandbox` fornece um ambiente seguro para execução de código. Ela suporta:
 
-- Local and Docker-based sandboxes
-- Command execution
-- File execution
-- Resource cleanup
+- Sandboxes locais e baseadas em Docker
+- Execução de comandos
+- Execução de arquivos
+- Limpeza de recursos
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.core.agents.sandbox import SandboxConfig, SandboxFactory
-from parlant.core.loggers import ConsoleLogger
+from parlat.core.agents.sandbox import SandboxConfig, SandboxFactory
+from parlat.core.loggers import ConsoleLogger
 
 # Create a sandbox factory
 factory = SandboxFactory(logger=ConsoleLogger())
@@ -241,89 +241,58 @@ await sandbox.cleanup()
 
 ### MessageHandler
 
-The `MessageHandler` class provides utilities for handling messages in agent systems. It supports:
+A classe `MessageHandler` fornece utilitários para manipulação de mensagens em sistemas de agentes. Ela suporta:
 
-- Parsing messages
-- Formatting messages
-- Extracting code blocks
-- Extracting tool calls
-- Extracting commands
+- Análise de mensagens
+- Formatação de mensagens
+- Extração de blocos de código
+- Extração de chamadas de ferramentas
+- Extração de comandos
 
-Example usage:
+## Integração com Parlant
 
-```python
-from parlant.core.agents.utils import Message, MessageHandler
-from parlant.core.loggers import ConsoleLogger
+O sistema de agentes está integrado com o framework Parlant:
 
-# Create a message handler
-handler = MessageHandler(logger=ConsoleLogger())
+1. **Modelos**: Os agentes usam modelos para gerar respostas
+2. **Ferramentas**: Os agentes podem usar ferramentas registradas
+3. **Prompts**: Os agentes usam prompts para guiar seu comportamento
+4. **Armazenamento**: Os agentes podem persistir seu estado
 
-# Parse a message
-message = handler.parse_message("user: Hello, world!")
-print(f"Role: {message.role}")
-print(f"Content: {message.content}")
+## Detalhes de Implementação
 
-# Format a message
-formatted = handler.format_message(Message(role="assistant", content="I'll help you with that"))
-print(formatted)
+### Gerenciamento de Estado
 
-# Extract code blocks
-code_blocks = handler.extract_code_blocks("""
-Here's some Python code:
-```python
-print("Hello, world!")
-```
-""")
-for language, code in code_blocks:
-    print(f"Language: {language}")
-    print(f"Code: {code}")
+O sistema de agentes gerencia:
 
-# Extract commands
-commands = handler.extract_commands("""
-Let me run some commands:
-```bash
-ls -la
-echo "Hello, world!"
-```
-""")
-for command in commands:
-    print(f"Command: {command}")
-```
+- Estado de execução do agente
+- Histórico de conversas
+- Contexto do agente
+- Recursos do sistema
 
-## Agent Types
+### Segurança
 
-Agents are organized into types based on their functionality:
+O sistema inclui:
 
-- `CLI`: Command-line interface agents
-- `TERMINAL`: Terminal-based agents
-- `WEB`: Web-based agents
-- `CUSTOM`: Custom agent types
+- Execução segura de código
+- Controle de acesso a recursos
+- Validação de entrada
+- Registro de atividades
 
-## Agent States
+### Desempenho
 
-Agents can be in different states:
+O sistema otimiza:
 
-- `IDLE`: The agent is idle and ready to run
-- `RUNNING`: The agent is currently running
-- `PAUSED`: The agent is paused
-- `STOPPED`: The agent is stopped
-- `ERROR`: The agent encountered an error
+- Uso de memória
+- Tempo de resposta
+- Uso de CPU
+- Uso de rede
 
-## Integration with Parlant
+## Melhorias Futuras
 
-The agent system is integrated with the Parlant framework:
+Possíveis melhorias futuras para o sistema de agentes:
 
-1. **Core Engine**: The core engine uses agents to perform tasks
-2. **Models**: Agents use models to generate responses
-3. **Prompts**: Agents use prompts for their behavior
-4. **Tools**: Agents use tools to perform actions
-
-## Future Enhancements
-
-Future enhancements to the agent system may include:
-
-1. **Agent Collaboration**: Enable agents to collaborate on tasks
-2. **Agent Learning**: Allow agents to learn from their interactions
-3. **Agent Customization**: Provide more ways to customize agent behavior
-4. **Agent Monitoring**: Improve monitoring and debugging of agents
-5. **Agent Marketplace**: Discover and use agents from a marketplace
+1. **Agentes Distribuídos**: Suporte para execução distribuída de agentes
+2. **Aprendizado**: Capacidade de aprender com interações passadas
+3. **Personalização**: Mais opções de personalização de agentes
+4. **Monitoramento**: Melhores ferramentas de monitoramento
+5. **Integração**: Mais integrações com ferramentas externas

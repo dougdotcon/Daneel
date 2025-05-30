@@ -1,32 +1,32 @@
-# Multi-Modal Capabilities
+# Capacidades Multimodais
 
-This document describes the multi-modal capabilities in the Parlant framework.
+Este documento descreve as capacidades multimodais no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The multi-modal capabilities module provides a comprehensive set of tools for working with different types of data beyond text, such as images, audio, and video. It includes:
+O módulo de capacidades multimodais fornece um conjunto abrangente de ferramentas para trabalhar com diferentes tipos de dados além de texto, como imagens, áudio e vídeo. Inclui:
 
-1. Image processing and understanding for analyzing visual content
-2. Audio processing and transcription for working with spoken language
-3. Video analysis for understanding video content
-4. Multi-modal context integration to combine text, images, audio, and video
-5. Multi-modal content generation for creating different types of media
+1. Processamento e compreensão de imagens para análise de conteúdo visual
+2. Processamento de áudio e transcrição para trabalhar com linguagem falada
+3. Análise de vídeo para compreensão de conteúdo em vídeo
+4. Integração de contexto multimodal para combinar texto, imagens, áudio e vídeo
+5. Geração de conteúdo multimodal para criar diferentes tipos de mídia
 
-## Components
+## Componentes
 
-### Image Processing
+### Processamento de Imagens
 
-The image processing component provides functionality for working with images:
+O componente de processamento de imagens fornece funcionalidades para trabalhar com imagens:
 
-- Loading and saving images
-- Resizing and manipulating images
-- Analyzing image content (objects, text, sentiment, etc.)
-- Generating image descriptions
+- Carregamento e salvamento de imagens
+- Redimensionamento e manipulação de imagens
+- Análise de conteúdo de imagem (objetos, texto, sentimento, etc.)
+- Geração de descrições de imagens
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.multimodal import ImageProcessor, ImageFormat
+from parlat.multimodal import ImageProcessor, ImageFormat
 
 # Create an image processor
 image_processor = ImageProcessor(nlp_service, logger)
@@ -53,19 +53,19 @@ print(f"Colors: {analysis.colors}")
 await image_processor.save_image(image, "path/to/output.png")
 ```
 
-### Audio Processing
+### Processamento de Áudio
 
-The audio processing component provides functionality for working with audio:
+O componente de processamento de áudio fornece funcionalidades para trabalhar com áudio:
 
-- Loading and saving audio files
-- Transcribing speech to text
-- Analyzing audio content (description, sentiment, background sounds, etc.)
-- Working with different audio formats
+- Carregamento e salvamento de arquivos de áudio
+- Transcrição de fala para texto
+- Análise de conteúdo de áudio (descrição, sentimento, sons de fundo, etc.)
+- Trabalho com diferentes formatos de áudio
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.multimodal import AudioProcessor, AudioFormat
+from parlat.multimodal import AudioProcessor, AudioFormat
 
 # Create an audio processor
 audio_processor = AudioProcessor(nlp_service, logger)
@@ -98,19 +98,19 @@ if analysis.background_sounds:
 await audio_processor.save_audio(audio, "path/to/output.wav")
 ```
 
-### Video Analysis
+### Análise de Vídeo
 
-The video analysis component provides functionality for working with videos:
+O componente de análise de vídeo fornece funcionalidades para trabalhar com vídeos:
 
-- Loading and saving videos
-- Extracting frames and audio from videos
-- Analyzing video content (scenes, objects, actions, etc.)
-- Working with different video formats
+- Carregamento e salvamento de vídeos
+- Extração de quadros e áudio de vídeos
+- Análise de conteúdo de vídeo (cenas, objetos, ações, etc.)
+- Trabalho com diferentes formatos de vídeo
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.multimodal import VideoProcessor, VideoFormat
+from parlat.multimodal import VideoProcessor, VideoFormat
 
 # Create a video processor
 video_processor = VideoProcessor(nlp_service, image_processor, audio_processor, logger)
@@ -145,20 +145,20 @@ print(f"Sentiment: {analysis.sentiment}")
 await video_processor.save_video(video, "path/to/output.mp4")
 ```
 
-### Multi-Modal Context Integration
+### Integração de Contexto Multimodal
 
-The multi-modal context integration component enables combining different types of content into a unified context:
+O componente de integração de contexto multimodal permite combinar diferentes tipos de conteúdo em um contexto unificado:
 
-- Adding images, audio, and video to context
-- Generating text representations of multi-modal content
-- Integrating multi-modal context into prompts
-- Caching multi-modal content for efficient access
+- Adição de imagens, áudio e vídeo ao contexto
+- Geração de representações textuais de conteúdo multimodal
+- Integração de contexto multimodal em prompts
+- Cache de conteúdo multimodal para acesso eficiente
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.multimodal import MultiModalContextManager, ContentType
-from parlant.core.prompts import PromptBuilder
+from parlat.multimodal import MultiModalContextManager, ContentType
+from parlat.core.prompts import PromptBuilder
 
 # Create a context manager
 context_manager = MultiModalContextManager(
@@ -190,20 +190,20 @@ cached_audio = context_manager.get_audio(audio.id)
 cached_video = context_manager.get_video(video.id)
 ```
 
-### Multi-Modal Content Generation
+### Geração de Conteúdo Multimodal
 
-The multi-modal content generation component enables creating different types of media:
+O componente de geração de conteúdo multimodal permite criar diferentes tipos de mídia:
 
-- Generating images from text descriptions
-- Creating audio from text (text-to-speech, music generation, etc.)
-- Generating videos from text descriptions
-- Creating variations of existing media
-- Editing existing media based on instructions
+- Geração de imagens a partir de descrições textuais
+- Criação de áudio a partir de texto (texto para fala, geração de música, etc.)
+- Geração de vídeos a partir de descrições textuais
+- Criação de variações de mídia existente
+- Edição de mídia existente com base em instruções
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.multimodal import MultiModalGenerator, GenerationOptions, GenerationMode
+from parlat.multimodal import MultiModalGenerator, GenerationOptions, GenerationMode
 
 # Create a generator
 generator = MultiModalGenerator(
@@ -252,51 +252,51 @@ variation_options = GenerationOptions(
 variation_result = await generator.generate_content(variation_options)
 ```
 
-## Integration with Parlant
+## Integração com Parlant
 
-The multi-modal capabilities are integrated with the Parlant framework:
+As capacidades multimodais são integradas com o framework Parlant:
 
-1. **Agent System**: Agents can process and generate multi-modal content
-2. **Knowledge Management**: Multi-modal content can be stored in the knowledge management system
-3. **Prompts**: Multi-modal context can be included in prompts for more comprehensive understanding
-4. **Tools**: Multi-modal tools enable agents to work with different types of data
+1. **Sistema de Agente**: Agentes podem processar e gerar conteúdo multimodal
+2. **Gerenciamento de Conhecimento**: Conteúdo multimodal pode ser armazenado no sistema de gerenciamento de conhecimento
+3. **Prompts**: Contexto multimodal pode ser incluído em prompts para uma compreensão mais abrangente
+4. **Ferramentas**: Ferramentas multimodais permitem que agentes trabalhem com diferentes tipos de dados
 
-## Implementation Details
+## Detalhes de Implementação
 
-### Dependencies
+### Dependências
 
-The multi-modal capabilities module depends on several external libraries:
+O módulo de capacidades multimodais depende de várias bibliotecas externas:
 
-- **PIL/Pillow**: For image processing
-- **OpenCV**: For video processing
-- **Librosa/SoundFile**: For audio processing
-- **NumPy**: For numerical operations
-- **Requests**: For API communication
+- **PIL/Pillow**: Para processamento de imagens
+- **OpenCV**: Para processamento de vídeo
+- **Librosa/SoundFile**: Para processamento de áudio
+- **NumPy**: Para operações numéricas
+- **Requests**: Para comunicação de API
 
-### Performance Considerations
+### Considerações de Desempenho
 
-Working with multi-modal data can be resource-intensive. Consider the following:
+Trabalhar com dados multimodais pode ser intensivo em recursos. Considere os seguintes aspectos:
 
-- **Memory Usage**: Images, audio, and especially videos can consume significant memory
-- **Processing Time**: Analysis of multi-modal content can take longer than text processing
-- **Storage**: Multi-modal data requires more storage space than text
-- **Caching**: The module implements caching to improve performance for repeated access
+- **Uso de Memória**: Imagens, áudio e especialmente vídeos podem consumir memória significativa
+- **Tempo de Processamento**: Análise de conteúdo multimodal pode levar mais tempo do que processamento de texto
+- **Armazenamento**: Dados multimodais requerem mais espaço de armazenamento do que texto
+- **Cache**: O módulo implementa cache para melhorar o desempenho para acesso repetido
 
-### Privacy and Security
+### Privacidade e Segurança
 
-When working with multi-modal data, consider these privacy and security aspects:
+Ao trabalhar com dados multimodais, considere os seguintes aspectos de privacidade e segurança:
 
-- **Personal Information**: Images and videos may contain personally identifiable information
-- **Consent**: Ensure proper consent for processing multi-modal data containing people
-- **Data Storage**: Implement appropriate security measures for storing sensitive multi-modal data
-- **Content Filtering**: Consider implementing content filtering for generated media
+- **Informações Pessoais**: Imagens e vídeos podem conter informações pessoais identificáveis
+- **Consentimento**: Garanta consentimento adequado para processamento de dados multimodais que contenham pessoas
+- **Armazenamento de Dados**: Implemente medidas de segurança adequadas para armazenar dados multimodais sensíveis
+- **Filtro de Conteúdo**: Considere implementar filtro de conteúdo para mídias geradas
 
-## Future Enhancements
+## Melhorias Futuras
 
-Potential future enhancements for the multi-modal capabilities module:
+Possíveis melhorias futuras para o módulo de capacidades multimodais:
 
-1. **3D Content**: Add support for 3D models and environments
-2. **AR/VR Integration**: Enable integration with augmented and virtual reality
-3. **Real-time Processing**: Improve performance for real-time multi-modal processing
-4. **Multi-modal Reasoning**: Enhance reasoning capabilities across different modalities
-5. **Interactive Media**: Support for interactive multi-modal content
+1. **Conteúdo 3D**: Adicionar suporte para modelos 3D e ambientes
+2. **Integração AR/VR**: Permitir integração com realidade aumentada e virtual
+3. **Processamento em Tempo Real**: Melhorar desempenho para processamento multimodal em tempo real
+4. **Raciocínio Multimodal**: Aumentar capacidades de raciocínio através de diferentes modalidades
+5. **Mídia Interativa**: Suporte para conteúdo multimodal interativo

@@ -1,33 +1,33 @@
-# Security and Privacy
+# Segurança e Privacidade
 
-This document describes the security and privacy features in the Parlant framework.
+Este documento descreve os recursos de segurança e privacidade no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The security and privacy module provides a comprehensive set of tools for implementing security measures and privacy controls in Parlant applications. It includes:
+O módulo de segurança e privacidade fornece um conjunto abrangente de ferramentas para implementar medidas de segurança e controles de privacidade em aplicações Parlant. Inclui:
 
-1. Authentication and authorization for secure access control
-2. Data encryption for protecting sensitive information
-3. Privacy-preserving data processing techniques
-4. Audit logging and monitoring for security events
-5. Compliance frameworks for meeting regulatory requirements
+1. Autenticação e autorização para controle seguro de acesso
+2. Criptografia de dados para proteção de informações sensíveis
+3. Técnicas de processamento de dados com preservação de privacidade
+4. Registro e monitoramento de auditoria para eventos de segurança
+5. Frameworks de conformidade para atender requisitos regulatórios
 
-## Components
+## Componentes
 
-### Authentication and Authorization
+### Autenticação e Autorização
 
-The authentication and authorization component provides functionality for user management and access control:
+O componente de autenticação e autorização fornece funcionalidades para gerenciamento de usuários e controle de acesso:
 
-- User creation and management
-- Password hashing and verification
-- JWT token-based authentication
-- Role-based access control
-- Permission-based authorization
+- Criação e gerenciamento de usuários
+- Hash e verificação de senhas
+- Autenticação baseada em tokens JWT
+- Controle de acesso baseado em papéis
+- Autorização baseada em permissões
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.security import AuthManager, AuthRole, AuthPermission
+from parlat.security import AuthManager, AuthRole, AuthPermission
 
 # Create an authentication manager
 auth_manager = AuthManager(document_db, logger, jwt_secret="your_secret_key")
@@ -68,20 +68,20 @@ auth_manager.require_permission(
 )
 ```
 
-### Data Encryption
+### Criptografia de Dados
 
-The data encryption component provides functionality for protecting sensitive information:
+O componente de criptografia de dados fornece funcionalidades para proteger informações sensíveis:
 
-- Symmetric encryption for fast, secure data protection
-- Asymmetric encryption for secure key exchange
-- Password-based encryption
-- JSON data encryption
-- Field-level encryption
+- Criptografia simétrica para proteção de dados rápida e segura
+- Criptografia assimétrica para troca segura de chaves
+- Criptografia baseada em senha
+- Criptografia de dados JSON
+- Criptografia em nível de campo
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.security import EncryptionManager, EncryptionType
+from parlat.security import EncryptionManager, EncryptionType
 
 # Create an encryption manager
 encryption_manager = EncryptionManager(logger)
@@ -108,20 +108,20 @@ protected_data = encryption_manager.encrypt_field(
 )
 ```
 
-### Privacy-Preserving Data Processing
+### Processamento de Dados com Preservação de Privacidade
 
-The privacy component provides functionality for protecting personal data:
+O componente de privacidade fornece funcionalidades para proteger dados pessoais:
 
-- Detection of privacy entities (PII) in text
-- Anonymization of sensitive information
-- Pseudonymization of identifiers
-- Synthetic data generation
-- K-anonymity implementation
+- Detecção de entidades de privacidade (PII) em texto
+- Anonimização de informações sensíveis
+- Pseudonimização de identificadores
+- Geração de dados sintéticos
+- Implementação de K-anonimidade
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.security import PrivacyManager, PrivacyEntityType
+from parlat.security import PrivacyManager, PrivacyEntityType
 
 # Create a privacy manager
 privacy_manager = PrivacyManager(logger)
@@ -151,20 +151,20 @@ schema = {
 synthetic_data = privacy_manager.generate_synthetic_data(schema, count=10)
 ```
 
-### Audit Logging
+### Registro de Auditoria
 
-The audit logging component provides functionality for tracking security events:
+O componente de registro de auditoria fornece funcionalidades para rastrear eventos de segurança:
 
-- Comprehensive event logging
-- Severity levels for events
-- User and resource tracking
-- Searchable audit trail
-- Context manager for operation auditing
+- Registro abrangente de eventos
+- Níveis de severidade para eventos
+- Rastreamento de usuários e recursos
+- Trilha de auditoria pesquisável
+- Gerenciador de contexto para auditoria de operações
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.security import AuditLogger, AuditEventType, AuditEventSeverity
+from parlat.security import AuditLogger, AuditEventType, AuditEventSeverity
 
 # Create an audit logger
 audit_logger = AuditLogger(document_db, logger)
@@ -203,20 +203,20 @@ async with audit_logger.audit_context(
     await update_customer(customer_id="cust123", data={"name": "New Name"})
 ```
 
-### Compliance Frameworks
+### Frameworks de Conformidade
 
-The compliance component provides functionality for meeting regulatory requirements:
+O componente de conformidade fornece funcionalidades para atender requisitos regulatórios:
 
-- Support for GDPR, HIPAA, CCPA, SOC2, and PCI DSS
-- Compliance requirement tracking
-- Data subject request handling
-- Compliance reporting
-- Evidence management
+- Suporte para GDPR, HIPAA, CCPA, SOC2 e PCI DSS
+- Rastreamento de requisitos de conformidade
+- Tratamento de solicitações de titulares de dados
+- Relatórios de conformidade
+- Gerenciamento de evidências
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.security import (
+from parlat.security import (
     ComplianceManager,
     ComplianceFramework,
     ComplianceRequirementStatus,
@@ -248,38 +248,36 @@ request = await compliance_manager.create_data_subject_request(
     request_type="access",
     notes="User requested all data we have about them",
 )
-
-# Generate a compliance report
-report = await compliance_manager.generate_compliance_report(
-    framework=ComplianceFramework.GDPR,
-)
 ```
 
-## Integration with Parlant
+## Integração com Parlant
 
-The security and privacy features are integrated with the Parlant framework:
+Os recursos de segurança e privacidade estão integrados com o framework Parlant:
 
-1. **API Integration**: Authentication and authorization for API endpoints
-2. **Data Protection**: Encryption for sensitive data in storage and transit
-3. **Privacy Controls**: Privacy-preserving techniques for user data
-4. **Audit Trail**: Comprehensive logging of security events
-5. **Compliance**: Tools for meeting regulatory requirements
+1. **Integração de API**: Autenticação e autorização para endpoints de API
+2. **Proteção de Dados**: Criptografia para dados sensíveis em armazenamento e transmissão
+3. **Controles de Privacidade**: Técnicas de processamento de dados com preservação de privacidade
+4. **Trilha de Auditoria**: Registro abrangente de eventos de segurança
+5. **Conformidade**: Ferramentas para atender requisitos regulatórios
 
-## Implementation Details
+## Detalhes de Implementação
 
-### Dependencies
+### Dependências
 
-The security and privacy module depends on several external libraries:
+O módulo de segurança e privacidade depende de várias bibliotecas externas:
 
-- **PyJWT**: For JWT token generation and verification
-- **Cryptography**: For encryption and hashing
-- **Hashlib**: For secure hashing algorithms
-- **Regex**: For pattern matching in privacy detection
+- **PyJWT**: Para geração e verificação de tokens JWT
+- **Cryptography**: Para criptografia e hashing
+- **Hashlib**: Para algoritmos de hashing seguros
+- **Regex**: Para correspondência de padrões em detecção de privacidade
 
-### Performance Considerations
+### Considerações de Desempenho
 
-When implementing security and privacy features, consider the following:
+Ao implementar recursos de segurança e privacidade, considere os seguintes pontos:
 
+- **Cache de Autenticação**: Armazenar resultados de autenticação para melhorar o desempenho
+- **Overhead de Criptografia**: A criptografia adiciona sobrecarga de processamento, use-a seletivamente
+- **Tamanho do Log de Auditoria**: Implementar políticas de retenção para logs de auditoria
 - **Authentication Caching**: Cache authentication results to improve performance
 - **Encryption Overhead**: Encryption adds processing overhead, use selectively
 - **Audit Log Size**: Implement retention policies for audit logs

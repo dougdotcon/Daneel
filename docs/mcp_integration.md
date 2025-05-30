@@ -1,29 +1,29 @@
-# MCP (Model Context Protocol) Integration
+# Integração MCP (Protocolo de Contexto do Modelo)
 
-This document describes the integration of the Model Context Protocol (MCP) into the Parlant framework.
+Este documento descreve a integração do Protocolo de Contexto do Modelo (MCP) no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The Model Context Protocol (MCP) is a standardized protocol for communication between IDEs and AI agents. It allows for context sharing and tool usage, enabling AI agents to perform complex tasks by leveraging external tools and services.
+O Protocolo de Contexto do Modelo (MCP) é um protocolo padronizado para comunicação entre IDEs e agentes de IA. Ele permite o compartilhamento de contexto e uso de ferramentas, permitindo que agentes de IA realizem tarefas complexas aproveitando ferramentas e serviços externos.
 
-Parlant now includes a complete MCP implementation, allowing it to:
+O Parlant agora inclui uma implementação completa do MCP, permitindo:
 
-1. Connect to external MCP servers to use their tools and capabilities
-2. Expose its own capabilities as an MCP server for other applications to use
-3. Implement specialized MCP servers like Sequential Thinking for improved reasoning
+1. Conectar-se a servidores MCP externos para usar suas ferramentas e capacidades
+2. Expor suas próprias capacidades como um servidor MCP para uso por outras aplicações
+3. Implementar servidores MCP especializados como o Pensamento Sequencial para melhor raciocínio
 
-## Components
+## Componentes
 
 ### MCPClient
 
-The `MCPClient` class allows Parlant to connect to external MCP servers and use their tools. It handles:
+A classe `MCPClient` permite que o Parlant se conecte a servidores MCP externos e use suas ferramentas. Ela lida com:
 
-- WebSocket connection management
-- Tool discovery and registration
-- Message sending and receiving
-- Tool call execution
+- Gerenciamento de conexão WebSocket
+- Descoberta e registro de ferramentas
+- Envio e recebimento de mensagens
+- Execução de chamadas de ferramentas
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.adapters.mcp import MCPClient
@@ -48,14 +48,14 @@ await client.disconnect()
 
 ### MCPServer
 
-The `MCPServer` class allows Parlant to expose its capabilities as an MCP server. It handles:
+A classe `MCPServer` permite que o Parlant exponha suas capacidades como um servidor MCP. Ela lida com:
 
-- WebSocket server management
-- Tool registration and discovery
-- Message handling
-- Tool call execution
+- Gerenciamento de servidor WebSocket
+- Registro e descoberta de ferramentas
+- Manipulação de mensagens
+- Execução de chamadas de ferramentas
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.adapters.mcp import MCPServer, MCPTool
@@ -97,14 +97,14 @@ await server.start()
 
 ### SequentialThinkingMCP
 
-The `SequentialThinkingMCP` class implements a specialized MCP server for sequential thinking. It allows models to:
+A classe `SequentialThinkingMCP` implementa um servidor MCP especializado para pensamento sequencial. Ela permite que os modelos:
 
-- Generate a sequence of thoughts
-- Review and refine those thoughts
-- Branch hypotheses
-- Make decisions based on structured reasoning
+- Gerem uma sequência de pensamentos
+- Revisem e refinem esses pensamentos
+- Ramifiquem hipóteses
+- Tomem decisões baseadas em raciocínio estruturado
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.adapters.mcp import SequentialThinkingMCP
@@ -123,27 +123,27 @@ sequential_thinking = SequentialThinkingMCP(
 await sequential_thinking.start()
 ```
 
-## Integration with Parlant
+## Integração com Parlant
 
-The MCP integration is designed to work seamlessly with the existing Parlant architecture:
+A integração MCP foi projetada para funcionar perfeitamente com a arquitetura existente do Parlant:
 
-1. **Adapters Layer**: The MCP implementation lives in the adapters layer, allowing it to be used by the core components.
-2. **Tools Integration**: MCP tools can be registered and used by Parlant's tool system.
-3. **NLP Services**: MCP can be used with any of Parlant's NLP services.
-4. **Session Management**: MCP sessions can be integrated with Parlant's session management.
+1. **Camada de Adaptadores**: A implementação MCP reside na camada de adaptadores, permitindo que seja usada pelos componentes principais.
+2. **Integração de Ferramentas**: Ferramentas MCP podem ser registradas e usadas pelo sistema de ferramentas do Parlant.
+3. **Serviços NLP**: O MCP pode ser usado com qualquer um dos serviços NLP do Parlant.
+4. **Gerenciamento de Sessão**: Sessões MCP podem ser integradas com o gerenciamento de sessão do Parlant.
 
-## Future Enhancements
+## Melhorias Futuras
 
-Future enhancements to the MCP integration may include:
+Melhorias futuras para a integração MCP podem incluir:
 
-1. **Tool Chaining**: Allow tools to be chained together for complex workflows.
-2. **Tool Versioning**: Support for versioned tools and backward compatibility.
-3. **Authentication**: Add authentication and authorization for MCP connections.
-4. **Streaming**: Support for streaming responses from tools.
-5. **Multi-modal Support**: Add support for multi-modal inputs and outputs.
+1. **Encadeamento de Ferramentas**: Permitir que ferramentas sejam encadeadas para fluxos de trabalho complexos.
+2. **Versionamento de Ferramentas**: Suporte para ferramentas versionadas e compatibilidade retroativa.
+3. **Autenticação**: Adicionar autenticação e autorização para conexões MCP.
+4. **Streaming**: Suporte para respostas em streaming de ferramentas.
+5. **Suporte Multimodal**: Adicionar suporte para entradas e saídas multimodais.
 
-## References
+## Referências
 
-- [Model Context Protocol Specification](https://github.com/modelcontextprotocol/servers)
-- [Sequential Thinking MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)
-- [VSCode Agent Mode with MCP](https://code.visualstudio.com/blogs/2025/04/07/agentMode)
+- [Especificação do Protocolo de Contexto do Modelo](https://github.com/modelcontextprotocol/servers)
+- [MCP de Pensamento Sequencial](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)
+- [Modo Agente do VSCode com MCP](https://code.visualstudio.com/blogs/2025/04/07/agentMode)

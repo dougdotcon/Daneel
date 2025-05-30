@@ -1,29 +1,29 @@
-# Agent Learning and Adaptation
+# Aprendizado e Adaptação de Agentes
 
-This document describes the agent learning and adaptation functionality in the Parlant framework.
+Este documento descreve a funcionalidade de aprendizado e adaptação de agentes no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The agent learning and adaptation module provides a comprehensive set of tools for enabling agents to learn from their interactions and adapt their behavior over time. It includes:
+O módulo de aprendizado e adaptação de agentes fornece um conjunto abrangente de ferramentas para permitir que os agentes aprendam com suas interações e adaptem seu comportamento ao longo do tempo. Inclui:
 
-1. Interaction history tracking for recording agent interactions and outcomes
-2. Performance metrics and evaluation for measuring agent effectiveness
-3. Feedback-based learning for improving agent responses based on user feedback
-4. Behavior adaptation mechanisms for adjusting agent behavior over time
-5. Personalization based on user interactions to tailor agent responses to specific users
+1. Rastreamento de histórico de interações para registrar interações e resultados dos agentes
+2. Métricas de desempenho e avaliação para medir a eficácia dos agentes
+3. Aprendizado baseado em feedback para melhorar as respostas dos agentes com base no feedback do usuário
+4. Mecanismos de adaptação de comportamento para ajustar o comportamento do agente ao longo do tempo
+5. Personalização baseada em interações do usuário para adaptar as respostas do agente a usuários específicos
 
-## Components
+## Componentes
 
-### Interaction History Tracking
+### Rastreamento de Histórico de Interações
 
-The interaction history tracking component provides a way to record and analyze agent interactions:
+O componente de rastreamento de histórico de interações fornece uma maneira de registrar e analisar as interações dos agentes:
 
-- Different interaction types (user messages, agent messages, tool calls, etc.)
-- Feedback collection (thumbs up/down, ratings, text feedback, corrections)
-- Session-based tracking
-- Filtering and querying capabilities
+- Diferentes tipos de interação (mensagens do usuário, mensagens do agente, chamadas de ferramentas, etc.)
+- Coleta de feedback (positivo/negativo, avaliações, feedback em texto, correções)
+- Rastreamento baseado em sessão
+- Capacidades de filtragem e consulta
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.learning import InteractionHistoryTracker, InteractionType, FeedbackType
@@ -54,16 +54,16 @@ interactions = await tracker.get_session_interactions("session123")
 stats = await tracker.get_feedback_stats("agent456")
 ```
 
-### Performance Metrics and Evaluation
+### Métricas de Desempenho e Avaliação
 
-The performance metrics and evaluation component enables measuring and analyzing agent performance:
+O componente de métricas de desempenho e avaliação permite medir e analisar o desempenho dos agentes:
 
-- Different metric types (response time, feedback score, task completion, etc.)
-- Statistical analysis of metrics
-- Comprehensive evaluations combining multiple metrics
-- Trend analysis over time
+- Diferentes tipos de métricas (tempo de resposta, pontuação de feedback, conclusão de tarefas, etc.)
+- Análise estatística de métricas
+- Avaliações abrangentes combinando múltiplas métricas
+- Análise de tendências ao longo do tempo
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.learning import PerformanceMetricsTracker, MetricType
@@ -96,16 +96,16 @@ evaluation = await tracker.create_evaluation(
 evaluations = await tracker.list_evaluations("agent456")
 ```
 
-### Feedback-Based Learning
+### Aprendizado Baseado em Feedback
 
-The feedback-based learning component enables agents to learn from user feedback:
+O componente de aprendizado baseado em feedback permite que os agentes aprendam com o feedback do usuário:
 
-- Different learning strategies (example-based, rule-based, model-based, hybrid)
-- Pattern identification from feedback
-- Feedback application to improve responses
-- Confidence scoring for learned patterns
+- Diferentes estratégias de aprendizado (baseado em exemplos, baseado em regras, baseado em modelo, híbrido)
+- Identificação de padrões a partir do feedback
+- Aplicação de feedback para melhorar respostas
+- Pontuação de confiança para padrões aprendidos
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.learning import FeedbackLearner, LearningStrategy
@@ -136,16 +136,16 @@ patterns = await learner.list_patterns(
 )
 ```
 
-### Behavior Adaptation
+### Adaptação de Comportamento
 
-The behavior adaptation component enables agents to adjust their behavior over time:
+O componente de adaptação de comportamento permite que os agentes ajustem seu comportamento ao longo do tempo:
 
-- Different adaptation types (prompt modification, parameter adjustment, response style, etc.)
-- Adaptation generation based on feedback and metrics
-- Adaptation application and tracking
-- Confidence scoring for adaptations
+- Diferentes tipos de adaptação (modificação de prompt, ajuste de parâmetros, estilo de resposta, etc.)
+- Geração de adaptação baseada em feedback e métricas
+- Aplicação e rastreamento de adaptação
+- Pontuação de confiança para adaptações
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.learning import BehaviorAdapter, AdaptationType
@@ -174,16 +174,16 @@ adaptations = await adapter.list_adaptations(
 )
 ```
 
-### Personalization
+### Personalização
 
-The personalization component enables tailoring agent responses to specific users:
+O componente de personalização permite adaptar as respostas do agente a usuários específicos:
 
-- Different preference types (communication style, response length, technical level, etc.)
-- Preference inference from interactions
-- Response personalization based on preferences
-- Prompt personalization for more tailored responses
+- Diferentes tipos de preferências (estilo de comunicação, comprimento da resposta, nível técnico, etc.)
+- Inferência de preferências a partir de interações
+- Personalização de resposta baseada em preferências
+- Personalização de prompt para respostas mais adaptadas
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.learning import PersonalizationManager, PreferenceType
@@ -218,53 +218,53 @@ personalized_prompt = await manager.create_personalized_prompt(
 )
 ```
 
-## Integration with Parlant
+## Integração com Parlant
 
-The agent learning and adaptation functionality is integrated with the Parlant framework:
+A funcionalidade de aprendizado e adaptação de agentes está integrada com o framework Parlant:
 
-1. **Agent System**: Learning and adaptation enhance the agent system with continuous improvement capabilities
-2. **Knowledge Management**: Learned patterns and adaptations can be stored in the knowledge management system
-3. **Models**: Learning and adaptation can modify model parameters and prompts for better performance
-4. **Tools**: Adaptations can improve tool usage patterns and effectiveness
+1. **Sistema de Agente**: O aprendizado e adaptação aprimoram o sistema de agentes com capacidades de melhoria contínua
+2. **Gerenciamento de Conhecimento**: Padrões aprendidos e adaptações podem ser armazenados no sistema de gerenciamento de conhecimento
+3. **Modelos**: O aprendizado e adaptação podem modificar parâmetros e prompts do modelo para melhor desempenho
+4. **Ferramentas**: Adaptações podem melhorar padrões de uso e eficácia das ferramentas
 
-## Implementation Details
+## Detalhes de Implementação
 
-### Data Storage
+### Armazenamento de Dados
 
-The agent learning and adaptation module uses the document database for storing:
+O módulo de aprendizado e adaptação de agentes usa o banco de dados de documentos para armazenar:
 
-- Interaction history
-- Performance metrics
-- Feedback patterns
-- Behavior adaptations
-- User preferences
+- Histórico de interações
+- Métricas de desempenho
+- Padrões de feedback
+- Adaptações de comportamento
+- Preferências do usuário
 
-### Learning Process
+### Processo de Aprendizado
 
-The learning process follows these steps:
+O processo de aprendizado segue estas etapas:
 
-1. **Data Collection**: Interactions and feedback are collected and stored
-2. **Analysis**: Collected data is analyzed to identify patterns and trends
-3. **Learning**: Patterns are learned from the analyzed data
-4. **Adaptation**: Behavior adaptations are generated based on learned patterns
-5. **Application**: Adaptations are applied to improve agent behavior
-6. **Evaluation**: The effects of adaptations are evaluated to ensure improvement
+1. **Coleta de Dados**: Interações e feedback são coletados e armazenados
+2. **Análise**: Os dados coletados são analisados para identificar padrões e tendências
+3. **Aprendizado**: Padrões são aprendidos a partir dos dados analisados
+4. **Adaptação**: Adaptações de comportamento são geradas com base nos padrões aprendidos
+5. **Aplicação**: Adaptações são aplicadas para melhorar o comportamento do agente
+6. **Avaliação**: Os efeitos das adaptações são avaliados para garantir melhoria
 
-### Privacy Considerations
+### Considerações de Privacidade
 
-The agent learning and adaptation module includes privacy-preserving mechanisms:
+O módulo de aprendizado e adaptação de agentes inclui mecanismos de preservar privacidade:
 
-- Data minimization: Only necessary data is stored
-- Anonymization: Personal identifiers are removed when possible
-- Retention policies: Data is retained only as long as needed
-- Access controls: Access to learning data is restricted
+- Minimização de dados: Apenas dados necessários são armazenados
+- Anonimização: Identificadores pessoais são removidos quando possível
+- Políticas de retenção: Dados são retidos apenas enquanto necessário
+- Controles de acesso: Acesso a dados de aprendizado é restrito
 
-## Future Enhancements
+## Melhorias Futuras
 
-Potential future enhancements for the agent learning and adaptation module:
+Possíveis melhorias futuras para o módulo de aprendizado e adaptação de agentes:
 
-1. **Reinforcement Learning**: Add support for reinforcement learning to optimize agent behavior
-2. **Multi-Agent Learning**: Enable learning from interactions between multiple agents
-3. **Transfer Learning**: Allow transferring learned patterns between agents
-4. **Explainable Adaptations**: Provide explanations for why adaptations were made
-5. **User-Guided Learning**: Enable users to guide the learning process with explicit instructions
+1. **Aprendizado de Reforço**: Adicionar suporte para aprendizado de reforço para otimizar o comportamento do agente
+2. **Aprendizado Multi-Agente**: Permitir aprendizado a partir de interações entre múltiplos agentes
+3. **Aprendizado de Transferência**: Permitir transferência de padrões aprendidos entre agentes
+4. **Adaptações Explicáveis**: Fornecer explicações para por que adaptações foram feitas
+5. **Aprendizado Guiado pelo Usuário**: Permitir que usuários guiem o processo de aprendizado com instruções explícitas

@@ -1,32 +1,32 @@
-# UI Components
+# Componentes de UI
 
-This document describes the UI components in the Parlant framework.
+Este documento descreve os componentes de UI no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The UI components provide a way to create rich, interactive user interfaces for Parlant. They support:
+Os componentes de UI fornecem uma maneira de criar interfaces de usuário ricas e interativas para o Parlant. Eles suportam:
 
-1. Code highlighting and diff visualization
-2. Interactive terminal interfaces
-3. Debugging and inspection tools
-4. Visual feedback for agent actions
+1. Realce de código e visualização de diferenças
+2. Interfaces de terminal interativas
+3. Ferramentas de depuração e inspeção
+4. Feedback visual para ações dos agentes
 
-## Components
+## Componentes
 
-### Code Components
+### Componentes de Código
 
 #### CodeBlock
 
-The `CodeBlock` component provides syntax highlighting for code snippets. It supports:
+O componente `CodeBlock` fornece realce de sintaxe para trechos de código. Ele suporta:
 
-- Automatic language detection
-- Line numbers
-- Copy to clipboard functionality
-- Code folding for large code blocks
-- Highlighting specific lines
-- Multiple themes
+- Detecção automática de linguagem
+- Números de linha
+- Funcionalidade de copiar para a área de transferência
+- Dobramento de código para blocos grandes
+- Realce de linhas específicas
+- Múltiplos temas
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.ui.components.code import CodeBlock, CodeBlockOptions
@@ -61,15 +61,15 @@ html = code_block.render_html(code, options)
 
 #### DiffViewer
 
-The `DiffViewer` component visualizes differences between two pieces of code. It supports:
+O componente `DiffViewer` visualiza diferenças entre dois trechos de código. Ele suporta:
 
-- Split view (side-by-side) and unified view
-- Syntax highlighting
-- Line numbers
-- Color-coding for additions, deletions, and modifications
-- Multiple themes
+- Visualização dividida (lado a lado) e unificada
+- Realce de sintaxe
+- Números de linha
+- Codificação por cores para adições, exclusões e modificações
+- Múltiplos temas
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.ui.components.code import DiffViewer, DiffViewerOptions, DiffMode
@@ -103,21 +103,21 @@ def hello():
 html = diff_viewer.render_html(old_code, new_code, options)
 ```
 
-### Terminal Components
+### Componentes de Terminal
 
 #### Terminal
 
-The `Terminal` component provides an interactive terminal interface. It supports:
+O componente `Terminal` fornece uma interface de terminal interativa. Ele suporta:
 
-- Command execution
-- Command history
-- Syntax highlighting for terminal output
-- Copy to clipboard functionality
-- Fullscreen mode
-- Custom command handlers
-- Multiple themes
+- Execução de comandos
+- Histórico de comandos
+- Realce de sintaxe para saída do terminal
+- Funcionalidade de copiar para a área de transferência
+- Modo tela cheia
+- Manipuladores de comando personalizados
+- Múltiplos temas
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.ui.components.terminal import Terminal, TerminalOptions, TerminalState
@@ -155,19 +155,19 @@ html = terminal.render_html(options)
 output = await terminal.execute_command("echo Hello, world!")
 ```
 
-### Debug Components
+### Componentes de Depuração
 
 #### Inspector
 
-The `Inspector` component provides a way to inspect variables and objects. It supports:
+O componente `Inspector` fornece uma maneira de inspecionar variáveis e objetos. Ele suporta:
 
-- Expandable object properties
-- Syntax highlighting for values
-- Customizable expansion level
-- Multiple themes
-- Filtering of private and method properties
+- Propriedades de objeto expansíveis
+- Realce de sintaxe para valores
+- Nível de expansão personalizável
+- Múltiplos temas
+- Filtragem de propriedades privadas e métodos
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.ui.components.debug import Inspector, InspectorOptions
@@ -204,15 +204,15 @@ html = inspector.render_html(data, options)
 
 #### CallStack
 
-The `CallStack` component visualizes a call stack for debugging. It supports:
+O componente `CallStack` visualiza uma pilha de chamadas para depuração. Ele suporta:
 
-- Stack frame visualization
-- Source code display
-- Variable inspection
-- Multiple themes
-- Filtering of library frames
+- Visualização de quadros de pilha
+- Exibição de código-fonte
+- Inspeção de variáveis
+- Múltiplos temas
+- Filtragem de quadros de biblioteca
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.ui.components.debug import CallStack, CallStackOptions, StackFrame
@@ -251,118 +251,52 @@ frames = [
 
 # Render the call stack
 html = call_stack.render_html(frames, options)
-
-# Get the current stack frames
-current_frames = call_stack.get_current_stack_frames()
-
-# Get stack frames from an exception
-try:
-    raise ValueError("Example error")
-except ValueError as e:
-    exception_frames = call_stack.get_exception_stack_frames(e)
 ```
 
-## Integration with Parlant
+## Integração com Parlant
 
-The UI components are integrated with the Parlant framework:
+Os componentes de UI estão integrados com o framework Parlant:
 
-1. **Web Interface**: The components are used in the web interface to provide a rich user experience
-2. **Agent Feedback**: The components provide visual feedback for agent actions
-3. **Debugging**: The components help with debugging agent behavior
-4. **Code Editing**: The components enhance the code editing experience
+1. **Sistema de Agente**: Os agentes podem usar os componentes para fornecer feedback visual
+2. **Depuração**: Os componentes de depuração são usados para inspecionar o estado do agente
+3. **Terminal**: O componente de terminal é usado para interação com o sistema
+4. **Código**: Os componentes de código são usados para visualizar e editar código
 
-## CSS Styling
+## Detalhes de Implementação
 
-Each component provides its own CSS styling through the `get_css()` method. This allows the components to be styled consistently across different environments.
+### Renderização
 
-Example:
+Os componentes de UI usam:
 
-```python
-from parlant.ui.components.code import CodeBlock
-from parlant.core.loggers import ConsoleLogger
+- React para renderização do lado do cliente
+- Tailwind CSS para estilização
+- Monaco Editor para edição de código
+- XTerm.js para emulação de terminal
 
-# Create a code block
-code_block = CodeBlock(ConsoleLogger())
+### Temas
 
-# Get the CSS
-css = code_block.get_css()
+O sistema de temas suporta:
 
-# Include the CSS in your HTML
-html = f"""
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        {css}
-    </style>
-</head>
-<body>
-    {code_block.render_html("print('Hello, world!')")}
-</body>
-</html>
-"""
-```
+- Temas claros e escuros
+- Temas personalizados
+- Temas específicos de componente
+- Transições suaves entre temas
 
-## JavaScript Integration
+### Acessibilidade
 
-The UI components are designed to work with JavaScript for enhanced interactivity. The JavaScript code can be included in your HTML to enable features like:
+Os componentes seguem as diretrizes de acessibilidade:
 
-- Expanding and collapsing code blocks
-- Switching between split and unified diff views
-- Executing commands in the terminal
-- Expanding and collapsing object properties in the inspector
-- Selecting stack frames in the call stack
+- Suporte a leitor de tela
+- Navegação por teclado
+- Alto contraste
+- Tamanhos de fonte ajustáveis
 
-Example JavaScript for the CodeBlock component:
+## Melhorias Futuras
 
-```javascript
-// Enable copy button functionality
-document.querySelectorAll('.parlant-code-block-copy-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const codeBlock = button.closest('.parlant-code-block-container');
-        const code = codeBlock.querySelector('.parlant-code-block-content').textContent;
-        
-        navigator.clipboard.writeText(code).then(() => {
-            button.textContent = 'Copied!';
-            setTimeout(() => {
-                button.textContent = 'Copy';
-            }, 2000);
-        });
-    });
-});
+Possíveis melhorias futuras para os componentes de UI:
 
-// Enable collapse button functionality
-document.querySelectorAll('.parlant-code-block-collapse-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const codeBlock = button.closest('.parlant-code-block-container');
-        const content = codeBlock.querySelector('.parlant-code-block-content');
-        
-        if (content.style.maxHeight === '100px') {
-            content.style.maxHeight = '500px';
-            button.textContent = 'Collapse';
-        } else {
-            content.style.maxHeight = '100px';
-            button.textContent = 'Expand';
-        }
-    });
-});
-```
-
-## Accessibility
-
-The UI components are designed with accessibility in mind. They include:
-
-- Proper ARIA attributes
-- Keyboard navigation
-- High contrast themes
-- Screen reader support
-
-## Future Enhancements
-
-Future enhancements to the UI components may include:
-
-1. **More Themes**: Additional themes for different environments
-2. **More Languages**: Support for more programming languages
-3. **More Interactive Features**: Enhanced interactivity with JavaScript
-4. **Mobile Support**: Better support for mobile devices
-5. **Accessibility Improvements**: Enhanced accessibility features
+1. **Componentes Responsivos**: Melhorar o suporte para diferentes tamanhos de tela
+2. **Personalização Avançada**: Adicionar mais opções de personalização
+3. **Integração de Gráficos**: Adicionar componentes para visualização de dados
+4. **Suporte a Gestos**: Melhorar o suporte para dispositivos touch
+5. **Modo Offline**: Permitir uso offline dos componentes

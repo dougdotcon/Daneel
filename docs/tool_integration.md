@@ -1,30 +1,30 @@
-# Tool Integration System
+# Sistema de Integração de Ferramentas
 
-This document describes the tool integration system in the Parlant framework.
+Este documento descreve o sistema de integração de ferramentas no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The tool integration system provides a way to create, manage, and use tools in Parlant. It supports:
+O sistema de integração de ferramentas fornece uma maneira de criar, gerenciar e usar ferramentas no Parlant. Ele suporta:
 
-1. Registering and discovering tools
-2. Categorizing tools by functionality
-3. Calling tools with arguments
-4. Handling tool results
-5. Managing tool metadata
+1. Registro e descoberta de ferramentas
+2. Categorização de ferramentas por funcionalidade
+3. Chamada de ferramentas com argumentos
+4. Tratamento de resultados de ferramentas
+5. Gerenciamento de metadados de ferramentas
 
-## Components
+## Componentes
 
 ### ToolRegistry
 
-The `ToolRegistry` class is the central component of the tool integration system. It manages the registration, discovery, and access of tools. It provides methods for:
+A classe `ToolRegistry` é o componente central do sistema de integração de ferramentas. Ela gerencia o registro, descoberta e acesso de ferramentas. Ela fornece métodos para:
 
-- Registering tools
-- Getting tools by ID
-- Listing tools by category or tags
-- Calling tools with arguments
-- Managing tool metadata
+- Registro de ferramentas
+- Obtenção de ferramentas por ID
+- Listagem de ferramentas por categoria ou tags
+- Chamada de ferramentas com argumentos
+- Gerenciamento de metadados de ferramentas
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.core.loggers import ConsoleLogger
@@ -69,11 +69,11 @@ result = await registry.call_tool(
 )
 ```
 
-### Tool Decorator
+### Decorador Tool
 
-The `tool` decorator provides a convenient way to define tools as Python functions. It automatically handles the conversion of function parameters to tool parameters and the registration of the tool with the registry.
+O decorador `tool` fornece uma maneira conveniente de definir ferramentas como funções Python. Ele lida automaticamente com a conversão de parâmetros de função para parâmetros de ferramenta e o registro da ferramenta no registro.
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.core.tools import ToolResult
@@ -108,92 +108,92 @@ def my_tool(param1, param2=None):
     )
 ```
 
-### Tool Categories
+### Categorias de Ferramentas
 
-Tools are organized into categories based on their functionality:
+As ferramentas são organizadas em categorias baseadas em sua funcionalidade:
 
-- `CODE`: Tools for working with code (search, edit, execute)
-- `WEB`: Tools for working with the web (search, fetch)
-- `FILESYSTEM`: Tools for working with the filesystem (list, create, delete)
-- `UTILS`: Utility tools (time, random, UUID)
-- `CUSTOM`: Custom tools defined by the user
+- `CODE`: Ferramentas para trabalhar com código (busca, edição, execução)
+- `WEB`: Ferramentas para trabalhar com a web (busca, download)
+- `FILESYSTEM`: Ferramentas para trabalhar com o sistema de arquivos (listar, criar, excluir)
+- `UTILS`: Ferramentas utilitárias (tempo, aleatório, UUID)
+- `CUSTOM`: Ferramentas personalizadas definidas pelo usuário
 
-### Tool Metadata
+### Metadados de Ferramentas
 
-Each tool has associated metadata that describes its purpose, parameters, and other attributes:
+Cada ferramenta tem metadados associados que descrevem seu propósito, parâmetros e outros atributos:
 
-- `id`: Unique identifier for the tool
-- `name`: Display name for the tool
-- `description`: Description of what the tool does
-- `category`: Category of the tool
-- `version`: Version of the tool
-- `author`: Author of the tool
-- `tags`: Tags for categorizing the tool
-- `documentation_url`: URL to the tool's documentation
+- `id`: Identificador único para a ferramenta
+- `name`: Nome de exibição para a ferramenta
+- `description`: Descrição do que a ferramenta faz
+- `category`: Categoria da ferramenta
+- `version`: Versão da ferramenta
+- `author`: Autor da ferramenta
+- `tags`: Tags para categorizar a ferramenta
+- `documentation_url`: URL para a documentação da ferramenta
 
-## Available Tools
+## Ferramentas Disponíveis
 
-### Code Tools
+### Ferramentas de Código
 
-#### Search Tools
+#### Ferramentas de Busca
 
-- `code_search`: Search for code in the workspace using a query string
-- `code_semantic_search`: Search for code semantically using natural language
-- `find_definition`: Find the definition of a symbol in the codebase
+- `code_search`: Buscar código no workspace usando uma string de consulta
+- `code_semantic_search`: Buscar código semanticamente usando linguagem natural
+- `find_definition`: Encontrar a definição de um símbolo no código-fonte
 
-#### Edit Tools
+#### Ferramentas de Edição
 
-- `read_file`: Read the contents of a file
-- `write_file`: Write content to a file
-- `edit_file`: Edit a specific part of a file
-- `create_file`: Create a new file with the specified content
-- `delete_file`: Delete a file
+- `read_file`: Ler o conteúdo de um arquivo
+- `write_file`: Escrever conteúdo em um arquivo
+- `edit_file`: Editar uma parte específica de um arquivo
+- `create_file`: Criar um novo arquivo com o conteúdo especificado
+- `delete_file`: Excluir um arquivo
 
-#### Execute Tools
+#### Ferramentas de Execução
 
-- `execute_python`: Execute Python code and return the result
-- `execute_shell`: Execute a shell command and return the result
-- `run_tests`: Run tests for a project
-- `execute_code_snippet`: Execute a code snippet in a specific language
+- `execute_python`: Executar código Python e retornar o resultado
+- `execute_shell`: Executar um comando shell e retornar o resultado
+- `run_tests`: Executar testes para um projeto
+- `execute_code_snippet`: Executar um trecho de código em uma linguagem específica
 
-### Web Tools
+### Ferramentas Web
 
-- `web_search`: Search the web for information
-- `fetch_webpage`: Fetch the content of a webpage
-- `search_wikipedia`: Search Wikipedia for information
+- `web_search`: Pesquisar informações na web
+- `fetch_webpage`: Buscar o conteúdo de uma página web
+- `search_wikipedia`: Pesquisar informações na Wikipedia
 
-### Filesystem Tools
+### Ferramentas de Sistema de Arquivos
 
-- `list_directory`: List files and directories in a directory
-- `create_directory`: Create a new directory
-- `delete_directory`: Delete a directory
-- `copy_file`: Copy a file from source to destination
-- `move_file`: Move a file from source to destination
+- `list_directory`: Listar arquivos e diretórios em um diretório
+- `create_directory`: Criar um novo diretório
+- `delete_directory`: Excluir um diretório
+- `copy_file`: Copiar um arquivo da origem para o destino
+- `move_file`: Mover um arquivo da origem para o destino
 
-### Utility Tools
+### Ferramentas Utilitárias
 
-- `get_current_time`: Get the current date and time
-- `generate_random_string`: Generate a random string
-- `generate_uuid`: Generate a UUID
-- `get_system_info`: Get information about the system
-- `parse_json`: Parse a JSON string
-- `format_json`: Format a JSON string
+- `get_current_time`: Obter a data e hora atual
+- `generate_random_string`: Gerar uma string aleatória
+- `generate_uuid`: Gerar um UUID
+- `get_system_info`: Obter informações sobre o sistema
+- `parse_json`: Analisar uma string JSON
+- `format_json`: Formatar uma string JSON
 
-## Integration with Parlant
+## Integração com Parlant
 
-The tool integration system is integrated with the Parlant framework:
+O sistema de integração de ferramentas está integrado com o framework Parlant:
 
-1. **Core Engine**: The core engine uses tools to perform actions
-2. **Agents**: Agents use tools to interact with the environment
-3. **Prompt System**: The prompt system includes tool descriptions and examples
-4. **MCP**: The MCP uses tools to execute actions
+1. **Motor Principal**: O motor principal usa ferramentas para executar ações
+2. **Agentes**: Os agentes usam ferramentas para interagir com o ambiente
+3. **Sistema de Prompts**: O sistema de prompts inclui descrições e exemplos de ferramentas
+4. **MCP**: O MCP usa ferramentas para executar ações
 
-## Future Enhancements
+## Melhorias Futuras
 
-Future enhancements to the tool integration system may include:
+Possíveis melhorias futuras para o sistema de integração de ferramentas:
 
-1. **Tool Versioning**: Track changes to tools over time
-2. **Tool Testing**: Test tools with different arguments
-3. **Tool Optimization**: Optimize tools for different environments
-4. **Tool Sharing**: Share tools between Parlant instances
-5. **Tool Marketplace**: Discover and use tools from a marketplace
+1. **Versionamento de Ferramentas**: Rastrear mudanças nas ferramentas ao longo do tempo
+2. **Teste de Ferramentas**: Testar ferramentas com diferentes argumentos
+3. **Otimização de Ferramentas**: Otimizar ferramentas para diferentes ambientes
+4. **Compartilhamento de Ferramentas**: Compartilhar ferramentas entre instâncias do Parlant
+5. **Marketplace de Ferramentas**: Descobrir e usar ferramentas de um marketplace

@@ -1,35 +1,35 @@
-# Knowledge Management
+# Gerenciamento de Conhecimento
 
-This document describes the knowledge management functionality in the Parlant framework.
+Este documento descreve a funcionalidade de gerenciamento de conhecimento no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The knowledge management module provides a comprehensive set of tools for storing, retrieving, and reasoning over knowledge. It includes:
+O módulo de gerenciamento de conhecimento fornece um conjunto abrangente de ferramentas para armazenar, recuperar e raciocinar sobre conhecimento. Inclui:
 
-1. A knowledge base for storing structured and unstructured knowledge
-2. A knowledge graph for representing relationships between knowledge items
-3. A reasoning engine for answering questions and generating inferences
-4. Support for multi-modal knowledge (text, code, structured data, etc.)
+1. Uma base de conhecimento para armazenar conhecimento estruturado e não estruturado
+2. Um grafo de conhecimento para representar relacionamentos entre itens de conhecimento
+3. Um motor de raciocínio para responder perguntas e gerar inferências
+4. Suporte para conhecimento multimodal (texto, código, dados estruturados, etc.)
 
-## Components
+## Componentes
 
-### Knowledge Base
+### Base de Conhecimento
 
-The `KnowledgeBase` class provides functionality for storing and retrieving knowledge items:
+A classe `KnowledgeBase` fornece funcionalidade para armazenar e recuperar itens de conhecimento:
 
-- Creating knowledge items of different types
-- Updating and deleting knowledge items
-- Searching for knowledge items using vector similarity
-- Filtering knowledge items by type, source, and tags
+- Criação de itens de conhecimento de diferentes tipos
+- Atualização e exclusão de itens de conhecimento
+- Busca de itens de conhecimento usando similaridade vetorial
+- Filtragem de itens de conhecimento por tipo, fonte e tags
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.knowledge import KnowledgeBase, KnowledgeItemType, KnowledgeItemSource
-from parlant.core.loggers import ConsoleLogger
-from parlant.adapters.vector_db.chroma import ChromaDatabase
-from parlant.adapters.db.transient import TransientDocumentDatabase
-from parlant.core.nlp.embedding import EmbedderFactory
+from parlat.knowledge import KnowledgeBase, KnowledgeItemType, KnowledgeItemSource
+from parlat.core.loggers import ConsoleLogger
+from parlat.adapters.vector_db.chroma import ChromaDatabase
+from parlat.adapters.db.transient import TransientDocumentDatabase
+from parlat.core.nlp.embedding import EmbedderFactory
 
 # Create a knowledge base
 async with KnowledgeBase(
@@ -68,20 +68,20 @@ async with KnowledgeBase(
     )
 ```
 
-### Knowledge Graph
+### Grafo de Conhecimento
 
-The `KnowledgeGraph` class provides functionality for representing relationships between knowledge items:
+A classe `KnowledgeGraph` fornece funcionalidade para representar relacionamentos entre itens de conhecimento:
 
-- Adding and removing relationships
-- Getting neighbors of a knowledge item
-- Finding paths between knowledge items
-- Extracting subgraphs for visualization
+- Adição e remoção de relacionamentos
+- Obtenção de vizinhos de um item de conhecimento
+- Encontrar caminhos entre itens de conhecimento
+- Extração de subgrafos para visualização
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.knowledge import KnowledgeGraph
-from parlant.core.loggers import ConsoleLogger
+from parlat.knowledge import KnowledgeGraph
+from parlat.core.loggers import ConsoleLogger
 
 # Create a knowledge graph
 graph = KnowledgeGraph(
@@ -119,19 +119,19 @@ subgraph = await graph.get_subgraph(
 )
 ```
 
-### Knowledge Reasoner
+### Motor de Raciocínio
 
-The `KnowledgeReasoner` class provides functionality for reasoning over the knowledge base:
+A classe `KnowledgeReasoner` fornece funcionalidade para raciocinar sobre a base de conhecimento:
 
-- Answering questions using relevant knowledge items
-- Generating inferences about knowledge items
-- Validating relationships between knowledge items
+- Responder perguntas usando itens de conhecimento relevantes
+- Gerar inferências sobre itens de conhecimento
+- Validar relacionamentos entre itens de conhecimento
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.knowledge import KnowledgeReasoner
-from parlant.core.loggers import ConsoleLogger
+from parlat.knowledge import KnowledgeReasoner
+from parlat.core.loggers import ConsoleLogger
 
 # Create a knowledge reasoner
 reasoner = KnowledgeReasoner(
@@ -161,21 +161,21 @@ result = await reasoner.validate_relationship(
 )
 ```
 
-### Knowledge Manager
+### Gerenciador de Conhecimento
 
-The `KnowledgeManager` class provides a unified interface for knowledge management:
+A classe `KnowledgeManager` fornece uma interface unificada para gerenciamento de conhecimento:
 
-- Adding different types of knowledge (text, code, structured data)
-- Relating knowledge items
-- Searching for knowledge
-- Answering questions
-- Getting knowledge networks for visualization
+- Adição de diferentes tipos de conhecimento (texto, código, dados estruturados)
+- Relacionamento de itens de conhecimento
+- Busca de conhecimento
+- Resposta a perguntas
+- Obtenção de redes de conhecimento para visualização
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.knowledge import KnowledgeManager
-from parlant.core.loggers import ConsoleLogger
+from parlat.knowledge import KnowledgeManager
+from parlat.core.loggers import ConsoleLogger
 
 # Create a knowledge manager
 async with KnowledgeManager(
@@ -239,42 +239,61 @@ async with KnowledgeManager(
     )
 ```
 
-## Knowledge Item Types
+## Tipos de Itens de Conhecimento
 
-The knowledge management module supports different types of knowledge items:
+O módulo de gerenciamento de conhecimento suporta diferentes tipos de itens de conhecimento:
 
-- `TEXT`: Textual knowledge (articles, notes, etc.)
-- `CODE`: Code snippets with language metadata
-- `IMAGE`: Image data with metadata
-- `AUDIO`: Audio data with metadata
-- `VIDEO`: Video data with metadata
-- `STRUCTURED`: Structured data (JSON, etc.)
-- `GRAPH`: Graph data (nodes and edges)
+- `TEXT`: Conhecimento textual (artigos, notas, etc.)
+- `CODE`: Trechos de código com metadados de linguagem
+- `IMAGE`: Dados de imagem com metadados
+- `AUDIO`: Dados de áudio com metadados
+- `VIDEO`: Dados de vídeo com metadados
 
-## Knowledge Item Sources
+## Integração com Parlant
 
-Knowledge items can come from different sources:
+A funcionalidade de gerenciamento de conhecimento está integrada com o framework Parlant:
 
-- `USER`: Created by the user
-- `SYSTEM`: Created by the system
-- `AGENT`: Created by an agent
-- `EXTERNAL`: Imported from an external source
+1. **Sistema de Agente**: Os agentes podem acessar e contribuir para a base de conhecimento
+2. **Processamento de Linguagem Natural**: O conhecimento é indexado e pesquisável usando técnicas de NLP
+3. **Armazenamento de Dados**: O conhecimento é armazenado de forma eficiente em bancos de dados vetoriais e documentais
+4. **Ferramentas**: Ferramentas especializadas para manipulação de conhecimento
 
-## Integration with Parlant
+## Detalhes de Implementação
 
-The knowledge management functionality is integrated with the Parlant framework:
+### Armazenamento de Dados
 
-1. **Agent Tools**: The knowledge management components can be used as tools for agents
-2. **Vector Database**: The knowledge base uses the vector database for efficient retrieval
-3. **NLP Service**: The reasoning engine uses the NLP service for generating answers and inferences
-4. **Embeddings**: The knowledge base uses embeddings for semantic search
+O módulo de gerenciamento de conhecimento usa:
 
-## Future Enhancements
+- Banco de dados vetorial para busca semântica
+- Banco de dados documental para metadados e relacionamentos
+- Sistema de arquivos para dados binários (imagens, áudio, vídeo)
 
-Potential future enhancements for the knowledge management module:
+### Processo de Conhecimento
 
-1. **Knowledge Extraction**: Automatically extract knowledge from documents and conversations
-2. **Knowledge Validation**: Validate knowledge items for accuracy and consistency
-3. **Knowledge Versioning**: Track changes to knowledge items over time
-4. **Knowledge Sharing**: Share knowledge between agents and users
-5. **Knowledge Visualization**: Visualize knowledge graphs and relationships
+O processo de gerenciamento de conhecimento segue estas etapas:
+
+1. **Aquisição**: Conhecimento é adquirido de várias fontes
+2. **Processamento**: O conhecimento é processado e indexado
+3. **Armazenamento**: O conhecimento é armazenado de forma eficiente
+4. **Recuperação**: O conhecimento pode ser recuperado usando vários métodos
+5. **Raciocínio**: Inferências podem ser feitas sobre o conhecimento
+6. **Atualização**: O conhecimento pode ser atualizado conforme necessário
+
+### Considerações de Privacidade
+
+O módulo de gerenciamento de conhecimento inclui:
+
+- Controle de acesso granular para itens de conhecimento
+- Criptografia de dados sensíveis
+- Registro de acesso e modificações
+- Políticas de retenção de dados
+
+## Melhorias Futuras
+
+Possíveis melhorias futuras para o módulo de gerenciamento de conhecimento:
+
+1. **Aprendizado Contínuo**: Permitir que a base de conhecimento aprenda continuamente
+2. **Raciocínio Avançado**: Implementar técnicas mais sofisticadas de raciocínio
+3. **Integração Multimodal**: Melhorar o suporte para conhecimento multimodal
+4. **Escalabilidade**: Otimizar para grandes volumes de conhecimento
+5. **Federação**: Suportar bases de conhecimento federadas

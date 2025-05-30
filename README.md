@@ -227,6 +227,71 @@ insights = engine.analyze_conversations(
 )
 ```
 
+## 🌟 Como Usar - Guia para Iniciantes
+
+### O que é o Daneel?
+
+O Daneel é um assistente virtual inteligente que ajuda empresas e organizações a criar experiências de conversação mais naturais e eficientes com seus clientes. Imagine-o como um "professor" que ensina outros assistentes virtuais (chatbots) a conversarem de forma mais humana e profissional.
+
+### Para que serve?
+
+- 💬 **Atendimento ao Cliente**: Ajuda a criar assistentes virtuais que respondem dúvidas e resolvem problemas
+- 📱 **Suporte Técnico**: Auxilia usuários com questões técnicas de forma clara e paciente
+- 🏥 **Área da Saúde**: Oferece informações e orientações seguindo protocolos médicos
+- 🏦 **Serviços Financeiros**: Ajuda com consultas bancárias e financeiras de forma segura
+- ⚖️ **Assistência Jurídica**: Fornece orientações legais básicas seguindo as normas
+
+### Como Começar?
+
+1. **Instalação Básica**:
+   - Se você é um usuário comum, procure sua equipe de TI para instalar e configurar o Daneel
+   - Se você é um desenvolvedor iniciante, siga o guia de instalação acima usando `pip install parlant`
+
+2. **Primeiros Passos**:
+   - Defina o tipo de assistente que você precisa (atendimento, suporte, vendas, etc.)
+   - Configure as regras básicas de comportamento do seu assistente
+   - Teste com perguntas simples antes de usar em produção
+
+3. **Dicas Importantes**:
+   - Comece com casos de uso simples e vá aumentando a complexidade
+   - Mantenha um registro das interações para melhorar o sistema
+   - Peça ajuda no nosso [Discord](https://discord.gg/duxWqxKk6J) se precisar
+
+### Exemplos de Uso no Dia a Dia
+
+**Cenário 1: Atendimento ao Cliente**
+```python
+# Configuração simples para atendimento
+assistente = ConversationEngine.create_simple_assistant(
+    nome="Assistente de Ajuda",
+    regras_basicas=[
+        "Ser educado",
+        "Falar de forma clara",
+        "Pedir ajuda quando não souber"
+    ]
+)
+```
+
+**Cenário 2: Suporte Técnico**
+```python
+# Configuração para suporte
+suporte = ConversationEngine.create_simple_assistant(
+    nome="Suporte Técnico",
+    regras_basicas=[
+        "Explicar passo a passo",
+        "Usar linguagem simples",
+        "Confirmar se o problema foi resolvido"
+    ]
+)
+```
+
+### Precisa de Ajuda?
+
+- 📚 Consulte nossa [Documentação Simplificada](https://www.parlant.io/docs/quickstart/introduction)
+- 💬 Entre no nosso [Discord](https://discord.gg/duxWqxKk6J) para suporte
+- 📧 Envie um e-mail para support@parlant.io
+- 🎥 Assista nossos tutoriais no [YouTube](https://www.youtube.com/watch?v=_39ERIb0100)
+
 ## 🤝 Contribuindo
 
 Contribuições são bem-vindas! Veja nosso [Guia de Contribuição](CONTRIBUTING.md) para começar.

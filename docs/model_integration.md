@@ -1,28 +1,28 @@
-# Model Integration
+# Integração de Modelos
 
-This document describes the integration of local and cloud models into the Parlant framework.
+Este documento descreve a integração de modelos locais e em nuvem no framework Parlant.
 
-## Overview
+## Visão Geral
 
-Parlant now supports a variety of language models, both local and cloud-based, through a unified interface. The model integration includes:
+O Parlant agora suporta uma variedade de modelos de linguagem, tanto locais quanto baseados em nuvem, através de uma interface unificada. A integração de modelos inclui:
 
-1. Support for local models like Llama and DeepSeek
-2. Model switching capabilities for dynamically selecting the best model for a task
-3. Model fallback mechanisms for reliability
-4. Performance monitoring for model usage
+1. Suporte para modelos locais como Llama e DeepSeek
+2. Capacidades de alternância de modelos para selecionar dinamicamente o melhor modelo para uma tarefa
+3. Mecanismos de fallback de modelos para confiabilidade
+4. Monitoramento de desempenho para uso de modelos
 
-## Components
+## Componentes
 
 ### LocalModelManager
 
-The `LocalModelManager` class handles downloading, listing, and managing local models. It supports:
+A classe `LocalModelManager` lida com o download, listagem e gerenciamento de modelos locais. Ela suporta:
 
-- Models from Hugging Face
-- GGUF format models
-- Ollama models
-- Custom models
+- Modelos do Hugging Face
+- Modelos no formato GGUF
+- Modelos Ollama
+- Modelos personalizados
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.adapters.nlp.local.model_manager import LocalModelManager, ModelType
@@ -51,13 +51,13 @@ model = manager.get_model("local/llama/llama-7b")
 
 ### LlamaService
 
-The `LlamaService` class provides NLP capabilities using Llama models. It supports:
+A classe `LlamaService` fornece capacidades de NLP usando modelos Llama. Ela suporta:
 
-- Text generation
+- Geração de texto
 - Embeddings
-- Moderation
+- Moderação
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.adapters.nlp.local.llama import LlamaService
@@ -86,18 +86,18 @@ embeddings = await embedder.embed(["What is the capital of France?"])
 
 ### DeepSeekService
 
-The `DeepSeekService` class provides NLP capabilities using DeepSeek models. It has the same interface as `LlamaService`.
+A classe `DeepSeekService` fornece capacidades de NLP usando modelos DeepSeek. Ela tem a mesma interface que a `LlamaService`.
 
 ### ModelSwitcher
 
-The `ModelSwitcher` class allows switching between different models based on requirements. It can:
+A classe `ModelSwitcher` permite alternar entre diferentes modelos com base em requisitos. Ela pode:
 
-- Use local models when possible
-- Fall back to cloud models when needed
-- Select models based on capabilities
-- Monitor model performance
+- Usar modelos locais quando possível
+- Recorrer a modelos em nuvem quando necessário
+- Selecionar modelos com base em capacidades
+- Monitorar o desempenho do modelo
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.adapters.nlp.model_switcher import ModelSwitcher
@@ -132,13 +132,13 @@ result = await generator.generate("What is the capital of France?")
 
 ### NLPServiceFactory
 
-The `NLPServiceFactory` class provides a factory for creating NLP services. It can:
+A classe `NLPServiceFactory` fornece uma fábrica para criar serviços NLP. Ela pode:
 
-- Create services for different model types
-- Create a default service based on available models
-- Initialize services with appropriate configuration
+- Criar serviços para diferentes tipos de modelo
+- Criar um serviço padrão baseado nos modelos disponíveis
+- Inicializar serviços com configuração apropriada
 
-Example usage:
+Exemplo de uso:
 
 ```python
 from parlant.adapters.nlp.factory import NLPServiceFactory
@@ -159,26 +159,26 @@ switcher = await factory.create_service("model_switcher")
 service = await factory.create_default_service()
 ```
 
-## Integration with Parlant
+## Integração com Parlant
 
-The model integration is designed to work seamlessly with the existing Parlant architecture:
+A integração de modelos foi projetada para funcionar perfeitamente com a arquitetura existente do Parlant:
 
-1. **Adapters Layer**: The model implementations live in the adapters layer, allowing them to be used by the core components.
-2. **NLP Services**: The models implement the NLP service interface, making them compatible with existing code.
-3. **Configuration**: Models can be configured through Parlant's configuration system.
-4. **Logging**: Model usage is logged through Parlant's logging system.
+1. **Camada de Adaptadores**: As implementações dos modelos residem na camada de adaptadores, permitindo que sejam usadas pelos componentes principais.
+2. **Serviços NLP**: Os modelos implementam a interface de serviço NLP, tornando-os compatíveis com o código existente.
+3. **Configuração**: Os modelos podem ser configurados através do sistema de configuração do Parlant.
+4. **Registro**: O uso do modelo é registrado através do sistema de registro do Parlant.
 
-## Future Enhancements
+## Melhorias Futuras
 
-Future enhancements to the model integration may include:
+Melhorias futuras para a integração de modelos podem incluir:
 
-1. **Model Fine-tuning**: Support for fine-tuning models for specific tasks.
-2. **Model Quantization**: Support for quantizing models to reduce memory usage.
-3. **Model Caching**: Caching model outputs for improved performance.
-4. **Model Metrics**: Collecting metrics on model performance and usage.
-5. **Multi-modal Models**: Support for models that can handle multiple modalities (text, images, audio, etc.).
+1. **Fine-tuning de Modelos**: Suporte para ajuste fino de modelos para tarefas específicas.
+2. **Quantização de Modelos**: Suporte para quantização de modelos para reduzir o uso de memória.
+3. **Cache de Modelos**: Cache de saídas do modelo para melhor desempenho.
+4. **Métricas de Modelos**: Coleta de métricas sobre desempenho e uso do modelo.
+5. **Modelos Multimodais**: Suporte para modelos que podem lidar com múltiplas modalidades (texto, imagens, áudio, etc.).
 
-## References
+## Referências
 
 - [Llama](https://github.com/facebookresearch/llama)
 - [DeepSeek](https://github.com/deepseek-ai/DeepSeek-Coder)

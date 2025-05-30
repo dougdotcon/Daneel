@@ -1,33 +1,33 @@
-# Collaborative Agents
+# Agentes Colaborativos
 
-This document describes the collaborative agents functionality in the Parlant framework.
+Este documento descreve a funcionalidade de agentes colaborativos no framework Parlant.
 
-## Overview
+## Visão Geral
 
-The collaborative agents module provides a comprehensive set of tools for enabling agents to work together to solve complex problems. It includes:
+O módulo de agentes colaborativos fornece um conjunto abrangente de ferramentas para permitir que os agentes trabalhem juntos para resolver problemas complexos. Inclui:
 
-1. Agent communication protocol for structured message exchange
-2. Team management for organizing agents into teams with specific goals
-3. Role-based agent specialization to enable division of labor
-4. Task delegation and coordination mechanisms for complex problem solving
-5. Consensus mechanisms for collaborative decision making
-6. Shared knowledge and context between agents
+1. Protocolo de comunicação entre agentes para troca estruturada de mensagens
+2. Gerenciamento de equipe para organizar agentes em equipes com objetivos específicos
+3. Especialização de agentes baseada em papéis para permitir divisão de trabalho
+4. Mecanismos de delegação e coordenação de tarefas para resolução de problemas complexos
+5. Mecanismos de consenso para tomada de decisão colaborativa
+6. Conhecimento e contexto compartilhados entre agentes
 
-## Components
+## Componentes
 
-### Agent Communication Protocol
+### Protocolo de Comunicação entre Agentes
 
-The agent communication protocol provides a structured way for agents to exchange messages:
+O protocolo de comunicação entre agentes fornece uma maneira estruturada para os agentes trocarem mensagens:
 
-- Different message types for different purposes (text, commands, tasks, etc.)
-- Message priority levels
-- Support for directed and broadcast messages
-- Message bus for routing messages between agents
+- Diferentes tipos de mensagem para diferentes propósitos (texto, comandos, tarefas, etc.)
+- Níveis de prioridade de mensagem
+- Suporte para mensagens direcionadas e em broadcast
+- Barramento de mensagens para roteamento entre agentes
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.collaborative import AgentCommunicator, MessageBus, MessageType, MessagePriority
+from parlat.collaborative import AgentCommunicator, MessageBus, MessageType, MessagePriority
 
 # Create a message bus
 message_bus = MessageBus()
@@ -57,19 +57,19 @@ await agent1_communicator.broadcast(
 )
 ```
 
-### Team Management
+### Gerenciamento de Equipe
 
-The team management component allows organizing agents into teams:
+O componente de gerenciamento de equipe permite organizar agentes em equipes:
 
-- Creating and managing teams
-- Adding agents to teams with specific roles
-- Team-based communication
-- Role-based permissions and responsibilities
+- Criação e gerenciamento de equipes
+- Adição de agentes a equipes com papéis específicos
+- Comunicação baseada em equipe
+- Permissões e responsabilidades baseadas em papéis
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.collaborative import TeamManager, TeamRole
+from parlat.collaborative import TeamManager, TeamRole
 
 # Create a team manager
 team_manager = TeamManager(agent_store, message_bus, logger)
@@ -108,20 +108,20 @@ await team_manager.broadcast_to_team(
 )
 ```
 
-### Task Delegation and Coordination
+### Delegação e Coordenação de Tarefas
 
-The task delegation and coordination component enables agents to assign and coordinate tasks:
+O componente de delegação e coordenação de tarefas permite que os agentes atribuam e coordenem tarefas:
 
-- Creating and managing tasks
-- Assigning tasks to agents
-- Tracking task status and progress
-- Handling task dependencies
-- Reporting task results
+- Criação e gerenciamento de tarefas
+- Atribuição de tarefas a agentes
+- Rastreamento de status e progresso de tarefas
+- Tratamento de dependências de tarefas
+- Relatório de resultados de tarefas
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.collaborative import TaskManager, TaskStatus, TaskPriority
+from parlat.collaborative import TaskManager, TaskStatus, TaskPriority
 
 # Create a task manager
 task_manager = TaskManager(agent_store, team_manager, message_bus, logger)
@@ -160,19 +160,19 @@ await task_manager.update_task_status(
 )
 ```
 
-### Consensus Mechanisms
+### Mecanismos de Consenso
 
-The consensus mechanisms component enables collaborative decision making:
+O componente de mecanismos de consenso permite a tomada de decisão colaborativa:
 
-- Different consensus types (majority, super majority, unanimous, weighted)
-- Voting on proposals
-- Tracking consensus status
-- Notifying participants of results
+- Diferentes tipos de consenso (maioria, super maioria, unânime, ponderado)
+- Votação em propostas
+- Rastreamento de status de consenso
+- Notificação de participantes sobre resultados
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.collaborative import ConsensusManager, ConsensusType, VoteOption
+from parlat.collaborative import ConsensusManager, ConsensusType, VoteOption
 
 # Create a consensus manager
 consensus_manager = ConsensusManager(agent_store, team_manager, message_bus, logger)
@@ -208,19 +208,19 @@ await consensus_manager.close_consensus(
 )
 ```
 
-### Shared Knowledge
+### Conhecimento Compartilhado
 
-The shared knowledge component enables agents to share knowledge with each other:
+O componente de conhecimento compartilhado permite que os agentes compartilhem conhecimento entre si:
 
-- Different access levels (read, write, admin)
-- Sharing knowledge with individual agents or teams
-- Tracking permissions
-- Notifying agents of shared knowledge
+- Diferentes níveis de acesso (leitura, escrita, administração)
+- Compartilhamento de conhecimento com agentes individuais ou equipes
+- Rastreamento de permissões
+- Notificação de agentes sobre conhecimento compartilhado
 
-Example usage:
+Exemplo de uso:
 
 ```python
-from parlant.collaborative import SharedKnowledgeManager, SharedKnowledgeAccess
+from parlat.collaborative import SharedKnowledgeManager, SharedKnowledgeAccess
 
 # Create a shared knowledge manager
 shared_knowledge_manager = SharedKnowledgeManager(
@@ -249,80 +249,56 @@ has_access = await shared_knowledge_manager.check_access(
     agent_id="agent2",
     required_access=SharedKnowledgeAccess.WRITE,
 )
-
-# List all knowledge shared with an agent
-shared_knowledge = await shared_knowledge_manager.list_shared_knowledge(
-    agent_id="agent2",
-)
 ```
 
-### Collaborative Agent
+## Integração com Parlant
 
-The collaborative agent component extends the base agent system with collaboration capabilities:
+A funcionalidade de agentes colaborativos está integrada com o framework Parlant:
 
-- Team membership and roles
-- Specializations
-- Message handling
-- Task processing
-- Consensus participation
-- Knowledge sharing
+1. **Sistema de Agente**: Os agentes colaborativos estendem o sistema base de agentes
+2. **Gerenciamento de Conhecimento**: O conhecimento compartilhado é armazenado no sistema de gerenciamento de conhecimento
+3. **Prompts**: O contexto colaborativo pode ser incluído em prompts para melhor compreensão
+4. **Ferramentas**: Ferramentas colaborativas permitem que os agentes trabalhem juntos
 
-Example usage:
+## Detalhes de Implementação
 
-```python
-from parlant.collaborative import CollaborativeAgent, CollaborativeAgentConfig, TeamRole
+### Armazenamento de Dados
 
-# Create a collaborative agent configuration
-config = CollaborativeAgentConfig(
-    agent_type="collaborative",
-    name="Development Agent",
-    description="An agent for software development",
-    model_id="gpt-4",
-    team_ids=[team.id],
-    roles={team.id: [TeamRole.SPECIALIST]},
-    specializations=["coding", "testing"],
-    collaboration_mode="proactive",
-)
+O módulo de agentes colaborativos usa o banco de dados de documentos para armazenar:
 
-# Create a collaborative agent
-agent = CollaborativeAgent(
-    agent_id="agent1",
-    config=config,
-    logger=logger,
-    model_manager=model_manager,
-    prompt_manager=prompt_manager,
-    tool_registry=tool_registry,
-    agent_store=agent_store,
-    message_bus=message_bus,
-    team_manager=team_manager,
-    task_manager=task_manager,
-    consensus_manager=consensus_manager,
-    knowledge_manager=knowledge_manager,
-    shared_knowledge_manager=shared_knowledge_manager,
-)
+- Mensagens entre agentes
+- Informações de equipe e membros
+- Tarefas e seu estado
+- Processos de consenso
+- Permissões de conhecimento compartilhado
 
-# Initialize the agent
-await agent.initialize()
+### Processo Colaborativo
 
-# Run the agent with an instruction
-result = await agent.run("Implement a new feature")
-```
+O processo colaborativo segue estas etapas:
 
-## Integration with Parlant
+1. **Formação de Equipe**: Agentes são organizados em equipes com papéis específicos
+2. **Comunicação**: Agentes trocam mensagens para coordenar atividades
+3. **Delegação**: Tarefas são atribuídas a agentes apropriados
+4. **Execução**: Agentes trabalham em suas tarefas atribuídas
+5. **Coordenação**: O progresso é rastreado e ajustes são feitos conforme necessário
+6. **Consenso**: Decisões importantes são tomadas através de processos de consenso
+7. **Compartilhamento**: Conhecimento e resultados são compartilhados entre agentes
 
-The collaborative agents functionality is integrated with the Parlant framework:
+### Considerações de Privacidade
 
-1. **Agent System**: Collaborative agents extend the base agent system
-2. **Knowledge Management**: Collaborative agents can share knowledge using the knowledge management system
-3. **Models**: Collaborative agents use models for generating responses and making decisions
-4. **Tools**: Collaborative agents can use tools to perform actions
+O módulo de agentes colaborativos inclui mecanismos de preservação de privacidade:
 
-## Future Enhancements
+- Controle de acesso granular para conhecimento compartilhado
+- Registro de todas as ações colaborativas
+- Proteção de informações sensíveis
+- Isolamento de dados entre equipes
 
-Potential future enhancements for the collaborative agents module:
+## Melhorias Futuras
 
-1. **Agent Learning**: Allow agents to learn from their collaborative interactions
-2. **Conflict Resolution**: Add mechanisms for resolving conflicts between agents
-3. **Performance Optimization**: Optimize agent team performance based on past interactions
-4. **Dynamic Team Formation**: Enable dynamic team formation based on task requirements
-5. **Multi-Modal Collaboration**: Support collaboration across different modalities (text, code, images, etc.)
+Possíveis melhorias futuras para o módulo de agentes colaborativos:
+
+1. **Aprendizado Colaborativo**: Permitir que agentes aprendam uns com os outros
+2. **Negociação Avançada**: Implementar protocolos mais sofisticados de negociação
+3. **Otimização de Equipe**: Melhorar a formação e composição de equipes
+4. **Resolução de Conflitos**: Adicionar mecanismos para resolver conflitos entre agentes
+5. **Colaboração Multi-Equipe**: Suportar colaboração entre múltiplas equipes
