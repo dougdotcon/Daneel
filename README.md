@@ -211,6 +211,7 @@
   </p>
 </div>
 
+<<<<<<< HEAD
 ```mermaid
 graph TD
     API(🌐 API REST DANEEL) -->|Reagir ao Gatilho| Engine[🧠 Motor de Resposta IA]
@@ -363,6 +364,72 @@ graph TD
     <em>Nota: Os links do repositório serão atualizados quando o projeto for totalmente migrado para Daneel.</em>
   </p>
 </div>
+=======
+### ⚙️ Como funciona o ASIMOV-AGENTS?
+
+```mermaid
+graph TD
+    API(API REST ASIMOV-AGENTS) -->|Reagir ao Gatilho de Sessão| Engine[Motor de Resposta IA]
+    Engine -->|Carregar Terminologia do Domínio| GlossaryStore[(Glossário)]
+    Engine -->|Combinar Diretrizes| GuidelineMatcher[Matcher de Diretrizes]
+    Engine -->|Inferir e Chamar Ferramentas| ToolCaller[Chamador de Ferramentas]
+    Engine -->|Personalizar Mensagem Guiada| MessageComposer[Compositor de Mensagens]
+
+    classDef primary fill:#4f46e5,stroke:#4338ca,color:white;
+    classDef secondary fill:#3b82f6,stroke:#2563eb,color:white;
+
+    class API,Engine primary;
+    class GlossaryStore,GuidelineMatcher,ToolCaller,MessageComposer secondary;
+```
+
+Quando um agente precisa responder a um cliente, o motor do ASIMOV-AGENTS:
+
+1. Avalia a situação
+2. Verifica as diretrizes relevantes
+3. Reúne informações necessárias através de suas ferramentas
+4. Reavalia continuamente sua abordagem com base em suas diretrizes
+5. Implementa mecanismos de autocrítica para garantir respostas alinhadas com o comportamento pretendido
+
+> ***📚 Mais documentação técnica sobre a arquitetura e API estão disponíveis em [docs/](./docs)***.
+
+## 📦 Início Rápido
+
+O ASIMOV-AGENTS vem pré-construído com:
+- Gerenciamento responsivo de sessão (conversa)
+- Mecanismo de detecção de incoerências nas diretrizes
+- Filtragem de conteúdo e proteção contra jailbreak
+- Interface de sandbox integrada para testes comportamentais
+- Clientes de API nativos em Python e TypeScript
+
+```bash
+# Instalação
+$ pip install parlant  # O nome do pacote será atualizado em versões futuras
+
+# Execução
+$ parlant-server run
+
+# Acesse a interface sandbox: http://localhost:8800
+```
+
+## 🎯 Para quem é o ASIMOV-AGENTS?
+
+O ASIMOV-AGENTS é a ferramenta certa para o trabalho se você está construindo um agente de chat baseado em LLM e:
+
+1. 🎯 Seu caso de uso coloca **alta importância na precisão e consistência comportamental**, particularmente em cenários voltados para o cliente
+2. 🔄 Espera-se que seu agente passe por **refinamentos e mudanças comportamentais contínuas**, e você precisa de uma maneira de implementar essas mudanças de forma eficiente e confiante
+3. 📈 Você precisa manter um **conjunto crescente de diretrizes comportamentais**, e precisa mantê-las de forma coerente e com controle de versão
+4. 💬 A experiência conversacional e o engajamento do usuário são preocupações importantes para seu caso de uso, e você deseja **controlar facilmente o fluxo e o tom das conversas**
+
+## ⭐ Dê uma Estrela: Seu Apoio é Importante!
+
+<div align="center">
+
+[![Gráfico de Histórico de Estrelas](https://api.star-history.com/svg?repos=emcie-co/parlant&type=Date)](https://star-history.com/#emcie-co/parlant&Date)
+
+</div>
+
+*Nota: Os links do repositório serão atualizados quando o projeto for totalmente migrado para ASIMOV-AGENTS.*
+>>>>>>> 73b3c258c0c3f547d3f9598c1d89f3abbf8e7ef7
 
 ## 🤔 O que torna o Daneel diferente?
 
@@ -379,12 +446,19 @@ $ daneel guideline create \
     --action "obter o número do pedido e o nome do item e então ajudá-lo a fazer a devolução"
 ```
 
+<<<<<<< HEAD
 Ao dar estrutura às diretrizes comportamentais e _granularizar_ diretrizes (ou seja, fazer de cada diretriz comportamental uma entidade de primeira classe no motor), o motor do Daneel é capaz de oferecer controle, qualidade e eficiência sem precedentes na construção de agentes baseados em LLM:
+=======
+### 🔑 Benefícios das Diretrizes Gerenciadas
+
+Ao dar estrutura às diretrizes comportamentais e _granularizar_ diretrizes (ou seja, fazer de cada diretriz comportamental uma entidade de primeira classe no motor), o motor do ASIMOV-AGENTS oferece:
+>>>>>>> 73b3c258c0c3f547d3f9598c1d89f3abbf8e7ef7
 
 1. 🛡️ **Confiabilidade:** Executando autocrítica focada em tempo real, por diretriz, para garantir que ela seja realmente seguida
-1. 💡 **Explicabilidade:** Fornecendo feedback sobre sua interpretação das diretrizes em cada contexto real, o que ajuda na solução de problemas e melhorias
-1. 🔧 **Manutenibilidade:** Ajudando você a manter um conjunto coerente de diretrizes, detectando e alertando sobre possíveis contradições (grosseiras ou sutis) em suas instruções
+2. 💡 **Explicabilidade:** Fornecendo feedback sobre sua interpretação das diretrizes em cada contexto real, o que ajuda na solução de problemas e melhorias
+3. 🔧 **Manutenibilidade:** Ajudando você a manter um conjunto coerente de diretrizes, detectando e alertando sobre possíveis contradições (grosseiras ou sutis) em suas instruções
 
+<<<<<<< HEAD
 ## 🤖 Funciona com todos os principais provedores de LLM
 - [OpenAI](https://platform.openai.com/docs/overview) (também via [Azure](https://learn.microsoft.com/en-us/azure/ai-services/openai/))
 - [Gemini](https://ai.google.dev/)
@@ -392,9 +466,27 @@ Ao dar estrutura às diretrizes comportamentais e _granularizar_ diretrizes (ou 
 - [Anthropic](https://www.anthropic.com/api) (também via [AWS Bedrock](https://aws.amazon.com/bedrock/))
 - [DeepSeek](https://www.deepseek.com/) (suporte adicionado na v1.5.0)
 - E mais são adicionados regularmente
+=======
+## 🌐 Compatibilidade com Provedores de LLM
+
+O ASIMOV-AGENTS funciona com todos os principais provedores de LLM:
+
+<div align="center">
+
+| Provedor | Plataformas |
+|----------|-------------|
+| [OpenAI](https://platform.openai.com/docs/overview) | Nativo, [Azure](https://learn.microsoft.com/en-us/azure/ai-services/openai/) |
+| [Gemini](https://ai.google.dev/) | Nativo |
+| [Meta Llama 3](https://www.llama.com/) | [Together AI](https://www.together.ai/), [Cerebras](https://cerebras.ai/) |
+| [Anthropic](https://www.anthropic.com/api) | Nativo, [AWS Bedrock](https://aws.amazon.com/bedrock/) |
+| Outros | Novos provedores são adicionados regularmente |
+
+</div>
+>>>>>>> 73b3c258c0c3f547d3f9598c1d89f3abbf8e7ef7
 
 ## 🏷️ Sistema Avançado de Tags e Relacionamentos
 
+<<<<<<< HEAD
 ### Tags para Organização
 O Daneel v2.0.0 introduz um sistema robusto de tags que permite organizar e categorizar:
 - **Agentes**: Agrupe agentes por departamento, função ou características
@@ -458,14 +550,26 @@ Obtenha insights detalhados sobre o uso de ferramentas:
 ## 📚 Aprendendo Daneel
 
 Para começar a aprender e construir com o Daneel, visite nosso [portal de documentação](https://parlant.io/docs/quickstart/introduction).
+=======
+Para começar a aprender e construir com o ASIMOV-AGENTS:
+>>>>>>> 73b3c258c0c3f547d3f9598c1d89f3abbf8e7ef7
 
-Precisa de ajuda? Pergunte-nos qualquer coisa no [Discord](https://discord.gg/duxWqxKk6J). Estamos felizes em responder perguntas e ajudá-lo a começar!
+- 📖 Visite nosso [portal de documentação](https://parlant.io/docs/quickstart/introduction)
+- 💬 Junte-se ao nosso [Discord](https://discord.gg/duxWqxKk6J) para suporte e discussões
+- 🎓 Explore nossos tutoriais guiados e exemplos
 
 *Nota: Os links de documentação serão atualizados quando o projeto for totalmente migrado para Daneel.*
 
+<<<<<<< HEAD
 ## 💻 Exemplos de Uso Avançados
 
 ### Criando Diretrizes com Tags e Relacionamentos
+=======
+## 💻 Exemplo de Uso
+
+Adicionando uma diretriz para um agente—por exemplo, para fazer uma contra-pergunta para obter mais informações quando um cliente faz uma pergunta:
+
+>>>>>>> 73b3c258c0c3f547d3f9598c1d89f3abbf8e7ef7
 ```bash
 # Criar diretriz básica
 daneel guideline create \
@@ -541,6 +645,7 @@ parlant-prepare-migration
 
 ## 👋 Contribuindo
 
+<<<<<<< HEAD
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; margin: 20px 0;">
   <h3 style="margin: 0 0 15px 0; color: white;">🤝 Junte-se à Comunidade</h3>
   <p style="margin: 0; opacity: 0.9; line-height: 1.6;">
@@ -618,4 +723,21 @@ parlant-prepare-migration
     </p>
   </div>
 
+=======
+Usamos o Developer Certificate of Origin padrão do Linux ([DCO.md](DCO.md)), para que, ao contribuir, você confirme que tem os direitos de enviar sua contribuição sob a licença Apache 2.0.
+
+<details>
+  <summary><strong>Como contribuir</strong></summary>
+
+  1. Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para detalhes completos
+  2. Junte-se ao nosso [Discord](https://discord.gg/duxWqxKk6J) para discutir como você pode ajudar
+  3. Inicie uma discussão ou abra uma issue aqui no GitHub
+
+</details>
+
+---
+
+<div align="center">
+  <p>Desenvolvido com ❤️ para a comunidade de IA</p>
+>>>>>>> 73b3c258c0c3f547d3f9598c1d89f3abbf8e7ef7
 </div>
