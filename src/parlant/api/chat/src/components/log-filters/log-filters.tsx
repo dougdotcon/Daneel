@@ -60,7 +60,7 @@ const FilterDialogContent = ({contentChanged, defaultValue}: {contentChanged: (t
 			</div>
 			<div className='buttons flex items-center gap-[16px] justify-end text-[16px] font-normal font-inter'>
 				<DialogClose className='h-[38px] w-[84px] !bg-white text-[#656565] hover:text-[#151515] rounded-[5px] border'>Cancel</DialogClose>
-				<DialogClose onClick={onApplyClick} className='bg-green-main text-white h-[38px] w-[79px] hover:bg-green-hover rounded-[5px]'>
+				<DialogClose onClick={onApplyClick} className='bg-blue-primary text-white h-[38px] w-[79px] hover:bg-blue-hover rounded-[5px]'>
 					Apply
 				</DialogClose>
 			</div>
@@ -250,7 +250,7 @@ const LogFilters = ({
 					<div className='flex flex-col gap-[4px] mt-[9px] pb-[11px] px-[8px]'>
 						{ALL_TYPES.map((type) => (
 							<div key={type} className={twMerge('flex items-center rounded-[3px] h-[24px] py-[4px] ps-[4px] space-x-2 hover:bg-main', sources.includes(type) && '!bg-gray-4')}>
-								<Checkbox id={type} checked={sources?.includes(type)} className='[&_svg]:[stroke:#006E53] border-black rounded-[2px] !bg-white' onCheckedChange={(isChecked) => changeSource(type, !!isChecked)} />
+								<Checkbox id={type} checked={sources?.includes(type)} className='[&_svg]:[stroke:#0053B3] border-black rounded-[2px] !bg-white' onCheckedChange={(isChecked) => changeSource(type, !!isChecked)} />
 								<label className='text-[14px] font-light w-full cursor-pointer flex gap-[8px] !ms-[12px]' htmlFor={type}>
 									<img src={typeOptions[type].icon} alt={type} />
 									{typeOptions[type].label}
@@ -297,7 +297,7 @@ const LogFilters = ({
 								applyFn(sources, level, content);
 								setDropdownOpen(false);
 							}}
-							className='flex-1 ps-[12px] pe-[10px] text-[12px] font-normal !text-white bg-green-main hover:bg-[#005C3F] w-fit max-w-fit h-[35px]'>
+							className='flex-1 ps-[12px] pe-[10px] text-[12px] font-normal !text-white bg-blue-primary hover:bg-[#004494] w-fit max-w-fit h-[35px]'>
 							Apply
 						</Button>
 					</div>

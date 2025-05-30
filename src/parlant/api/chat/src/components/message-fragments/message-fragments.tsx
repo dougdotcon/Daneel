@@ -23,7 +23,7 @@ const MessageFragments = ({fragments, className}: {fragments: {id: string; value
 			</summary>
 			<div className='p-[14px] pb-0 pt-[10px]'>
 				<div className='rounded-[14px]'>
-					<div className='overflow-auto fixed-scroll max-h-[308px] border-[6px] border-[#F5F9F7] bg-[#F5F9F7] rounded-[10px]'>
+					<div className='overflow-auto fixed-scroll max-h-[308px] border-[6px] border-[#F5F9FF] bg-[#F5F9FF] rounded-[10px]'>
 						<ErrorBoundary component={<div>Could not load fragments</div>}>
 							{fragments.map((fragment) => (
 								<MessageFragment key={fragment.id} fragment={fragment} />

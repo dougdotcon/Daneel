@@ -37,7 +37,7 @@
 		--radius: 0.5rem;
 	}
 	.dark {
-		--main: rgb(1, 37, 21);
+		--main: rgb(1, 37, 78);
 	}
 }
 @layer utilities {

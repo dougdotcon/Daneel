@@ -20,26 +20,26 @@ interface Color {
 }
 
 const colors = {
-	green: {dark: 'rgb(80 130 1)', light: 'rgb(80 130 1 / 10%)', extraLight: 'rgb(80 130 1 / 5%)'},
+	blue: {dark: 'rgb(25 118 210)', light: 'rgb(25 118 210 / 10%)', extraLight: 'rgb(25 118 210 / 5%)'},
 	purple: {dark: 'rgb(85 1 104)', light: 'rgb(85 1 104 / 10%)', extraLight: 'rgb(85 1 104 / 5%)'},
 	pink: {dark: 'rgb(155 3 95)', light: 'rgb(155 3 95 / 10%)', extraLight: 'rgb(155 3 95 / 5%)'},
 	orange: {dark: 'rgb(183 99 0)', light: 'rgb(183 99 0 / 10%)', extraLight: 'rgb(183 99 0 / 5%)'},
-	blue: {dark: 'rgb(46 128 108)', light: 'rgb(46 128 108 / 10%)', extraLight: 'rgb(46 128 108 / 5%)'},
+	teal: {dark: 'rgb(0 137 178)', light: 'rgb(0 137 178 / 10%)', extraLight: 'rgb(0 137 178 / 5%)'},
 };
 
 const agentColors: Color[] = [
-	{text: 'white', background: colors.green.dark, outerBackground: colors.green.light},
+	{text: 'white', background: colors.blue.dark, outerBackground: colors.blue.light},
 	{text: 'white', background: colors.purple.dark, outerBackground: colors.purple.light},
 	{text: 'white', background: colors.pink.dark, outerBackground: colors.pink.light},
 	{text: 'white', background: colors.orange.dark, outerBackground: colors.orange.light},
-	{text: 'white', background: colors.blue.dark, outerBackground: colors.blue.light},
+	{text: 'white', background: colors.teal.dark, outerBackground: colors.teal.light},
 ];
 const customerColors: Color[] = [
-	{iconBackground: colors.green.dark, background: colors.green.light, text: colors.green.dark, outerBackground: colors.green.extraLight},
+	{iconBackground: colors.blue.dark, background: colors.blue.light, text: colors.blue.dark, outerBackground: colors.blue.extraLight},
 	{iconBackground: colors.purple.dark, background: colors.purple.light, text: colors.purple.dark, outerBackground: colors.purple.extraLight},
 	{iconBackground: colors.pink.dark, background: colors.pink.light, text: colors.pink.dark, outerBackground: colors.pink.extraLight},
 	{iconBackground: colors.orange.dark, background: colors.orange.light, text: colors.orange.dark, outerBackground: colors.orange.extraLight},
-	{iconBackground: colors.blue.dark, background: colors.blue.light, text: colors.blue.dark, outerBackground: colors.blue.extraLight},
+	{iconBackground: colors.teal.dark, background: colors.teal.light, text: colors.teal.dark, outerBackground: colors.teal.extraLight},
 ];
 
 export const getAvatarColor = (id: string, type: 'agent' | 'customer') => {

@@ -233,17 +233,15 @@ Contribuições são bem-vindas! Veja nosso [Guia de Contribuição](CONTRIBUTIN
 
 ## 📞 Suporte
 
-- [Documentação](https://www.parlant.io/docs)
-- [GitHub Issues](https://github.com/emcie-co/parlant/issues)
-- [Discord](https://discord.gg/duxWqxKk6J)
-- Email: support@parlant.io
+- [GitHub Issues](https://github.com/dougdotcon/parlant/issues)
+- Email: dougdotcon@gmail.com
 
 ---
 
 <div align="center">
 
-Feito com ❤️ pela [Emcie](https://www.emcie.co)
+Feito com ❤️ pela [AsimovTechSolutions](https://asimovtech.systems/)
 
-[Termos de Serviço](https://www.parlant.io/terms) • [Política de Privacidade](https://www.parlant.io/privacy)
+
 
 </div> 
