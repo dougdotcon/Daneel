@@ -4,7 +4,7 @@
 <div style="margin: 30px 0;">
   <img alt="Daneel Logo" src="logo.png" width="120" height="120" style="border-radius: 20px; margin-bottom: 15px;" />
   <h1 style="margin: 15px 0 10px 0; font-size: 2.5em; font-weight: bold; color: #2c3e50;">
-    DANEEL
+    Daneel
   </h1>
   <h3 style="margin: 0 0 20px 0; color: #7f8c8d; font-weight: 400;">
     O Motor de Modelagem de Conversas 💬 ✅
