@@ -1,8 +1,5 @@
 <div align="center">
 
-<!-- Banner Principal -->
-<img alt="Daneel Banner" src="banner.png" width="100%" style="max-width: 800px; border-radius: 12px; margin-bottom: 20px;" />
-
 <!-- Logo e Título -->
 <div style="margin: 30px 0;">
   <img alt="Daneel Logo" src="logo.png" width="120" height="120" style="border-radius: 20px; margin-bottom: 15px;" />
