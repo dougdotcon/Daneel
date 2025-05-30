@@ -31,16 +31,10 @@ O Motor de Modelagem de Conversas Inteligente
 </a>
 </div>
 
-<img src="banner.png" alt="Daneel Banner" width="100%" style="max-width: 900px; border-radius: 20px; margin: 30px 0; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
-
 </div>
 
 <!-- Seção de Avisos Importantes -->
 <div align="center" style="margin: 40px 0;">
-
-> ### 📢 **Importante:** Este projeto está sendo renomeado de PARLANT para DANEEL
-> *A identidade visual e nomes dos pacotes serão atualizados em versões futuras.*
-
 > ### 🎉 **Novidades da v2.0.0 (Janeiro 2025)**
 > ✨ Sistema avançado de tags • 🔗 Relacionamentos entre diretrizes • 📊 Logs em tempo real  
 > 🗣️ API de Utterances • 🔄 Migração automática • 🛠️ Tool Insights aprimorados
