@@ -84,6 +84,67 @@ O Motor de Modelagem de Conversas Inteligente
 
 ---
 
+<!-- Screenshots da Interface -->
+<div align="center">
+
+## 📸 **Interface do Sistema**
+
+<p style="color: #4a5568; margin: 20px 0; font-size: 1.1em;">
+Conheça a interface moderna e intuitiva do Daneel
+</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin: 40px 0;">
+
+<div style="text-align: center;">
+<h4 style="color: #667eea; margin-bottom: 15px;">🏠 Tela Inicial</h4>
+<img src="screenshots/telainicial.png" alt="Tela Inicial do Daneel" width="100%" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin-bottom: 10px;" />
+<p style="color: #666; font-size: 0.9em; margin: 0;">Interface de boas-vindas com navegação intuitiva</p>
+</div>
+
+<div style="text-align: center;">
+<h4 style="color: #667eea; margin-bottom: 15px;">💬 Interface de Chat</h4>
+<img src="screenshots/chat.png" alt="Interface de Chat do Daneel" width="100%" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin-bottom: 10px;" />
+<p style="color: #666; font-size: 0.9em; margin: 0;">Chat inteligente com recursos avançados</p>
+</div>
+
+<div style="text-align: center;">
+<h4 style="color: #667eea; margin-bottom: 15px;">📊 Dashboard Administrativo</h4>
+<img src="screenshots/dashboard.png" alt="Dashboard do Daneel" width="100%" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin-bottom: 10px;" />
+<p style="color: #666; font-size: 0.9em; margin: 0;">Painel de controle completo para administradores</p>
+</div>
+
+</div>
+
+### ✨ **Principais Características da Interface:**
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
+
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; color: white;">
+<h4>🎨 Design Moderno</h4>
+<p>Interface limpa e profissional sem elementos desnecessários</p>
+</div>
+
+<div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 20px; border-radius: 15px; color: white;">
+<h4>📱 Responsiva</h4>
+<p>Funciona perfeitamente em desktop, tablet e mobile</p>
+</div>
+
+<div style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 20px; border-radius: 15px; color: white;">
+<h4>⚡ Rápida</h4>
+<p>Carregamento instantâneo e navegação fluida</p>
+</div>
+
+<div style="background: linear-gradient(135deg, #43e97b, #38f9d7); padding: 20px; border-radius: 15px; color: white;">
+<h4>🔧 Completa</h4>
+<p>Sistema de administração com todas as funcionalidades</p>
+</div>
+
+</div>
+
+</div>
+
+---
+
 <!-- Seção Principal: O que é Modelagem de Conversas -->
 <div align="center">
 
@@ -202,6 +263,121 @@ A <strong>Modelagem de Conversas (MC)</strong> é uma abordagem poderosa e confi
 
 ---
 
+<!-- Funcionalidades Implementadas -->
+<div align="center">
+
+## 🚀 **Funcionalidades Implementadas**
+
+<p style="color: #4a5568; margin: 20px 0; font-size: 1.1em;">
+Sistema completo de administração e chat inteligente
+</p>
+
+</div>
+
+### 🎛️ **Sistema de Administração Completo**
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin: 30px 0;">
+
+<div style="background: linear-gradient(45deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; color: white;">
+<h4>🤖 **Gerenciamento de Agentes**</h4>
+<p>• CRUD completo de agentes IA<br>
+• Sistema de fallback inteligente<br>
+• Modais avançados de configuração<br>
+• Filtros e busca em tempo real</p>
+</div>
+
+<div style="background: linear-gradient(45deg, #f093fb, #f5576c); padding: 20px; border-radius: 15px; color: white;">
+<h4>⚡ **Configuração LLM**</h4>
+<p>• GPT-4o e GPT-4o Mini<br>
+• Claude 3.5 Sonnet<br>
+• Gemini 1.5 Pro<br>
+• Llama 3.1 via Ollama</p>
+</div>
+
+<div style="background: linear-gradient(45deg, #4facfe, #00f2fe); padding: 20px; border-radius: 15px; color: white;">
+<h4>📊 **Dashboard Avançado**</h4>
+<p>• Métricas em tempo real<br>
+• Ações rápidas<br>
+• Cards informativos<br>
+• Navegação intuitiva</p>
+</div>
+
+<div style="background: linear-gradient(45deg, #43e97b, #38f9d7); padding: 20px; border-radius: 15px; color: white;">
+<h4>🎯 **Agentes Pré-Prontos**</h4>
+<p>• 8 templates especializados<br>
+• Criação automática<br>
+• Categorização inteligente<br>
+• Estimativas de tempo</p>
+</div>
+
+<div style="background: linear-gradient(45deg, #fa709a, #fee140); padding: 20px; border-radius: 15px; color: white;">
+<h4>📋 **Logs e Monitoramento**</h4>
+<p>• Monitoramento em tempo real<br>
+• Filtros avançados<br>
+• Histórico completo<br>
+• Análise de performance</p>
+</div>
+
+<div style="background: linear-gradient(45deg, #a8edea, #fed6e3); padding: 20px; border-radius: 15px; color: #2d3748;">
+<h4>💾 **Sistema de Backup**</h4>
+<p>• Backup automático<br>
+• Restore inteligente<br>
+• Versionamento<br>
+• Proteção de dados</p>
+</div>
+
+</div>
+
+### 💬 **Interface de Chat Inteligente**
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
+
+<div style="background: #e6fffa; border-left: 5px solid #38b2ac; padding: 20px; border-radius: 10px;">
+<h4>🎨 **Design Moderno**</h4>
+<p>Interface limpa e profissional sem emojis desnecessários</p>
+</div>
+
+<div style="background: #f0f8ff; border-left: 5px solid #3182ce; padding: 20px; border-radius: 10px;">
+<h4>⚡ **Respostas Rápidas**</h4>
+<p>Sistema otimizado para conversas fluidas e naturais</p>
+</div>
+
+<div style="background: #f0fff4; border-left: 5px solid #48bb78; padding: 20px; border-radius: 10px;">
+<h4>📱 **Responsivo**</h4>
+<p>Funciona perfeitamente em todos os dispositivos</p>
+</div>
+
+<div style="background: #fffaf0; border-left: 5px solid #ed8936; padding: 20px; border-radius: 10px;">
+<h4>🔒 **Seguro**</h4>
+<p>Tratamento robusto de erros e fallbacks inteligentes</p>
+</div>
+
+</div>
+
+### 🛠️ **Recursos Técnicos**
+
+<div style="background: #f7fafc; padding: 25px; border-radius: 15px; margin: 20px 0;">
+
+**🔧 Tecnologias Utilizadas:**
+- **Frontend:** React + TypeScript + Vite
+- **UI:** Tailwind CSS + Shadcn/ui
+- **Backend:** Python + FastAPI
+- **Banco de Dados:** SQLite/PostgreSQL
+- **LLMs:** OpenAI, Anthropic, Google, Ollama
+
+**✅ Funcionalidades Ativas:**
+- ✅ **9/15 páginas administrativas** funcionais
+- ✅ **Sistema de agentes** com CRUD completo
+- ✅ **Configuração LLM** com 5 provedores
+- ✅ **Dashboard** com métricas em tempo real
+- ✅ **Interface de chat** moderna e responsiva
+- ✅ **Sistema de backup** e restore
+- ✅ **Logs** e monitoramento avançado
+
+</div>
+
+---
+
 <!-- Principais Recursos -->
 <div align="center">
 
@@ -307,17 +483,17 @@ O Daneel funciona com os principais provedores de LLM:
 
 <div style="background: #00d2ff; background: linear-gradient(45deg, #00d2ff, #3a7bd5); padding: 15px; border-radius: 10px; color: white; text-align: center;">
 <strong>🤖 OpenAI</strong><br>
-<small>GPT-3.5, GPT-4</small>
+<small>GPT-4o, GPT-4o Mini, GPT-4</small>
 </div>
 
 <div style="background: #ff9a9e; background: linear-gradient(45deg, #ff9a9e, #fecfef); padding: 15px; border-radius: 10px; color: white; text-align: center;">
 <strong>🧠 Anthropic</strong><br>
-<small>Claude</small>
+<small>Claude 3.5 Sonnet</small>
 </div>
 
 <div style="background: #a8edea; background: linear-gradient(45deg, #a8edea, #fed6e3); padding: 15px; border-radius: 10px; color: #2d3748; text-align: center;">
 <strong>🔍 Google</strong><br>
-<small>Gemini</small>
+<small>Gemini 1.5 Pro</small>
 </div>
 
 <div style="background: #d299c2; background: linear-gradient(45deg, #d299c2, #fef9d7); padding: 15px; border-radius: 10px; color: #2d3748; text-align: center;">
@@ -341,16 +517,33 @@ O Daneel funciona com os principais provedores de LLM:
 
 ## 📦 **Instalação**
 
-<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 30px; border-radius: 20px; margin: 30px 0; max-width: 600px; color: white;">
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 30px; border-radius: 20px; margin: 30px 0; max-width: 800px; color: white;">
 
-<h3 style="margin-top: 0;">⚡ Instalação Rápida</h3>
+<h3 style="margin-top: 0;">⚡ Instalação e Execução</h3>
 
+**📦 Instalação:**
 ```bash
 pip install parlant
 ```
 
+**🚀 Executar Interface Web:**
+```bash
+# Navegar para o diretório do chat
+cd src/parlant/api/chat
+
+# Instalar dependências
+npm install
+
+# Executar em modo desenvolvimento
+npm run dev
+```
+
+**🌐 Acessar o Sistema:**
+- **Chat:** http://127.0.0.1:8002/chat/
+- **Admin:** http://127.0.0.1:8002/chat/admin
+
 <p style="margin-bottom: 0; font-size: 0.9em; opacity: 0.9;">
-💡 Requisitos: Python 3.8+ 
+💡 Requisitos: Python 3.8+ e Node.js 16+
 </p>
 
 </div>
@@ -674,15 +867,36 @@ Email: dougdotcon@gmail.com
 
 <div align="center" style="margin-top: 60px;">
 
-<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 40px; border-radius: 20px; color: white; max-width: 600px;">
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 40px; border-radius: 20px; color: white; max-width: 700px;">
 
-<h3 style="margin-top: 0;">❤️ Feito com amor pela</h3>
+<h3 style="margin-top: 0;">🎯 Status do Projeto</h3>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0;">
+
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
+<h4 style="margin: 0 0 10px 0;">🚀 Interface Web</h4>
+<p style="margin: 0; font-size: 0.9em;">100% Funcional</p>
+</div>
+
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
+<h4 style="margin: 0 0 10px 0;">🎛️ Admin</h4>
+<p style="margin: 0; font-size: 0.9em;">9/15 Páginas Ativas</p>
+</div>
+
+<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
+<h4 style="margin: 0 0 10px 0;">🤖 LLMs</h4>
+<p style="margin: 0; font-size: 0.9em;">5 Provedores</p>
+</div>
+
+</div>
+
+<h3 style="margin: 30px 0 10px 0;">❤️ Desenvolvido por</h3>
 
 <a href="https://asimovtech.systems/" style="color: white; text-decoration: none; font-size: 1.3em; font-weight: bold;">
 🚀 AsimovTechSolutions
 </a>
 
-<p style="margin-bottom: 0; opacity: 0.9; margin-top: 15px;">
+<p style="margin: 15px 0 0 0; opacity: 0.9;">
 Transformando conversas em experiências extraordinárias
 </p>
 
@@ -690,6 +904,9 @@ Transformando conversas em experiências extraordinárias
 
 <div style="margin-top: 30px; opacity: 0.6;">
 <p>© 2025 AsimovTechSolutions. Todos os direitos reservados.</p>
+<p style="font-size: 0.8em; margin-top: 10px;">
+🤖 Daneel - Sistema de Modelagem de Conversas Inteligente
+</p>
 </div>
 
-</div> 
+</div>
