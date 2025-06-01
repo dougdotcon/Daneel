@@ -38,7 +38,8 @@ from parlant.core.persistence.document_database_helper import (
     DocumentStoreMigrationHelper,
 )
 from parlant.core.tags import TagId
-from parlant.core.tools import ToolId
+# from parlant.core.tools import ToolId
+ToolId = str  # Temporary fix for circular import
 
 ContextVariableId = NewType("ContextVariableId", str)
 ContextVariableValueId = NewType("ContextVariableValueId", str)

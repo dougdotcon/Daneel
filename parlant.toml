@@ -1,0 +1,18 @@
+# Parlant Configuration File
+
+[server]
+port = 8000
+log_level = "info"
+
+[modules]
+# List of modules to load
+# modules = []
+
+[database]
+# Database configuration
+type = "json_file"
+path = "./data"
+
+[tools]
+# Tool configuration
+enabled = true

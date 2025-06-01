@@ -435,3 +435,248 @@ def normalize_tool_argument(parameter_type: Any, argument: Any) -> Any:
         raise ToolExecutionError(
             f"Failed to convert argument '{argument}' into a {parameter_type}"
         ) from exc
+
+
+# Tool Registry classes and functions
+
+class ToolCategory(str, enum.Enum):
+    """Categories of tools."""
+    CODE = "code"
+    WEB = "web"
+    FILESYSTEM = "filesystem"
+    UTILS = "utils"
+    CUSTOM = "custom"
+
+
+@dataclass
+class ToolMetadata:
+    """Metadata for a tool."""
+    id: str
+    name: str
+    description: str
+    category: ToolCategory
+    version: str
+    author: str
+    tags: list[str]
+    documentation_url: Optional[str] = None
+
+    def to_dict(self) -> dict[str, Any]:
+        """Convert metadata to a dictionary."""
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "category": self.category,
+            "version": self.version,
+            "author": self.author,
+            "tags": self.tags,
+            "documentation_url": self.documentation_url,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> "ToolMetadata":
+        """Create metadata from a dictionary."""
+        return cls(
+            id=data["id"],
+            name=data["name"],
+            description=data["description"],
+            category=ToolCategory(data["category"]),
+            version=data["version"],
+            author=data["author"],
+            tags=data["tags"],
+            documentation_url=data.get("documentation_url"),
+        )
+
+
+class ToolRegistry:
+    """Registry for tools in Parlant.
+
+    This class manages the registration, discovery, and access of tools.
+    It provides a unified interface for accessing tools from different sources.
+    """
+
+    def __init__(
+        self,
+        logger: Any,  # Logger,
+        tool_service: LocalToolService,
+    ):
+        """Initialize the tool registry.
+
+        Args:
+            logger: Logger instance
+            tool_service: Local tool service
+        """
+        self.logger = logger
+        self.tool_service = tool_service
+        self._tools: dict[str, ToolMetadata] = {}
+        self._tool_modules: dict[str, str] = {}
+
+    async def register_tool(
+        self,
+        tool_id: str,
+        module_path: str,
+        name: str,
+        description: str,
+        parameters: Mapping[str, Union[ToolParameterDescriptor, tuple[ToolParameterDescriptor, ToolParameterOptions]]],
+        required: Sequence[str],
+        category: ToolCategory,
+        version: str = "1.0.0",
+        author: str = "Parlant",
+        tags: list[str] = None,
+        documentation_url: Optional[str] = None,
+        consequential: bool = False,
+    ) -> Tool:
+        """Register a tool with the registry."""
+        # Create tool metadata
+        metadata = ToolMetadata(
+            id=tool_id,
+            name=name,
+            description=description,
+            category=category,
+            version=version,
+            author=author,
+            tags=tags or [],
+            documentation_url=documentation_url,
+        )
+
+        # Register the tool with the local tool service
+        tool = await self.tool_service.create_tool(
+            name=tool_id,
+            module_path=module_path,
+            description=description,
+            parameters=parameters,
+            required=required,
+            consequential=consequential,
+        )
+
+        # Store the tool metadata and module path
+        self._tools[tool_id] = metadata
+        self._tool_modules[tool_id] = module_path
+
+        if hasattr(self.logger, 'info'):
+            self.logger.info(f"Registered tool: {tool_id}")
+
+        return tool
+
+    async def get_tool(self, tool_id: str) -> Tool:
+        """Get a tool by ID."""
+        try:
+            return await self.tool_service.read_tool(tool_id)
+        except Exception as e:
+            if hasattr(self.logger, 'error'):
+                self.logger.error(f"Failed to get tool {tool_id}: {e}")
+            raise ToolError(tool_id, f"Tool not found: {tool_id}")
+
+    async def list_tools(
+        self,
+        category: Optional[ToolCategory] = None,
+        tags: Optional[list[str]] = None,
+    ) -> list[Tool]:
+        """List tools."""
+        tools = await self.tool_service.list_tools()
+
+        if category:
+            # Filter by category
+            tool_ids = [
+                tool_id for tool_id, metadata in self._tools.items()
+                if metadata.category == category
+            ]
+            tools = [tool for tool in tools if tool.name in tool_ids]
+
+        if tags:
+            # Filter by tags
+            tool_ids = [
+                tool_id for tool_id, metadata in self._tools.items()
+                if all(tag in metadata.tags for tag in tags)
+            ]
+            tools = [tool for tool in tools if tool.name in tool_ids]
+
+        return list(tools)
+
+    async def call_tool(
+        self,
+        tool_id: str,
+        context: ToolContext,
+        arguments: Mapping[str, Any],
+    ) -> ToolResult:
+        """Call a tool."""
+        try:
+            return await self.tool_service.call_tool(tool_id, context, arguments)
+        except Exception as e:
+            if hasattr(self.logger, 'error'):
+                self.logger.error(f"Failed to call tool {tool_id}: {e}")
+            raise ToolExecutionError(tool_id, f"Tool call failed: {e}")
+
+    async def get_tool_metadata(self, tool_id: str) -> ToolMetadata:
+        """Get metadata for a tool."""
+        if tool_id not in self._tools:
+            if hasattr(self.logger, 'error'):
+                self.logger.error(f"Tool metadata not found: {tool_id}")
+            raise ToolError(tool_id, f"Tool metadata not found: {tool_id}")
+
+        return self._tools[tool_id]
+
+
+def tool(
+    id: str,
+    name: str,
+    description: str,
+    parameters: dict[str, dict[str, Any]],
+    required: list[str],
+    category: ToolCategory,
+    version: str = "1.0.0",
+    author: str = "Parlant",
+    tags: list[str] = None,
+    documentation_url: Optional[str] = None,
+    consequential: bool = False,
+) -> Callable[[Callable], Callable]:
+    """Decorator for registering a function as a tool."""
+    def decorator(func: Callable) -> Callable:
+        # Convert parameters to the format expected by the tool service
+        tool_parameters = {}
+        for param_name, param_def in parameters.items():
+            param_type = param_def.get("type", "string")
+            param_desc = ToolParameterDescriptor(
+                type=param_type,
+                description=param_def.get("description", ""),
+            )
+
+            if param_type == "array":
+                param_desc["item_type"] = param_def.get("item_type", "string")
+
+            if "enum" in param_def:
+                param_desc["enum"] = param_def["enum"]
+
+            if "examples" in param_def:
+                param_desc["examples"] = param_def["examples"]
+
+            param_options = ToolParameterOptions(
+                hidden=param_def.get("hidden", False),
+                source=param_def.get("source", "any"),
+                description=param_def.get("description"),
+                significance=param_def.get("significance"),
+                examples=param_def.get("examples", []),
+                precedence=param_def.get("precedence"),
+                display_name=param_def.get("display_name"),
+            )
+
+            tool_parameters[param_name] = (param_desc, param_options)
+
+        # Store the tool metadata on the function
+        func.__tool_metadata__ = {
+            "id": id,
+            "name": name,
+            "description": description,
+            "parameters": tool_parameters,
+            "required": required,
+            "category": category,
+            "version": version,
+            "author": author,
+            "tags": tags or [],
+            "documentation_url": documentation_url,
+            "consequential": consequential,
+        }
+
+        return func
+
+    return decorator

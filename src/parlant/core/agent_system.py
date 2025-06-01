@@ -77,7 +77,7 @@ class AgentConfig:
 
 class AgentSystem(ABC):
     """Base class for agent systems."""
-    
+
     def __init__(
         self,
         agent_id: AgentId,
@@ -90,7 +90,7 @@ class AgentSystem(ABC):
         workspace_dir: Optional[str] = None,
     ):
         """Initialize the agent system.
-        
+
         Args:
             agent_id: ID of the agent
             config: Configuration for the agent
@@ -109,70 +109,70 @@ class AgentSystem(ABC):
         self.tool_registry = tool_registry
         self.agent_store = agent_store
         self.workspace_dir = workspace_dir or os.path.join(os.getcwd(), "workspace", str(agent_id))
-        
+
         # Create workspace directory if it doesn't exist
         os.makedirs(self.workspace_dir, exist_ok=True)
-        
+
         self.state = AgentState.IDLE
         self.current_task: Optional[asyncio.Task] = None
         self.interrupt_requested = False
-        
+
     @abstractmethod
     async def initialize(self) -> None:
         """Initialize the agent system."""
         pass
-        
+
     @abstractmethod
     async def run(self, instruction: str) -> str:
         """Run the agent with an instruction.
-        
+
         Args:
             instruction: Instruction for the agent
-            
+
         Returns:
             Result of the agent run
         """
         pass
-        
+
     @abstractmethod
     async def stop(self) -> None:
         """Stop the agent."""
         pass
-        
+
     async def pause(self) -> None:
         """Pause the agent."""
         if self.state == AgentState.RUNNING:
             self.state = AgentState.PAUSED
             self.logger.info(f"Agent {self.agent_id} paused")
-            
+
     async def resume(self) -> None:
         """Resume the agent."""
         if self.state == AgentState.PAUSED:
             self.state = AgentState.RUNNING
             self.logger.info(f"Agent {self.agent_id} resumed")
-            
+
     async def interrupt(self) -> None:
         """Interrupt the agent."""
         if self.state == AgentState.RUNNING:
             self.interrupt_requested = True
             self.logger.info(f"Agent {self.agent_id} interrupt requested")
-            
+
     async def get_state(self) -> AgentState:
         """Get the current state of the agent.
-        
+
         Returns:
             Current state of the agent
         """
         return self.state
-        
+
     async def get_context(self) -> AgentContext:
         """Get the context of the agent.
-        
+
         Returns:
             Context of the agent
         """
         model = await self.model_manager.get_model(self.config.model_id)
-        
+
         return AgentContext(
             agent_id=self.agent_id,
             workspace_dir=self.workspace_dir,
@@ -182,16 +182,16 @@ class AgentSystem(ABC):
             environment=self.config.environment,
             metadata=self.config.metadata,
         )
-        
+
     async def update_config(self, config: AgentConfig) -> None:
         """Update the configuration of the agent.
-        
+
         Args:
             config: New configuration for the agent
         """
         self.config = config
         self.logger.info(f"Agent {self.agent_id} configuration updated")
-        
+
     async def cleanup(self) -> None:
         """Clean up resources used by the agent."""
         if self.current_task and not self.current_task.done():
@@ -200,14 +200,14 @@ class AgentSystem(ABC):
                 await self.current_task
             except asyncio.CancelledError:
                 pass
-            
+
         self.state = AgentState.STOPPED
         self.logger.info(f"Agent {self.agent_id} cleaned up")
 
 
 class AgentSystemFactory:
     """Factory for creating agent systems."""
-    
+
     def __init__(
         self,
         logger: Logger,
@@ -217,7 +217,7 @@ class AgentSystemFactory:
         agent_store: AgentStore,
     ):
         """Initialize the agent system factory.
-        
+
         Args:
             logger: Logger instance
             model_manager: Model manager
@@ -231,35 +231,35 @@ class AgentSystemFactory:
         self.tool_registry = tool_registry
         self.agent_store = agent_store
         self.agent_system_types: Dict[AgentType, Type[AgentSystem]] = {}
-        
+
     def register_agent_system_type(self, agent_type: AgentType, agent_system_class: Type[AgentSystem]) -> None:
         """Register an agent system type.
-        
+
         Args:
             agent_type: Type of the agent
             agent_system_class: Class for the agent system
         """
         self.agent_system_types[agent_type] = agent_system_class
         self.logger.info(f"Registered agent system type: {agent_type}")
-        
+
     async def create_agent_system(self, agent_id: AgentId, config: AgentConfig) -> AgentSystem:
         """Create an agent system.
-        
+
         Args:
             agent_id: ID of the agent
             config: Configuration for the agent
-            
+
         Returns:
             Created agent system
-            
+
         Raises:
             ValueError: If the agent type is not registered
         """
         if config.agent_type not in self.agent_system_types:
             raise ValueError(f"Agent type not registered: {config.agent_type}")
-            
+
         agent_system_class = self.agent_system_types[config.agent_type]
-        
+
         agent_system = agent_system_class(
             agent_id=agent_id,
             config=config,
@@ -269,9 +269,9 @@ class AgentSystemFactory:
             tool_registry=self.tool_registry,
             agent_store=self.agent_store,
         )
-        
+
         await agent_system.initialize()
-        
+
         self.logger.info(f"Created agent system: {agent_id} ({config.agent_type})")
-        
+
         return agent_system

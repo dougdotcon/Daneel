@@ -34,6 +34,7 @@ from parlant.api import tags
 from parlant.api import customers
 from parlant.api import logs
 from parlant.api import utterances
+from parlant.api import system_stats
 from parlant.core.context_variables import ContextVariableStore
 from parlant.core.contextual_correlator import ContextualCorrelator
 from parlant.core.agents import AgentStore
@@ -287,6 +288,15 @@ async def create_api_app(container: Container) -> ASGIApplication:
     api_app.include_router(
         router=logs.create_router(
             websocket_logger,
+        )
+    )
+
+    api_app.include_router(
+        router=system_stats.create_router(
+            agent_store=agent_store,
+            session_store=session_store,
+            customer_store=customer_store,
+            guideline_store=guideline_store,
         )
     )
 

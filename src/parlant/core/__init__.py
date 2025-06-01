@@ -14,7 +14,7 @@
 
 """Agent system for Parlant."""
 
-from parlant.core.agents.agent_system import (
+from parlant.core.agent_system import (
     AgentConfig,
     AgentContext,
     AgentState,
