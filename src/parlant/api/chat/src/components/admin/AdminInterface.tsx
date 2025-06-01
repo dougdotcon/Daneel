@@ -46,6 +46,7 @@ import SetupWizardPage from './SetupWizardPage';
 import DefaultAgentsSetup from './DefaultAgentsSetup';
 import InterfaceSettingsPage from './InterfaceSettingsPage';
 import DataManagementPage from './DataManagementPage';
+import DefaultAgentsPage from './DefaultAgentsPage';
 
 interface AdminInterfaceProps {
   onNavigateToChat?: () => void;
@@ -396,7 +397,7 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat, onNav
       case 'agents':
         return <AgentsPage />;
       case 'default-agents':
-        return renderPlaceholderPage('Agentes Pré-Prontos', 'Criar agentes especializados automaticamente');
+        return <DefaultAgentsPage />;
       case 'guidelines':
         return renderPlaceholderPage('Guidelines', 'Gerencie regras de comportamento dos agentes');
       case 'context-variables':

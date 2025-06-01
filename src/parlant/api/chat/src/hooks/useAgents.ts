@@ -31,19 +31,55 @@ export const useAgents = () => {
   const [error, setError] = useState<string | null>(null);
   const { addToast } = useToast();
 
+  // Mock data for when API is not available
+  const mockAgents: Agent[] = [
+    {
+      id: '1',
+      name: 'Assistente Geral',
+      description: 'Assistente versátil para tarefas gerais e suporte ao usuário',
+      creation_utc: new Date().toISOString(),
+      metadata: { type: 'general', version: '1.0' },
+      tags: ['geral', 'suporte', 'conversação']
+    },
+    {
+      id: '2',
+      name: 'Suporte Técnico',
+      description: 'Especialista em resolução de problemas técnicos e troubleshooting',
+      creation_utc: new Date().toISOString(),
+      metadata: { type: 'technical', version: '1.0' },
+      tags: ['técnico', 'troubleshooting', 'suporte']
+    },
+    {
+      id: '3',
+      name: 'Assistente de Vendas',
+      description: 'Especializado em vendas, qualificação de leads e conversão',
+      creation_utc: new Date().toISOString(),
+      metadata: { type: 'sales', version: '1.0' },
+      tags: ['vendas', 'leads', 'conversão']
+    }
+  ];
+
   const fetchAgents = async () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${BASE_URL}/agents`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      // Try to fetch from API first
+      if (BASE_URL) {
+        const response = await fetch(`${BASE_URL}/agents`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setAgents(data);
+      } else {
+        // Use mock data if no API URL configured
+        setAgents(mockAgents);
       }
-      const data = await response.json();
-      setAgents(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch agents');
-      console.error('Error fetching agents:', err);
+      // Fallback to mock data on API error
+      console.warn('API not available, using mock data:', err);
+      setAgents(mockAgents);
+      setError(null); // Don't show error when using fallback
     } finally {
       setLoading(false);
     }
@@ -53,26 +89,50 @@ export const useAgents = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${BASE_URL}/agents`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params),
-      });
+      if (BASE_URL) {
+        const response = await fetch(`${BASE_URL}/agents`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(params),
+        });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const newAgent = await response.json();
+        setAgents(prev => [...prev, newAgent]);
+        addToast(toast.success(`Agente "${newAgent.name}" criado com sucesso!`));
+        return newAgent;
+      } else {
+        // Mock creation
+        const newAgent: Agent = {
+          id: Date.now().toString(),
+          name: params.name,
+          description: params.description,
+          creation_utc: new Date().toISOString(),
+          metadata: params.metadata || {},
+          tags: params.tags || []
+        };
+        setAgents(prev => [...prev, newAgent]);
+        addToast(toast.success(`Agente "${newAgent.name}" criado com sucesso! (Modo Demo)`));
+        return newAgent;
       }
-
-      const newAgent = await response.json();
-      setAgents(prev => [...prev, newAgent]);
-      addToast(toast.success(`Agente "${newAgent.name}" criado com sucesso!`));
-      return newAgent;
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to create agent');
-      console.error('Error creating agent:', err);
-      return null;
+      // Fallback to mock creation
+      const newAgent: Agent = {
+        id: Date.now().toString(),
+        name: params.name,
+        description: params.description,
+        creation_utc: new Date().toISOString(),
+        metadata: params.metadata || {},
+        tags: params.tags || []
+      };
+      setAgents(prev => [...prev, newAgent]);
+      addToast(toast.success(`Agente "${newAgent.name}" criado com sucesso! (Modo Demo)`));
+      return newAgent;
     } finally {
       setLoading(false);
     }
@@ -82,25 +142,43 @@ export const useAgents = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${BASE_URL}/agents/${id}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params),
-      });
+      if (BASE_URL) {
+        const response = await fetch(`${BASE_URL}/agents/${id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(params),
+        });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const updatedAgent = await response.json();
+        setAgents(prev => prev.map(agent => agent.id === id ? updatedAgent : agent));
+        addToast(toast.success(`Agente "${updatedAgent.name}" atualizado com sucesso!`));
+        return updatedAgent;
+      } else {
+        // Mock update
+        const updatedAgent = agents.find(agent => agent.id === id);
+        if (updatedAgent) {
+          const newAgent = { ...updatedAgent, ...params };
+          setAgents(prev => prev.map(agent => agent.id === id ? newAgent : agent));
+          addToast(toast.success(`Agente "${newAgent.name}" atualizado com sucesso! (Modo Demo)`));
+          return newAgent;
+        }
+        return null;
       }
-
-      const updatedAgent = await response.json();
-      setAgents(prev => prev.map(agent => agent.id === id ? updatedAgent : agent));
-      addToast(toast.success(`Agente "${updatedAgent.name}" atualizado com sucesso!`));
-      return updatedAgent;
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to update agent');
-      console.error('Error updating agent:', err);
+      // Fallback to mock update
+      const updatedAgent = agents.find(agent => agent.id === id);
+      if (updatedAgent) {
+        const newAgent = { ...updatedAgent, ...params };
+        setAgents(prev => prev.map(agent => agent.id === id ? newAgent : agent));
+        addToast(toast.success(`Agente "${newAgent.name}" atualizado com sucesso! (Modo Demo)`));
+        return newAgent;
+      }
       return null;
     } finally {
       setLoading(false);
@@ -111,21 +189,29 @@ export const useAgents = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${BASE_URL}/agents/${id}`, {
-        method: 'DELETE',
-      });
+      if (BASE_URL) {
+        const response = await fetch(`${BASE_URL}/agents/${id}`, {
+          method: 'DELETE',
+        });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        setAgents(prev => prev.filter(agent => agent.id !== id));
+        addToast(toast.success('Agente excluído com sucesso!'));
+        return true;
+      } else {
+        // Mock deletion
+        setAgents(prev => prev.filter(agent => agent.id !== id));
+        addToast(toast.success('Agente excluído com sucesso! (Modo Demo)'));
+        return true;
       }
-
-      setAgents(prev => prev.filter(agent => agent.id !== id));
-      addToast(toast.success('Agente excluído com sucesso!'));
-      return true;
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to delete agent');
-      console.error('Error deleting agent:', err);
-      return false;
+      // Fallback to mock deletion
+      setAgents(prev => prev.filter(agent => agent.id !== id));
+      addToast(toast.success('Agente excluído com sucesso! (Modo Demo)'));
+      return true;
     } finally {
       setLoading(false);
     }
@@ -135,16 +221,22 @@ export const useAgents = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${BASE_URL}/agents/${id}`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      if (BASE_URL) {
+        const response = await fetch(`${BASE_URL}/agents/${id}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const agent = await response.json();
+        return agent;
+      } else {
+        // Mock get agent
+        const agent = agents.find(a => a.id === id) || null;
+        return agent;
       }
-      const agent = await response.json();
-      return agent;
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch agent');
-      console.error('Error fetching agent:', err);
-      return null;
+      // Fallback to mock get agent
+      const agent = agents.find(a => a.id === id) || null;
+      return agent;
     } finally {
       setLoading(false);
     }

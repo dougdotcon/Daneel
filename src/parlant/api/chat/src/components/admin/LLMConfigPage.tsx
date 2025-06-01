@@ -20,7 +20,7 @@ import LLMProviderModal from './modals/LLMProviderModal';
 interface LLMProvider {
   id: string;
   name: string;
-  type: 'openai' | 'anthropic' | 'ollama' | 'custom';
+  type: 'openai' | 'anthropic' | 'google' | 'ollama' | 'custom';
   status: 'connected' | 'disconnected' | 'testing';
   apiKey?: string;
   baseUrl?: string;
@@ -70,8 +70,10 @@ const LLMProviderCard: React.FC<LLMProviderCardProps> = ({ provider, onEdit, onD
         return <Zap className="h-6 w-6 text-green-500" />;
       case 'anthropic':
         return <Cpu className="h-6 w-6 text-orange-500" />;
+      case 'google':
+        return <Zap className="h-6 w-6 text-blue-500" />;
       case 'ollama':
-        return <Settings className="h-6 w-6 text-blue-500" />;
+        return <Settings className="h-6 w-6 text-purple-500" />;
       default:
         return <Settings className="h-6 w-6 text-gray-500" />;
     }
@@ -200,29 +202,48 @@ const LLMConfigPage: React.FC = () => {
   const [providers, setProviders] = useState<LLMProvider[]>([
     {
       id: '1',
-      name: 'OpenAI GPT-4',
+      name: 'OpenAI GPT-4o',
       type: 'openai',
       status: 'connected',
       apiKey: 'sk-1234567890abcdef1234567890abcdef',
-      model: 'gpt-4',
+      model: 'gpt-4o',
       lastTested: new Date().toISOString(),
     },
     {
       id: '2',
-      name: 'Anthropic Claude',
-      type: 'anthropic',
-      status: 'disconnected',
-      apiKey: 'sk-ant-1234567890abcdef1234567890abcdef',
-      model: 'claude-3-sonnet',
-      lastTested: new Date(Date.now() - 86400000).toISOString(),
+      name: 'OpenAI GPT-4o Mini',
+      type: 'openai',
+      status: 'connected',
+      apiKey: 'sk-1234567890abcdef1234567890abcdef',
+      model: 'gpt-4o-mini',
+      lastTested: new Date().toISOString(),
     },
     {
       id: '3',
+      name: 'Claude 3.5 Sonnet',
+      type: 'anthropic',
+      status: 'connected',
+      apiKey: 'sk-ant-1234567890abcdef1234567890abcdef',
+      model: 'claude-3-5-sonnet-20241022',
+      lastTested: new Date().toISOString(),
+    },
+    {
+      id: '4',
+      name: 'Gemini 1.5 Pro',
+      type: 'google',
+      status: 'disconnected',
+      apiKey: 'AIzaSy1234567890abcdef1234567890abcdef',
+      baseUrl: 'https://generativelanguage.googleapis.com/v1beta',
+      model: 'gemini-1.5-pro',
+      lastTested: new Date(Date.now() - 86400000).toISOString(),
+    },
+    {
+      id: '5',
       name: 'Ollama Local',
       type: 'ollama',
       status: 'connected',
       baseUrl: 'http://localhost:11434',
-      model: 'llama2',
+      model: 'llama3.1:8b',
       lastTested: new Date().toISOString(),
     },
   ]);
