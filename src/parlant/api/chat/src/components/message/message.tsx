@@ -11,6 +11,7 @@ import {useAtom} from 'jotai';
 import {agentAtom, customerAtom, sessionAtom} from '@/store';
 import {getAvatarColor} from '../avatar/avatar';
 import MessageRelativeTime from './message-relative-time';
+import EnhancedMessage from './enhanced-message';
 
 interface Props {
 	event: EventInterface;
@@ -139,24 +140,33 @@ const MessageEditing = ({event, resendMessageFn, setIsEditing}: Props) => {
 	);
 };
 
-function Message({event, isFirstMessageInDate, isContinual, showLogs, showLogsForMessage, resendMessageFn}: Props): ReactElement {
-	const [isEditing, setIsEditing] = useState(false);
+function Message({event, isFirstMessageInDate, isContinual, showLogs, showLogsForMessage, resendMessageFn, regenerateMessageFn}: Props): ReactElement {
+	const [session] = useAtom(sessionAtom);
+
+	// Convert EventInterface to format expected by EnhancedMessage
+	const messageProps = {
+		id: event.id,
+		content: event.data?.message || '',
+		role: (event.source === 'customer' || event.source === 'customer_ui') ? 'user' as const : 'assistant' as const,
+		timestamp: new Date(event.creation_utc),
+		onEdit: (id: string, newContent: string) => {
+			resendMessageFn?.(session?.id || '', newContent);
+		},
+		onRegenerate: regenerateMessageFn ? (id: string) => {
+			regenerateMessageFn(session?.id || '');
+		} : undefined,
+		onCopy: (content: string) => {
+			console.log('Copied:', content);
+		},
+		onFeedback: (id: string, type: 'positive' | 'negative') => {
+			console.log('Feedback:', id, type);
+		},
+		className: "max-w-[1000px] mx-auto"
+	};
 
 	return (
-		<div className={twMerge(isEditing && '[direction:rtl] flex justify-center')}>
-			<div
-				className={twMerge(
-					'group/main flex py-[12px] mx-0 mb-1 w-full justify-between animate-fade-in scrollbar',
-					isEditing && 'flex-1 flex justify-start max-w-[1000px] items-end w-[calc(100%-412px)] max-[2100px]:w-[calc(100%-200px)] self-end max-[1700px]:w-[calc(100%-40px)]'
-				)}>
-				<Spacer />
-				{isEditing ? (
-					<MessageEditing resendMessageFn={resendMessageFn} setIsEditing={setIsEditing} event={event} isContinual={isContinual} showLogs={showLogs} showLogsForMessage={showLogsForMessage} />
-				) : (
-					<MessageBubble isFirstMessageInDate={isFirstMessageInDate} setIsEditing={setIsEditing} event={event} isContinual={isContinual} showLogs={showLogs} showLogsForMessage={showLogsForMessage} />
-				)}
-				<Spacer />
-			</div>
+		<div className="w-full">
+			<EnhancedMessage {...messageProps} />
 		</div>
 	);
 }

@@ -19,7 +19,11 @@ import {
   Cpu,
   HardDrive,
   Wifi,
-  Loader2
+  Loader2,
+  FileText,
+  Tag,
+  Variable,
+  BookOpen
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -33,12 +37,18 @@ import LogsPage from './LogsPage';
 import BackupPage from './BackupPage';
 import SystemSettingsPage from './SystemSettingsPage';
 import AnalyticsPage from './AnalyticsPage';
+import GuidelinesPage from './GuidelinesPage';
+import ContextVariablesPage from './ContextVariablesPage';
+import UtterancesPage from './UtterancesPage';
+import TagsPage from './TagsPage';
+import SetupWizardPage from './SetupWizardPage';
+import DefaultAgentsSetup from './DefaultAgentsSetup';
 
 interface AdminInterfaceProps {
   onNavigateToChat: () => void;
 }
 
-type AdminPage = 'dashboard' | 'setup' | 'agents' | 'configuration' | 'monitoring' | 'data' | 'settings' | 'analytics' | 'backup' | 'system-settings';
+type AdminPage = 'dashboard' | 'setup' | 'agents' | 'default-agents' | 'guidelines' | 'context-variables' | 'utterances' | 'tags' | 'configuration' | 'monitoring' | 'data' | 'settings' | 'analytics' | 'backup' | 'system-settings';
 
 const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => {
   const [currentPage, setCurrentPage] = useState<AdminPage>('dashboard');
@@ -54,6 +64,11 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
     { name: 'Analytics', page: 'analytics' as AdminPage, icon: TrendingUp },
     { name: 'Setup Wizard', page: 'setup' as AdminPage, icon: Wrench },
     { name: 'Agentes', page: 'agents' as AdminPage, icon: Users },
+    { name: 'Agentes Padrão', page: 'default-agents' as AdminPage, icon: Plus },
+    { name: 'Guidelines', page: 'guidelines' as AdminPage, icon: BookOpen },
+    { name: 'Context Variables', page: 'context-variables' as AdminPage, icon: Variable },
+    { name: 'Utterances', page: 'utterances' as AdminPage, icon: MessageSquare },
+    { name: 'Tags', page: 'tags' as AdminPage, icon: Tag },
     { name: 'Configuração LLM', page: 'configuration' as AdminPage, icon: Settings },
     { name: 'Logs', page: 'monitoring' as AdminPage, icon: Activity },
     { name: 'Backup', page: 'backup' as AdminPage, icon: Database },
@@ -63,8 +78,11 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
   const renderSidebar = () => (
     <div className="flex flex-col flex-grow bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 shadow-sm">
       <div className="flex h-16 items-center px-4 border-b border-gray-200 dark:border-gray-700">
-        <img src="/chat/app-logo.svg" alt="Daneel" className="h-8 w-auto" />
-        <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Admin</span>
+        <img src="/chat/logo.png" alt="Daneel" className="h-10 w-10 object-contain" />
+        <div className="ml-3">
+          <span className="text-xl font-bold text-gray-900 dark:text-white">Daneel</span>
+          <p className="text-xs text-gray-500 dark:text-gray-400">Admin Panel</p>
+        </div>
       </div>
       <nav className="flex-1 space-y-1 px-2 py-4">
         {navigation.map((item) => {
@@ -263,9 +281,13 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { title: 'Configurar Novo Agente', description: 'Criar e configurar um novo agente AI', icon: Users, page: 'agents' as AdminPage },
+              { title: 'Agentes Pré-Prontos', description: 'Criar agentes especializados automaticamente', icon: Plus, page: 'default-agents' as AdminPage },
+              { title: 'Gerenciar Guidelines', description: 'Criar e editar regras de comportamento', icon: BookOpen, page: 'guidelines' as AdminPage },
+              { title: 'Context Variables', description: 'Configurar variáveis de contexto', icon: Variable, page: 'context-variables' as AdminPage },
+              { title: 'Utterances', description: 'Gerenciar templates de mensagens', icon: MessageSquare, page: 'utterances' as AdminPage },
+              { title: 'Organizar Tags', description: 'Criar e gerenciar tags do sistema', icon: Tag, page: 'tags' as AdminPage },
               { title: 'Configurar LLM', description: 'Adicionar ou configurar provedores LLM', icon: Settings, page: 'configuration' as AdminPage },
-              { title: 'Ver Logs', description: 'Monitorar logs do sistema em tempo real', icon: Activity, page: 'monitoring' as AdminPage },
-              { title: 'Backup de Dados', description: 'Fazer backup das configurações e dados', icon: Database, page: 'backup' as AdminPage }
+              { title: 'Ver Logs', description: 'Monitorar logs do sistema em tempo real', icon: Activity, page: 'monitoring' as AdminPage }
             ].map((action, index) => {
               const Icon = action.icon;
               return (
@@ -323,17 +345,81 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
       case 'analytics':
         return <AnalyticsPage />;
       case 'setup':
-        return renderPlaceholderPage('Setup Wizard', 'Configure seu sistema Daneel');
+        return (
+          <div className="space-y-8">
+            <div className="text-center space-y-6">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                <img src="/chat/logo.png" alt="Daneel" className="w-12 h-12 object-contain" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  Bem-vindo ao Daneel
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto">
+                  Setup wizard para configurar agentes e tags padrão do sistema.
+                </p>
+              </div>
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                <h3 className="font-medium text-blue-900 dark:text-blue-100 mb-2">
+                  Funcionalidades disponíveis:
+                </h3>
+                <ul className="text-sm text-blue-700 dark:text-blue-200 space-y-1">
+                  <li>• Criação automática de agentes padrão</li>
+                  <li>• Sistema de tags organizacional</li>
+                  <li>• Configurações básicas do sistema</li>
+                </ul>
+              </div>
+              <Button className="w-full sm:w-auto">
+                Iniciar Configuração
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        );
       case 'agents':
-        return <AgentsPage />;
+        return (
+          <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Agentes</h1>
+                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Gerencie seus agentes AI e suas configurações
+                </p>
+              </div>
+              <Button>
+                <Plus className="h-4 w-4 mr-2" />
+                Novo Agente
+              </Button>
+            </div>
+            <div className="text-center py-12">
+              <Users className="mx-auto h-12 w-12 text-gray-400" />
+              <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-white">
+                Carregando agentes...
+              </h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                Conectando com a API para carregar os dados.
+              </p>
+            </div>
+          </div>
+        );
+      case 'default-agents':
+        return <DefaultAgentsSetup />;
+      case 'guidelines':
+        return renderPlaceholderPage('Guidelines', 'Gerencie regras de comportamento dos agentes');
+      case 'context-variables':
+        return renderPlaceholderPage('Context Variables', 'Gerencie variáveis de contexto para personalização');
+      case 'utterances':
+        return renderPlaceholderPage('Utterances', 'Gerencie templates de mensagens com campos dinâmicos');
+      case 'tags':
+        return renderPlaceholderPage('Tags', 'Gerencie tags para organizar recursos');
       case 'configuration':
-        return <LLMConfigPage />;
+        return renderPlaceholderPage('Configuração LLM', 'Configure provedores de LLM');
       case 'monitoring':
-        return <LogsPage />;
+        return renderPlaceholderPage('Logs', 'Monitoramento do sistema em tempo real');
       case 'backup':
-        return <BackupPage />;
+        return renderPlaceholderPage('Backup', 'Backup e restauração de dados');
       case 'system-settings':
-        return <SystemSettingsPage />;
+        return renderPlaceholderPage('Configurações do Sistema', 'Configurações gerais do sistema');
       case 'data':
         return renderPlaceholderPage('Gerenciamento de Dados', 'Backup, importação e exportação');
       case 'settings':
@@ -353,7 +439,10 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
         <div className="fixed inset-0 bg-gray-600 bg-opacity-75" onClick={() => setSidebarOpen(false)} />
         <div className="fixed inset-y-0 left-0 flex w-64 flex-col bg-white dark:bg-gray-800 shadow-xl">
           <div className="flex h-16 items-center justify-between px-4">
-            <img src="/chat/app-logo.svg" alt="Daneel" className="h-8 w-auto" />
+            <div className="flex items-center">
+              <img src="/chat/logo.png" alt="Daneel" className="h-8 w-8 object-contain" />
+              <span className="ml-2 text-lg font-bold text-gray-900 dark:text-white">Daneel</span>
+            </div>
             <Button
               variant="ghost"
               size="icon"

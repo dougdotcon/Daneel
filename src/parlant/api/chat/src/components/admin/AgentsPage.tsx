@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+// import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { cn } from '@/lib/utils';
 import { useAgents, Agent, CreateAgentParams, UpdateAgentParams } from '@/hooks/useAgents';
 import { useSessions } from '@/hooks/useSessions';
@@ -241,17 +241,16 @@ const AgentsPage: React.FC = () => {
             />
           </div>
         </div>
-        <Select value={statusFilter} onValueChange={setStatusFilter}>
-          <SelectTrigger className="w-full sm:w-48">
-            <SelectValue placeholder="Filtrar por status" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todos os status</SelectItem>
-            <SelectItem value="active">Ativo</SelectItem>
-            <SelectItem value="inactive">Inativo</SelectItem>
-            <SelectItem value="draft">Rascunho</SelectItem>
-          </SelectContent>
-        </Select>
+        <select
+          value={statusFilter}
+          onChange={(e) => setStatusFilter(e.target.value)}
+          className="w-full sm:w-48 h-10 px-3 py-2 border border-gray-300 rounded-md bg-white text-sm"
+        >
+          <option value="all">Todos os status</option>
+          <option value="active">Ativo</option>
+          <option value="inactive">Inativo</option>
+          <option value="draft">Rascunho</option>
+        </select>
       </div>
 
       {/* Stats */}

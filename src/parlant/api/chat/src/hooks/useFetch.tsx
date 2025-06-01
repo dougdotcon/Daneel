@@ -33,7 +33,11 @@ export default function useFetch<T>(url: string, body?: Record<string, unknown>,
 	const params = body ? objToUrlParams(body) : '';
 
 	useEffect(() => {
-		if (error && error.message !== TIMEOUT_ERROR_MESSAGE) throw new Error(`Failed to fetch "${url}"`);
+		// Temporarily disable error throwing to allow demo mode
+		// if (error && error.message !== TIMEOUT_ERROR_MESSAGE) throw new Error(`Failed to fetch "${url}"`);
+		if (error && error.message !== TIMEOUT_ERROR_MESSAGE) {
+			console.warn(`Failed to fetch "${url}" - running in demo mode`);
+		}
 	}, [error, url]);
 
 	const ErrorTemplate = () => {
@@ -79,7 +83,8 @@ export default function useFetch<T>(url: string, body?: Record<string, unknown>,
 					if (checkErr && err.code !== ABORT_REQ_CODE) setError({message: err.message});
 					else if (err.code !== ABORT_REQ_CODE && err.code !== NOT_FOUND_CODE && retry) fetchData();
 
-					if (err.code === NOT_FOUND_CODE) toast.error('resource not found. please try to refresh the page');
+					// Temporarily disable error toasts to avoid spam
+					// if (err.code === NOT_FOUND_CODE) toast.error('resource not found. please try to refresh the page');
 				})
 				.finally(() => checkErr && setLoading(false));
 

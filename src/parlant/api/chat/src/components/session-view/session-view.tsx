@@ -3,6 +3,7 @@ import React, {ReactElement, useEffect, useRef, useState} from 'react';
 import useFetch from '@/hooks/useFetch';
 import {Textarea} from '../ui/textarea';
 import {Button} from '../ui/button';
+import EnhancedInput from '../chat-input/enhanced-input';
 import {deleteData, postData} from '@/utils/api';
 import {groupBy} from '@/utils/obj';
 import Message from '../message/message';
@@ -261,56 +262,61 @@ const SessionView = (): ReactElement => {
 									</React.Fragment>
 								))}
 							</div>
-							<div className={twMerge('w-full flex justify-between', isMissingAgent && 'hidden')}>
-								<Spacer />
-								<div className='group relative border flex-1 border-muted border-solid rounded-[16px] flex flex-row justify-center items-center bg-white p-[0.9rem] ps-[14px] pe-0 h-[48.67px] max-w-[1000px] mb-[26px]'>
-									<DropdownMenu open={isContentFilterMenuOpen} onOpenChange={setIsContentFilterMenuOpen}>
-										<DropdownMenuTrigger className='outline-none' data-testid='menu-button' tabIndex={-1} onClick={(e) => e.stopPropagation()}>
-											<div className={twMerge('me-[2px] border border-transparent hover:bg-[#F3F5F9] rounded-[6px] size-[25px] flex items-center justify-center', isContentFilterMenuOpen && '!bg-[#f5f6f8]')}>
-												{!useContentFiltering && <img src='icons/edit.svg' alt='' className={twMerge('h-[14px] w-[14px]')} />}
-												{useContentFiltering && <ShieldEllipsis className={twJoin('size-[18px]')} />}
-											</div>
-										</DropdownMenuTrigger>
-										<DropdownMenuContent side='top' align='start' className='max-w-[480px] -ms-[10px] flex flex-col gap-[8px] py-[14px] px-[10px] border-none [box-shadow:_0px_8px_20px_-8px_#00000012] rounded-[8px]'>
-											<DropdownMenuItem
-												tabIndex={0}
-												onClick={() => setUseContentFiltering(false)}
-												className={twMerge('gap-0  cursor-pointer font-normal text-[14px] px-[10px] font-inter capitalize hover:!bg-[#FAF9FF]', !useContentFiltering && '!bg-[#f5f6f8] hover:!bg-[#f5f6f8]')}>
-												<img src='icons/edit.svg' alt='' className={twMerge('me-[8px] size-[15px]')} />
-												Direct (No Moderation)
-											</DropdownMenuItem>
-											<DropdownMenuItem
-												tabIndex={0}
-												onClick={() => setUseContentFiltering(true)}
-												className={twMerge('gap-0 !cursor-pointer font-normal text-[14px] items-start px-[10px] font-inter  hover:!bg-[#FAF9FF]', useContentFiltering && '!bg-[#f5f6f8] hover:!bg-[#f5f6f8]')}>
-												<ShieldEllipsis className='me-[8px] !size-[17px] mt-[3px]' />
-												<div>
-													<div>Content Moderation</div>
-													<small className='font-light'>
-														Messages will be flagged for harmful or illicit content and censored accordingly. The agent will see such messages were sent and the reason why they were censored, but it won't see their content.
-													</small>
-												</div>
-											</DropdownMenuItem>
-										</DropdownMenuContent>
-									</DropdownMenu>
-									<Textarea
-										role='textbox'
-										ref={textareaRef}
-										placeholder='Message...'
+							<div className={twMerge('w-full flex justify-center px-4', isMissingAgent && 'hidden')}>
+								<div className="w-full max-w-[1000px] mb-6">
+									<EnhancedInput
 										value={message}
-										onKeyDown={handleTextareaKeydown}
-										onChange={(e) => setMessage(e.target.value)}
-										rows={1}
-										className='box-shadow-none placeholder:text-[#282828] resize-none border-none h-full rounded-none min-h-[unset] p-0 whitespace-nowrap no-scrollbar font-inter font-light text-[16px] leading-[18px] bg-white'
+										onChange={setMessage}
+										onSend={(content, attachments) => {
+											console.log('Attachments:', attachments); // Handle attachments in the future
+											postMessage(content);
+										}}
+										placeholder="Type your message..."
+										disabled={!agent?.id}
+										className="shadow-lg"
 									/>
-									<p className={twMerge('absolute invisible left-[0.25em] -bottom-[28px] font-normal text-[#A9AFB7] text-[14px] font-inter', (showTyping || showThinking) && 'visible')}>
-										{showTyping ? `${agent?.name} is typing...` : `${agent?.name} is online`}
-									</p>
-									<Button variant='ghost' data-testid='submit-button' className='max-w-[60px] rounded-full hover:bg-white' ref={submitButtonRef} disabled={!message?.trim() || !agent?.id} onClick={() => postMessage(message)}>
-										<img src='icons/send.svg' alt='Send' height={19.64} width={21.52} className='h-10' />
-									</Button>
+
+									{/* Content filtering options */}
+									<div className="flex items-center justify-between mt-2 px-2">
+										<div className="flex items-center gap-2">
+											<DropdownMenu open={isContentFilterMenuOpen} onOpenChange={setIsContentFilterMenuOpen}>
+												<DropdownMenuTrigger className='outline-none text-sm text-gray-600 hover:text-gray-800' data-testid='menu-button'>
+													<div className="flex items-center gap-1">
+														{!useContentFiltering && <img src='icons/edit.svg' alt='' className='h-3 w-3' />}
+														{useContentFiltering && <ShieldEllipsis className='h-3 w-3' />}
+														<span>{useContentFiltering ? 'Content Moderation' : 'Direct Mode'}</span>
+													</div>
+												</DropdownMenuTrigger>
+												<DropdownMenuContent side='top' align='start' className='max-w-[480px]'>
+													<DropdownMenuItem
+														onClick={() => setUseContentFiltering(false)}
+														className={twMerge('cursor-pointer', !useContentFiltering && 'bg-gray-100')}>
+														<img src='icons/edit.svg' alt='' className='me-2 h-4 w-4' />
+														Direct (No Moderation)
+													</DropdownMenuItem>
+													<DropdownMenuItem
+														onClick={() => setUseContentFiltering(true)}
+														className={twMerge('cursor-pointer', useContentFiltering && 'bg-gray-100')}>
+														<ShieldEllipsis className='me-2 h-4 w-4' />
+														<div>
+															<div>Content Moderation</div>
+															<small className='text-gray-500'>
+																Messages will be flagged for harmful content
+															</small>
+														</div>
+													</DropdownMenuItem>
+												</DropdownMenuContent>
+											</DropdownMenu>
+										</div>
+
+										{/* Typing indicator */}
+										{(showTyping || showThinking) && (
+											<p className='text-sm text-gray-500'>
+												{showTyping ? `${agent?.name} is typing...` : `${agent?.name} is thinking...`}
+											</p>
+										)}
+									</div>
 								</div>
-								<Spacer />
 							</div>
 							<div className='w-full'>
 								<Spacer />

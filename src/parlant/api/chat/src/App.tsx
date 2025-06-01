@@ -28,7 +28,9 @@ function App() {
 
 	// Update URL when view changes
 	React.useEffect(() => {
-		const newPath = currentView === 'admin' ? '/chat/admin' : '/chat/';
+		let newPath = '/chat/';
+		if (currentView === 'admin') newPath = '/chat/admin';
+
 		if (window.location.pathname !== newPath) {
 			window.history.pushState({}, '', newPath);
 		}
@@ -39,7 +41,9 @@ function App() {
 			<div className='bg-blue-light min-h-screen'>
 				{currentView === 'chat' ? (
 					<>
-						<Chatbot onNavigateToAdmin={() => setCurrentView('admin')} />
+						<Chatbot
+							onNavigateToAdmin={() => setCurrentView('admin')}
+						/>
 						<WebSocketComp />
 					</>
 				) : (
