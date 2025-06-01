@@ -1,47 +1,37 @@
 <div align="center">
 
-# <img src="logo.png" alt="Daneel Logo" width="40" style="vertical-align: middle; margin-right: 10px;"> Daneel
+<img src="logo.png" alt="Daneel Logo" width="160" height="160" style="border-radius: 24px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" />
 
-<img src="logo.png" alt="Daneel Logo" width="160" height="160" style="border-radius: 24px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.3); filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.6));" />
+## O Motor de Modelagem de Conversas Inteligente
 
-<h2 style="background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2.6em; margin: 20px 0; font-weight: 700;">
-O Motor de Modelagem de Conversas Inteligente
-</h2>
+[![PyPI Version](https://img.shields.io/pypi/v/parlant?style=for-the-badge&logo=pypi&logoColor=white&color=667eea&labelColor=1a202c)](https://pypi.org/project/parlant/)
+[![Python Version](https://img.shields.io/pypi/pyversions/parlant?style=for-the-badge&logo=python&logoColor=white&color=667eea&labelColor=1a202c)](https://pypi.org/project/parlant/)
+[![License](https://img.shields.io/badge/license-Apache%202.0-667eea.svg?style=for-the-badge&logo=apache&logoColor=white&labelColor=1a202c)](https://opensource.org/licenses/Apache-2.0)
+[![GitHub Activity](https://img.shields.io/github/commit-activity/w/emcie-co/parlant?label=commits&style=for-the-badge&logo=github&logoColor=white&color=667eea&labelColor=1a202c)](https://github.com/emcie-co/parlant)
+[![Discord](https://img.shields.io/discord/1312378700993663007?style=for-the-badge&logo=discord&logoColor=white&label=discord&color=667eea&labelColor=1a202c)](https://discord.gg/duxWqxKk6J)
 
-<div style="margin: 35px 0;">
-<a href="https://pypi.org/project/parlant/"><img src="https://img.shields.io/pypi/v/parlant?style=for-the-badge&logo=pypi&logoColor=white&color=667eea&labelColor=1a202c" alt="PyPI Version" /></a>
-<a href="https://pypi.org/project/parlant/"><img src="https://img.shields.io/pypi/pyversions/parlant?style=for-the-badge&logo=python&logoColor=white&color=667eea&labelColor=1a202c" alt="Python Version" /></a>
-<a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/license-Apache%202.0-667eea.svg?style=for-the-badge&logo=apache&logoColor=white&labelColor=1a202c" alt="License" /></a>
-<a href="https://github.com/emcie-co/parlant"><img src="https://img.shields.io/github/commit-activity/w/emcie-co/parlant?label=commits&style=for-the-badge&logo=github&logoColor=white&color=667eea&labelColor=1a202c" alt="GitHub Activity" /></a>
-<a href="https://discord.gg/duxWqxKk6J"><img src="https://img.shields.io/discord/1312378700993663007?style=for-the-badge&logo=discord&logoColor=white&label=discord&color=667eea&labelColor=1a202c" alt="Discord" /></a>
+<div style="margin: 25px 0;">
+
+[![Site Oficial](https://img.shields.io/badge/🌐_Site_Oficial-667eea?style=for-the-badge&logoColor=white)](https://www.parlant.io/)
+[![Documentação](https://img.shields.io/badge/📚_Documentação-764ba2?style=for-the-badge&logoColor=white)](https://www.parlant.io/docs/quickstart/introduction)
+[![Início Rápido](https://img.shields.io/badge/🚀_Início_Rápido-f093fb?style=for-the-badge&logoColor=white)](https://www.parlant.io/docs/tutorial/getting-started)
+[![Discord](https://img.shields.io/badge/💬_Discord-5865f2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/duxWqxKk6J)
+
 </div>
 
-<div style="margin: 40px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-<a href="https://www.parlant.io/" style="text-decoration: none; display: inline-block;">
-  <img src="https://img.shields.io/badge/🌐_Site_Oficial-667eea?style=for-the-badge&logoColor=white" alt="Site Oficial" />
-</a>
-<a href="https://www.parlant.io/docs/quickstart/introduction" style="text-decoration: none; display: inline-block;">
-  <img src="https://img.shields.io/badge/📚_Documentação-764ba2?style=for-the-badge&logoColor=white" alt="Documentação" />
-</a>
-<a href="https://www.parlant.io/docs/tutorial/getting-started" style="text-decoration: none; display: inline-block;">
-  <img src="https://img.shields.io/badge/🚀_Início_Rápido-f093fb?style=for-the-badge&logoColor=white" alt="Início Rápido" />
-</a>
-<a href="https://discord.gg/duxWqxKk6J" style="text-decoration: none; display: inline-block;">
-  <img src="https://img.shields.io/badge/💬_Discord-5865f2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
-</a>
-</div>
-
-<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 25px; border-radius: 20px; border: 1px solid rgba(102, 126, 234, 0.2); max-width: 85%; margin: 40px auto;">
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 25px; border-radius: 12px; border: 1px solid rgba(102, 126, 234, 0.2); max-width: 85%; margin: 30px auto;">
   <p style="font-size: 1.2em; color: #4a5568; margin: 0;">
     <strong style="color: #667eea;">Daneel</strong> é um sistema completo para criação e gerenciamento de agentes de conversação inteligentes com controle preciso sobre o comportamento, garantindo consistência e conformidade em todas as interações.
   </p>
 </div>
 
+</div>
+
 ---
 
-<div align="center">
-
 ## 📋 Navegação Rápida
+
+<div align="center">
 
 <table style="width: 90%; margin: 20px auto; border-collapse: separate; border-spacing: 12px; background: none; border: none;">
 <tr>
@@ -91,100 +81,45 @@ O Motor de Modelagem de Conversas Inteligente
 
 ---
 
-<!-- Screenshots da Interface -->
 <div align="center">
 
-## 📸 **Interface do Sistema**
+## 📸 Interface do Sistema
 
-<p style="color: #4a5568; margin: 20px 0; font-size: 1.2em; max-width: 700px; line-height: 1.6;">
-Explore a interface moderna, intuitiva e completa do Daneel, projetada para proporcionar uma experiência de usuário excepcional
-</p>
+> Explore a interface moderna, intuitiva e completa do Daneel, projetada para proporcionar uma experiência de usuário excepcional
 
-<div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; margin: 40px 0;">
+<table>
+  <tr>
+    <td>
+      <img src="screenshots/telainicial.png" alt="Tela Inicial do Daneel" width="100%">
+      <h4 align="center">🏠 Tela Inicial</h4>
+    </td>
+    <td>
+      <img src="screenshots/chat.png" alt="Interface de Chat do Daneel" width="100%">
+      <h4 align="center">💬 Interface de Chat</h4>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="screenshots/dashboard.png" alt="Dashboard do Daneel" width="100%">
+      <h4 align="center">📊 Dashboard Administrativo</h4>
+    </td>
+  </tr>
+</table>
 
-<div style="flex: 1; min-width: 300px; max-width: 450px; background: #ffffff; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="background: linear-gradient(45deg, #667eea, #764ba2); padding: 18px; color: white;">
-        <h4 style="margin: 0; font-size: 1.2em; font-weight: 600;">🏠 Tela Inicial</h4>
-    </div>
-    <div style="padding: 0;">
-        <img src="screenshots/telainicial.png" alt="Tela Inicial do Daneel" width="100%" style="display: block; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;" />
-    </div>
-</div>
+### ✨ Principais Características da Interface:
 
-<div style="flex: 1; min-width: 300px; max-width: 450px; background: #ffffff; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="background: linear-gradient(45deg, #f093fb, #f5576c); padding: 18px; color: white;">
-        <h4 style="margin: 0; font-size: 1.2em; font-weight: 600;">💬 Interface de Chat</h4>
-    </div>
-    <div style="padding: 0;">
-        <img src="screenshots/chat.png" alt="Interface de Chat do Daneel" width="100%" style="display: block; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;" />
-    </div>
-</div>
-
-<div style="flex: 1; min-width: 300px; max-width: 450px; background: #ffffff; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="background: linear-gradient(45deg, #4facfe, #00f2fe); padding: 18px; color: white;">
-        <h4 style="margin: 0; font-size: 1.2em; font-weight: 600;">📊 Dashboard Administrativo</h4>
-    </div>
-    <div style="padding: 0;">
-        <img src="screenshots/dashboard.png" alt="Dashboard do Daneel" width="100%" style="display: block; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;" />
-    </div>
-</div>
-
-</div>
-
-### ✨ **Principais Características da Interface:**
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px auto; max-width: 1000px;">
-
-<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 25px; border-radius: 16px; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <div style="background: rgba(255,255,255,0.2); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-            <span style="font-size: 1.2em;">🎨</span>
-        </div>
-        <h4 style="margin: 0; font-size: 1.2em; font-weight: 600;">Design Moderno</h4>
-    </div>
-    <p style="margin: 0; line-height: 1.5;">Interface limpa e profissional com atenção aos detalhes visuais</p>
-</div>
-
-<div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 25px; border-radius: 16px; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <div style="background: rgba(255,255,255,0.2); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-            <span style="font-size: 1.2em;">📱</span>
-        </div>
-        <h4 style="margin: 0; font-size: 1.2em; font-weight: 600;">Responsiva</h4>
-    </div>
-    <p style="margin: 0; line-height: 1.5;">Funciona perfeitamente em desktop, tablet e dispositivos móveis</p>
-</div>
-
-<div style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 25px; border-radius: 16px; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <div style="background: rgba(255,255,255,0.2); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-            <span style="font-size: 1.2em;">⚡</span>
-        </div>
-        <h4 style="margin: 0; font-size: 1.2em; font-weight: 600;">Alto Desempenho</h4>
-    </div>
-    <p style="margin: 0; line-height: 1.5;">Carregamento instantâneo e navegação fluida em todo o sistema</p>
-</div>
-
-<div style="background: linear-gradient(135deg, #43e97b, #38f9d7); padding: 25px; border-radius: 16px; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <div style="background: rgba(255,255,255,0.2); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-            <span style="font-size: 1.2em;">🔧</span>
-        </div>
-        <h4 style="margin: 0; font-size: 1.2em; font-weight: 600;">Funcionalidades Completas</h4>
-    </div>
-    <p style="margin: 0; line-height: 1.5;">Sistema administrativo robusto com todas as ferramentas necessárias</p>
-</div>
-
-</div>
+- 🎨 **Design Moderno** - Interface limpa e profissional com atenção aos detalhes visuais
+- 📱 **Responsiva** - Funciona perfeitamente em desktop, tablet e dispositivos móveis
+- ⚡ **Alto Desempenho** - Carregamento instantâneo e navegação fluida em todo o sistema
+- 🔧 **Funcionalidades Completas** - Sistema administrativo robusto com todas as ferramentas necessárias
 
 </div>
 
 ---
 
-<!-- Seção Principal: O que é Modelagem de Conversas -->
 <div align="center">
 
-## 🤔 **O que é Modelagem de Conversas?**
+## 🤔 O que é Modelagem de Conversas?
 
 <p style="font-size: 1.2em; color: #4a5568; margin: 20px auto; max-width: 800px; line-height: 1.6;">
 A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma abordagem avançada que permite controlar de forma precisa como seus agentes de IA interagem com usuários, garantindo consistência e qualidade em todas as conversas.
@@ -222,7 +157,7 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
 
 </div>
 
-### 🆚 **Comparação com outras abordagens**
+### 🆚 Comparação com outras abordagens
 
 <div style="border-radius: 16px; overflow: hidden; margin: 30px auto; max-width: 900px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
     <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 18px 25px; color: white;">
@@ -294,7 +229,6 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
 
 ---
 
-<!-- Por que usar o Daneel -->
 <div align="center">
 
 ## 🚀 Por que usar o Daneel?
@@ -371,244 +305,118 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
 
 ---
 
-<!-- Funcionalidades Implementadas -->
 <div align="center">
 
 ## 🚀 Funcionalidades Implementadas
 
-<p style="color: #4a5568; margin: 20px 0; font-size: 1.2em; max-width: 800px; line-height: 1.6;">
-  Sistema completo de administração e chat inteligente com recursos avançados
-</p>
+> Sistema completo de administração e chat inteligente com recursos avançados
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px auto; max-width: 1200px;">
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-    <div style="height: 8px; background: linear-gradient(90deg, #667eea, #764ba2);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(102, 126, 234, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #667eea;">🎛️</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Sistema de Administração</h3>
-        </div>
-        <ul style="color: #718096; margin: 0; padding-left: 20px; line-height: 1.6;">
-            <li>CRUD completo de agentes IA</li>
-            <li>Sistema de fallback inteligente</li>
-            <li>Modais avançados de configuração</li>
-            <li>Filtros e busca em tempo real</li>
-        </ul>
-    </div>
 </div>
 
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-    <div style="height: 8px; background: linear-gradient(90deg, #f093fb, #f5576c);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(240, 147, 251, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #f093fb;">⚡</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Configuração LLM</h3>
-        </div>
-        <ul style="color: #718096; margin: 0; padding-left: 20px; line-height: 1.6;">
-            <li>GPT-4o e GPT-4o Mini</li>
-            <li>Claude 3.5 Sonnet</li>
-            <li>Gemini 1.5 Pro</li>
-            <li>Llama 3.1 via Ollama</li>
-        </ul>
-    </div>
+<table>
+  <tr>
+    <td width="33%">
+      <h3>🎛️ Sistema de Administração</h3>
+      <ul>
+        <li>CRUD completo de agentes IA</li>
+        <li>Sistema de fallback inteligente</li>
+        <li>Modais avançados de configuração</li>
+        <li>Filtros e busca em tempo real</li>
+      </ul>
+    </td>
+    <td width="33%">
+      <h3>⚡ Configuração LLM</h3>
+      <ul>
+        <li>GPT-4o e GPT-4o Mini</li>
+        <li>Claude 3.5 Sonnet</li>
+        <li>Gemini 1.5 Pro</li>
+        <li>Llama 3.1 via Ollama</li>
+      </ul>
+    </td>
+    <td width="33%">
+      <h3>📊 Dashboard Avançado</h3>
+      <ul>
+        <li>Métricas em tempo real</li>
+        <li>Ações rápidas</li>
+        <li>Cards informativos</li>
+        <li>Navegação intuitiva</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>🎯 Agentes Pré-Prontos</h3>
+      <ul>
+        <li>8 templates especializados</li>
+        <li>Criação automática</li>
+        <li>Categorização inteligente</li>
+        <li>Estimativas de tempo</li>
+      </ul>
+    </td>
+    <td>
+      <h3>👤 Personalização</h3>
+      <p>Adicionar informações específicas do cliente</p>
+    </td>
+    <td>
+      <h3>🏷️ Sistema de Tags</h3>
+      <p>Organizar e categorizar entidades</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3>🔗 Relacionamentos</h3>
+      <p>Estabelecer conexões complexas entre diretrizes</p>
+    </td>
+    <td>
+      <h3>📊 Monitoramento</h3>
+      <p>Debugar agentes em tempo real</p>
+    </td>
+    <td>
+      <h3>🔄 Migração</h3>
+      <p>Gerenciar atualizações de versão transparentes</p>
+    </td>
+  </tr>
+</table>
+
+---
+
+<div align="center">
+
+## 🔥 Principais Recursos
+
+### 🧑‍💻 Desenvolvedores e Cientistas de Dados estão usando o Daneel para:
+
 </div>
 
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-    <div style="height: 8px; background: linear-gradient(90deg, #4facfe, #00f2fe);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(79, 172, 254, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #4facfe;">📊</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Dashboard Avançado</h3>
-        </div>
-        <ul style="color: #718096; margin: 0; padding-left: 20px; line-height: 1.6;">
-            <li>Métricas em tempo real</li>
-            <li>Ações rápidas</li>
-            <li>Cards informativos</li>
-            <li>Navegação intuitiva</li>
-        </ul>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-    <div style="height: 8px; background: linear-gradient(90deg, #43e97b, #38f9d7);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(67, 233, 123, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #43e97b;">🎯</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Agentes Pré-Prontos</h3>
-        </div>
-        <ul style="color: #718096; margin: 0; padding-left: 20px; line-height: 1.6;">
-            <li>8 templates especializados</li>
-            <li>Criação automática</li>
-            <li>Categorização inteligente</li>
-            <li>Estimativas de tempo</li>
-        </ul>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-    <div style="height: 8px; background: linear-gradient(90deg, #fa709a, #fee140);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(250, 112, 154, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #fa709a;">👤</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Personalização</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Adicionar informações específicas do cliente
-        </p>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-    <div style="height: 8px; background: linear-gradient(90deg, #a8edea, #fed6e3);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(168, 237, 226, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #a8edea;">🏷️</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Sistema de Tags</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Organizar e categorizar entidades
-        </p>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-    <div style="height: 8px; background: linear-gradient(90deg, #d299c2, #fef9d7);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(210, 153, 194, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #d299c2;">🔗</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Relacionamentos</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Estabelecer conexões complexas entre diretrizes
-        </p>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-    <div style="height: 8px; background: linear-gradient(90deg, #89f7fe, #66a6ff);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(137, 166, 255, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #89f7fe;">📊</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Monitoramento</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Debugar agentes em tempo real
-        </p>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-    <div style="height: 8px; background: linear-gradient(90deg, #fdbb2d, #22c1c3);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(253, 187, 45, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #fdbb2d;">🔄</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Migração</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Gerenciar atualizações de versão transparentes
-        </p>
-    </div>
-</div>
-
+<div align="center">
+<table>
+  <tr>
+    <td><strong>🤖 Criação Rápida</strong><br>Criar agentes conversacionais personalizados de forma rápida</td>
+    <td><strong>👣 Diretrizes Confiáveis</strong><br>Definir comportamentos que são seguidos de forma consistente</td>
+    <td><strong>🛠️ Ferramentas Inteligentes</strong><br>Anexar ferramentas com orientações contextuais</td>
+  </tr>
+  <tr>
+    <td><strong>📖 Glossário Gerenciado</strong><br>Garantir interpretação estrita de termos</td>
+    <td><strong>👤 Personalização</strong><br>Adicionar informações específicas do cliente</td>
+    <td><strong>🏷️ Sistema de Tags</strong><br>Organizar e categorizar entidades</td>
+  </tr>
+  <tr>
+    <td><strong>🔗 Relacionamentos</strong><br>Estabelecer conexões complexas entre diretrizes</td>
+    <td><strong>📊 Monitoramento</strong><br>Debugar agentes em tempo real</td>
+    <td><strong>🔄 Migração</strong><br>Gerenciar atualizações de versão transparentes</td>
+  </tr>
+</table>
 </div>
 
 ---
 
-<!-- Principais Recursos -->
 <div align="center">
 
-## 🔥 **Principais Recursos**
+## 🔍 Como funciona o Daneel?
 
-<h3 style="color: #4a5568; margin: 30px 0;">🧑‍💻 Desenvolvedores e Cientistas de Dados estão usando o Daneel para:
-</h3>
+### 🔄 Fluxo de Processamento
 
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin: 30px 0;">
-
-<div style="background: linear-gradient(45deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; color: white;">
-<h4>🤖 **Criação Rápida**</h4>
-<p>Criar agentes conversacionais personalizados de forma rápida</p>
-</div>
-
-<div style="background: linear-gradient(45deg, #f093fb, #f5576c); padding: 20px; border-radius: 15px; color: white;">
-<h4>👣 **Diretrizes Confiáveis**</h4>
-<p>Definir comportamentos que são seguidos de forma consistente</p>
-</div>
-
-<div style="background: linear-gradient(45deg, #4facfe, #00f2fe); padding: 20px; border-radius: 15px; color: white;">
-<h4>🛠️ **Ferramentas Inteligentes**</h4>
-<p>Anexar ferramentas com orientações contextuais</p>
-</div>
-
-<div style="background: linear-gradient(45deg, #43e97b, #38f9d7); padding: 20px; border-radius: 15px; color: white;">
-<h4>📖 **Glossário Gerenciado**</h4>
-<p>Garantir interpretação estrita de termos</p>
-</div>
-
-<div style="background: linear-gradient(45deg, #fa709a, #fee140); padding: 20px; border-radius: 15px; color: white;">
-<h4>👤 **Personalização**</h4>
-<p>Adicionar informações específicas do cliente</p>
-</div>
-
-<div style="background: linear-gradient(45deg, #a8edea, #fed6e3); padding: 20px; border-radius: 15px; color: #2d3748;">
-<h4>🏷️ **Sistema de Tags**</h4>
-<p>Organizar e categorizar entidades</p>
-</div>
-
-<div style="background: linear-gradient(45deg, #d299c2, #fef9d7); padding: 20px; border-radius: 15px; color: #2d3748;">
-<h4>🔗 **Relacionamentos**</h4>
-<p>Estabelecer conexões complexas entre diretrizes</p>
-</div>
-
-<div style="background: linear-gradient(45deg, #89f7fe, #66a6ff); padding: 20px; border-radius: 15px; color: white;">
-<h4>📊 **Monitoramento**</h4>
-<p>Debugar agentes em tempo real</p>
-</div>
-
-<div style="background: linear-gradient(45deg, #fdbb2d, #22c1c3); padding: 20px; border-radius: 15px; color: white;">
-<h4>🔄 **Migração**</h4>
-<p>Gerenciar atualizações de versão transparentes</p>
-</div>
-
-</div>
-
----
-
-<!-- Como funciona -->
-<div align="center">
-
-## 🔍 **Como funciona o Daneel?**
-
-<h3 style="color: #4a5568; margin: 30px 0;">🔄 Fluxo de Processamento</h3>
-
-<p style="max-width: 800px; margin: 0 auto; color: #666; font-size: 1.1em;">
-Quando um agente precisa responder a um cliente, o motor do Daneel:
-</p>
-
-</div>
-
-<div style="display: flex; justify-content: center; margin: 40px 0;">
-<div style="max-width: 600px;">
+> Quando um agente precisa responder a um cliente, o motor do Daneel:
 
 ```mermaid
 graph TD
@@ -620,53 +428,31 @@ graph TD
 ```
 
 </div>
-</div>
 
 ---
 
-<!-- Compatibilidade -->
 <div align="center">
 
-## 💻 **Compatibilidade com LLMs**
+## 💻 Compatibilidade com LLMs
 
-<p style="color: #4a5568; margin: 20px auto; font-size: 1.1em; max-width: 800px;">
-O Daneel funciona com os principais provedores de LLM:
-</p>
+> O Daneel funciona com os principais provedores de LLM:
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px auto; max-width: 800px;">
-
-<div style="background: linear-gradient(45deg, #00d2ff, #3a7bd5); padding: 15px; border-radius: 10px; color: white; text-align: center;">
-<strong>🤖 OpenAI</strong><br>
-<small>GPT-4o, GPT-4o Mini, GPT-4</small>
-</div>
-
-<div style="background: linear-gradient(45deg, #ff9a9e, #fecfef); padding: 15px; border-radius: 10px; color: white; text-align: center;">
-<strong>🧠 Anthropic</strong><br>
-<small>Claude 3.5 Sonnet</small>
-</div>
-
-<div style="background: linear-gradient(45deg, #a8edea, #fed6e3); padding: 15px; border-radius: 10px; color: #2d3748; text-align: center;">
-<strong>🔍 Google</strong><br>
-<small>Gemini 1.5 Pro</small>
-</div>
-
-<div style="background: linear-gradient(45deg, #d299c2, #fef9d7); padding: 15px; border-radius: 10px; color: #2d3748; text-align: center;">
-<strong>⚡ Mistral AI</strong><br>
-<small>Mistral Models</small>
-</div>
-
-<div style="background: linear-gradient(45deg, #89f7fe, #66a6ff); padding: 15px; border-radius: 10px; color: white; text-align: center;">
-<strong>🔓 Código Aberto</strong><br>
-<small>API Compatível</small>
-</div>
-
-</div>
+<table>
+  <tr>
+    <td align="center"><strong>🤖 OpenAI</strong><br>GPT-4o, GPT-4o Mini, GPT-4</td>
+    <td align="center"><strong>🧠 Anthropic</strong><br>Claude 3.5 Sonnet</td>
+    <td align="center"><strong>🔍 Google</strong><br>Gemini 1.5 Pro</td>
+  </tr>
+  <tr>
+    <td align="center"><strong>⚡ Mistral AI</strong><br>Mistral Models</td>
+    <td align="center" colspan="2"><strong>🔓 Código Aberto</strong><br>API Compatível</td>
+  </tr>
+</table>
 
 </div>
 
 ---
 
-<!-- Instalação -->
 <div align="center">
 
 ## 📦 Instalação
@@ -706,14 +492,11 @@ npm run dev
 
 ---
 
-<!-- Guia de Início Rápido -->
 <div align="center">
 
-## 🚀 **Guia de Início Rápido**
+## 🚀 Guia de Início Rápido
 
 </div>
-
-<div style="background: #f7fafc; padding: 30px; border-radius: 15px; margin: 20px 0;">
 
 ```python
 from parlat import ConversationEngine, ConversationModel
@@ -765,20 +548,15 @@ response = conversation.generate_response(
 print(response)
 ```
 
-</div>
-
 ---
 
-<!-- Exemplos Avançados -->
 <div align="center">
 
-## 📊 **Exemplos de Uso Avançados**
+## 📊 Exemplos de Uso Avançados
 
 </div>
 
-### 🏷️ **Sistema de Tags e Relacionamentos**
-
-<div style="background: #edf2f7; padding: 25px; border-radius: 15px; margin: 20px 0;">
+### 🏷️ Sistema de Tags e Relacionamentos
 
 ```python
 # 🏷️ Adicionar diretrizes com tags
@@ -803,11 +581,7 @@ model.add_relationship(
 )
 ```
 
-</div>
-
-### 📊 **Monitoramento e Logs**
-
-<div style="background: #f0fff4; padding: 25px; border-radius: 15px; margin: 20px 0;">
+### 📊 Monitoramento e Logs
 
 ```python
 # 📊 Configurar monitoramento
@@ -826,59 +600,35 @@ insights = engine.analyze_conversations(
 )
 ```
 
-</div>
-
 ---
 
-<!-- Guia para Iniciantes -->
 <div align="center">
 
-## 🌟 **Como Usar - Guia para Iniciantes**
+## 🌟 Como Usar - Guia para Iniciantes
 
 </div>
 
-### 🤔 **O que é o Daneel?**
+### 🤔 O que é o Daneel?
 
-<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 25px; border-radius: 15px; color: white; margin: 20px 0;">
-<p style="margin: 0; font-size: 1.1em;">
-O Daneel é um assistente virtual inteligente que ajuda empresas e organizações a criar experiências de conversação mais naturais e eficientes com seus clientes. Imagine-o como um "professor" que ensina outros assistentes virtuais (chatbots) a conversarem de forma mais humana e profissional.
-</p>
-</div>
+> O Daneel é um assistente virtual inteligente que ajuda empresas e organizações a criar experiências de conversação mais naturais e eficientes com seus clientes. Imagine-o como um "professor" que ensina outros assistentes virtuais (chatbots) a conversarem de forma mais humana e profissional.
 
-### 🎯 **Para que serve?**
+### 🎯 Para que serve?
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+<table>
+  <tr>
+    <td><strong>💬 Atendimento ao Cliente</strong><br>Ajuda a criar assistentes virtuais que respondem dúvidas e resolvem problemas</td>
+    <td><strong>📱 Suporte Técnico</strong><br>Auxilia usuários com questões técnicas de forma clara e paciente</td>
+  </tr>
+  <tr>
+    <td><strong>🏥 Área da Saúde</strong><br>Oferece informações e orientações seguindo protocolos médicos</td>
+    <td><strong>🏦 Serviços Financeiros</strong><br>Ajuda com consultas bancárias e financeiras de forma segura</td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>⚖️ Assistência Jurídica</strong><br>Fornece orientações legais básicas seguindo as normas</td>
+  </tr>
+</table>
 
-<div style="background: #e6fffa; border-left: 5px solid #38b2ac; padding: 20px; border-radius: 10px;">
-<h4>💬 **Atendimento ao Cliente**</h4>
-<p>Ajuda a criar assistentes virtuais que respondem dúvidas e resolvem problemas</p>
-</div>
-
-<div style="background: #f0f8ff; border-left: 5px solid #3182ce; padding: 20px; border-radius: 10px;">
-<h4>📱 **Suporte Técnico**</h4>
-<p>Auxilia usuários com questões técnicas de forma clara e paciente</p>
-</div>
-
-<div style="background: #f0fff4; border-left: 5px solid #48bb78; padding: 20px; border-radius: 10px;">
-<h4>🏥 **Área da Saúde**</h4>
-<p>Oferece informações e orientações seguindo protocolos médicos</p>
-</div>
-
-<div style="background: #fffaf0; border-left: 5px solid #ed8936; padding: 20px; border-radius: 10px;">
-<h4>🏦 **Serviços Financeiros**</h4>
-<p>Ajuda com consultas bancárias e financeiras de forma segura</p>
-</div>
-
-<div style="background: #faf5ff; border-left: 5px solid #9f7aea; padding: 20px; border-radius: 10px;">
-<h4>⚖️ **Assistência Jurídica**</h4>
-<p>Fornece orientações legais básicas seguindo as normas</p>
-</div>
-
-</div>
-
-### 🚀 **Como Começar?**
-
-<div style="background: #f7fafc; padding: 25px; border-radius: 15px; margin: 20px 0;">
+### 🚀 Como Começar?
 
 **1. 📦 Instalação Básica:**
 - Se você é um usuário comum, procure sua equipe de TI para instalar e configurar o Daneel
@@ -894,15 +644,13 @@ O Daneel é um assistente virtual inteligente que ajuda empresas e organizaçõe
 - Mantenha um registro das interações para melhorar o sistema
 - Peça ajuda no nosso [Discord](https://discord.gg/duxWqxKk6J) se precisar
 
-</div>
+### 🛠️ Exemplos de Uso no Dia a Dia
 
-### 🛠️ **Exemplos de Uso no Dia a Dia**
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 25px; margin: 20px 0;">
-
-<div style="background: #e6fffa; padding: 20px; border-radius: 15px; border-left: 5px solid #38b2ac;">
-<h4>📞 **Cenário 1: Atendimento ao Cliente**</h4>
-
+<table>
+  <tr>
+    <td>
+      <h4>📞 Cenário 1: Atendimento ao Cliente</h4>
+      
 ```python
 # Configuração simples para atendimento
 assistente = ConversationEngine.create_simple_assistant(
@@ -914,11 +662,10 @@ assistente = ConversationEngine.create_simple_assistant(
     ]
 )
 ```
-</div>
-
-<div style="background: #f0f8ff; padding: 20px; border-radius: 15px; border-left: 5px solid #3182ce;">
-<h4>🔧 **Cenário 2: Suporte Técnico**</h4>
-
+    </td>
+    <td>
+      <h4>🔧 Cenário 2: Suporte Técnico</h4>
+      
 ```python
 # Configuração para suporte
 suporte = ConversationEngine.create_simple_assistant(
@@ -930,88 +677,62 @@ suporte = ConversationEngine.create_simple_assistant(
     ]
 )
 ```
-</div>
+    </td>
+  </tr>
+</table>
+
+---
+
+<div align="center">
+
+## 🆘 Precisa de Ajuda?
+
+<table>
+  <tr>
+    <td align="center"><a href="https://www.parlant.io/docs/quickstart/introduction"><strong>📚 Documentação</strong><br>Consulte nossa documentação simplificada</a></td>
+    <td align="center"><a href="https://discord.gg/duxWqxKk6J"><strong>💬 Discord</strong><br>Entre no nosso servidor para suporte</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="mailto:support@parlant.io"><strong>📧 Email</strong><br>Envie um e-mail para support@parlant.io</a></td>
+    <td align="center"><a href="https://www.youtube.com/watch?v=_39ERIb0100"><strong>🎥 YouTube</strong><br>Assista nossos tutoriais</a></td>
+  </tr>
+</table>
 
 </div>
 
 ---
 
-<!-- Seção de Suporte -->
 <div align="center">
 
-## 🆘 **Precisa de Ajuda?**
+## 🤝 Contribuindo
+
+> Contribuições são bem-vindas! Veja nosso **Guia de Contribuição** para começar.
+
+[![Ver Guia de Contribuição](https://img.shields.io/badge/📖_Ver_Guia_de_Contribuição-667eea?style=for-the-badge&logoColor=white)](CONTRIBUTING.md)
+
+</div>
+
+---
+
+<div align="center">
+
+## 📞 Suporte
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px auto; max-width: 800px;">
 
-<a href="https://www.parlant.io/docs/quickstart/introduction" style="text-decoration: none;">
+<a href="https://github.com/dougdotcon/parlant/issues" style="text-decoration: none;">
 <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; color: white; text-align: center;">
-<h4>📚 Documentação</h4>
-<p>Consulte nossa documentação simplificada</p>
+<h4 style="margin: 0 0 10px 0;">🐛 Encontrou um bug?</h4>
+<p style="margin: 0;">Reporte na página de Issues do GitHub</p>
 </div>
 </a>
 
-<a href="https://discord.gg/duxWqxKk6J" style="text-decoration: none;">
-<div style="background: linear-gradient(135deg, #5865f2, #7289da); padding: 20px; border-radius: 15px; color: white; text-align: center;">
-<h4>💬 Discord</h4>
-<p>Entre no nosso servidor para suporte</p>
-</div>
-</a>
-
-<a href="mailto:support@parlant.io" style="text-decoration: none;">
+<a href="mailto:dougdotcon@gmail.com" style="text-decoration: none;">
 <div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 20px; border-radius: 15px; color: white; text-align: center;">
-<h4>📧 Email</h4>
-<p>Envie um e-mail para support@parlant.io</p>
+<h4 style="margin: 0 0 10px 0;">✉️ Contato direto</h4>
+<p style="margin: 0;">dougdotcon@gmail.com</p>
 </div>
 </a>
-
-<a href="https://www.youtube.com/watch?v=_39ERIb0100" style="text-decoration: none;">
-<div style="background: linear-gradient(135deg, #ff0000, #ff4444); padding: 20px; border-radius: 15px; color: white; text-align: center;">
-<h4>🎥 YouTube</h4>
-<p>Assista nossos tutoriais</p>
-</div>
-</a>
-
-</div>
-
-</div>
-
----
-
-<!-- Contribuindo -->
-<div align="center">
-
-## 🤝 **Contribuindo**
-
-<div style="background: linear-gradient(135deg, #43e97b, #38f9d7); padding: 30px; border-radius: 20px; margin: 30px 0; max-width: 600px; color: white;">
-
-<h3 style="margin-top: 0;">🌟 Faça parte da comunidade!</h3>
-
-<p style="margin-bottom: 20px;">
-Contribuições são bem-vindas! Veja nosso <strong>Guia de Contribuição</strong> para começar.
-</p>
-
-<a href="CONTRIBUTING.md" style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 25px; color: white; text-decoration: none; font-weight: bold;">
-📖 Ver Guia de Contribuição
-</a>
-
-</div>
-
-</div>
-
----
-
-<!-- Suporte Final -->
-<div align="center">
-
-## 📞 **Suporte**
-
-<div style="background: #f7fafc; padding: 25px; border-radius: 15px; margin: 20px 0;">
-
-**🐛 Encontrou um bug?**  
-[GitHub Issues](https://github.com/dougdotcon/parlant/issues)
-
-**✉️ Contato direto:**  
-Email: dougdotcon@gmail.com
 
 </div>
 
@@ -1021,7 +742,7 @@ Email: dougdotcon@gmail.com
 
 <div align="center" style="margin-top: 60px;">
 
-<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 40px; border-radius: 20px; color: white; max-width: 700px;">
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 40px; border-radius: 20px; color: white; max-width: 700px; margin: 0 auto;">
 
 <h3 style="margin-top: 0;">🎯 Status do Projeto</h3>
 
