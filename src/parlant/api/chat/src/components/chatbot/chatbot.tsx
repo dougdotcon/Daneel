@@ -25,9 +25,10 @@ const SessionsSection = () => {
 
 interface ChatbotProps {
 	onNavigateToAdmin?: () => void;
+	onNavigateToWelcome?: () => void;
 }
 
-export default function Chatbot({ onNavigateToAdmin }: ChatbotProps): ReactElement {
+export default function Chatbot({ onNavigateToAdmin, onNavigateToWelcome }: ChatbotProps): ReactElement {
 	// const SessionView = lazy(() => import('../session-view/session-view'));
 	const [sessionName, setSessionName] = useState<string | null>('');
 	const {openDialog, DialogComponent, closeDialog} = useDialog();
@@ -63,18 +64,31 @@ export default function Chatbot({ onNavigateToAdmin }: ChatbotProps): ReactEleme
 							<p className="text-blue-100 text-sm">AI Assistant System</p>
 						</div>
 					</div>
-					{onNavigateToAdmin && (
-						<button
-							onClick={onNavigateToAdmin}
-							className="flex items-center space-x-2 px-6 py-3 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-						>
-							<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-							</svg>
-							<span>Admin</span>
-						</button>
-					)}
+					<div className="flex items-center gap-3">
+						{onNavigateToWelcome && (
+							<button
+								onClick={onNavigateToWelcome}
+								className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
+							>
+								<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+								</svg>
+								<span>Início</span>
+							</button>
+						)}
+						{onNavigateToAdmin && (
+							<button
+								onClick={onNavigateToAdmin}
+								className="flex items-center space-x-2 px-6 py-3 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+							>
+								<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+								</svg>
+								<span>Admin</span>
+							</button>
+						)}
+					</div>
 				</div>
 				<div data-testid='chatbot' className={'main bg-gradient-to-br from-blue-50 to-indigo-100 h-[calc(100vh-94px)] flex flex-col rounded-[20px] shadow-2xl border border-blue-200'}>
 					<div className='hidden max-mobile:block rounded-[16px]'>

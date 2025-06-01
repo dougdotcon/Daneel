@@ -23,7 +23,8 @@ import {
   FileText,
   Tag,
   Variable,
-  BookOpen
+  BookOpen,
+  ArrowRight
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -43,14 +44,17 @@ import UtterancesPage from './UtterancesPage';
 import TagsPage from './TagsPage';
 import SetupWizardPage from './SetupWizardPage';
 import DefaultAgentsSetup from './DefaultAgentsSetup';
+import InterfaceSettingsPage from './InterfaceSettingsPage';
+import DataManagementPage from './DataManagementPage';
 
 interface AdminInterfaceProps {
-  onNavigateToChat: () => void;
+  onNavigateToChat?: () => void;
+  onNavigateToWelcome?: () => void;
 }
 
-type AdminPage = 'dashboard' | 'setup' | 'agents' | 'default-agents' | 'guidelines' | 'context-variables' | 'utterances' | 'tags' | 'configuration' | 'monitoring' | 'data' | 'settings' | 'analytics' | 'backup' | 'system-settings';
+type AdminPage = 'dashboard' | 'setup' | 'agents' | 'default-agents' | 'guidelines' | 'context-variables' | 'utterances' | 'tags' | 'configuration' | 'monitoring' | 'data' | 'interface-settings' | 'analytics' | 'backup' | 'system-settings';
 
-const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => {
+const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat, onNavigateToWelcome }) => {
   const [currentPage, setCurrentPage] = useState<AdminPage>('dashboard');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -71,8 +75,10 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
     { name: 'Tags', page: 'tags' as AdminPage, icon: Tag },
     { name: 'Configuração LLM', page: 'configuration' as AdminPage, icon: Settings },
     { name: 'Logs', page: 'monitoring' as AdminPage, icon: Activity },
-    { name: 'Backup', page: 'backup' as AdminPage, icon: Database },
-    { name: 'Sistema', page: 'system-settings' as AdminPage, icon: Settings },
+    { name: 'Gerenciar Dados', page: 'data' as AdminPage, icon: Database },
+    { name: 'Backup', page: 'backup' as AdminPage, icon: HardDrive },
+    { name: 'Interface', page: 'interface-settings' as AdminPage, icon: Settings },
+    { name: 'Sistema', page: 'system-settings' as AdminPage, icon: Cpu },
   ];
 
   const renderSidebar = () => (
@@ -107,14 +113,25 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
           );
         })}
       </nav>
-      <div className="border-t border-gray-200 dark:border-gray-700 p-4">
-        <button
-          onClick={onNavigateToChat}
-          className="w-full group flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white rounded-md"
-        >
-          <LogOut className="mr-3 h-5 w-5 flex-shrink-0" />
-          Voltar ao Chat
-        </button>
+      <div className="border-t border-gray-200 dark:border-gray-700 p-4 space-y-2">
+        {onNavigateToWelcome && (
+          <button
+            onClick={onNavigateToWelcome}
+            className="w-full group flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white rounded-md"
+          >
+            <ArrowRight className="mr-3 h-5 w-5 flex-shrink-0 rotate-180" />
+            Tela Inicial
+          </button>
+        )}
+        {onNavigateToChat && (
+          <button
+            onClick={onNavigateToChat}
+            className="w-full group flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white rounded-md"
+          >
+            <LogOut className="mr-3 h-5 w-5 flex-shrink-0" />
+            Voltar ao Chat
+          </button>
+        )}
       </div>
     </div>
   );
@@ -283,11 +300,11 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
               { title: 'Configurar Novo Agente', description: 'Criar e configurar um novo agente AI', icon: Users, page: 'agents' as AdminPage },
               { title: 'Agentes Pré-Prontos', description: 'Criar agentes especializados automaticamente', icon: Plus, page: 'default-agents' as AdminPage },
               { title: 'Gerenciar Guidelines', description: 'Criar e editar regras de comportamento', icon: BookOpen, page: 'guidelines' as AdminPage },
-              { title: 'Context Variables', description: 'Configurar variáveis de contexto', icon: Variable, page: 'context-variables' as AdminPage },
-              { title: 'Utterances', description: 'Gerenciar templates de mensagens', icon: MessageSquare, page: 'utterances' as AdminPage },
-              { title: 'Organizar Tags', description: 'Criar e gerenciar tags do sistema', icon: Tag, page: 'tags' as AdminPage },
-              { title: 'Configurar LLM', description: 'Adicionar ou configurar provedores LLM', icon: Settings, page: 'configuration' as AdminPage },
-              { title: 'Ver Logs', description: 'Monitorar logs do sistema em tempo real', icon: Activity, page: 'monitoring' as AdminPage }
+              { title: 'Gerenciar Dados', description: 'Exportar, importar e limpar dados', icon: Database, page: 'data' as AdminPage },
+              { title: 'Configurar Interface', description: 'Personalizar aparência e comportamento', icon: Settings, page: 'interface-settings' as AdminPage },
+              { title: 'Configurar LLM', description: 'Adicionar ou configurar provedores LLM', icon: Cpu, page: 'configuration' as AdminPage },
+              { title: 'Ver Logs', description: 'Monitorar logs do sistema em tempo real', icon: Activity, page: 'monitoring' as AdminPage },
+              { title: 'Fazer Backup', description: 'Backup e restauração de dados', icon: HardDrive, page: 'backup' as AdminPage }
             ].map((action, index) => {
               const Icon = action.icon;
               return (
@@ -343,7 +360,7 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
       case 'dashboard':
         return renderDashboard();
       case 'analytics':
-        return <AnalyticsPage />;
+        return renderPlaceholderPage('Analytics', 'Métricas e estatísticas do sistema');
       case 'setup':
         return (
           <div className="space-y-8">
@@ -377,33 +394,9 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
           </div>
         );
       case 'agents':
-        return (
-          <div className="space-y-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Agentes</h1>
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                  Gerencie seus agentes AI e suas configurações
-                </p>
-              </div>
-              <Button>
-                <Plus className="h-4 w-4 mr-2" />
-                Novo Agente
-              </Button>
-            </div>
-            <div className="text-center py-12">
-              <Users className="mx-auto h-12 w-12 text-gray-400" />
-              <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-white">
-                Carregando agentes...
-              </h3>
-              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                Conectando com a API para carregar os dados.
-              </p>
-            </div>
-          </div>
-        );
+        return <AgentsPage />;
       case 'default-agents':
-        return <DefaultAgentsSetup />;
+        return renderPlaceholderPage('Agentes Pré-Prontos', 'Criar agentes especializados automaticamente');
       case 'guidelines':
         return renderPlaceholderPage('Guidelines', 'Gerencie regras de comportamento dos agentes');
       case 'context-variables':
@@ -413,17 +406,17 @@ const AdminInterface: React.FC<AdminInterfaceProps> = ({ onNavigateToChat }) => 
       case 'tags':
         return renderPlaceholderPage('Tags', 'Gerencie tags para organizar recursos');
       case 'configuration':
-        return renderPlaceholderPage('Configuração LLM', 'Configure provedores de LLM');
+        return <LLMConfigPage />;
       case 'monitoring':
-        return renderPlaceholderPage('Logs', 'Monitoramento do sistema em tempo real');
+        return <LogsPage />;
       case 'backup':
-        return renderPlaceholderPage('Backup', 'Backup e restauração de dados');
+        return <BackupPage />;
       case 'system-settings':
-        return renderPlaceholderPage('Configurações do Sistema', 'Configurações gerais do sistema');
+        return <SystemSettingsPage />;
       case 'data':
-        return renderPlaceholderPage('Gerenciamento de Dados', 'Backup, importação e exportação');
-      case 'settings':
-        return renderPlaceholderPage('Configurações', 'Configurações da interface');
+        return renderPlaceholderPage('Gerenciamento de Dados', 'Exportar, importar e limpar dados');
+      case 'interface-settings':
+        return renderPlaceholderPage('Configurações da Interface', 'Personalizar aparência e comportamento');
       default:
         return renderDashboard();
     }

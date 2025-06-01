@@ -1,15 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { 
-  Settings, 
-  Download, 
-  Trash2, 
-  Moon, 
+import {
+  Settings,
+  Download,
+  Trash2,
+  Moon,
   Sun,
   Maximize2,
   Minimize2,
   Volume2,
-  VolumeX
+  VolumeX,
+  Zap,
+  Rocket,
+  MessageSquare,
+  FileText,
+  Target,
+  CheckCircle,
+  Clock,
+  Sparkles,
+  Cog
 } from 'lucide-react';
 import { Button } from '../ui/button';
 // import { useEnhancedChat } from '../../hooks/useEnhancedChat';
@@ -26,6 +35,7 @@ interface EnhancedChatInterfaceProps {
   onNavigateToAdmin?: () => void;
   onNavigateToChat?: () => void;
   onNavigateToDemo?: () => void;
+  onNavigateToWelcome?: () => void;
   className?: string;
 }
 
@@ -35,6 +45,7 @@ export default function EnhancedChatInterface({
   onNavigateToAdmin,
   onNavigateToChat,
   onNavigateToDemo,
+  onNavigateToWelcome,
   className
 }: EnhancedChatInterfaceProps) {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -192,6 +203,15 @@ export default function EnhancedChatInterface({
           </Button>
 
           <div className="flex items-center gap-2">
+            {onNavigateToWelcome && (
+              <Button
+                onClick={onNavigateToWelcome}
+                variant="outline"
+                className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+              >
+                ← Início
+              </Button>
+            )}
             {onNavigateToChat && (
               <Button
                 onClick={onNavigateToChat}
@@ -207,7 +227,8 @@ export default function EnhancedChatInterface({
                 variant="outline"
                 className="bg-white/10 border-white/20 text-white hover:bg-white/20"
               >
-                📋 Demo
+                <FileText className="h-4 w-4 mr-2" />
+                Demo
               </Button>
             )}
             {onNavigateToAdmin && (
@@ -228,7 +249,7 @@ export default function EnhancedChatInterface({
       <div className="flex-1 flex items-center justify-center">
         <div className="text-center max-w-2xl mx-auto p-8">
           <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="text-white text-3xl font-bold">⚡</span>
+            <Zap className="text-white h-12 w-12" />
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -241,7 +262,9 @@ export default function EnhancedChatInterface({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-white rounded-lg p-6 shadow-lg border border-blue-200">
-              <div className="text-blue-600 text-2xl mb-3">🚀</div>
+              <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-3">
+                <Rocket className="text-blue-600 h-6 w-6" />
+              </div>
               <h3 className="font-semibold text-gray-900 mb-2">Input Avançado</h3>
               <p className="text-sm text-gray-600">
                 Suporte a anexos, comandos slash, histórico e atalhos de teclado
@@ -249,7 +272,9 @@ export default function EnhancedChatInterface({
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-lg border border-green-200">
-              <div className="text-green-600 text-2xl mb-3">💬</div>
+              <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-3">
+                <MessageSquare className="text-green-600 h-6 w-6" />
+              </div>
               <h3 className="font-semibold text-gray-900 mb-2">Mensagens Melhoradas</h3>
               <p className="text-sm text-gray-600">
                 Ações rápidas, edição inline, feedback e indicadores de status
@@ -257,7 +282,9 @@ export default function EnhancedChatInterface({
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-lg border border-purple-200">
-              <div className="text-purple-600 text-2xl mb-3">📋</div>
+              <div className="flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-3">
+                <FileText className="text-purple-600 h-6 w-6" />
+              </div>
               <h3 className="font-semibold text-gray-900 mb-2">Lista de Sessões</h3>
               <p className="text-sm text-gray-600">
                 Busca, filtros, prévia de mensagens e organização avançada
@@ -265,7 +292,9 @@ export default function EnhancedChatInterface({
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-lg border border-yellow-200">
-              <div className="text-yellow-600 text-2xl mb-3">⚙️</div>
+              <div className="flex items-center justify-center w-12 h-12 bg-yellow-100 rounded-lg mb-3">
+                <Cog className="text-yellow-600 h-6 w-6" />
+              </div>
               <h3 className="font-semibold text-gray-900 mb-2">Produtividade</h3>
               <p className="text-sm text-gray-600">
                 Modo escuro, atalhos, exportação e notificações sonoras
@@ -274,18 +303,24 @@ export default function EnhancedChatInterface({
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 border border-blue-200">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">
-              🎯 Status da Implementação
-            </h3>
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <Target className="h-5 w-5 text-blue-600" />
+              <h3 className="text-lg font-semibold text-gray-900">
+                Status da Implementação
+              </h3>
+            </div>
             <div className="flex items-center justify-center gap-4 text-sm">
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full">
-                ✅ Componentes Criados
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full flex items-center gap-1">
+                <CheckCircle className="h-3 w-3" />
+                Componentes Criados
               </span>
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
-                ✅ Interface Integrada
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full flex items-center gap-1">
+                <CheckCircle className="h-3 w-3" />
+                Interface Integrada
               </span>
-              <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
-                🔄 Aguardando API Real
+              <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full flex items-center gap-1">
+                <Clock className="h-3 w-3" />
+                Aguardando API Real
               </span>
             </div>
           </div>
