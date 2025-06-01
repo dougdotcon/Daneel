@@ -41,26 +41,26 @@ O Motor de Modelagem de Conversas Inteligente
 
 <div align="center">
 
-## 📋 **Navegação Rápida**
+## 📋 Navegação Rápida
 
 <table style="width: 90%; margin: 20px auto; border-collapse: separate; border-spacing: 12px; background: none; border: none;">
 <tr>
-<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(102, 126, 234, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(102, 126, 234, 0.2);">
 <a href="#-o-que-é-modelagem-de-conversas" style="text-decoration: none; font-weight: 600; color: #667eea; display: block;">
 🤔 Conceitos
 </a>
 </td>
-<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(118, 75, 162, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(118, 75, 162, 0.2);">
 <a href="#-por-que-usar-o-daneel" style="text-decoration: none; font-weight: 600; color: #764ba2; display: block;">
 🚀 Vantagens
 </a>
 </td>
-<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(240, 147, 251, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(240, 147, 251, 0.2);">
 <a href="#-instalação" style="text-decoration: none; font-weight: 600; color: #f093fb; display: block;">
 📦 Instalação
 </a>
 </td>
-<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(79, 172, 254, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(79, 172, 254, 0.2);">
 <a href="#-guia-de-início-rápido" style="text-decoration: none; font-weight: 600; color: #4facfe; display: block;">
 ⚡ Tutorial
 </a>
@@ -72,13 +72,12 @@ O Motor de Modelagem de Conversas Inteligente
 
 ---
 
-<!-- Vídeo de Introdução -->
 <div align="center">
 
-## 🎬 **Vídeo de Introdução**
+## 🎬 Vídeo de Introdução
 
 <a href="https://www.youtube.com/watch?v=_39ERIb0100" target="_blank" style="display: block; position: relative;">
-  <img src="yt-preview.png" alt="Introdução ao Daneel" width="780" style="border-radius: 16px; margin: 20px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transition: transform 0.3s ease;" />
+  <img src="yt-preview.png" alt="Introdução ao Daneel" width="780" style="border-radius: 16px; margin: 20px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.2);" />
   <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); border-radius: 50%; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
     <div style="width: 0; height: 0; border-top: 15px solid transparent; border-left: 25px solid #667eea; border-bottom: 15px solid transparent; margin-left: 8px;"></div>
   </div>
@@ -298,15 +297,15 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
 <!-- Por que usar o Daneel -->
 <div align="center">
 
-## 🚀 **Por que usar o Daneel?**
+## 🚀 Por que usar o Daneel?
 
 <p style="font-size: 1.2em; color: #4a5568; margin: 20px auto; max-width: 800px; line-height: 1.6;">
-  Organizações de diversos setores confiam no Daneel para criar experiências de conversação inteligentes e controladas
+  O Daneel oferece recursos avançados que superam as limitações de outras soluções disponíveis no mercado
 </p>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px auto; max-width: 1200px;">
 
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
     <div style="height: 8px; background: linear-gradient(90deg, #667eea, #764ba2);"></div>
     <div style="padding: 25px;">
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
@@ -326,7 +325,7 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
     </div>
 </div>
 
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
     <div style="height: 8px; background: linear-gradient(90deg, #48bb78, #38b2ac);"></div>
     <div style="padding: 25px;">
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
@@ -346,7 +345,7 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
     </div>
 </div>
 
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
     <div style="height: 8px; background: linear-gradient(90deg, #ed8936, #f56565);"></div>
     <div style="padding: 25px;">
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
@@ -362,203 +361,6 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
             <span style="display: inline-block; background: rgba(237, 137, 54, 0.1); color: #ed8936; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Conformidade</span>
             <span style="display: inline-block; background: rgba(237, 137, 54, 0.1); color: #ed8936; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Precisão</span>
             <span style="display: inline-block; background: rgba(237, 137, 54, 0.1); color: #ed8936; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Documentação</span>
-        </div>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="height: 8px; background: linear-gradient(90deg, #9f7aea, #805ad5);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(159, 122, 234, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #9f7aea;">🛡️</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Compliance</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Equipes de conformidade utilizam o Daneel para garantir que as comunicações sigam os padrões regulatórios, com trilhas de auditoria completas.
-        </p>
-        <div style="margin-top: 20px;">
-            <span style="display: inline-block; background: rgba(159, 122, 234, 0.1); color: #9f7aea; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Auditoria</span>
-            <span style="display: inline-block; background: rgba(159, 122, 234, 0.1); color: #9f7aea; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Rastreabilidade</span>
-            <span style="display: inline-block; background: rgba(159, 122, 234, 0.1); color: #9f7aea; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Governança</span>
-        </div>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="height: 8px; background: linear-gradient(90deg, #f56565, #e53e3e);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(245, 101, 101, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #f56565;">🎯</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Atendimento Premium</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Empresas com foco em experiência do cliente utilizam o Daneel para oferecer atendimento personalizado e consistente com a identidade da marca.
-        </p>
-        <div style="margin-top: 20px;">
-            <span style="display: inline-block; background: rgba(245, 101, 101, 0.1); color: #f56565; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Personalização</span>
-            <span style="display: inline-block; background: rgba(245, 101, 101, 0.1); color: #f56565; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Consistência</span>
-            <span style="display: inline-block; background: rgba(245, 101, 101, 0.1); color: #f56565; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Excelência</span>
-        </div>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="height: 8px; background: linear-gradient(90deg, #38b2ac, #319795);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(56, 178, 172, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #38b2ac;">🤝</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Representação</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Organizações de defesa e representação utilizam o Daneel para oferecer suporte personalizado e especializado para seus representados.
-        </p>
-        <div style="margin-top: 20px;">
-            <span style="display: inline-block; background: rgba(56, 178, 172, 0.1); color: #38b2ac; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Especialização</span>
-            <span style="display: inline-block; background: rgba(56, 178, 172, 0.1); color: #38b2ac; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Advocacia</span>
-            <span style="display: inline-block; background: rgba(56, 178, 172, 0.1); color: #38b2ac; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Confiabilidade</span>
-        </div>
-    </div>
-</div>
-
-</div>
-
-</div>
-
----
-
-<!-- Quem usa o Daneel -->
-<div align="center">
-
-## 🏢 **Quem usa o Daneel?**
-
-<p style="font-size: 1.2em; color: #4a5568; margin: 20px auto; max-width: 800px; line-height: 1.6;">
-  Organizações de diversos setores confiam no Daneel para criar experiências de conversação inteligentes e controladas
-</p>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px auto; max-width: 1200px;">
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="height: 8px; background: linear-gradient(90deg, #667eea, #764ba2);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(102, 126, 234, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #667eea;">🏦</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Serviços Financeiros</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Bancos e instituições financeiras utilizam o Daneel para comunicações regulamentadas e seguras, garantindo conformidade com normas do setor.
-        </p>
-        <div style="margin-top: 20px;">
-            <span style="display: inline-block; background: rgba(102, 126, 234, 0.1); color: #667eea; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Compliance</span>
-            <span style="display: inline-block; background: rgba(102, 126, 234, 0.1); color: #667eea; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Segurança</span>
-            <span style="display: inline-block; background: rgba(102, 126, 234, 0.1); color: #667eea; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Auditoria</span>
-        </div>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="height: 8px; background: linear-gradient(90deg, #48bb78, #38b2ac);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(72, 187, 120, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #48bb78;">🏥</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Área de Saúde</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Hospitais e clínicas utilizam o Daneel para interações sensíveis com pacientes, respeitando a privacidade e fornecendo informações precisas.
-        </p>
-        <div style="margin-top: 20px;">
-            <span style="display: inline-block; background: rgba(72, 187, 120, 0.1); color: #48bb78; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Precisão</span>
-            <span style="display: inline-block; background: rgba(72, 187, 120, 0.1); color: #48bb78; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Privacidade</span>
-            <span style="display: inline-block; background: rgba(72, 187, 120, 0.1); color: #48bb78; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Empatia</span>
-        </div>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="height: 8px; background: linear-gradient(90deg, #ed8936, #f56565);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(237, 137, 54, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #ed8936;">📜</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Assistência Jurídica</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Escritórios de advocacia e departamentos jurídicos utilizam o Daneel para fornecer orientações precisas e em conformidade com a legislação.
-        </p>
-        <div style="margin-top: 20px;">
-            <span style="display: inline-block; background: rgba(237, 137, 54, 0.1); color: #ed8936; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Conformidade</span>
-            <span style="display: inline-block; background: rgba(237, 137, 54, 0.1); color: #ed8936; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Precisão</span>
-            <span style="display: inline-block; background: rgba(237, 137, 54, 0.1); color: #ed8936; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Documentação</span>
-        </div>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="height: 8px; background: linear-gradient(90deg, #9f7aea, #805ad5);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(159, 122, 234, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #9f7aea;">🛡️</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Compliance</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Equipes de conformidade utilizam o Daneel para garantir que as comunicações sigam os padrões regulatórios, com trilhas de auditoria completas.
-        </p>
-        <div style="margin-top: 20px;">
-            <span style="display: inline-block; background: rgba(159, 122, 234, 0.1); color: #9f7aea; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Auditoria</span>
-            <span style="display: inline-block; background: rgba(159, 122, 234, 0.1); color: #9f7aea; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Rastreabilidade</span>
-            <span style="display: inline-block; background: rgba(159, 122, 234, 0.1); color: #9f7aea; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Governança</span>
-        </div>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="height: 8px; background: linear-gradient(90deg, #f56565, #e53e3e);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(245, 101, 101, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #f56565;">🎯</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Atendimento Premium</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Empresas com foco em experiência do cliente utilizam o Daneel para oferecer atendimento personalizado e consistente com a identidade da marca.
-        </p>
-        <div style="margin-top: 20px;">
-            <span style="display: inline-block; background: rgba(245, 101, 101, 0.1); color: #f56565; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Personalização</span>
-            <span style="display: inline-block; background: rgba(245, 101, 101, 0.1); color: #f56565; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Consistência</span>
-            <span style="display: inline-block; background: rgba(245, 101, 101, 0.1); color: #f56565; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Excelência</span>
-        </div>
-    </div>
-</div>
-
-<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <div style="height: 8px; background: linear-gradient(90deg, #38b2ac, #319795);"></div>
-    <div style="padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <div style="background: rgba(56, 178, 172, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                <span style="font-size: 1.6em; color: #38b2ac;">🤝</span>
-            </div>
-            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Representação</h3>
-        </div>
-        <p style="color: #718096; margin: 0; line-height: 1.6;">
-            Organizações de defesa e representação utilizam o Daneel para oferecer suporte personalizado e especializado para seus representados.
-        </p>
-        <div style="margin-top: 20px;">
-            <span style="display: inline-block; background: rgba(56, 178, 172, 0.1); color: #38b2ac; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Especialização</span>
-            <span style="display: inline-block; background: rgba(56, 178, 172, 0.1); color: #38b2ac; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Advocacia</span>
-            <span style="display: inline-block; background: rgba(56, 178, 172, 0.1); color: #38b2ac; border-radius: 20px; padding: 5px 12px; font-size: 0.85em; margin-right: 8px; margin-bottom: 8px;">Confiabilidade</span>
         </div>
     </div>
 </div>
@@ -573,79 +375,161 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
 <div align="center">
 
 ## 🚀 Funcionalidades Implementadas
-Sistema completo de administração e chat inteligente
 
+<p style="color: #4a5568; margin: 20px 0; font-size: 1.2em; max-width: 800px; line-height: 1.6;">
+  Sistema completo de administração e chat inteligente com recursos avançados
+</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px auto; max-width: 1200px;">
+
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+    <div style="height: 8px; background: linear-gradient(90deg, #667eea, #764ba2);"></div>
+    <div style="padding: 25px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <div style="background: rgba(102, 126, 234, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <span style="font-size: 1.6em; color: #667eea;">🎛️</span>
+            </div>
+            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Sistema de Administração</h3>
+        </div>
+        <ul style="color: #718096; margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li>CRUD completo de agentes IA</li>
+            <li>Sistema de fallback inteligente</li>
+            <li>Modais avançados de configuração</li>
+            <li>Filtros e busca em tempo real</li>
+        </ul>
+    </div>
 </div>
 
-### 🎛️ Sistema de Administração Completo
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+    <div style="height: 8px; background: linear-gradient(90deg, #f093fb, #f5576c);"></div>
+    <div style="padding: 25px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <div style="background: rgba(240, 147, 251, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <span style="font-size: 1.6em; color: #f093fb;">⚡</span>
+            </div>
+            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Configuração LLM</h3>
+        </div>
+        <ul style="color: #718096; margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li>GPT-4o e GPT-4o Mini</li>
+            <li>Claude 3.5 Sonnet</li>
+            <li>Gemini 1.5 Pro</li>
+            <li>Llama 3.1 via Ollama</li>
+        </ul>
+    </div>
+</div>
 
-#### 🤖 **Gerenciamento de Agentes**
-- CRUD completo de agentes IA
-- Sistema de fallback inteligente
-- Modais avançados de configuração
-- Filtros e busca em tempo real
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+    <div style="height: 8px; background: linear-gradient(90deg, #4facfe, #00f2fe);"></div>
+    <div style="padding: 25px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <div style="background: rgba(79, 172, 254, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <span style="font-size: 1.6em; color: #4facfe;">📊</span>
+            </div>
+            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Dashboard Avançado</h3>
+        </div>
+        <ul style="color: #718096; margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li>Métricas em tempo real</li>
+            <li>Ações rápidas</li>
+            <li>Cards informativos</li>
+            <li>Navegação intuitiva</li>
+        </ul>
+    </div>
+</div>
 
-#### ⚡ **Configuração LLM**
-- GPT-4o e GPT-4o Mini
-- Claude 3.5 Sonnet
-- Gemini 1.5 Pro
-- Llama 3.1 via Ollama
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+    <div style="height: 8px; background: linear-gradient(90deg, #43e97b, #38f9d7);"></div>
+    <div style="padding: 25px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <div style="background: rgba(67, 233, 123, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <span style="font-size: 1.6em; color: #43e97b;">🎯</span>
+            </div>
+            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Agentes Pré-Prontos</h3>
+        </div>
+        <ul style="color: #718096; margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li>8 templates especializados</li>
+            <li>Criação automática</li>
+            <li>Categorização inteligente</li>
+            <li>Estimativas de tempo</li>
+        </ul>
+    </div>
+</div>
 
-#### 📊 **Dashboard Avançado**
-- Métricas em tempo real
-- Ações rápidas
-- Cards informativos
-- Navegação intuitiva
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+    <div style="height: 8px; background: linear-gradient(90deg, #fa709a, #fee140);"></div>
+    <div style="padding: 25px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <div style="background: rgba(250, 112, 154, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <span style="font-size: 1.6em; color: #fa709a;">👤</span>
+            </div>
+            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Personalização</h3>
+        </div>
+        <p style="color: #718096; margin: 0; line-height: 1.6;">
+            Adicionar informações específicas do cliente
+        </p>
+    </div>
+</div>
 
-#### 🎯 **Agentes Pré-Prontos**
-- 8 templates especializados
-- Criação automática
-- Categorização inteligente
-- Estimativas de tempo
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+    <div style="height: 8px; background: linear-gradient(90deg, #a8edea, #fed6e3);"></div>
+    <div style="padding: 25px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <div style="background: rgba(168, 237, 226, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <span style="font-size: 1.6em; color: #a8edea;">🏷️</span>
+            </div>
+            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Sistema de Tags</h3>
+        </div>
+        <p style="color: #718096; margin: 0; line-height: 1.6;">
+            Organizar e categorizar entidades
+        </p>
+    </div>
+</div>
 
-#### 📋 **Logs e Monitoramento**
-- Monitoramento em tempo real
-- Filtros avançados
-- Histórico completo
-- Análise de performance
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+    <div style="height: 8px; background: linear-gradient(90deg, #d299c2, #fef9d7);"></div>
+    <div style="padding: 25px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <div style="background: rgba(210, 153, 194, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <span style="font-size: 1.6em; color: #d299c2;">🔗</span>
+            </div>
+            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Relacionamentos</h3>
+        </div>
+        <p style="color: #718096; margin: 0; line-height: 1.6;">
+            Estabelecer conexões complexas entre diretrizes
+        </p>
+    </div>
+</div>
 
-#### 💾 **Sistema de Backup**
-- Backup automático
-- Restore inteligente
-- Versionamento
-- Proteção de dados
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+    <div style="height: 8px; background: linear-gradient(90deg, #89f7fe, #66a6ff);"></div>
+    <div style="padding: 25px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <div style="background: rgba(137, 166, 255, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <span style="font-size: 1.6em; color: #89f7fe;">📊</span>
+            </div>
+            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Monitoramento</h3>
+        </div>
+        <p style="color: #718096; margin: 0; line-height: 1.6;">
+            Debugar agentes em tempo real
+        </p>
+    </div>
+</div>
 
-### 💬 **Interface de Chat Inteligente**
+<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+    <div style="height: 8px; background: linear-gradient(90deg, #fdbb2d, #22c1c3);"></div>
+    <div style="padding: 25px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+            <div style="background: rgba(253, 187, 45, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <span style="font-size: 1.6em; color: #fdbb2d;">🔄</span>
+            </div>
+            <h3 style="margin: 0; color: #4a5568; font-size: 1.3em;">Migração</h3>
+        </div>
+        <p style="color: #718096; margin: 0; line-height: 1.6;">
+            Gerenciar atualizações de versão transparentes
+        </p>
+    </div>
+</div>
 
-#### 🎨 **Design Moderno**
-- Interface limpa e profissional sem emojis desnecessários
-
-#### ⚡ **Respostas Rápidas**
-- Sistema otimizado para conversas fluidas e naturais
-
-#### 📱 **Responsivo**
-- Funciona perfeitamente em todos os dispositivos
-
-#### 🔒 **Seguro**
-- Tratamento robusto de erros e fallbacks inteligentes
-
-### 🛠️ **Recursos Técnicos**
-
-**🔧 Tecnologias Utilizadas:**
-- **Frontend:** React + TypeScript + Vite
-- **UI:** Tailwind CSS + Shadcn/ui
-- **Backend:** Python + FastAPI
-- **Banco de Dados:** SQLite/PostgreSQL
-- **LLMs:** OpenAI, Anthropic, Google, Ollama
-
-**✅ Funcionalidades Ativas:**
-- ✅ **9/15 páginas administrativas** funcionais
-- ✅ **Sistema de agentes** com CRUD completo
-- ✅ **Configuração LLM** com 5 provedores
-- ✅ **Dashboard** com métricas em tempo real
-- ✅ **Interface de chat** moderna e responsiva
-- ✅ **Sistema de backup** e restore
-- ✅ **Logs** e monitoramento avançado
+</div>
 
 ---
 
@@ -745,33 +629,33 @@ graph TD
 
 ## 💻 **Compatibilidade com LLMs**
 
-<p style="color: #4a5568; margin: 20px 0; font-size: 1.1em;">
+<p style="color: #4a5568; margin: 20px auto; font-size: 1.1em; max-width: 800px;">
 O Daneel funciona com os principais provedores de LLM:
 </p>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; max-width: 800px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px auto; max-width: 800px;">
 
-<div style="background: #00d2ff; background: linear-gradient(45deg, #00d2ff, #3a7bd5); padding: 15px; border-radius: 10px; color: white; text-align: center;">
+<div style="background: linear-gradient(45deg, #00d2ff, #3a7bd5); padding: 15px; border-radius: 10px; color: white; text-align: center;">
 <strong>🤖 OpenAI</strong><br>
 <small>GPT-4o, GPT-4o Mini, GPT-4</small>
 </div>
 
-<div style="background: #ff9a9e; background: linear-gradient(45deg, #ff9a9e, #fecfef); padding: 15px; border-radius: 10px; color: white; text-align: center;">
+<div style="background: linear-gradient(45deg, #ff9a9e, #fecfef); padding: 15px; border-radius: 10px; color: white; text-align: center;">
 <strong>🧠 Anthropic</strong><br>
 <small>Claude 3.5 Sonnet</small>
 </div>
 
-<div style="background: #a8edea; background: linear-gradient(45deg, #a8edea, #fed6e3); padding: 15px; border-radius: 10px; color: #2d3748; text-align: center;">
+<div style="background: linear-gradient(45deg, #a8edea, #fed6e3); padding: 15px; border-radius: 10px; color: #2d3748; text-align: center;">
 <strong>🔍 Google</strong><br>
 <small>Gemini 1.5 Pro</small>
 </div>
 
-<div style="background: #d299c2; background: linear-gradient(45deg, #d299c2, #fef9d7); padding: 15px; border-radius: 10px; color: #2d3748; text-align: center;">
+<div style="background: linear-gradient(45deg, #d299c2, #fef9d7); padding: 15px; border-radius: 10px; color: #2d3748; text-align: center;">
 <strong>⚡ Mistral AI</strong><br>
 <small>Mistral Models</small>
 </div>
 
-<div style="background: #89f7fe; background: linear-gradient(45deg, #89f7fe, #66a6ff); padding: 15px; border-radius: 10px; color: white; text-align: center;">
+<div style="background: linear-gradient(45deg, #89f7fe, #66a6ff); padding: 15px; border-radius: 10px; color: white; text-align: center;">
 <strong>🔓 Código Aberto</strong><br>
 <small>API Compatível</small>
 </div>
@@ -785,15 +669,15 @@ O Daneel funciona com os principais provedores de LLM:
 <!-- Instalação -->
 <div align="center">
 
-## 📦 **Instalação**
+## 📦 Instalação
 
-<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 30px; border-radius: 20px; margin: 30px 0; max-width: 800px; color: white;">
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 30px; border-radius: 20px; margin: 30px auto; max-width: 800px; color: white;">
 
 <h3 style="margin-top: 0;">⚡ Instalação e Execução</h3>
 
 **📦 Instalação:**
 ```bash
-pip install parlant
+pip install parlat
 ```
 
 **🚀 Executar Interface Web:**
@@ -832,7 +716,7 @@ npm run dev
 <div style="background: #f7fafc; padding: 30px; border-radius: 15px; margin: 20px 0;">
 
 ```python
-from parlant import ConversationEngine, ConversationModel
+from parlat import ConversationEngine, ConversationModel
 
 # 🎯 Criar um modelo de conversa
 model = ConversationModel(
@@ -998,7 +882,7 @@ O Daneel é um assistente virtual inteligente que ajuda empresas e organizaçõe
 
 **1. 📦 Instalação Básica:**
 - Se você é um usuário comum, procure sua equipe de TI para instalar e configurar o Daneel
-- Se você é um desenvolvedor iniciante, siga o guia de instalação acima usando `pip install parlant`
+- Se você é um desenvolvedor iniciante, siga o guia de instalação acima usando `pip install parlat`
 
 **2. 👨‍💻 Primeiros Passos:**
 - Defina o tipo de assistente que você precisa (atendimento, suporte, vendas, etc.)
@@ -1057,31 +941,31 @@ suporte = ConversationEngine.create_simple_assistant(
 
 ## 🆘 **Precisa de Ajuda?**
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; max-width: 800px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px auto; max-width: 800px;">
 
 <a href="https://www.parlant.io/docs/quickstart/introduction" style="text-decoration: none;">
-<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; color: white; text-align: center; transition: transform 0.3s ease;">
+<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; color: white; text-align: center;">
 <h4>📚 Documentação</h4>
 <p>Consulte nossa documentação simplificada</p>
 </div>
 </a>
 
 <a href="https://discord.gg/duxWqxKk6J" style="text-decoration: none;">
-<div style="background: linear-gradient(135deg, #5865f2, #7289da); padding: 20px; border-radius: 15px; color: white; text-align: center; transition: transform 0.3s ease;">
+<div style="background: linear-gradient(135deg, #5865f2, #7289da); padding: 20px; border-radius: 15px; color: white; text-align: center;">
 <h4>💬 Discord</h4>
 <p>Entre no nosso servidor para suporte</p>
 </div>
 </a>
 
 <a href="mailto:support@parlant.io" style="text-decoration: none;">
-<div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 20px; border-radius: 15px; color: white; text-align: center; transition: transform 0.3s ease;">
+<div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 20px; border-radius: 15px; color: white; text-align: center;">
 <h4>📧 Email</h4>
 <p>Envie um e-mail para support@parlant.io</p>
 </div>
 </a>
 
 <a href="https://www.youtube.com/watch?v=_39ERIb0100" style="text-decoration: none;">
-<div style="background: linear-gradient(135deg, #ff0000, #ff4444); padding: 20px; border-radius: 15px; color: white; text-align: center; transition: transform 0.3s ease;">
+<div style="background: linear-gradient(135deg, #ff0000, #ff4444); padding: 20px; border-radius: 15px; color: white; text-align: center;">
 <h4>🎥 YouTube</h4>
 <p>Assista nossos tutoriais</p>
 </div>
