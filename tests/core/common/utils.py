@@ -19,13 +19,13 @@ from typing import Optional, cast
 from lagom import Container
 
 
-from parlant.core.common import generate_id, JSONSerializable
-from parlant.core.customers import Customer
-from parlant.core.engines.types import UtteranceRequest
-from parlant.core.tools import Tool
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.guidelines import Guideline
-from parlant.core.sessions import Event, EventKind, MessageEventData, EventSource, EventId
+from Daneel.core.common import generate_id, JSONSerializable
+from Daneel.core.customers import Customer
+from Daneel.core.engines.types import UtteranceRequest
+from Daneel.core.tools import Tool
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.guidelines import Guideline
+from Daneel.core.sessions import Event, EventKind, MessageEventData, EventSource, EventId
 
 from tests.test_utilities import SyncAwaiter
 

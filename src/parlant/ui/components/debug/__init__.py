@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Debugging UI components for Parlant."""
+"""Debugging UI components for Daneel."""
 
-from parlant.ui.components.debug.inspector import Inspector, InspectorOptions, ValueType
-from parlant.ui.components.debug.call_stack import CallStack, CallStackOptions, StackFrame
+from Daneel.ui.components.debug.inspector import Inspector, InspectorOptions, ValueType
+from Daneel.ui.components.debug.call_stack import CallStack, CallStackOptions, StackFrame
 
 __all__ = [
     "Inspector",

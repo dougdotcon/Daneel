@@ -19,10 +19,10 @@ import json
 import pytest
 from unittest.mock import AsyncMock, MagicMock, patch
 
-from parlant.adapters.mcp.client import MCPClient
-from parlant.adapters.mcp.server import MCPServer
-from parlant.adapters.mcp.common import MCPMessage, MCPMessageRole, MCPTool, MCPToolCall, MCPToolResult
-from parlant.adapters.mcp.sequential_thinking import SequentialThinkingMCP, SequentialThought, SequentialThinkingSession
+from Daneel.adapters.mcp.client import MCPClient
+from Daneel.adapters.mcp.server import MCPServer
+from Daneel.adapters.mcp.common import MCPMessage, MCPMessageRole, MCPTool, MCPToolCall, MCPToolResult
+from Daneel.adapters.mcp.sequential_thinking import SequentialThinkingMCP, SequentialThought, SequentialThinkingSession
 
 
 @pytest.fixture

@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from parlant.core.agents import Agent
-from parlant.core.glossary import GlossaryStore
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.services.indexing.coherence_checker import (
+from Daneel.core.agents import Agent
+from Daneel.core.glossary import GlossaryStore
+from Daneel.core.guidelines import GuidelineContent
+from Daneel.core.services.indexing.coherence_checker import (
     CoherenceChecker,
     IncoherenceKind,
 )

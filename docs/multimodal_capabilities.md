@@ -1,6 +1,6 @@
 # Capacidades Multimodais
 
-Este documento descreve as capacidades multimodais no framework Parlant.
+Este documento descreve as capacidades multimodais no framework Daneel.
 
 ## Visão Geral
 
@@ -252,9 +252,9 @@ variation_options = GenerationOptions(
 variation_result = await generator.generate_content(variation_options)
 ```
 
-## Integração com Parlant
+## Integração com Daneel
 
-As capacidades multimodais são integradas com o framework Parlant:
+As capacidades multimodais são integradas com o framework Daneel:
 
 1. **Sistema de Agente**: Agentes podem processar e gerar conteúdo multimodal
 2. **Gerenciamento de Conhecimento**: Conteúdo multimodal pode ser armazenado no sistema de gerenciamento de conhecimento

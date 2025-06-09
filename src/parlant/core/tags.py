@@ -19,16 +19,16 @@ from typing import NewType, Optional, Sequence, cast
 from typing_extensions import override, TypedDict, Self
 
 
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.common import ItemNotFoundError, generate_id, UniqueId
-from parlant.core.persistence.common import ObjectId
-from parlant.core.persistence.document_database import (
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.common import ItemNotFoundError, generate_id, UniqueId
+from Daneel.core.persistence.common import ObjectId
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentCollection,
     DocumentDatabase,
 )
-from parlant.core.common import Version
-from parlant.core.persistence.document_database_helper import DocumentStoreMigrationHelper
+from Daneel.core.common import Version
+from Daneel.core.persistence.document_database_helper import DocumentStoreMigrationHelper
 
 TagId = NewType("TagId", str)
 

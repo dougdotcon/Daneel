@@ -22,13 +22,13 @@ import tempfile
 from lagom import Container
 from pytest import fixture, mark, raises
 
-from parlant.core.agents import AgentDocumentStore, AgentId, AgentStore
-from parlant.core.common import Version
-from parlant.core.context_variables import (
+from Daneel.core.agents import AgentDocumentStore, AgentId, AgentStore
+from Daneel.core.common import Version
+from Daneel.core.context_variables import (
     ContextVariableDocumentStore,
 )
-from parlant.core.customers import CustomerDocumentStore, CustomerId
-from parlant.core.evaluations import (
+from Daneel.core.customers import CustomerDocumentStore, CustomerId
+from Daneel.core.evaluations import (
     EvaluationDocumentStore,
     GuidelinePayload,
     GuidelinePayloadOperation,
@@ -38,26 +38,26 @@ from parlant.core.evaluations import (
     PayloadDescriptor,
     PayloadKind,
 )
-from parlant.core.guidelines import (
+from Daneel.core.guidelines import (
     GuidelineContent,
     GuidelineDocumentStore,
     GuidelineId,
 )
-from parlant.adapters.db.json_file import JSONFileDocumentDatabase
-from parlant.core.persistence.common import MigrationRequired
-from parlant.core.persistence.document_database import (
+from Daneel.adapters.db.json_file import JSONFileDocumentDatabase
+from Daneel.core.persistence.common import MigrationRequired
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentCollection,
     identity_loader,
 )
-from parlant.core.persistence.document_database_helper import DocumentStoreMigrationHelper
-from parlant.core.sessions import EventKind, EventSource, SessionDocumentStore
-from parlant.core.guideline_tool_associations import (
+from Daneel.core.persistence.document_database_helper import DocumentStoreMigrationHelper
+from Daneel.core.sessions import EventKind, EventSource, SessionDocumentStore
+from Daneel.core.guideline_tool_associations import (
     GuidelineToolAssociationDocumentStore,
 )
-from parlant.core.loggers import Logger
-from parlant.core.tags import Tag
-from parlant.core.tools import ToolId
+from Daneel.core.loggers import Logger
+from Daneel.core.tags import Tag
+from Daneel.core.tools import ToolId
 
 from tests.test_utilities import SyncAwaiter
 

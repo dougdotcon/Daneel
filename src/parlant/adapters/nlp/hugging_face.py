@@ -28,9 +28,9 @@ from huggingface_hub.errors import (  # type: ignore
 
 from tempfile import gettempdir
 
-from parlant.core.nlp.policies import policy, retry
-from parlant.core.nlp.tokenization import EstimatingTokenizer
-from parlant.core.nlp.embedding import Embedder, EmbeddingResult
+from Daneel.core.nlp.policies import policy, retry
+from Daneel.core.nlp.tokenization import EstimatingTokenizer
+from Daneel.core.nlp.embedding import Embedder, EmbeddingResult
 
 
 _TOKENIZER_MODELS: dict[str, AutoTokenizer] = {}
@@ -39,14 +39,14 @@ _DEVICE: torch.device | None = None
 
 
 def _model_temp_dir() -> str:
-    return str(Path(gettempdir()) / "parlant_data" / "hf_models")
+    return str(Path(gettempdir()) / "Daneel_data" / "hf_models")
 
 
 def _create_tokenizer(model_name: str) -> AutoTokenizer:
     if model_name in _TOKENIZER_MODELS:
         return _TOKENIZER_MODELS[model_name]
 
-    save_dir = os.environ.get("PARLANT_HOME", _model_temp_dir())
+    save_dir = os.environ.get("Daneel_HOME", _model_temp_dir())
     os.makedirs(save_dir, exist_ok=True)
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -77,7 +77,7 @@ def _create_auto_model(model_name: str) -> AutoModel:
     if model_name in _AUTO_MODELS:
         return _AUTO_MODELS[model_name]
 
-    save_dir = os.environ.get("PARLANT_HOME", _model_temp_dir())
+    save_dir = os.environ.get("Daneel_HOME", _model_temp_dir())
     os.makedirs(save_dir, exist_ok=True)
 
     model = AutoModel.from_pretrained(

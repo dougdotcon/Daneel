@@ -15,7 +15,7 @@
 import json
 from typing import Sequence
 
-from parlant.core.context_variables import ContextVariable, ContextVariableValue
+from Daneel.core.context_variables import ContextVariable, ContextVariableValue
 
 
 def context_variables_to_json(

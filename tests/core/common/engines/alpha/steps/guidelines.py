@@ -14,16 +14,16 @@
 
 from pytest_bdd import given, parsers
 
-from parlant.core.agents import AgentId
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.relationships import (
+from Daneel.core.agents import AgentId
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.relationships import (
     EntityType,
     GuidelineRelationshipKind,
     RelationshipStore,
 )
-from parlant.core.guidelines import Guideline, GuidelineStore
+from Daneel.core.guidelines import Guideline, GuidelineStore
 
-from parlant.core.tags import Tag
+from Daneel.core.tags import Tag
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest
 

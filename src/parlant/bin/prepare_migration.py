@@ -29,26 +29,26 @@ import sys
 import rich
 from rich.prompt import Confirm, Prompt
 
-from parlant.adapters.db.json_file import JSONFileDocumentDatabase
-from parlant.adapters.vector_db.chroma import ChromaDatabase
-from parlant.core.common import generate_id, md5_checksum, Version
-from parlant.core.context_variables import (
+from Daneel.adapters.db.json_file import JSONFileDocumentDatabase
+from Daneel.adapters.vector_db.chroma import ChromaDatabase
+from Daneel.core.common import generate_id, md5_checksum, Version
+from Daneel.core.context_variables import (
     ContextVariableDocument_v0_1_0,
     ContextVariableTagAssociationDocument,
     ContextVariableId,
 )
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.glossary import (
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.glossary import (
     TermDocument_v0_1_0,
     TermTagAssociationDocument,
     TermId,
 )
-from parlant.core.relationships import (
+from Daneel.core.relationships import (
     GuidelineRelationshipDocument_v0_1_0,
     GuidelineRelationshipDocument_v0_2_0,
     RelationshipDocument,
 )
-from parlant.core.guidelines import (
+from Daneel.core.guidelines import (
     GuidelineDocument_v0_2_0,
     GuidelineTagAssociationDocument,
     GuidelineDocument,
@@ -56,30 +56,30 @@ from parlant.core.guidelines import (
     guideline_document_converter_0_1_0_to_0_2_0,
     GuidelineDocument_v0_1_0,
 )
-from parlant.core.loggers import LogLevel, StdoutLogger
-from parlant.core.nlp.embedding import EmbedderFactory
-from parlant.core.persistence.common import ObjectId
-from parlant.core.persistence.document_database import (
+from Daneel.core.loggers import LogLevel, StdoutLogger
+from Daneel.core.nlp.embedding import EmbedderFactory
+from Daneel.core.persistence.common import ObjectId
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     identity_loader,
 )
-from parlant.core.persistence.document_database_helper import MetadataDocument
-from parlant.core.tags import Tag
+from Daneel.core.persistence.document_database_helper import MetadataDocument
+from Daneel.core.tags import Tag
 
-DEFAULT_HOME_DIR = "runtime-data" if Path("runtime-data").exists() else "parlant-data"
-PARLANT_HOME_DIR = Path(os.environ.get("PARLANT_HOME", DEFAULT_HOME_DIR))
-PARLANT_HOME_DIR.mkdir(parents=True, exist_ok=True)
+DEFAULT_HOME_DIR = "runtime-data" if Path("runtime-data").exists() else "Daneel-data"
+Daneel_HOME_DIR = Path(os.environ.get("Daneel_HOME", DEFAULT_HOME_DIR))
+Daneel_HOME_DIR.mkdir(parents=True, exist_ok=True)
 
 EXIT_STACK = AsyncExitStack()
 
-sys.path.append(PARLANT_HOME_DIR.as_posix())
+sys.path.append(Daneel_HOME_DIR.as_posix())
 sys.path.append(".")
 
 LOGGER = StdoutLogger(
     correlator=ContextualCorrelator(),
     log_level=LogLevel.INFO,
-    logger_id="parlant.bin.prepare_migration",
+    logger_id="Daneel.bin.prepare_migration",
 )
 
 
@@ -131,35 +131,35 @@ async def get_component_versions() -> list[tuple[str, str]]:
         return None
 
     agents_version = _get_version_from_json_file(
-        PARLANT_HOME_DIR / "agents.json",
+        Daneel_HOME_DIR / "agents.json",
         "agents",
     )
     if agents_version:
         versions.append(("agents", agents_version))
 
     guidelines_version = _get_version_from_json_file(
-        PARLANT_HOME_DIR / "guidelines.json",
+        Daneel_HOME_DIR / "guidelines.json",
         "guidelines",
     )
     if guidelines_version:
         versions.append(("guidelines", guidelines_version))
 
     context_vars_version = _get_version_from_json_file(
-        PARLANT_HOME_DIR / "context_variables.json",
+        Daneel_HOME_DIR / "context_variables.json",
         "context_variables",
     )
     if context_vars_version:
         versions.append(("context_variables", context_vars_version))
 
     guideline_connections_version = _get_version_from_json_file(
-        PARLANT_HOME_DIR / "guideline_connections.json",
+        Daneel_HOME_DIR / "guideline_connections.json",
         "guideline_connections",
     )
     if guideline_connections_version:
         versions.append(("guideline_connections", guideline_connections_version))
 
     guideline_relationships_version = _get_version_from_json_file(
-        PARLANT_HOME_DIR / "guideline_relationships.json",
+        Daneel_HOME_DIR / "guideline_relationships.json",
         "guideline_relationships",
     )
     if guideline_relationships_version:
@@ -167,7 +167,7 @@ async def get_component_versions() -> list[tuple[str, str]]:
 
     embedder_factory = EmbedderFactory(Container())
     glossary_db = await EXIT_STACK.enter_async_context(
-        ChromaDatabase(LOGGER, PARLANT_HOME_DIR, embedder_factory)
+        ChromaDatabase(LOGGER, Daneel_HOME_DIR, embedder_factory)
     )
     with suppress(chromadb.errors.InvalidCollectionException):
         if glossary_db.chroma_client.get_collection("glossary_unembedded"):
@@ -180,10 +180,10 @@ async def get_component_versions() -> list[tuple[str, str]]:
 
 def backup_data() -> None:
     if Confirm.ask("Do you want to backup your data before migration?"):
-        default_backup_dir = PARLANT_HOME_DIR.parent / "parlant-data.orig"
+        default_backup_dir = Daneel_HOME_DIR.parent / "Daneel-data.orig"
         try:
             backup_dir = Prompt.ask("Enter backup directory path", default=str(default_backup_dir))
-            shutil.copytree(PARLANT_HOME_DIR, backup_dir, dirs_exist_ok=True)
+            shutil.copytree(Daneel_HOME_DIR, backup_dir, dirs_exist_ok=True)
             rich.print(f"[green]Data backed up to {backup_dir}")
         except Exception as e:
             rich.print(f"[red]Failed to backup data: {e}")
@@ -238,7 +238,7 @@ async def migrate_glossary_with_metadata() -> None:
         embedder_factory = EmbedderFactory(Container())
 
         db = await EXIT_STACK.enter_async_context(
-            ChromaDatabase(LOGGER, PARLANT_HOME_DIR, embedder_factory)
+            ChromaDatabase(LOGGER, Daneel_HOME_DIR, embedder_factory)
         )
 
         try:
@@ -337,52 +337,52 @@ async def migrate_agents_0_1_0_to_0_2_0() -> None:
     rich.print("[green]Starting migration for agents 0.1.0 -> 0.2.0")
 
     agents_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "agents.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "agents.json")
     )
     await create_metadata_collection(agents_db, "agents")
 
     context_variables_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "context_variables.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "context_variables.json")
     )
     await create_metadata_collection(context_variables_db, "variables")
 
     tags_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "tags.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "tags.json")
     )
     await create_metadata_collection(tags_db, "tags")
 
     customers_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "customers.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "customers.json")
     )
     await create_metadata_collection(customers_db, "customers")
 
     sessions_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "sessions.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "sessions.json")
     )
     await create_metadata_collection(sessions_db, "sessions")
 
     guideline_tool_associations_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "guideline_tool_associations.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "guideline_tool_associations.json")
     )
     await create_metadata_collection(guideline_tool_associations_db, "associations")
 
     guidelines_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "guidelines.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "guidelines.json")
     )
     await create_metadata_collection(guidelines_db, "guidelines")
 
     guideline_connections_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "guideline_connections.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "guideline_connections.json")
     )
     await create_metadata_collection(guideline_connections_db, "guideline_connections")
 
     evaluations_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "evaluations.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "evaluations.json")
     )
     await create_metadata_collection(evaluations_db, "evaluations")
 
     services_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "services.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "services.json")
     )
     await create_metadata_collection(services_db, "tool_services")
 
@@ -412,7 +412,7 @@ async def migrate_guidelines_0_1_0_to_0_3_0() -> None:
 
     rich.print("[green]Starting migration for guidelines 0.1.0 -> 0.3.0")
     guidelines_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "guidelines.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "guidelines.json")
     )
 
     guideline_collection = await guidelines_db.get_or_create_collection(
@@ -476,7 +476,7 @@ async def migrate_context_variables_0_1_0_to_0_2_0() -> None:
         return cast(ContextVariableTagAssociationDocument, doc)
 
     context_variables_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "context_variables.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "context_variables.json")
     )
 
     context_variables_collection = await context_variables_db.get_or_create_collection(
@@ -528,7 +528,7 @@ async def migrate_context_variables_0_1_0_to_0_2_0() -> None:
 @register_migration("agents", "0.2.0", "0.3.0")
 async def migrate_agents_0_2_0_to_0_3_0() -> None:
     agent_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "agents.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "agents.json")
     )
 
     agent_collection = await agent_db.get_or_create_collection(
@@ -567,11 +567,11 @@ async def migrate_glossary_0_1_0_to_0_2_0() -> None:
     embedder_factory = EmbedderFactory(Container())
 
     db = await EXIT_STACK.enter_async_context(
-        ChromaDatabase(LOGGER, PARLANT_HOME_DIR, embedder_factory)
+        ChromaDatabase(LOGGER, Daneel_HOME_DIR, embedder_factory)
     )
 
     glossary_tags_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "glossary_tags.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "glossary_tags.json")
     )
 
     glossary_tags_collection = await glossary_tags_db.get_or_create_collection(
@@ -658,7 +658,7 @@ async def migrate_guideline_relationships_0_1_0_to_0_2_0() -> None:
     rich.print("[green]Starting migration for guideline relationships 0.1.0 -> 0.2.0")
 
     guideline_relationships_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "guideline_relationships.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "guideline_relationships.json")
     )
 
     guideline_relationships_collection = await guideline_relationships_db.get_or_create_collection(
@@ -674,7 +674,7 @@ async def migrate_guideline_relationships_0_1_0_to_0_2_0() -> None:
     )
 
     async with JSONFileDocumentDatabase(
-        LOGGER, PARLANT_HOME_DIR / "guideline_connections.json"
+        LOGGER, Daneel_HOME_DIR / "guideline_connections.json"
     ) as guideline_connections_db:
         guideline_connections_collection = await guideline_connections_db.get_or_create_collection(
             "guideline_connections",
@@ -715,7 +715,7 @@ async def migrate_guideline_relationships_0_1_0_to_0_2_0() -> None:
                 )
             )
 
-    (PARLANT_HOME_DIR / "guideline_connections.json").unlink()
+    (Daneel_HOME_DIR / "guideline_connections.json").unlink()
 
     rich.print("[green]Successfully migrated guideline connections to guideline relationships")
 
@@ -725,7 +725,7 @@ async def migrate_relationships_0_2_0_to_0_3_0() -> None:
     rich.print("[green]Starting migration for relationships 0.2.0 -> 0.3.0")
 
     relationships_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(LOGGER, PARLANT_HOME_DIR / "relationships.json")
+        JSONFileDocumentDatabase(LOGGER, Daneel_HOME_DIR / "relationships.json")
     )
 
     relationships_collection = await relationships_db.get_or_create_collection(
@@ -741,7 +741,7 @@ async def migrate_relationships_0_2_0_to_0_3_0() -> None:
     )
 
     async with JSONFileDocumentDatabase(
-        LOGGER, PARLANT_HOME_DIR / "guideline_relationships.json"
+        LOGGER, Daneel_HOME_DIR / "guideline_relationships.json"
     ) as guideline_relationships_db:
         guideline_relationships_collection = (
             await guideline_relationships_db.get_or_create_collection(
@@ -788,7 +788,7 @@ async def migrate_relationships_0_2_0_to_0_3_0() -> None:
                 )
             )
 
-    (PARLANT_HOME_DIR / "guideline_relationships.json").unlink()
+    (Daneel_HOME_DIR / "guideline_relationships.json").unlink()
 
     rich.print("[green]Successfully migrated guideline connections to guideline relationships")
 

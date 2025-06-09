@@ -17,7 +17,7 @@
 from dataclasses import dataclass
 from enum import Enum
 
-from parlant.core.guidelines import Guideline
+from Daneel.core.guidelines import Guideline
 
 
 class PreviouslyAppliedType(Enum):

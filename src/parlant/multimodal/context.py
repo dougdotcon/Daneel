@@ -1,5 +1,5 @@
 """
-Multi-modal context integration for Parlant.
+Multi-modal context integration for Daneel.
 
 This module provides functionality for integrating multi-modal content into agent context.
 """
@@ -16,16 +16,16 @@ import io
 import os
 from pathlib import Path
 
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.loggers import Logger
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.prompts import PromptBuilder
+from Daneel.core.common import JSONSerializable, generate_id
+from Daneel.core.loggers import Logger
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.prompts import PromptBuilder
 
-from parlant.multimodal.image import Image, ImageId, ImageProcessor, ImageAnalysisResult
-from parlant.multimodal.audio import Audio, AudioId, AudioProcessor, TranscriptionResult, AudioAnalysisResult
-from parlant.multimodal.video import Video, VideoId, VideoProcessor, VideoAnalysisResult
+from Daneel.multimodal.image import Image, ImageId, ImageProcessor, ImageAnalysisResult
+from Daneel.multimodal.audio import Audio, AudioId, AudioProcessor, TranscriptionResult, AudioAnalysisResult
+from Daneel.multimodal.video import Video, VideoId, VideoProcessor, VideoAnalysisResult
 
 
 class ContentType(str, Enum):

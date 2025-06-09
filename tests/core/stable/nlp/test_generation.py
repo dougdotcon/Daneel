@@ -19,23 +19,23 @@ from unittest.mock import AsyncMock
 
 from pytest import raises
 
-from parlant.core.common import DefaultBaseModel
-from parlant.core.engines.alpha.prompt_builder import (
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.engines.alpha.prompt_builder import (
     BuiltInSection,
     PromptBuilder,
     Section,
     SectionStatus,
 )
-from parlant.core.loggers import Logger
-from parlant.core.nlp.embedding import EmbeddingResult
-from parlant.core.nlp.generation import (
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.embedding import EmbeddingResult
+from Daneel.core.nlp.generation import (
     FallbackSchematicGenerator,
     SchematicGenerationResult,
     SchematicGenerator,
 )
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.nlp.policies import policy, retry
-from parlant.core.nlp.tokenization import EstimatingTokenizer, ZeroEstimatingTokenizer
+from Daneel.core.nlp.generation_info import GenerationInfo, UsageInfo
+from Daneel.core.nlp.policies import policy, retry
+from Daneel.core.nlp.tokenization import EstimatingTokenizer, ZeroEstimatingTokenizer
 
 
 class DummySchema(DefaultBaseModel):

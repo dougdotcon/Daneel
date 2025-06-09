@@ -1,5 +1,5 @@
 """
-Collaborative agents module for Parlant.
+Collaborative agents module for Daneel.
 
 This module provides functionality for agent collaboration, including:
 - Agent communication protocol
@@ -9,7 +9,7 @@ This module provides functionality for agent collaboration, including:
 - Shared knowledge
 """
 
-from parlant.collaborative.protocol import (
+from Daneel.collaborative.protocol import (
     AgentCommunicator,
     AgentMessage,
     MessageBus,
@@ -17,7 +17,7 @@ from parlant.collaborative.protocol import (
     MessagePriority,
 )
 
-from parlant.collaborative.team import (
+from Daneel.collaborative.team import (
     Team,
     TeamId,
     TeamMember,
@@ -25,7 +25,7 @@ from parlant.collaborative.team import (
     TeamManager,
 )
 
-from parlant.collaborative.tasks import (
+from Daneel.collaborative.tasks import (
     Task,
     TaskId,
     TaskStatus,
@@ -34,7 +34,7 @@ from parlant.collaborative.tasks import (
     TaskManager,
 )
 
-from parlant.collaborative.consensus import (
+from Daneel.collaborative.consensus import (
     Consensus,
     ConsensusId,
     ConsensusStatus,
@@ -44,7 +44,7 @@ from parlant.collaborative.consensus import (
     ConsensusManager,
 )
 
-from parlant.collaborative.knowledge import (
+from Daneel.collaborative.knowledge import (
     SharedKnowledgeAccess,
     SharedKnowledgePermission,
     SharedKnowledgeManager,

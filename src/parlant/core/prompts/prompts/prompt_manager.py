@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Prompt management system for Parlant."""
+"""Prompt management system for Daneel."""
 
 import os
 import json
@@ -21,8 +21,8 @@ from datetime import datetime
 from typing import Any, Dict, List, Optional, Set, Tuple, Union
 import yaml
 
-from parlant.core.loggers import Logger
-from parlant.core.prompts.common import (
+from Daneel.core.loggers import Logger
+from Daneel.core.prompts.common import (
     Prompt, PromptMetadata, PromptVariable, 
     PromptType, PromptFormat, PromptCategory,
     extract_variables_from_template
@@ -30,7 +30,7 @@ from parlant.core.prompts.common import (
 
 
 class PromptManager:
-    """Manager for prompts in Parlant.
+    """Manager for prompts in Daneel.
     
     This class handles loading, saving, and managing prompts.
     It supports prompts from various sources and formats.
@@ -295,7 +295,7 @@ class PromptManager:
             name=name,
             description=description,
             version="1.0.0",
-            author="Parlant",
+            author="Daneel",
             created_at=datetime.now().isoformat(),
             updated_at=datetime.now().isoformat(),
             tags=tags or [],

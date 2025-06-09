@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Prompt management system for Parlant."""
+"""Prompt management system for Daneel."""
 
-from parlant.core.prompts.common import (
+from Daneel.core.prompts.common import (
     Prompt, PromptMetadata, PromptVariable, 
     PromptType, PromptFormat, PromptCategory,
     extract_variables_from_template
 )
-from parlant.core.prompts.prompt_manager import PromptManager
-from parlant.core.prompts.prompt_template import PromptTemplate, PromptTemplateManager
+from Daneel.core.prompts.prompt_manager import PromptManager
+from Daneel.core.prompts.prompt_template import PromptTemplate, PromptTemplateManager
 
 __all__ = [
     "Prompt",

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Agent system for Parlant."""
+"""Agent system for Daneel."""
 
 import asyncio
 import os
@@ -24,11 +24,11 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Dict, List, Optional, Sequence, Set, Tuple, Type, Union, cast
 
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.loggers import Logger
-from parlant.core.models import Model, ModelManager
-from parlant.core.prompts import Prompt, PromptManager
-from parlant.core.tools import ToolRegistry
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.loggers import Logger
+from Daneel.core.models import Model, ModelManager
+from Daneel.core.prompts import Prompt, PromptManager
+from Daneel.core.tools import ToolRegistry
 
 
 class AgentState(str, Enum):

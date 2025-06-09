@@ -19,9 +19,9 @@ from typing import Any
 from fastapi import WebSocket
 from typing_extensions import override
 
-from parlant.core.common import UniqueId, generate_id
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.loggers import CorrelationalLogger, LogLevel
+from Daneel.core.common import UniqueId, generate_id
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.loggers import CorrelationalLogger, LogLevel
 
 
 @dataclass(frozen=True)

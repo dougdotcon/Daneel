@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from pytest_bdd import given, parsers
-from parlant.core.tags import TagStore, TagId
+from Daneel.core.tags import TagStore, TagId
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

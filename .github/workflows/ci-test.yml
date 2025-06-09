@@ -45,19 +45,19 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Test Parlant (deterministic)
+    - name: Test Daneel (deterministic)
       if: always()
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: just test-deterministic
     
-    - name: Test Parlant (core-stable)
+    - name: Test Daneel (core-stable)
       if: always()
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: just test-core-stable
     
-    - name: Test Parlant (core-unstable)
+    - name: Test Daneel (core-unstable)
       if: always()
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

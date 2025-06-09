@@ -17,13 +17,13 @@ from croniter import croniter
 from lagom import Container
 from pytest import mark
 
-from parlant.core.agents import AgentId
-from parlant.core.sessions import Session
-from parlant.core.context_variables import ContextVariableStore
-from parlant.core.engines.alpha.engine import load_fresh_context_variable_value
-from parlant.core.tags import Tag
-from parlant.core.tools import LocalToolService, ToolId
-from parlant.core.entity_cq import EntityQueries, EntityCommands
+from Daneel.core.agents import AgentId
+from Daneel.core.sessions import Session
+from Daneel.core.context_variables import ContextVariableStore
+from Daneel.core.engines.alpha.engine import load_fresh_context_variable_value
+from Daneel.core.tags import Tag
+from Daneel.core.tools import LocalToolService, ToolId
+from Daneel.core.entity_cq import EntityQueries, EntityCommands
 
 from tests.core.common.utils import ContextOfTest
 

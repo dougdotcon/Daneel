@@ -1,10 +1,10 @@
 # Sistema de Integração de Ferramentas
 
-Este documento descreve o sistema de integração de ferramentas no framework Parlant.
+Este documento descreve o sistema de integração de ferramentas no framework Daneel.
 
 ## Visão Geral
 
-O sistema de integração de ferramentas fornece uma maneira de criar, gerenciar e usar ferramentas no Parlant. Ele suporta:
+O sistema de integração de ferramentas fornece uma maneira de criar, gerenciar e usar ferramentas no Daneel. Ele suporta:
 
 1. Registro e descoberta de ferramentas
 2. Categorização de ferramentas por funcionalidade
@@ -27,9 +27,9 @@ A classe `ToolRegistry` é o componente central do sistema de integração de fe
 Exemplo de uso:
 
 ```python
-from parlant.core.loggers import ConsoleLogger
-from parlant.core.tools import LocalToolService, ToolRegistry
-from parlant.core.tools.tool_registry import ToolCategory
+from Daneel.core.loggers import ConsoleLogger
+from Daneel.core.tools import LocalToolService, ToolRegistry
+from Daneel.core.tools.tool_registry import ToolCategory
 
 # Create a tool registry
 tool_service = LocalToolService()
@@ -76,8 +76,8 @@ O decorador `tool` fornece uma maneira conveniente de definir ferramentas como f
 Exemplo de uso:
 
 ```python
-from parlant.core.tools import ToolResult
-from parlant.core.tools.tool_registry import ToolCategory, tool
+from Daneel.core.tools import ToolResult
+from Daneel.core.tools.tool_registry import ToolCategory, tool
 
 @tool(
     id="my_tool",
@@ -179,9 +179,9 @@ Cada ferramenta tem metadados associados que descrevem seu propósito, parâmetr
 - `parse_json`: Analisar uma string JSON
 - `format_json`: Formatar uma string JSON
 
-## Integração com Parlant
+## Integração com Daneel
 
-O sistema de integração de ferramentas está integrado com o framework Parlant:
+O sistema de integração de ferramentas está integrado com o framework Daneel:
 
 1. **Motor Principal**: O motor principal usa ferramentas para executar ações
 2. **Agentes**: Os agentes usam ferramentas para interagir com o ambiente
@@ -195,5 +195,5 @@ Possíveis melhorias futuras para o sistema de integração de ferramentas:
 1. **Versionamento de Ferramentas**: Rastrear mudanças nas ferramentas ao longo do tempo
 2. **Teste de Ferramentas**: Testar ferramentas com diferentes argumentos
 3. **Otimização de Ferramentas**: Otimizar ferramentas para diferentes ambientes
-4. **Compartilhamento de Ferramentas**: Compartilhar ferramentas entre instâncias do Parlant
+4. **Compartilhamento de Ferramentas**: Compartilhar ferramentas entre instâncias do Daneel
 5. **Marketplace de Ferramentas**: Descobrir e usar ferramentas de um marketplace

@@ -1,15 +1,15 @@
 """
-Data processing and analysis module for Parlant.
+Data processing and analysis module for Daneel.
 
 This module provides functionality for loading, preprocessing, analyzing,
 visualizing, and applying machine learning to data.
 """
 
-from parlant.data.loaders import DataLoader, DataLoaderOptions, DataFormat
-from parlant.data.preprocessing import DataCleaner, DataCleaningOptions
-from parlant.data.analysis import DataAnalyzer, DataAnalysisOptions
-from parlant.data.visualization import DataVisualizer, VisualizationOptions, ChartType
-from parlant.data.ml import ModelTrainer, ModelTrainingOptions, ModelType
+from Daneel.data.loaders import DataLoader, DataLoaderOptions, DataFormat
+from Daneel.data.preprocessing import DataCleaner, DataCleaningOptions
+from Daneel.data.analysis import DataAnalyzer, DataAnalysisOptions
+from Daneel.data.visualization import DataVisualizer, VisualizationOptions, ChartType
+from Daneel.data.ml import ModelTrainer, ModelTrainingOptions, ModelType
 
 __all__ = [
     # Data loading

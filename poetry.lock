@@ -3529,9 +3529,9 @@ test = ["hypothesis (>=6.46.1)", "pytest (>=7.3.2)", "pytest-xdist (>=2.2.0)"]
 xml = ["lxml (>=4.9.2)"]
 
 [[package]]
-name = "parlant-client"
+name = "Daneel-client"
 version = "0.10.6"
-description = "Python API client for Parlant (https://parlant.io)"
+description = "Python API client for Daneel (https://Daneel.io)"
 optional = false
 python-versions = "^3.10"
 files = []
@@ -3545,7 +3545,7 @@ pydantic = "^2.9.2"
 
 [package.source]
 type = "git"
-url = "https://github.com/emcie-co/parlant-client-python.git"
+url = "https://github.com/emcie-co/Daneel-client-python.git"
 reference = "develop.1743678521"
 resolved_reference = "a69b73095ab3ddd9f68d817d3f39482339e187ee"
 

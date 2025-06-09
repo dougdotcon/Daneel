@@ -17,10 +17,10 @@ import httpx
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.agents import AgentId
-from parlant.core.context_variables import ContextVariableStore
-from parlant.core.tags import Tag, TagId, TagStore
-from parlant.core.tools import LocalToolService, ToolId
+from Daneel.core.agents import AgentId
+from Daneel.core.context_variables import ContextVariableStore
+from Daneel.core.tags import Tag, TagId, TagStore
+from Daneel.core.tools import LocalToolService, ToolId
 
 
 @fixture

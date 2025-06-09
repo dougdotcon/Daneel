@@ -36,8 +36,8 @@ from typing import (
 from pydantic import Field
 from typing_extensions import override, TypedDict
 
-from parlant.core.common import DefaultBaseModel, ItemNotFoundError, JSONSerializable, UniqueId
-from parlant.core.utterances import Utterance
+from Daneel.core.common import DefaultBaseModel, ItemNotFoundError, JSONSerializable, UniqueId
+from Daneel.core.utterances import Utterance
 
 ToolParameterType = Literal[
     "array",
@@ -489,7 +489,7 @@ class ToolMetadata:
 
 
 class ToolRegistry:
-    """Registry for tools in Parlant.
+    """Registry for tools in Daneel.
 
     This class manages the registration, discovery, and access of tools.
     It provides a unified interface for accessing tools from different sources.
@@ -521,7 +521,7 @@ class ToolRegistry:
         required: Sequence[str],
         category: ToolCategory,
         version: str = "1.0.0",
-        author: str = "Parlant",
+        author: str = "Daneel",
         tags: list[str] = None,
         documentation_url: Optional[str] = None,
         consequential: bool = False,
@@ -625,7 +625,7 @@ def tool(
     required: list[str],
     category: ToolCategory,
     version: str = "1.0.0",
-    author: str = "Parlant",
+    author: str = "Daneel",
     tags: list[str] = None,
     documentation_url: Optional[str] = None,
     consequential: bool = False,

@@ -23,9 +23,9 @@ const ProgressImage: React.FC<ProgressImageProps> = ({phace}) => {
 
 	return (
 		<div style={{position: 'relative'}} className='bg-white rounded-full me-[8px] h-[36px] w-[36px]'>
-			<img src={'parlant-bubble-muted.svg'} alt='Progress' height={36} width={36} className='opacity-[0.3] rounded-full absolute' />
+			<img src={'Daneel-bubble-muted.svg'} alt='Progress' height={36} width={36} className='opacity-[0.3] rounded-full absolute' />
 			<img
-				src='parlant-logo-after.svg'
+				src='Daneel-logo-after.svg'
 				height={36}
 				width={36}
 				alt=''

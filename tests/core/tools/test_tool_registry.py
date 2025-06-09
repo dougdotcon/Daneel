@@ -19,9 +19,9 @@ import tempfile
 import pytest
 from unittest.mock import MagicMock, patch
 
-from parlant.core.loggers import Logger
-from parlant.core.tools import LocalToolService, Tool, ToolContext, ToolResult
-from parlant.core.tools.tool_registry import ToolCategory, ToolMetadata, ToolRegistry, tool
+from Daneel.core.loggers import Logger
+from Daneel.core.tools import LocalToolService, Tool, ToolContext, ToolResult
+from Daneel.core.tools.tool_registry import ToolCategory, ToolMetadata, ToolRegistry, tool
 
 
 @pytest.fixture

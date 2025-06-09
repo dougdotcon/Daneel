@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""MCP server implementation for exposing Parlant capabilities via MCP."""
+"""MCP server implementation for exposing Daneel capabilities via MCP."""
 
 import asyncio
 import json
@@ -22,12 +22,12 @@ import uuid
 import aiohttp
 from aiohttp import web
 
-from parlant.adapters.mcp.common import MCPMessage, MCPTool, MCPToolCall, MCPToolResult
-from parlant.core.loggers import Logger
+from Daneel.adapters.mcp.common import MCPMessage, MCPTool, MCPToolCall, MCPToolResult
+from Daneel.core.loggers import Logger
 
 
 class MCPServer:
-    """Server for exposing Parlant capabilities via MCP."""
+    """Server for exposing Daneel capabilities via MCP."""
     
     def __init__(
         self, 

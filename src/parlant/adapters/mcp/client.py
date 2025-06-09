@@ -21,8 +21,8 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 import aiohttp
 from aiohttp import ClientSession, ClientWebSocketResponse
 
-from parlant.adapters.mcp.common import MCPMessage, MCPTool, MCPToolCall, MCPToolResult
-from parlant.core.loggers import Logger
+from Daneel.adapters.mcp.common import MCPMessage, MCPTool, MCPToolCall, MCPToolResult
+from Daneel.core.loggers import Logger
 
 
 class MCPClient:

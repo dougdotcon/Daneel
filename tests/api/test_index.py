@@ -17,11 +17,11 @@ from fastapi import status
 import httpx
 from lagom import Container
 
-from parlant.core.agents import AgentId
-from parlant.core.evaluations import EvaluationStore
-from parlant.core.guidelines import GuidelineStore
+from Daneel.core.agents import AgentId
+from Daneel.core.evaluations import EvaluationStore
+from Daneel.core.guidelines import GuidelineStore
 
-from parlant.core.tags import Tag
+from Daneel.core.tags import Tag
 from tests.conftest import NoCachedGenerations
 from tests.core.stable.services.indexing.test_evaluator import (
     AMOUNT_OF_TIME_TO_WAIT_FOR_EVALUATION_TO_START_RUNNING,

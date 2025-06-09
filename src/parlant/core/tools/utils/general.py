@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""General utility tools for Parlant."""
+"""General utility tools for Daneel."""
 
 import datetime
 import json
@@ -24,8 +24,8 @@ import string
 import uuid
 from typing import Dict, List, Optional, Union
 
-from parlant.core.tools import ToolResult
-from parlant.core.tools.tool_registry import ToolCategory, tool
+from Daneel.core.tools import ToolResult
+from Daneel.core.tools.tool_registry import ToolCategory, tool
 
 
 @tool(

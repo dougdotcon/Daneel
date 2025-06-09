@@ -16,7 +16,7 @@ from dataclasses import dataclass, field
 from enum import Enum, auto
 from typing import Awaitable, Callable, Optional, Sequence, TypeAlias
 
-from parlant.core.engines.alpha.loaded_context import LoadedContext
+from Daneel.core.engines.alpha.loaded_context import LoadedContext
 
 
 class EngineHookResult(Enum):

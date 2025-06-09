@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Llama model implementation for Parlant."""
+"""Llama model implementation for Daneel."""
 
 import asyncio
 import json
@@ -23,18 +23,18 @@ from typing_extensions import override
 import aiohttp
 import numpy as np
 
-from parlant.adapters.nlp.common import normalize_json_output
-from parlant.adapters.nlp.local.model_manager import LocalModel, LocalModelManager, ModelType
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder
-from parlant.core.engines.alpha.tool_caller import ToolCallInferenceSchema
-from parlant.core.loggers import Logger
-from parlant.core.nlp.embedding import Embedder, EmbeddingResult
-from parlant.core.nlp.generation import T, SchematicGenerator, SchematicGenerationResult
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.nlp.moderation import ModerationCheck, ModerationService, ModerationTag
-from parlant.core.nlp.policies import policy, retry
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.tokenization import EstimatingTokenizer
+from Daneel.adapters.nlp.common import normalize_json_output
+from Daneel.adapters.nlp.local.model_manager import LocalModel, LocalModelManager, ModelType
+from Daneel.core.engines.alpha.prompt_builder import PromptBuilder
+from Daneel.core.engines.alpha.tool_caller import ToolCallInferenceSchema
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.embedding import Embedder, EmbeddingResult
+from Daneel.core.nlp.generation import T, SchematicGenerator, SchematicGenerationResult
+from Daneel.core.nlp.generation_info import GenerationInfo, UsageInfo
+from Daneel.core.nlp.moderation import ModerationCheck, ModerationService, ModerationTag
+from Daneel.core.nlp.policies import policy, retry
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.tokenization import EstimatingTokenizer
 
 
 class LlamaEstimatingTokenizer(EstimatingTokenizer):

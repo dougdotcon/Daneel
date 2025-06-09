@@ -1,5 +1,5 @@
 """
-Audit logging for Parlant.
+Audit logging for Daneel.
 
 This module provides functionality for audit logging and monitoring.
 """
@@ -15,13 +15,13 @@ import os
 import asyncio
 from contextlib import asynccontextmanager
 
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.loggers import Logger
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.persistence.document_database import DocumentCollection, DocumentDatabase
-from parlant.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId, Where
+from Daneel.core.common import JSONSerializable, generate_id
+from Daneel.core.loggers import Logger
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.persistence.document_database import DocumentCollection, DocumentDatabase
+from Daneel.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId, Where
 
-from parlant.security.auth import User, UserId
+from Daneel.security.auth import User, UserId
 
 
 class AuditEventType(str, Enum):

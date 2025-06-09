@@ -26,7 +26,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Callable, Dict, List, Optional, Set, Tuple, Union
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 class TerminalState(str, Enum):
@@ -258,52 +258,52 @@ class Terminal:
         html = []
         
         # Terminal container
-        theme_class = "parlant-terminal-dark" if options.theme == "dark" else "parlant-terminal-light"
-        html.append(f'<div class="parlant-terminal-container {theme_class}">')
+        theme_class = "Daneel-terminal-dark" if options.theme == "dark" else "Daneel-terminal-light"
+        html.append(f'<div class="Daneel-terminal-container {theme_class}">')
         
         # Terminal header
-        html.append('<div class="parlant-terminal-header">')
-        html.append(f'<div class="parlant-terminal-title">{options.title}</div>')
+        html.append('<div class="Daneel-terminal-header">')
+        html.append(f'<div class="Daneel-terminal-title">{options.title}</div>')
         
         # Terminal buttons
-        html.append('<div class="parlant-terminal-buttons">')
+        html.append('<div class="Daneel-terminal-buttons">')
         
         if options.show_copy_button:
-            html.append('<button class="parlant-terminal-button parlant-terminal-copy-button" title="Copy terminal content">Copy</button>')
+            html.append('<button class="Daneel-terminal-button Daneel-terminal-copy-button" title="Copy terminal content">Copy</button>')
             
         if options.show_clear_button:
-            html.append('<button class="parlant-terminal-button parlant-terminal-clear-button" title="Clear terminal">Clear</button>')
+            html.append('<button class="Daneel-terminal-button Daneel-terminal-clear-button" title="Clear terminal">Clear</button>')
             
         if options.show_fullscreen_button:
-            html.append('<button class="parlant-terminal-button parlant-terminal-fullscreen-button" title="Toggle fullscreen">Fullscreen</button>')
+            html.append('<button class="Daneel-terminal-button Daneel-terminal-fullscreen-button" title="Toggle fullscreen">Fullscreen</button>')
             
         html.append('</div>')  # End buttons
         html.append('</div>')  # End header
         
         # Terminal content
         max_height_style = f'style="max-height: {options.max_height}px;"' if options.max_height > 0 else ''
-        html.append(f'<div class="parlant-terminal-content" {max_height_style}>')
+        html.append(f'<div class="Daneel-terminal-content" {max_height_style}>')
         
         # Terminal history
-        html.append('<div class="parlant-terminal-history">')
+        html.append('<div class="Daneel-terminal-history">')
         
         for entry in self.history:
             if entry.command:
-                html.append(f'<div class="parlant-terminal-command"><span class="parlant-terminal-prompt">{options.prompt}</span>{entry.command}</div>')
+                html.append(f'<div class="Daneel-terminal-command"><span class="Daneel-terminal-prompt">{options.prompt}</span>{entry.command}</div>')
                 
             if entry.output:
                 # Apply simple syntax highlighting to the output
                 highlighted_output = self._highlight_terminal_output(entry.output)
-                html.append(f'<div class="parlant-terminal-output">{highlighted_output}</div>')
+                html.append(f'<div class="Daneel-terminal-output">{highlighted_output}</div>')
                 
         html.append('</div>')  # End history
         
         # Terminal input
         if not options.read_only:
             auto_focus = 'autofocus' if options.auto_focus else ''
-            html.append('<div class="parlant-terminal-input-line">')
-            html.append(f'<span class="parlant-terminal-prompt">{options.prompt}</span>')
-            html.append(f'<input type="text" class="parlant-terminal-input" {auto_focus}>')
+            html.append('<div class="Daneel-terminal-input-line">')
+            html.append(f'<span class="Daneel-terminal-prompt">{options.prompt}</span>')
+            html.append(f'<input type="text" class="Daneel-terminal-input" {auto_focus}>')
             html.append('</div>')  # End input line
             
         html.append('</div>')  # End content
@@ -327,17 +327,17 @@ class Terminal:
         for line in lines:
             # Highlight error messages
             if re.search(r'error|exception|traceback|fail', line, re.IGNORECASE):
-                highlighted_lines.append(f'<span class="parlant-terminal-error">{line}</span>')
+                highlighted_lines.append(f'<span class="Daneel-terminal-error">{line}</span>')
             # Highlight warning messages
             elif re.search(r'warning|warn', line, re.IGNORECASE):
-                highlighted_lines.append(f'<span class="parlant-terminal-warning">{line}</span>')
+                highlighted_lines.append(f'<span class="Daneel-terminal-warning">{line}</span>')
             # Highlight success messages
             elif re.search(r'success|succeeded|completed|done', line, re.IGNORECASE):
-                highlighted_lines.append(f'<span class="parlant-terminal-success">{line}</span>')
+                highlighted_lines.append(f'<span class="Daneel-terminal-success">{line}</span>')
             # Highlight file paths
             elif re.search(r'[/\\][a-zA-Z0-9_.-]+[/\\][a-zA-Z0-9_.-]+', line):
                 # This is a simple regex for file paths, might need improvement
-                highlighted_lines.append(f'<span class="parlant-terminal-path">{line}</span>')
+                highlighted_lines.append(f'<span class="Daneel-terminal-path">{line}</span>')
             else:
                 highlighted_lines.append(line)
                 
@@ -350,7 +350,7 @@ class Terminal:
             CSS for the terminal component
         """
         css = """
-        .parlant-terminal-container {
+        .Daneel-terminal-container {
             border: 1px solid #e2e8f0;
             border-radius: 0.375rem;
             margin: 1rem 0;
@@ -359,17 +359,17 @@ class Terminal:
             font-size: 0.875rem;
         }
         
-        .parlant-terminal-dark {
+        .Daneel-terminal-dark {
             background-color: #1e293b;
             color: #e2e8f0;
         }
         
-        .parlant-terminal-light {
+        .Daneel-terminal-light {
             background-color: #f8fafc;
             color: #1e293b;
         }
         
-        .parlant-terminal-header {
+        .Daneel-terminal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -377,26 +377,26 @@ class Terminal:
             border-bottom: 1px solid #e2e8f0;
         }
         
-        .parlant-terminal-dark .parlant-terminal-header {
+        .Daneel-terminal-dark .Daneel-terminal-header {
             background-color: #0f172a;
             border-bottom-color: #334155;
         }
         
-        .parlant-terminal-light .parlant-terminal-header {
+        .Daneel-terminal-light .Daneel-terminal-header {
             background-color: #e2e8f0;
             border-bottom-color: #cbd5e1;
         }
         
-        .parlant-terminal-title {
+        .Daneel-terminal-title {
             font-weight: 500;
         }
         
-        .parlant-terminal-buttons {
+        .Daneel-terminal-buttons {
             display: flex;
             gap: 0.5rem;
         }
         
-        .parlant-terminal-button {
+        .Daneel-terminal-button {
             background-color: transparent;
             border: 1px solid #64748b;
             border-radius: 0.25rem;
@@ -406,57 +406,57 @@ class Terminal:
             color: inherit;
         }
         
-        .parlant-terminal-dark .parlant-terminal-button {
+        .Daneel-terminal-dark .Daneel-terminal-button {
             border-color: #475569;
         }
         
-        .parlant-terminal-light .parlant-terminal-button {
+        .Daneel-terminal-light .Daneel-terminal-button {
             border-color: #94a3b8;
         }
         
-        .parlant-terminal-button:hover {
+        .Daneel-terminal-button:hover {
             background-color: rgba(100, 116, 139, 0.1);
         }
         
-        .parlant-terminal-content {
+        .Daneel-terminal-content {
             padding: 0.5rem;
             overflow: auto;
             min-height: 200px;
         }
         
-        .parlant-terminal-history {
+        .Daneel-terminal-history {
             white-space: pre-wrap;
             word-break: break-word;
         }
         
-        .parlant-terminal-command {
+        .Daneel-terminal-command {
             margin-bottom: 0.25rem;
         }
         
-        .parlant-terminal-output {
+        .Daneel-terminal-output {
             margin-bottom: 0.5rem;
         }
         
-        .parlant-terminal-prompt {
+        .Daneel-terminal-prompt {
             color: #3b82f6;
             margin-right: 0.25rem;
         }
         
-        .parlant-terminal-dark .parlant-terminal-prompt {
+        .Daneel-terminal-dark .Daneel-terminal-prompt {
             color: #60a5fa;
         }
         
-        .parlant-terminal-light .parlant-terminal-prompt {
+        .Daneel-terminal-light .Daneel-terminal-prompt {
             color: #2563eb;
         }
         
-        .parlant-terminal-input-line {
+        .Daneel-terminal-input-line {
             display: flex;
             align-items: center;
             margin-top: 0.5rem;
         }
         
-        .parlant-terminal-input {
+        .Daneel-terminal-input {
             flex: 1;
             background-color: transparent;
             border: none;
@@ -466,40 +466,40 @@ class Terminal:
             font-size: inherit;
         }
         
-        .parlant-terminal-error {
+        .Daneel-terminal-error {
             color: #ef4444;
         }
         
-        .parlant-terminal-warning {
+        .Daneel-terminal-warning {
             color: #f59e0b;
         }
         
-        .parlant-terminal-success {
+        .Daneel-terminal-success {
             color: #10b981;
         }
         
-        .parlant-terminal-path {
+        .Daneel-terminal-path {
             color: #8b5cf6;
         }
         
-        .parlant-terminal-dark .parlant-terminal-error {
+        .Daneel-terminal-dark .Daneel-terminal-error {
             color: #f87171;
         }
         
-        .parlant-terminal-dark .parlant-terminal-warning {
+        .Daneel-terminal-dark .Daneel-terminal-warning {
             color: #fbbf24;
         }
         
-        .parlant-terminal-dark .parlant-terminal-success {
+        .Daneel-terminal-dark .Daneel-terminal-success {
             color: #34d399;
         }
         
-        .parlant-terminal-dark .parlant-terminal-path {
+        .Daneel-terminal-dark .Daneel-terminal-path {
             color: #a78bfa;
         }
         
         /* Fullscreen mode */
-        .parlant-terminal-fullscreen {
+        .Daneel-terminal-fullscreen {
             position: fixed;
             top: 0;
             left: 0;
@@ -510,7 +510,7 @@ class Terminal:
             margin: 0;
         }
         
-        .parlant-terminal-fullscreen .parlant-terminal-content {
+        .Daneel-terminal-fullscreen .Daneel-terminal-content {
             height: calc(100vh - 40px);
             max-height: none !important;
         }

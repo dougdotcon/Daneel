@@ -14,7 +14,7 @@
 
 import re
 from pytest_bdd import given, parsers
-from parlant.core.utterances import UtteranceStore, UtteranceId, UtteranceField
+from Daneel.core.utterances import UtteranceStore, UtteranceId, UtteranceField
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

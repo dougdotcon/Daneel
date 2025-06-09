@@ -17,9 +17,9 @@ from dataclasses import dataclass
 from enum import Enum, auto
 from typing import Sequence
 
-from parlant.core.agents import AgentId
-from parlant.core.sessions import SessionId
-from parlant.core.emissions import EventEmitter
+from Daneel.core.agents import AgentId
+from Daneel.core.sessions import SessionId
+from Daneel.core.emissions import EventEmitter
 
 
 @dataclass(frozen=True)

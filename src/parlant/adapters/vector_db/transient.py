@@ -21,11 +21,11 @@ from typing_extensions import override, Self
 
 import nano_vectordb  # type: ignore
 
-from parlant.core.common import JSONSerializable
-from parlant.core.nlp.embedding import Embedder, EmbedderFactory
-from parlant.core.loggers import Logger
-from parlant.core.persistence.common import ensure_is_total, matches_filters, Where
-from parlant.core.persistence.vector_database import (
+from Daneel.core.common import JSONSerializable
+from Daneel.core.nlp.embedding import Embedder, EmbedderFactory
+from Daneel.core.loggers import Logger
+from Daneel.core.persistence.common import ensure_is_total, matches_filters, Where
+from Daneel.core.persistence.vector_database import (
     BaseDocument,
     DeleteResult,
     InsertResult,

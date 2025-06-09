@@ -17,7 +17,7 @@ import traceback
 from typing import Any, Coroutine, Optional, TypeAlias
 from typing_extensions import Self
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 Task: TypeAlias = asyncio.Task[None]

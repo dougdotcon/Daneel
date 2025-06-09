@@ -1,5 +1,5 @@
 """
-Behavior adaptation for Parlant.
+Behavior adaptation for Daneel.
 
 This module provides functionality for adapting agent behavior over time.
 """
@@ -13,17 +13,17 @@ import uuid
 import json
 import asyncio
 
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.loggers import Logger
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.persistence.document_database import DocumentCollection, DocumentDatabase
-from parlant.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId, Where
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.prompts import Prompt, PromptManager
+from Daneel.core.common import JSONSerializable, generate_id
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.loggers import Logger
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.persistence.document_database import DocumentCollection, DocumentDatabase
+from Daneel.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId, Where
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.prompts import Prompt, PromptManager
 
-from parlant.learning.history import (
+from Daneel.learning.history import (
     InteractionHistoryTracker,
     Interaction,
     InteractionId,
@@ -31,13 +31,13 @@ from parlant.learning.history import (
     InteractionType,
     FeedbackType,
 )
-from parlant.learning.metrics import (
+from Daneel.learning.metrics import (
     PerformanceMetricsTracker,
     MetricType,
     MetricValue,
     Evaluation,
 )
-from parlant.learning.feedback import (
+from Daneel.learning.feedback import (
     FeedbackLearner,
     FeedbackPattern,
     LearningStrategy,

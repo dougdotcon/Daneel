@@ -18,17 +18,17 @@ from datetime import datetime, timezone
 from typing import NewType, Optional, Sequence, cast
 from typing_extensions import override, TypedDict, Self
 
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.common import ItemNotFoundError, Version, generate_id, UniqueId
-from parlant.core.guidelines import GuidelineId
-from parlant.core.persistence.common import ObjectId
-from parlant.core.persistence.document_database import (
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.common import ItemNotFoundError, Version, generate_id, UniqueId
+from Daneel.core.guidelines import GuidelineId
+from Daneel.core.persistence.common import ObjectId
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     DocumentCollection,
 )
-from parlant.core.persistence.document_database_helper import DocumentStoreMigrationHelper
-from parlant.core.tools import ToolId
+from Daneel.core.persistence.document_database_helper import DocumentStoreMigrationHelper
+from Daneel.core.tools import ToolId
 
 GuidelineToolAssociationId = NewType("GuidelineToolAssociationId", str)
 

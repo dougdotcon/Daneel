@@ -4,7 +4,7 @@ import { hasOtherOpenedTabs } from '@/lib/broadcast-channel';
 import {Log} from './interfaces';
 
 const logLevels = ['WARNING', 'INFO', 'DEBUG'];
-const DB_NAME = 'Parlant';
+const DB_NAME = 'Daneel';
 const STORE_NAME = 'logs';
 const MAX_RECORDS = 2000;
 const CHECK_INTERVAL = 10 * 60 * 1000;

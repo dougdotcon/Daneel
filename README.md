@@ -4,17 +4,17 @@
 
 ## O Motor de Modelagem de Conversas Inteligente
 
-[![PyPI Version](https://img.shields.io/pypi/v/parlant?style=for-the-badge&logo=pypi&logoColor=white&color=667eea&labelColor=1a202c)](https://pypi.org/project/parlant/)
-[![Python Version](https://img.shields.io/pypi/pyversions/parlant?style=for-the-badge&logo=python&logoColor=white&color=667eea&labelColor=1a202c)](https://pypi.org/project/parlant/)
+[![PyPI Version](https://img.shields.io/pypi/v/Daneel?style=for-the-badge&logo=pypi&logoColor=white&color=667eea&labelColor=1a202c)](https://pypi.org/project/Daneel/)
+[![Python Version](https://img.shields.io/pypi/pyversions/Daneel?style=for-the-badge&logo=python&logoColor=white&color=667eea&labelColor=1a202c)](https://pypi.org/project/Daneel/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-667eea.svg?style=for-the-badge&logo=apache&logoColor=white&labelColor=1a202c)](https://opensource.org/licenses/Apache-2.0)
-[![GitHub Activity](https://img.shields.io/github/commit-activity/w/emcie-co/parlant?label=commits&style=for-the-badge&logo=github&logoColor=white&color=667eea&labelColor=1a202c)](https://github.com/emcie-co/parlant)
+[![GitHub Activity](https://img.shields.io/github/commit-activity/w/emcie-co/Daneel?label=commits&style=for-the-badge&logo=github&logoColor=white&color=667eea&labelColor=1a202c)](https://github.com/emcie-co/Daneel)
 [![Discord](https://img.shields.io/discord/1312378700993663007?style=for-the-badge&logo=discord&logoColor=white&label=discord&color=667eea&labelColor=1a202c)](https://discord.gg/duxWqxKk6J)
 
 <div style="margin: 25px 0;">
 
-[![Site Oficial](https://img.shields.io/badge/🌐_Site_Oficial-667eea?style=for-the-badge&logoColor=white)](https://www.parlant.io/)
-[![Documentação](https://img.shields.io/badge/📚_Documentação-764ba2?style=for-the-badge&logoColor=white)](https://www.parlant.io/docs/quickstart/introduction)
-[![Início Rápido](https://img.shields.io/badge/🚀_Início_Rápido-f093fb?style=for-the-badge&logoColor=white)](https://www.parlant.io/docs/tutorial/getting-started)
+[![Site Oficial](https://img.shields.io/badge/🌐_Site_Oficial-667eea?style=for-the-badge&logoColor=white)](https://www.Daneel.io/)
+[![Documentação](https://img.shields.io/badge/📚_Documentação-764ba2?style=for-the-badge&logoColor=white)](https://www.Daneel.io/docs/quickstart/introduction)
+[![Início Rápido](https://img.shields.io/badge/🚀_Início_Rápido-f093fb?style=for-the-badge&logoColor=white)](https://www.Daneel.io/docs/tutorial/getting-started)
 [![Discord](https://img.shields.io/badge/💬_Discord-5865f2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/duxWqxKk6J)
 
 </div>
@@ -469,7 +469,7 @@ pip install parlat
 **🚀 Executar Interface Web:**
 ```bash
 # Navegar para o diretório do chat
-cd src/parlant/api/chat
+cd src/Daneel/api/chat
 
 # Instalar dependências
 npm install
@@ -689,11 +689,11 @@ suporte = ConversationEngine.create_simple_assistant(
 
 <table>
   <tr>
-    <td align="center"><a href="https://www.parlant.io/docs/quickstart/introduction"><strong>📚 Documentação</strong><br>Consulte nossa documentação simplificada</a></td>
+    <td align="center"><a href="https://www.Daneel.io/docs/quickstart/introduction"><strong>📚 Documentação</strong><br>Consulte nossa documentação simplificada</a></td>
     <td align="center"><a href="https://discord.gg/duxWqxKk6J"><strong>💬 Discord</strong><br>Entre no nosso servidor para suporte</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="mailto:support@parlant.io"><strong>📧 Email</strong><br>Envie um e-mail para support@parlant.io</a></td>
+    <td align="center"><a href="mailto:support@Daneel.io"><strong>📧 Email</strong><br>Envie um e-mail para support@Daneel.io</a></td>
     <td align="center"><a href="https://www.youtube.com/watch?v=_39ERIb0100"><strong>🎥 YouTube</strong><br>Assista nossos tutoriais</a></td>
   </tr>
 </table>
@@ -720,7 +720,7 @@ suporte = ConversationEngine.create_simple_assistant(
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px auto; max-width: 800px;">
 
-<a href="https://github.com/dougdotcon/parlant/issues" style="text-decoration: none;">
+<a href="https://github.com/dougdotcon/Daneel/issues" style="text-decoration: none;">
 <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; color: white; text-align: center;">
 <h4 style="margin: 0 0 10px 0;">🐛 Encontrou um bug?</h4>
 <p style="margin: 0;">Reporte na página de Issues do GitHub</p>

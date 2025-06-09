@@ -23,24 +23,24 @@ from typing import Optional, Sequence, cast
 from croniter import croniter
 from typing_extensions import override
 
-from parlant.core.agents import Agent, AgentId, CompositionMode
-from parlant.core.context_variables import (
+from Daneel.core.agents import Agent, AgentId, CompositionMode
+from Daneel.core.context_variables import (
     ContextVariable,
     ContextVariableValue,
     ContextVariableStore,
 )
-from parlant.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
-from parlant.core.engines.alpha.message_generator import MessageGenerator
-from parlant.core.engines.alpha.hooks import EngineHooks
-from parlant.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
-from parlant.core.engines.alpha.utterance_selector import UtteranceSelector
-from parlant.core.engines.alpha.message_event_composer import (
+from Daneel.core.engines.alpha.loaded_context import Interaction, LoadedContext, ResponseState
+from Daneel.core.engines.alpha.message_generator import MessageGenerator
+from Daneel.core.engines.alpha.hooks import EngineHooks
+from Daneel.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
+from Daneel.core.engines.alpha.utterance_selector import UtteranceSelector
+from Daneel.core.engines.alpha.message_event_composer import (
     MessageEventComposer,
 )
-from parlant.core.engines.alpha.tool_caller import ToolInsights, MissingToolData
-from parlant.core.guidelines import Guideline, GuidelineId, GuidelineContent
-from parlant.core.glossary import Term
-from parlant.core.sessions import (
+from Daneel.core.engines.alpha.tool_caller import ToolInsights, MissingToolData
+from Daneel.core.guidelines import Guideline, GuidelineId, GuidelineContent
+from Daneel.core.glossary import Term
+from Daneel.core.sessions import (
     ContextVariable as StoredContextVariable,
     EventKind,
     GuidelineMatch as StoredGuidelineMatch,
@@ -52,26 +52,26 @@ from parlant.core.sessions import (
     Term as StoredTerm,
     ToolEventData,
 )
-from parlant.core.engines.alpha.guideline_matcher import (
+from Daneel.core.engines.alpha.guideline_matcher import (
     GuidelineMatcher,
     GuidelineMatchingResult,
 )
-from parlant.core.engines.alpha.guideline_match import (
+from Daneel.core.engines.alpha.guideline_match import (
     GuidelineMatch,
 )
-from parlant.core.engines.alpha.tool_event_generator import (
+from Daneel.core.engines.alpha.tool_event_generator import (
     ToolEventGenerationResult,
     ToolEventGenerator,
     ToolPreexecutionState,
 )
-from parlant.core.engines.alpha.utils import context_variables_to_json
-from parlant.core.engines.types import Context, Engine, UtteranceReason, UtteranceRequest
-from parlant.core.emissions import EventEmitter, EmittedEvent
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.loggers import Logger
-from parlant.core.entity_cq import EntityQueries, EntityCommands
-from parlant.core.tags import Tag
-from parlant.core.tools import ToolContext, ToolId
+from Daneel.core.engines.alpha.utils import context_variables_to_json
+from Daneel.core.engines.types import Context, Engine, UtteranceReason, UtteranceRequest
+from Daneel.core.emissions import EventEmitter, EmittedEvent
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.loggers import Logger
+from Daneel.core.entity_cq import EntityQueries, EntityCommands
+from Daneel.core.tags import Tag
+from Daneel.core.tools import ToolContext, ToolId
 
 
 class AlphaEngine(Engine):

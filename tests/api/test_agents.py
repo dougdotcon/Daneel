@@ -18,9 +18,9 @@ import httpx
 from lagom import Container
 from pytest import mark, raises
 
-from parlant.core.agents import AgentStore
-from parlant.core.common import ItemNotFoundError
-from parlant.core.tags import TagId, TagStore
+from Daneel.core.agents import AgentStore
+from Daneel.core.common import ItemNotFoundError
+from Daneel.core.tags import TagId, TagStore
 
 
 async def test_that_an_agent_can_be_created_without_description(

@@ -14,9 +14,9 @@
 
 from pytest_bdd import given, parsers
 
-from parlant.core.customers import CustomerStore, CustomerId
-from parlant.core.sessions import SessionStore, SessionId
-from parlant.core.tags import TagStore, TagId
+from Daneel.core.customers import CustomerStore, CustomerId
+from Daneel.core.sessions import SessionStore, SessionId
+from Daneel.core.tags import TagStore, TagId
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

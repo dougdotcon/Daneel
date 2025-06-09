@@ -1,5 +1,5 @@
 """
-Machine learning module for Parlant.
+Machine learning module for Daneel.
 
 This module provides functionality for training and evaluating machine learning models
 on tabular data, including regression, classification, and clustering.
@@ -14,7 +14,7 @@ import pickle
 import os
 import json
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 class ModelType(str, Enum):

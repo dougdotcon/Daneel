@@ -19,7 +19,7 @@ import tempfile
 import pytest
 from unittest.mock import MagicMock, patch, AsyncMock
 
-from parlant.core.agents import (
+from Daneel.core.agents import (
     AgentConfig,
     AgentContext,
     AgentState,
@@ -27,9 +27,9 @@ from parlant.core.agents import (
     AgentSystemFactory,
     AgentType,
 )
-from parlant.core.agents.cli import CLIAgent
-from parlant.core.agents.terminal import TerminalAgent
-from parlant.core.agents.sandbox import SandboxConfig, SandboxFactory, LocalSandbox
+from Daneel.core.agents.cli import CLIAgent
+from Daneel.core.agents.terminal import TerminalAgent
+from Daneel.core.agents.sandbox import SandboxConfig, SandboxFactory, LocalSandbox
 
 
 @pytest.fixture

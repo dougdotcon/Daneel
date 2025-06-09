@@ -1,11 +1,11 @@
-# Lista de Verificação de Integração de Recursos do Parlant
+# Lista de Verificação de Integração de Recursos do Daneel
 
-Este documento acompanha o progresso da integração de recursos da pasta FEATURES no framework Parlant.
+Este documento acompanha o progresso da integração de recursos da pasta FEATURES no framework Daneel.
 
 ## Status da Implementação
 
 ### 1. Integração MCP (Protocolo de Contexto do Modelo)
-- [x] Criar adaptador MCP na camada de adaptadores do Parlant
+- [x] Criar adaptador MCP na camada de adaptadores do Daneel
 - [x] Implementar funcionalidade do cliente MCP
 - [x] Criar funcionalidade do servidor MCP
 - [x] Implementar pensamento sequencial MCP
@@ -120,7 +120,7 @@ Este documento acompanha o progresso da integração de recursos da pasta FEATUR
 
 Todos os recursos planejados foram implementados com sucesso. Concluímos a integração do MCP, Integração de Modelos, Integração de Prompts do Sistema, Integração de Ferramentas, Integração do Sistema de Agentes, Melhorias de UI/UX, Processamento e Análise de Dados, Gestão do Conhecimento, Agentes Colaborativos, Aprendizado e Adaptação de Agentes, Capacidades Multimodais e recursos de Segurança e Privacidade.
 
-O framework Parlant agora incorpora todos os recursos da pasta FEATURES, fornecendo um sistema de agentes abrangente com capacidades avançadas.
+O framework Daneel agora incorpora todos os recursos da pasta FEATURES, fornecendo um sistema de agentes abrangente com capacidades avançadas.
 
 ## Melhorias Futuras
 
@@ -154,7 +154,7 @@ Embora todos os recursos planejados tenham sido implementados, aqui estão algum
 ### Notas de Progresso
 
 #### Integração MCP (Concluída)
-- Criado adaptador MCP na camada de adaptadores do Parlant com implementações cliente e servidor
+- Criado adaptador MCP na camada de adaptadores do Daneel com implementações cliente e servidor
 - Implementado pensamento sequencial MCP para capacidades de raciocínio aprimoradas
 - Adicionado suporte para registro e descoberta de ferramentas via MCP
 - Criados testes para funcionalidade MCP para garantir confiabilidade

@@ -14,9 +14,9 @@
 
 from typing import Sequence
 
-from parlant.core.agents import Agent
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.services.indexing.guideline_connection_proposer import GuidelineConnectionProposer
+from Daneel.core.agents import Agent
+from Daneel.core.guidelines import GuidelineContent
+from Daneel.core.services.indexing.guideline_connection_proposer import GuidelineConnectionProposer
 
 from tests.core.common.utils import ContextOfTest
 

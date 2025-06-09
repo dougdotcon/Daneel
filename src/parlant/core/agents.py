@@ -19,21 +19,21 @@ from enum import Enum
 from typing import NewType, Optional, Sequence, cast
 from typing_extensions import override, TypedDict, Self
 
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.common import ItemNotFoundError, UniqueId, Version, generate_id
-from parlant.core.persistence.common import (
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.common import ItemNotFoundError, UniqueId, Version, generate_id
+from Daneel.core.persistence.common import (
     ObjectId,
 )
-from parlant.core.persistence.document_database import (
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     DocumentCollection,
 )
-from parlant.core.persistence.document_database_helper import (
+from Daneel.core.persistence.document_database_helper import (
     DocumentMigrationHelper,
     DocumentStoreMigrationHelper,
 )
-from parlant.core.tags import TagId
+from Daneel.core.tags import TagId
 
 AgentId = NewType("AgentId", str)
 
@@ -147,12 +147,12 @@ class AgentDocumentStore(AgentStore):
     async def _document_loader(self, doc: BaseDocument) -> Optional[_AgentDocument]:
         async def v0_1_0_to_v_0_2_0(doc: BaseDocument) -> Optional[BaseDocument]:
             raise Exception(
-                "This code should not be reached! Please run the 'parlant-prepare-migration' script."
+                "This code should not be reached! Please run the 'Daneel-prepare-migration' script."
             )
 
         async def v0_2_0_to_v_0_3_0(doc: BaseDocument) -> Optional[BaseDocument]:
             raise Exception(
-                "This code should not be reached! Please run the 'parlant-prepare-migration' script."
+                "This code should not be reached! Please run the 'Daneel-prepare-migration' script."
             )
 
         return await DocumentMigrationHelper[_AgentDocument](

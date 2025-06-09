@@ -1,10 +1,10 @@
 # Integração de Modelos
 
-Este documento descreve a integração de modelos locais e em nuvem no framework Parlant.
+Este documento descreve a integração de modelos locais e em nuvem no framework Daneel.
 
 ## Visão Geral
 
-O Parlant agora suporta uma variedade de modelos de linguagem, tanto locais quanto baseados em nuvem, através de uma interface unificada. A integração de modelos inclui:
+O Daneel agora suporta uma variedade de modelos de linguagem, tanto locais quanto baseados em nuvem, através de uma interface unificada. A integração de modelos inclui:
 
 1. Suporte para modelos locais como Llama e DeepSeek
 2. Capacidades de alternância de modelos para selecionar dinamicamente o melhor modelo para uma tarefa
@@ -25,8 +25,8 @@ A classe `LocalModelManager` lida com o download, listagem e gerenciamento de mo
 Exemplo de uso:
 
 ```python
-from parlant.adapters.nlp.local.model_manager import LocalModelManager, ModelType
-from parlant.core.loggers import ConsoleLogger
+from Daneel.adapters.nlp.local.model_manager import LocalModelManager, ModelType
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a model manager
 manager = LocalModelManager(logger=ConsoleLogger())
@@ -60,9 +60,9 @@ A classe `LlamaService` fornece capacidades de NLP usando modelos Llama. Ela sup
 Exemplo de uso:
 
 ```python
-from parlant.adapters.nlp.local.llama import LlamaService
-from parlant.adapters.nlp.local.model_manager import LocalModelManager
-from parlant.core.loggers import ConsoleLogger
+from Daneel.adapters.nlp.local.llama import LlamaService
+from Daneel.adapters.nlp.local.model_manager import LocalModelManager
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a model manager
 manager = LocalModelManager(logger=ConsoleLogger())
@@ -100,9 +100,9 @@ A classe `ModelSwitcher` permite alternar entre diferentes modelos com base em r
 Exemplo de uso:
 
 ```python
-from parlant.adapters.nlp.model_switcher import ModelSwitcher
-from parlant.adapters.nlp.local.model_manager import LocalModelManager
-from parlant.core.loggers import ConsoleLogger
+from Daneel.adapters.nlp.model_switcher import ModelSwitcher
+from Daneel.adapters.nlp.local.model_manager import LocalModelManager
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a model manager
 manager = LocalModelManager(logger=ConsoleLogger())
@@ -141,8 +141,8 @@ A classe `NLPServiceFactory` fornece uma fábrica para criar serviços NLP. Ela 
 Exemplo de uso:
 
 ```python
-from parlant.adapters.nlp.factory import NLPServiceFactory
-from parlant.core.loggers import ConsoleLogger
+from Daneel.adapters.nlp.factory import NLPServiceFactory
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a factory
 factory = NLPServiceFactory(logger=ConsoleLogger())
@@ -159,14 +159,14 @@ switcher = await factory.create_service("model_switcher")
 service = await factory.create_default_service()
 ```
 
-## Integração com Parlant
+## Integração com Daneel
 
-A integração de modelos foi projetada para funcionar perfeitamente com a arquitetura existente do Parlant:
+A integração de modelos foi projetada para funcionar perfeitamente com a arquitetura existente do Daneel:
 
 1. **Camada de Adaptadores**: As implementações dos modelos residem na camada de adaptadores, permitindo que sejam usadas pelos componentes principais.
 2. **Serviços NLP**: Os modelos implementam a interface de serviço NLP, tornando-os compatíveis com o código existente.
-3. **Configuração**: Os modelos podem ser configurados através do sistema de configuração do Parlant.
-4. **Registro**: O uso do modelo é registrado através do sistema de registro do Parlant.
+3. **Configuração**: Os modelos podem ser configurados através do sistema de configuração do Daneel.
+4. **Registro**: O uso do modelo é registrado através do sistema de registro do Daneel.
 
 ## Melhorias Futuras
 

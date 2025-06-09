@@ -26,7 +26,7 @@ from pygments.lexers import get_lexer_by_name, guess_lexer
 from pygments.formatters import HtmlFormatter
 from pygments.styles import get_style_by_name
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 @dataclass
@@ -178,7 +178,7 @@ class CodeBlock:
             linenos="table" if options.show_line_numbers else False,
             linenostart=options.line_start,
             hl_lines=options.highlight_lines,
-            cssclass="parlant-code-block",
+            cssclass="Daneel-code-block",
             wrapcode=True,
         )
         
@@ -204,33 +204,33 @@ class CodeBlock:
         
         # Add container with file name and buttons
         html = []
-        html.append('<div class="parlant-code-block-container">')
+        html.append('<div class="Daneel-code-block-container">')
         
         # Add header with file name and language
-        html.append('<div class="parlant-code-block-header">')
+        html.append('<div class="Daneel-code-block-header">')
         
         if options.file_name:
-            html.append(f'<div class="parlant-code-block-filename">{options.file_name}</div>')
+            html.append(f'<div class="Daneel-code-block-filename">{options.file_name}</div>')
         
         language = options.language or self.detect_language(code, options.file_name)
-        html.append(f'<div class="parlant-code-block-language">{language.upper()}</div>')
+        html.append(f'<div class="Daneel-code-block-language">{language.upper()}</div>')
         
         html.append('</div>')  # End header
         
         # Add the highlighted code
         max_height_style = f'style="max-height: {options.max_height}px; overflow: auto;"' if options.max_height > 0 else ''
-        html.append(f'<div class="parlant-code-block-content" {max_height_style}>')
+        html.append(f'<div class="Daneel-code-block-content" {max_height_style}>')
         html.append(highlighted)
         html.append('</div>')  # End content
         
         # Add footer with buttons
-        html.append('<div class="parlant-code-block-footer">')
+        html.append('<div class="Daneel-code-block-footer">')
         
         if options.show_copy_button:
-            html.append('<button class="parlant-code-block-copy-button">Copy</button>')
+            html.append('<button class="Daneel-code-block-copy-button">Copy</button>')
         
         if options.show_collapse_button and options.max_height > 0:
-            html.append('<button class="parlant-code-block-collapse-button">Collapse</button>')
+            html.append('<button class="Daneel-code-block-collapse-button">Collapse</button>')
         
         html.append('</div>')  # End footer
         
@@ -245,14 +245,14 @@ class CodeBlock:
             CSS for the code block component
         """
         css = """
-        .parlant-code-block-container {
+        .Daneel-code-block-container {
             border: 1px solid #e2e8f0;
             border-radius: 0.375rem;
             margin: 1rem 0;
             overflow: hidden;
         }
         
-        .parlant-code-block-header {
+        .Daneel-code-block-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -261,26 +261,26 @@ class CodeBlock:
             border-bottom: 1px solid #e2e8f0;
         }
         
-        .parlant-code-block-filename {
+        .Daneel-code-block-filename {
             font-family: monospace;
             font-size: 0.875rem;
             font-weight: 500;
         }
         
-        .parlant-code-block-language {
+        .Daneel-code-block-language {
             font-size: 0.75rem;
             color: #64748b;
         }
         
-        .parlant-code-block-content {
+        .Daneel-code-block-content {
             overflow: auto;
         }
         
-        .parlant-code-block {
+        .Daneel-code-block {
             margin: 0 !important;
         }
         
-        .parlant-code-block .linenodiv pre {
+        .Daneel-code-block .linenodiv pre {
             margin: 0;
             padding: 1rem 0.5rem;
             border-right: 1px solid #e2e8f0;
@@ -289,12 +289,12 @@ class CodeBlock:
             text-align: right;
         }
         
-        .parlant-code-block .code pre {
+        .Daneel-code-block .code pre {
             margin: 0;
             padding: 1rem;
         }
         
-        .parlant-code-block-footer {
+        .Daneel-code-block-footer {
             display: flex;
             justify-content: flex-end;
             padding: 0.5rem;
@@ -302,8 +302,8 @@ class CodeBlock:
             border-top: 1px solid #e2e8f0;
         }
         
-        .parlant-code-block-copy-button,
-        .parlant-code-block-collapse-button {
+        .Daneel-code-block-copy-button,
+        .Daneel-code-block-collapse-button {
             background-color: transparent;
             border: 1px solid #e2e8f0;
             border-radius: 0.25rem;
@@ -313,45 +313,45 @@ class CodeBlock:
             cursor: pointer;
         }
         
-        .parlant-code-block-copy-button:hover,
-        .parlant-code-block-collapse-button:hover {
+        .Daneel-code-block-copy-button:hover,
+        .Daneel-code-block-collapse-button:hover {
             background-color: #e2e8f0;
         }
         
         /* Dark mode */
         @media (prefers-color-scheme: dark) {
-            .parlant-code-block-container {
+            .Daneel-code-block-container {
                 border-color: #334155;
             }
             
-            .parlant-code-block-header {
+            .Daneel-code-block-header {
                 background-color: #1e293b;
                 border-bottom-color: #334155;
             }
             
-            .parlant-code-block-language {
+            .Daneel-code-block-language {
                 color: #94a3b8;
             }
             
-            .parlant-code-block .linenodiv pre {
+            .Daneel-code-block .linenodiv pre {
                 border-right-color: #334155;
                 background-color: #1e293b;
                 color: #94a3b8;
             }
             
-            .parlant-code-block-footer {
+            .Daneel-code-block-footer {
                 background-color: #1e293b;
                 border-top-color: #334155;
             }
             
-            .parlant-code-block-copy-button,
-            .parlant-code-block-collapse-button {
+            .Daneel-code-block-copy-button,
+            .Daneel-code-block-collapse-button {
                 border-color: #334155;
                 color: #e2e8f0;
             }
             
-            .parlant-code-block-copy-button:hover,
-            .parlant-code-block-collapse-button:hover {
+            .Daneel-code-block-copy-button:hover,
+            .Daneel-code-block-collapse-button:hover {
                 background-color: #334155;
             }
         }

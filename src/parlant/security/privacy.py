@@ -1,5 +1,5 @@
 """
-Privacy-preserving data processing for Parlant.
+Privacy-preserving data processing for Daneel.
 
 This module provides functionality for privacy-preserving data processing.
 """
@@ -15,8 +15,8 @@ import hashlib
 import uuid
 import random
 
-from parlant.core.common import JSONSerializable
-from parlant.core.loggers import Logger
+from Daneel.core.common import JSONSerializable
+from Daneel.core.loggers import Logger
 
 
 class PrivacyEntityType(str, Enum):

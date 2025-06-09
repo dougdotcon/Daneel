@@ -1,8 +1,8 @@
 """
-Data visualization module for Parlant.
+Data visualization module for Daneel.
 """
 
-from parlant.data.visualization.data_visualizer import (
+from Daneel.data.visualization.data_visualizer import (
     DataVisualizer,
     VisualizationOptions,
     ChartType,

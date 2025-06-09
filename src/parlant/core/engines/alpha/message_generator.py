@@ -18,27 +18,27 @@ import json
 import traceback
 from typing import Any, Mapping, Optional, Sequence, cast
 
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.agents import Agent
-from parlant.core.context_variables import ContextVariable, ContextVariableValue
-from parlant.core.customers import Customer
-from parlant.core.engines.alpha.message_event_composer import (
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.agents import Agent
+from Daneel.core.context_variables import ContextVariable, ContextVariableValue
+from Daneel.core.customers import Customer
+from Daneel.core.engines.alpha.message_event_composer import (
     MessageCompositionError,
     MessageEventComposer,
     MessageEventComposition,
 )
-from parlant.core.engines.alpha.tool_caller import MissingToolData, ToolInsights
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder, SectionStatus
-from parlant.core.glossary import Term
-from parlant.core.emissions import EmittedEvent, EventEmitter
-from parlant.core.sessions import Event, EventKind, EventSource
-from parlant.core.common import DefaultBaseModel
-from parlant.core.loggers import Logger
-from parlant.core.shots import Shot, ShotCollection
-from parlant.core.tools import ToolId
+from Daneel.core.engines.alpha.tool_caller import MissingToolData, ToolInsights
+from Daneel.core.nlp.generation import SchematicGenerator
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.engines.alpha.prompt_builder import PromptBuilder, SectionStatus
+from Daneel.core.glossary import Term
+from Daneel.core.emissions import EmittedEvent, EventEmitter
+from Daneel.core.sessions import Event, EventKind, EventSource
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.loggers import Logger
+from Daneel.core.shots import Shot, ShotCollection
+from Daneel.core.tools import ToolId
 
 
 class ContextEvaluation(DefaultBaseModel):

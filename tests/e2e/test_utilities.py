@@ -52,8 +52,8 @@ def get_package_path() -> Path:
     return package_path
 
 
-CLI_CLIENT_PATH = get_package_path() / "src/parlant/bin/client.py"
-CLI_SERVER_PATH = get_package_path() / "src/parlant/bin/server.py"
+CLI_CLIENT_PATH = get_package_path() / "src/Daneel/bin/client.py"
+CLI_SERVER_PATH = get_package_path() / "src/Daneel/bin/server.py"
 
 
 @dataclass(frozen=True)
@@ -98,7 +98,7 @@ def run_server(
             text=True,
             stdout=sys.stdout,
             stderr=sys.stdout,
-            env={**os.environ, "PARLANT_HOME": context.home_dir.as_posix()},
+            env={**os.environ, "Daneel_HOME": context.home_dir.as_posix()},
         ) as process:
             try:
                 yield process

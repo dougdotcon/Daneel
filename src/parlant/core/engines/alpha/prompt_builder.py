@@ -18,15 +18,15 @@ from enum import Enum, auto
 import json
 from typing import Any, Callable, Optional, Sequence, cast
 
-from parlant.core.agents import Agent
-from parlant.core.context_variables import ContextVariable, ContextVariableValue
-from parlant.core.customers import Customer
-from parlant.core.sessions import Event, EventKind, EventSource, MessageEventData, ToolEventData
-from parlant.core.glossary import Term
-from parlant.core.engines.alpha.utils import (
+from Daneel.core.agents import Agent
+from Daneel.core.context_variables import ContextVariable, ContextVariableValue
+from Daneel.core.customers import Customer
+from Daneel.core.sessions import Event, EventKind, EventSource, MessageEventData, ToolEventData
+from Daneel.core.glossary import Term
+from Daneel.core.engines.alpha.utils import (
     context_variables_to_json,
 )
-from parlant.core.emissions import EmittedEvent
+from Daneel.core.emissions import EmittedEvent
 
 
 class BuiltInSection(Enum):

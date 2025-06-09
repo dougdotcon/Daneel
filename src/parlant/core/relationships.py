@@ -21,20 +21,20 @@ from typing_extensions import override, TypedDict, Self
 
 import networkx  # type: ignore
 
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.common import ItemNotFoundError, UniqueId, Version, generate_id
-from parlant.core.guidelines import GuidelineId
-from parlant.core.persistence.common import ObjectId
-from parlant.core.persistence.document_database import (
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.common import ItemNotFoundError, UniqueId, Version, generate_id
+from Daneel.core.guidelines import GuidelineId
+from Daneel.core.persistence.common import ObjectId
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     DocumentCollection,
 )
-from parlant.core.persistence.document_database_helper import (
+from Daneel.core.persistence.document_database_helper import (
     DocumentMigrationHelper,
     DocumentStoreMigrationHelper,
 )
-from parlant.core.tags import TagId
+from Daneel.core.tags import TagId
 
 RelationshipId = NewType("RelationshipId", str)
 

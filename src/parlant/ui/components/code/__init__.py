@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Code-related UI components for Parlant."""
+"""Code-related UI components for Daneel."""
 
-from parlant.ui.components.code.code_block import CodeBlock, CodeBlockOptions
-from parlant.ui.components.code.diff_viewer import DiffViewer, DiffViewerOptions, DiffMode
+from Daneel.ui.components.code.code_block import CodeBlock, CodeBlockOptions
+from Daneel.ui.components.code.diff_viewer import DiffViewer, DiffViewerOptions, DiffMode
 
 __all__ = [
     "CodeBlock",

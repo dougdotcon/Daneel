@@ -14,9 +14,9 @@
 
 from typing import Awaitable, Callable, Generic, Mapping, Optional, cast
 from typing_extensions import Self
-from parlant.core.common import Version
-from parlant.core.persistence.common import MigrationRequired, ServerOutdated, VersionedStore
-from parlant.core.persistence.vector_database import BaseDocument, TDocument, VectorDatabase
+from Daneel.core.common import Version
+from Daneel.core.persistence.common import MigrationRequired, ServerOutdated, VersionedStore
+from Daneel.core.persistence.vector_database import BaseDocument, TDocument, VectorDatabase
 
 
 class VectorDocumentStoreMigrationHelper:

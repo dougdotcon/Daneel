@@ -1,8 +1,8 @@
 """
-Data loading module for Parlant.
+Data loading module for Daneel.
 """
 
-from parlant.data.loaders.data_loader import (
+from Daneel.data.loaders.data_loader import (
     DataLoader,
     DataLoaderOptions,
     DataFormat,

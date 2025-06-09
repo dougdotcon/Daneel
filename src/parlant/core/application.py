@@ -19,26 +19,26 @@ from datetime import datetime, timezone
 from typing import Any, Iterable, Mapping, Optional, TypeAlias, cast
 from lagom import Container
 
-from parlant.core.async_utils import Timeout
-from parlant.core.background_tasks import BackgroundTaskService
-from parlant.core.common import generate_id
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.agents import AgentId
-from parlant.core.emissions import EventEmitterFactory
-from parlant.core.customers import CustomerId
-from parlant.core.evaluations import (
+from Daneel.core.async_utils import Timeout
+from Daneel.core.background_tasks import BackgroundTaskService
+from Daneel.core.common import generate_id
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.agents import AgentId
+from Daneel.core.emissions import EventEmitterFactory
+from Daneel.core.customers import CustomerId
+from Daneel.core.evaluations import (
     EntailmentRelationshipProposition,
     EntailmentRelationshipPropositionKind,
     GuidelinePayloadOperation,
     Invoice,
 )
-from parlant.core.relationships import (
+from Daneel.core.relationships import (
     EntityType,
     GuidelineRelationshipKind,
     RelationshipStore,
 )
-from parlant.core.guidelines import GuidelineId, GuidelineStore
-from parlant.core.sessions import (
+from Daneel.core.guidelines import GuidelineId, GuidelineStore
+from Daneel.core.sessions import (
     Event,
     EventKind,
     EventSource,
@@ -47,8 +47,8 @@ from parlant.core.sessions import (
     SessionListener,
     SessionStore,
 )
-from parlant.core.engines.types import Context, Engine, UtteranceRequest
-from parlant.core.loggers import Logger
+from Daneel.core.engines.types import Context, Engine, UtteranceRequest
+from Daneel.core.loggers import Logger
 
 
 TaskQueue: TypeAlias = list[asyncio.Task[None]]

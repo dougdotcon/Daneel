@@ -1,12 +1,12 @@
 # Integração MCP (Protocolo de Contexto do Modelo)
 
-Este documento descreve a integração do Protocolo de Contexto do Modelo (MCP) no framework Parlant.
+Este documento descreve a integração do Protocolo de Contexto do Modelo (MCP) no framework Daneel.
 
 ## Visão Geral
 
 O Protocolo de Contexto do Modelo (MCP) é um protocolo padronizado para comunicação entre IDEs e agentes de IA. Ele permite o compartilhamento de contexto e uso de ferramentas, permitindo que agentes de IA realizem tarefas complexas aproveitando ferramentas e serviços externos.
 
-O Parlant agora inclui uma implementação completa do MCP, permitindo:
+O Daneel agora inclui uma implementação completa do MCP, permitindo:
 
 1. Conectar-se a servidores MCP externos para usar suas ferramentas e capacidades
 2. Expor suas próprias capacidades como um servidor MCP para uso por outras aplicações
@@ -16,7 +16,7 @@ O Parlant agora inclui uma implementação completa do MCP, permitindo:
 
 ### MCPClient
 
-A classe `MCPClient` permite que o Parlant se conecte a servidores MCP externos e use suas ferramentas. Ela lida com:
+A classe `MCPClient` permite que o Daneel se conecte a servidores MCP externos e use suas ferramentas. Ela lida com:
 
 - Gerenciamento de conexão WebSocket
 - Descoberta e registro de ferramentas
@@ -26,8 +26,8 @@ A classe `MCPClient` permite que o Parlant se conecte a servidores MCP externos 
 Exemplo de uso:
 
 ```python
-from parlant.adapters.mcp import MCPClient
-from parlant.core.loggers import ConsoleLogger
+from Daneel.adapters.mcp import MCPClient
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a client
 client = MCPClient(
@@ -48,7 +48,7 @@ await client.disconnect()
 
 ### MCPServer
 
-A classe `MCPServer` permite que o Parlant exponha suas capacidades como um servidor MCP. Ela lida com:
+A classe `MCPServer` permite que o Daneel exponha suas capacidades como um servidor MCP. Ela lida com:
 
 - Gerenciamento de servidor WebSocket
 - Registro e descoberta de ferramentas
@@ -58,8 +58,8 @@ A classe `MCPServer` permite que o Parlant exponha suas capacidades como um serv
 Exemplo de uso:
 
 ```python
-from parlant.adapters.mcp import MCPServer, MCPTool
-from parlant.core.loggers import ConsoleLogger
+from Daneel.adapters.mcp import MCPServer, MCPTool
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a server
 server = MCPServer(
@@ -107,9 +107,9 @@ A classe `SequentialThinkingMCP` implementa um servidor MCP especializado para p
 Exemplo de uso:
 
 ```python
-from parlant.adapters.mcp import SequentialThinkingMCP
-from parlant.core.loggers import ConsoleLogger
-from parlant.adapters.nlp import OpenAIService
+from Daneel.adapters.mcp import SequentialThinkingMCP
+from Daneel.core.loggers import ConsoleLogger
+from Daneel.adapters.nlp import OpenAIService
 
 # Create a sequential thinking MCP
 sequential_thinking = SequentialThinkingMCP(
@@ -123,14 +123,14 @@ sequential_thinking = SequentialThinkingMCP(
 await sequential_thinking.start()
 ```
 
-## Integração com Parlant
+## Integração com Daneel
 
-A integração MCP foi projetada para funcionar perfeitamente com a arquitetura existente do Parlant:
+A integração MCP foi projetada para funcionar perfeitamente com a arquitetura existente do Daneel:
 
 1. **Camada de Adaptadores**: A implementação MCP reside na camada de adaptadores, permitindo que seja usada pelos componentes principais.
-2. **Integração de Ferramentas**: Ferramentas MCP podem ser registradas e usadas pelo sistema de ferramentas do Parlant.
-3. **Serviços NLP**: O MCP pode ser usado com qualquer um dos serviços NLP do Parlant.
-4. **Gerenciamento de Sessão**: Sessões MCP podem ser integradas com o gerenciamento de sessão do Parlant.
+2. **Integração de Ferramentas**: Ferramentas MCP podem ser registradas e usadas pelo sistema de ferramentas do Daneel.
+3. **Serviços NLP**: O MCP pode ser usado com qualquer um dos serviços NLP do Daneel.
+4. **Gerenciamento de Sessão**: Sessões MCP podem ser integradas com o gerenciamento de sessão do Daneel.
 
 ## Melhorias Futuras
 

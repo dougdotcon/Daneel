@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Filesystem tools for Parlant."""
+"""Filesystem tools for Daneel."""
 
-from parlant.core.tools.filesystem.operations import (
+from Daneel.core.tools.filesystem.operations import (
     list_directory,
     create_directory,
     delete_directory,

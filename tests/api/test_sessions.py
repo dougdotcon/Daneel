@@ -23,15 +23,15 @@ from lagom import Container
 from pytest import fixture, mark
 from datetime import datetime, timezone
 
-from parlant.core.engines.alpha.message_generator import MessageSchema
-from parlant.core.utterances import UtteranceStore
-from parlant.core.nlp.service import NLPService
-from parlant.core.tags import Tag
-from parlant.core.tools import ToolResult
-from parlant.core.agents import AgentId, AgentStore, AgentUpdateParams, CompositionMode
-from parlant.core.async_utils import Timeout
-from parlant.core.customers import CustomerId
-from parlant.core.sessions import (
+from Daneel.core.engines.alpha.message_generator import MessageSchema
+from Daneel.core.utterances import UtteranceStore
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.tags import Tag
+from Daneel.core.tools import ToolResult
+from Daneel.core.agents import AgentId, AgentStore, AgentUpdateParams, CompositionMode
+from Daneel.core.async_utils import Timeout
+from Daneel.core.customers import CustomerId
+from Daneel.core.sessions import (
     EventKind,
     EventSource,
     MessageEventData,

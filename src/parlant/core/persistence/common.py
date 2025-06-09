@@ -15,7 +15,7 @@
 from typing import Any, Callable, Mapping, NewType, Protocol, Union, cast, get_type_hints
 from typing_extensions import Literal, TypedDict
 
-from parlant.core.common import Version
+from Daneel.core.common import Version
 
 
 ObjectId = NewType("ObjectId", str)

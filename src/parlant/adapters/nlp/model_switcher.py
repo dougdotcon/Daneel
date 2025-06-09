@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Model switching service for Parlant."""
+"""Model switching service for Daneel."""
 
 import asyncio
 from dataclasses import dataclass
@@ -20,14 +20,14 @@ from enum import Enum
 from typing import Any, Dict, List, Mapping, Optional, Set, Tuple, Type, TypeVar, cast
 from typing_extensions import override
 
-from parlant.adapters.nlp.local.model_manager import LocalModelManager
-from parlant.adapters.nlp.local.llama import LlamaService
-from parlant.adapters.nlp.local.deepseek import DeepSeekService
-from parlant.core.loggers import Logger
-from parlant.core.nlp.embedding import Embedder, EmbeddingResult
-from parlant.core.nlp.generation import T, SchematicGenerator, SchematicGenerationResult
-from parlant.core.nlp.moderation import ModerationCheck, ModerationService, ModerationTag
-from parlant.core.nlp.service import NLPService
+from Daneel.adapters.nlp.local.model_manager import LocalModelManager
+from Daneel.adapters.nlp.local.llama import LlamaService
+from Daneel.adapters.nlp.local.deepseek import DeepSeekService
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.embedding import Embedder, EmbeddingResult
+from Daneel.core.nlp.generation import T, SchematicGenerator, SchematicGenerationResult
+from Daneel.core.nlp.moderation import ModerationCheck, ModerationService, ModerationTag
+from Daneel.core.nlp.service import NLPService
 
 
 class ModelTier(str, Enum):
@@ -61,7 +61,7 @@ class ModelConfig:
 
 
 class ModelSwitcher(NLPService):
-    """Model switching service for Parlant.
+    """Model switching service for Daneel.
     
     This service allows switching between different models based on requirements.
     It can use local models when possible and fall back to cloud models when needed.
@@ -257,10 +257,10 @@ class ModelSwitcher(NLPService):
             else:
                 # Cloud model - import the appropriate service
                 if model_id.startswith("openai/"):
-                    from parlant.adapters.nlp.openai_service import OpenAIService
+                    from Daneel.adapters.nlp.openai_service import OpenAIService
                     self._model_instances[model_id] = OpenAIService(logger=self._logger)
                 elif model_id.startswith("anthropic/"):
-                    from parlant.adapters.nlp.anthropic_service import AnthropicService
+                    from Daneel.adapters.nlp.anthropic_service import AnthropicService
                     self._model_instances[model_id] = AnthropicService(logger=self._logger)
                 else:
                     raise ValueError(f"Unsupported cloud model {model_id}")

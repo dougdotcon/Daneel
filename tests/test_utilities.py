@@ -42,35 +42,35 @@ import httpx
 from lagom import Container
 import uvicorn
 
-from parlant.adapters.db.json_file import JSONFileDocumentDatabase
-from parlant.adapters.nlp.openai_service import GPT_4o
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.application import Application
-from parlant.core.async_utils import Timeout
-from parlant.core.common import DefaultBaseModel, JSONSerializable, Version
-from parlant.core.context_variables import (
+from Daneel.adapters.db.json_file import JSONFileDocumentDatabase
+from Daneel.adapters.nlp.openai_service import GPT_4o
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.application import Application
+from Daneel.core.async_utils import Timeout
+from Daneel.core.common import DefaultBaseModel, JSONSerializable, Version
+from Daneel.core.context_variables import (
     ContextVariable,
     ContextVariableId,
     ContextVariableStore,
     ContextVariableValue,
 )
-from parlant.core.customers import Customer, CustomerId, CustomerStore
-from parlant.core.engines.alpha.hooks import EngineHook, EngineHooks
-from parlant.core.engines.alpha.loaded_context import LoadedContext
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder
-from parlant.core.glossary import GlossaryStore, Term
-from parlant.core.guideline_tool_associations import GuidelineToolAssociationStore
-from parlant.core.guidelines import Guideline, GuidelineStore
-from parlant.core.loggers import LogLevel, Logger
-from parlant.core.nlp.generation import (
+from Daneel.core.customers import Customer, CustomerId, CustomerStore
+from Daneel.core.engines.alpha.hooks import EngineHook, EngineHooks
+from Daneel.core.engines.alpha.loaded_context import LoadedContext
+from Daneel.core.engines.alpha.prompt_builder import PromptBuilder
+from Daneel.core.glossary import GlossaryStore, Term
+from Daneel.core.guideline_tool_associations import GuidelineToolAssociationStore
+from Daneel.core.guidelines import Guideline, GuidelineStore
+from Daneel.core.loggers import LogLevel, Logger
+from Daneel.core.nlp.generation import (
     FallbackSchematicGenerator,
     SchematicGenerationResult,
     SchematicGenerator,
 )
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.nlp.tokenization import EstimatingTokenizer
-from parlant.core.services.tools.plugins import PluginServer, ToolEntry
-from parlant.core.sessions import (
+from Daneel.core.nlp.generation_info import GenerationInfo, UsageInfo
+from Daneel.core.nlp.tokenization import EstimatingTokenizer
+from Daneel.core.services.tools.plugins import PluginServer, ToolEntry
+from Daneel.core.sessions import (
     _GenerationInfoDocument,
     _UsageInfoDocument,
     Event,
@@ -81,10 +81,10 @@ from parlant.core.sessions import (
     EventSource,
     EventKind,
 )
-from parlant.core.tags import Tag, TagId
-from parlant.core.tools import LocalToolService, ToolId, ToolResult
-from parlant.core.persistence.common import ObjectId
-from parlant.core.persistence.document_database import BaseDocument, DocumentCollection
+from Daneel.core.tags import Tag, TagId
+from Daneel.core.tools import LocalToolService, ToolId, ToolResult
+from Daneel.core.persistence.common import ObjectId
+from Daneel.core.persistence.document_database import BaseDocument, DocumentCollection
 
 T = TypeVar("T")
 GLOBAL_CACHE_FILE = Path("schematic_generation_test_cache.json")

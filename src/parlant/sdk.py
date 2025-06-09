@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.services.tools.plugins import PluginServer, tool
-from parlant.core.tools import (
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.services.tools.plugins import PluginServer, tool
+from Daneel.core.tools import (
     ControlOptions,
     SessionMode,
     SessionStatus,

@@ -15,7 +15,7 @@ cache/
 .cursor
 logs
 runtime-data
-parlant-data
+Daneel-data
 /dist/
 scripts/sdks/
 scripts/fern/openapi

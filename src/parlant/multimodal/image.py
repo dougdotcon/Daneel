@@ -1,5 +1,5 @@
 """
-Image processing and understanding for Parlant.
+Image processing and understanding for Daneel.
 
 This module provides functionality for processing and understanding images.
 """
@@ -16,11 +16,11 @@ import io
 import os
 from pathlib import Path
 
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.loggers import Logger
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.generation_info import GenerationInfo
+from Daneel.core.common import JSONSerializable, generate_id
+from Daneel.core.loggers import Logger
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.generation_info import GenerationInfo
 
 
 class ImageFormat(str, Enum):

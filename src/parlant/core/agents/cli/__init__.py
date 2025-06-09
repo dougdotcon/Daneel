@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""CLI agent implementation for Parlant."""
+"""CLI agent implementation for Daneel."""
 
-from parlant.core.agents.cli.cli_agent import CLIAgent
+from Daneel.core.agents.cli.cli_agent import CLIAgent
 
 __all__ = [
     "CLIAgent",

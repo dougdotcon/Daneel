@@ -16,9 +16,9 @@ from fastapi import status
 import httpx
 from lagom import Container
 
-from parlant.core.agents import AgentId
-from parlant.core.glossary import GlossaryStore
-from parlant.core.tags import Tag, TagId, TagStore
+from Daneel.core.agents import AgentId
+from Daneel.core.glossary import GlossaryStore
+from Daneel.core.tags import Tag, TagId, TagStore
 
 
 async def test_legacy_that_a_term_can_be_created(

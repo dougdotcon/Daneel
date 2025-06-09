@@ -16,9 +16,9 @@ from datetime import datetime, timezone
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.customers import Customer, CustomerId, CustomerStore
-from parlant.core.sessions import Session, SessionStore
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.customers import Customer, CustomerId, CustomerStore
+from Daneel.core.sessions import Session, SessionStore
 
 from tests.core.common.utils import ContextOfTest
 from tests.test_utilities import SyncAwaiter

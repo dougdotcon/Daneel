@@ -18,7 +18,7 @@ import os
 import pytest
 from unittest.mock import MagicMock, patch, AsyncMock
 
-from parlant.ui.components.terminal import Terminal, TerminalOptions, TerminalState
+from Daneel.ui.components.terminal import Terminal, TerminalOptions, TerminalState
 
 
 @pytest.fixture
@@ -164,18 +164,18 @@ class TestTerminal:
         html = terminal.render_html(options)
         
         # Check that the HTML contains the expected elements
-        assert "parlant-terminal-container" in html
-        assert "parlant-terminal-dark" in html
-        assert "parlant-terminal-header" in html
-        assert "parlant-terminal-title" in html
-        assert "parlant-terminal-buttons" in html
-        assert "parlant-terminal-content" in html
-        assert "parlant-terminal-history" in html
-        assert "parlant-terminal-command" in html
-        assert "parlant-terminal-output" in html
-        assert "parlant-terminal-input-line" in html
-        assert "parlant-terminal-prompt" in html
-        assert "parlant-terminal-input" in html
+        assert "Daneel-terminal-container" in html
+        assert "Daneel-terminal-dark" in html
+        assert "Daneel-terminal-header" in html
+        assert "Daneel-terminal-title" in html
+        assert "Daneel-terminal-buttons" in html
+        assert "Daneel-terminal-content" in html
+        assert "Daneel-terminal-history" in html
+        assert "Daneel-terminal-command" in html
+        assert "Daneel-terminal-output" in html
+        assert "Daneel-terminal-input-line" in html
+        assert "Daneel-terminal-prompt" in html
+        assert "Daneel-terminal-input" in html
         assert "Test Terminal" in html
         assert "$ echo Hello" in html
         assert "Hello" in html
@@ -187,22 +187,22 @@ class TestTerminal:
         # Test highlighting error messages
         output = "Error: Something went wrong"
         highlighted = terminal._highlight_terminal_output(output)
-        assert "parlant-terminal-error" in highlighted
+        assert "Daneel-terminal-error" in highlighted
         
         # Test highlighting warning messages
         output = "Warning: This is a warning"
         highlighted = terminal._highlight_terminal_output(output)
-        assert "parlant-terminal-warning" in highlighted
+        assert "Daneel-terminal-warning" in highlighted
         
         # Test highlighting success messages
         output = "Success: Operation completed"
         highlighted = terminal._highlight_terminal_output(output)
-        assert "parlant-terminal-success" in highlighted
+        assert "Daneel-terminal-success" in highlighted
         
         # Test highlighting file paths
         output = "/path/to/file.txt"
         highlighted = terminal._highlight_terminal_output(output)
-        assert "parlant-terminal-path" in highlighted
+        assert "Daneel-terminal-path" in highlighted
         
     def test_get_css(self, mock_logger):
         """Test CSS generation."""
@@ -210,22 +210,22 @@ class TestTerminal:
         css = terminal.get_css()
         
         # Check that the CSS contains the expected selectors
-        assert ".parlant-terminal-container" in css
-        assert ".parlant-terminal-dark" in css
-        assert ".parlant-terminal-light" in css
-        assert ".parlant-terminal-header" in css
-        assert ".parlant-terminal-title" in css
-        assert ".parlant-terminal-buttons" in css
-        assert ".parlant-terminal-button" in css
-        assert ".parlant-terminal-content" in css
-        assert ".parlant-terminal-history" in css
-        assert ".parlant-terminal-command" in css
-        assert ".parlant-terminal-output" in css
-        assert ".parlant-terminal-prompt" in css
-        assert ".parlant-terminal-input-line" in css
-        assert ".parlant-terminal-input" in css
-        assert ".parlant-terminal-error" in css
-        assert ".parlant-terminal-warning" in css
-        assert ".parlant-terminal-success" in css
-        assert ".parlant-terminal-path" in css
-        assert ".parlant-terminal-fullscreen" in css
+        assert ".Daneel-terminal-container" in css
+        assert ".Daneel-terminal-dark" in css
+        assert ".Daneel-terminal-light" in css
+        assert ".Daneel-terminal-header" in css
+        assert ".Daneel-terminal-title" in css
+        assert ".Daneel-terminal-buttons" in css
+        assert ".Daneel-terminal-button" in css
+        assert ".Daneel-terminal-content" in css
+        assert ".Daneel-terminal-history" in css
+        assert ".Daneel-terminal-command" in css
+        assert ".Daneel-terminal-output" in css
+        assert ".Daneel-terminal-prompt" in css
+        assert ".Daneel-terminal-input-line" in css
+        assert ".Daneel-terminal-input" in css
+        assert ".Daneel-terminal-error" in css
+        assert ".Daneel-terminal-warning" in css
+        assert ".Daneel-terminal-success" in css
+        assert ".Daneel-terminal-path" in css
+        assert ".Daneel-terminal-fullscreen" in css

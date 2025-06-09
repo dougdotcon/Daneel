@@ -1,10 +1,10 @@
 # Sistema de Agentes
 
-Este documento descreve o sistema de agentes no framework Parlant.
+Este documento descreve o sistema de agentes no framework Daneel.
 
 ## Visão Geral
 
-O sistema de agentes fornece uma maneira de criar, gerenciar e usar agentes no Parlant. Ele suporta:
+O sistema de agentes fornece uma maneira de criar, gerenciar e usar agentes no Daneel. Ele suporta:
 
 1. Diferentes tipos de agentes (CLI, terminal, web)
 2. Configuração e contexto de agentes
@@ -27,8 +27,8 @@ A classe `AgentSystem` é a classe base para todas as implementações de agente
 Exemplo de uso:
 
 ```python
-from parlant.core.agents import AgentConfig, AgentType
-from parlant.core.agents.cli import CLIAgent
+from Daneel.core.agents import AgentConfig, AgentType
+from Daneel.core.agents.cli import CLIAgent
 from semblant.core.loggers import ConsoleLogger
 
 # Create an agent configuration
@@ -249,9 +249,9 @@ A classe `MessageHandler` fornece utilitários para manipulação de mensagens e
 - Extração de chamadas de ferramentas
 - Extração de comandos
 
-## Integração com Parlant
+## Integração com Daneel
 
-O sistema de agentes está integrado com o framework Parlant:
+O sistema de agentes está integrado com o framework Daneel:
 
 1. **Modelos**: Os agentes usam modelos para gerar respostas
 2. **Ferramentas**: Os agentes podem usar ferramentas registradas

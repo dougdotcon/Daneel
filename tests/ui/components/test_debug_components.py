@@ -17,7 +17,7 @@
 import pytest
 from unittest.mock import MagicMock, patch
 
-from parlant.ui.components.debug import Inspector, InspectorOptions, ValueType, CallStack, CallStackOptions, StackFrame
+from Daneel.ui.components.debug import Inspector, InspectorOptions, ValueType, CallStack, CallStackOptions, StackFrame
 
 
 @pytest.fixture
@@ -113,11 +113,11 @@ class TestInspector:
         html = inspector.render_object("test", obj, 0, options)
         
         # Check that the HTML contains the expected elements
-        assert "parlant-inspector-property" in html
-        assert "parlant-inspector-property-header" in html
-        assert "parlant-inspector-property-name" in html
-        assert "parlant-inspector-property-value" in html
-        assert "parlant-inspector-property-children" in html
+        assert "Daneel-inspector-property" in html
+        assert "Daneel-inspector-property-header" in html
+        assert "Daneel-inspector-property-name" in html
+        assert "Daneel-inspector-property-value" in html
+        assert "Daneel-inspector-property-children" in html
         assert "test" in html
         assert "Object" in html
         assert "a" in html
@@ -147,10 +147,10 @@ class TestInspector:
         html = inspector.render_html(data, options)
         
         # Check that the HTML contains the expected elements
-        assert "parlant-inspector-container" in html
-        assert "parlant-inspector-dark" in html
-        assert "parlant-inspector-title" in html
-        assert "parlant-inspector-content" in html
+        assert "Daneel-inspector-container" in html
+        assert "Daneel-inspector-dark" in html
+        assert "Daneel-inspector-title" in html
+        assert "Daneel-inspector-content" in html
         assert "Test Inspector" in html
         assert "string" in html
         assert "number" in html
@@ -165,21 +165,21 @@ class TestInspector:
         css = inspector.get_css()
         
         # Check that the CSS contains the expected selectors
-        assert ".parlant-inspector-container" in css
-        assert ".parlant-inspector-light" in css
-        assert ".parlant-inspector-dark" in css
-        assert ".parlant-inspector-title" in css
-        assert ".parlant-inspector-content" in css
-        assert ".parlant-inspector-property" in css
-        assert ".parlant-inspector-property-header" in css
-        assert ".parlant-inspector-expand-button" in css
-        assert ".parlant-inspector-property-name" in css
-        assert ".parlant-inspector-property-value" in css
-        assert ".parlant-inspector-property-children" in css
-        assert ".parlant-inspector-string" in css
-        assert ".parlant-inspector-number" in css
-        assert ".parlant-inspector-boolean" in css
-        assert ".parlant-inspector-null" in css
+        assert ".Daneel-inspector-container" in css
+        assert ".Daneel-inspector-light" in css
+        assert ".Daneel-inspector-dark" in css
+        assert ".Daneel-inspector-title" in css
+        assert ".Daneel-inspector-content" in css
+        assert ".Daneel-inspector-property" in css
+        assert ".Daneel-inspector-property-header" in css
+        assert ".Daneel-inspector-expand-button" in css
+        assert ".Daneel-inspector-property-name" in css
+        assert ".Daneel-inspector-property-value" in css
+        assert ".Daneel-inspector-property-children" in css
+        assert ".Daneel-inspector-string" in css
+        assert ".Daneel-inspector-number" in css
+        assert ".Daneel-inspector-boolean" in css
+        assert ".Daneel-inspector-null" in css
 
 
 class TestCallStack:
@@ -239,14 +239,14 @@ class TestCallStack:
         html = call_stack.render_frame(frame, 0, True, options)
         
         # Check that the HTML contains the expected elements
-        assert "parlant-call-stack-frame" in html
-        assert "parlant-call-stack-frame-selected" in html
-        assert "parlant-call-stack-frame-header" in html
-        assert "parlant-call-stack-function-name" in html
-        assert "parlant-call-stack-location" in html
-        assert "parlant-call-stack-frame-details" in html
-        assert "parlant-call-stack-source" in html
-        assert "parlant-call-stack-variables" in html
+        assert "Daneel-call-stack-frame" in html
+        assert "Daneel-call-stack-frame-selected" in html
+        assert "Daneel-call-stack-frame-header" in html
+        assert "Daneel-call-stack-function-name" in html
+        assert "Daneel-call-stack-location" in html
+        assert "Daneel-call-stack-frame-details" in html
+        assert "Daneel-call-stack-source" in html
+        assert "Daneel-call-stack-variables" in html
         assert "test_function" in html
         assert "test_file.py:42" in html
         assert "x" in html
@@ -283,10 +283,10 @@ class TestCallStack:
         html = call_stack.render_html(frames, options)
         
         # Check that the HTML contains the expected elements
-        assert "parlant-call-stack-container" in html
-        assert "parlant-call-stack-dark" in html
-        assert "parlant-call-stack-title" in html
-        assert "parlant-call-stack-content" in html
+        assert "Daneel-call-stack-container" in html
+        assert "Daneel-call-stack-dark" in html
+        assert "Daneel-call-stack-title" in html
+        assert "Daneel-call-stack-content" in html
         assert "Test Call Stack" in html
         assert "main" in html
         assert "calculate" in html
@@ -299,15 +299,15 @@ class TestCallStack:
         css = call_stack.get_css()
         
         # Check that the CSS contains the expected selectors
-        assert ".parlant-call-stack-container" in css
-        assert ".parlant-call-stack-light" in css
-        assert ".parlant-call-stack-dark" in css
-        assert ".parlant-call-stack-title" in css
-        assert ".parlant-call-stack-content" in css
-        assert ".parlant-call-stack-frame" in css
-        assert ".parlant-call-stack-frame-header" in css
-        assert ".parlant-call-stack-function-name" in css
-        assert ".parlant-call-stack-location" in css
-        assert ".parlant-call-stack-frame-details" in css
-        assert ".parlant-call-stack-source" in css
-        assert ".parlant-call-stack-variables" in css
+        assert ".Daneel-call-stack-container" in css
+        assert ".Daneel-call-stack-light" in css
+        assert ".Daneel-call-stack-dark" in css
+        assert ".Daneel-call-stack-title" in css
+        assert ".Daneel-call-stack-content" in css
+        assert ".Daneel-call-stack-frame" in css
+        assert ".Daneel-call-stack-frame-header" in css
+        assert ".Daneel-call-stack-function-name" in css
+        assert ".Daneel-call-stack-location" in css
+        assert ".Daneel-call-stack-frame-details" in css
+        assert ".Daneel-call-stack-source" in css
+        assert ".Daneel-call-stack-variables" in css

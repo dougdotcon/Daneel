@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Terminal agent implementation for Parlant."""
+"""Terminal agent implementation for Daneel."""
 
 import asyncio
 import json
@@ -28,13 +28,13 @@ import tty
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
-from parlant.core.agents import AgentId
-from parlant.core.agents.agent_system import AgentConfig, AgentState, AgentSystem, AgentType
-from parlant.core.agents.utils.message_handler import MessageHandler
-from parlant.core.loggers import Logger
-from parlant.core.models import Model, ModelManager
-from parlant.core.prompts import Prompt, PromptManager
-from parlant.core.tools import ToolContext, ToolRegistry
+from Daneel.core.agents import AgentId
+from Daneel.core.agents.agent_system import AgentConfig, AgentState, AgentSystem, AgentType
+from Daneel.core.agents.utils.message_handler import MessageHandler
+from Daneel.core.loggers import Logger
+from Daneel.core.models import Model, ModelManager
+from Daneel.core.prompts import Prompt, PromptManager
+from Daneel.core.tools import ToolContext, ToolRegistry
 
 
 class TerminalAgent(AgentSystem):

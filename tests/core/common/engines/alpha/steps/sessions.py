@@ -17,9 +17,9 @@ import json
 from pytest_bdd import given, parsers
 from typing import cast
 
-from parlant.core.agents import Agent, AgentId
-from parlant.core.customers import Customer, CustomerStore
-from parlant.core.sessions import EventKind, EventSource, Session, SessionId, SessionStore
+from Daneel.core.agents import Agent, AgentId
+from Daneel.core.customers import Customer, CustomerStore
+from Daneel.core.sessions import EventKind, EventSource, Session, SessionId, SessionStore
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

@@ -33,9 +33,9 @@ from rich.text import Text
 import sys
 from typing import Any, Callable, Iterator, Optional, OrderedDict, cast
 
-from parlant.client import ParlantClient
-from parlant.client.core import ApiError
-from parlant.client.types import (
+from Daneel.client import DaneelClient
+from Daneel.client.core import ApiError
+from Daneel.client.types import (
     Agent,
     AgentTagUpdateParams,
     ContextVariable,
@@ -108,7 +108,7 @@ class Actions:
         ctx: click.Context,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         if tag.startswith("agent:"):
             agent_id = tag.split(":")[1]
@@ -133,7 +133,7 @@ class Actions:
             if tag_id := Actions._fetch_tag_id(ctx, entity_id):
                 return tag_id, "tag"
 
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.guidelines.retrieve(entity_id)
         return entity_id, "guideline"
 
@@ -146,7 +146,7 @@ class Actions:
         composition_mode: Optional[str],
         tags: list[str],
     ) -> Agent:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.agents.create(
             name=name,
@@ -161,7 +161,7 @@ class Actions:
         ctx: click.Context,
         agent_id: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.agents.delete(agent_id=agent_id)
 
     @staticmethod
@@ -169,13 +169,13 @@ class Actions:
         ctx: click.Context,
         agent_id: str,
     ) -> Agent:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.agents.retrieve(agent_id)
 
     @staticmethod
     def list_agents(ctx: click.Context) -> list[Agent]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.agents.list()
 
     @staticmethod
@@ -187,7 +187,7 @@ class Actions:
         max_engine_iterations: Optional[int] = None,
         composition_mode: Optional[str] = None,
     ) -> Agent:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.agents.update(
             agent_id,
@@ -203,7 +203,7 @@ class Actions:
         agent_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.agents.update(
             agent_id=agent_id,
@@ -218,7 +218,7 @@ class Actions:
         agent_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.agents.update(
             agent_id=agent_id,
@@ -234,7 +234,7 @@ class Actions:
         customer_id: Optional[str] = None,
         title: Optional[str] = None,
     ) -> Session:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.sessions.create(
             agent_id=agent_id,
@@ -245,7 +245,7 @@ class Actions:
 
     @staticmethod
     def delete_session(ctx: click.Context, session_id: str) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         client.sessions.delete(session_id)
 
@@ -256,7 +256,7 @@ class Actions:
         consumption_offsets: Optional[int] = None,
         title: Optional[str] = None,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         if consumption_offsets:
             client.sessions.update(
@@ -276,7 +276,7 @@ class Actions:
         agent_id: Optional[str],
         customer_id: Optional[str],
     ) -> list[Session]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.sessions.list(
             agent_id=agent_id,
@@ -289,7 +289,7 @@ class Actions:
         session_id: str,
         event_id: str,
     ) -> EventInspectionResult:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.sessions.inspect_event(
             session_id=session_id,
@@ -301,7 +301,7 @@ class Actions:
         ctx: click.Context,
         session_id: str,
     ) -> list[Event]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.sessions.list_events(session_id=session_id, wait_for_data=0)
 
     @staticmethod
@@ -312,7 +312,7 @@ class Actions:
         synonyms: list[str],
         tags: list[str],
     ) -> Term:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.glossary.create_term(
             name=name,
@@ -329,7 +329,7 @@ class Actions:
         description: Optional[str],
         synonyms: list[str],
     ) -> Term:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.glossary.update_term(
             term_id,
@@ -343,7 +343,7 @@ class Actions:
         ctx: click.Context,
         term_id: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.glossary.delete_term(term_id)
 
     @staticmethod
@@ -351,7 +351,7 @@ class Actions:
         ctx: click.Context,
         tag: Optional[str] = None,
     ) -> list[Term]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         if tag:
             return client.glossary.list_terms(tag_id=Actions._fetch_tag_id(ctx, tag))
         else:
@@ -363,7 +363,7 @@ class Actions:
         term_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.glossary.update_term(term_id, tags=TermTagsUpdateParams(add=[tag_id]))
 
@@ -375,7 +375,7 @@ class Actions:
         term_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.glossary.update_term(term_id, tags=TermTagsUpdateParams(remove=[tag_id]))
 
@@ -388,7 +388,7 @@ class Actions:
         action: str,
         tags: list[str],
     ) -> Guideline:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.guidelines.create(
             condition=condition,
@@ -403,7 +403,7 @@ class Actions:
         condition: Optional[str] = None,
         action: Optional[str] = None,
     ) -> GuidelineWithRelationshipsAndToolAssociations:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.guidelines.update(guideline_id, condition=condition, action=action)
 
@@ -412,7 +412,7 @@ class Actions:
         ctx: click.Context,
         guideline_id: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.guidelines.delete(guideline_id)
 
     @staticmethod
@@ -420,7 +420,7 @@ class Actions:
         ctx: click.Context,
         guideline_id: str,
     ) -> GuidelineWithRelationshipsAndToolAssociations:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.guidelines.retrieve(guideline_id)
 
     @staticmethod
@@ -428,7 +428,7 @@ class Actions:
         ctx: click.Context,
         tag: Optional[str],
     ) -> list[Guideline]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         if tag:
             return client.guidelines.list(tag_id=Actions._fetch_tag_id(ctx, tag))
         else:
@@ -441,7 +441,7 @@ class Actions:
         target: str,
         kind: GuidelineRelationshipKindDto,
     ) -> Relationship:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         source_id, source_type = Actions._parse_relationship_entity(ctx, source)
         target_id, target_type = Actions._parse_relationship_entity(ctx, target)
@@ -461,7 +461,7 @@ class Actions:
         target_id: str,
         kind: GuidelineRelationshipKindDto,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         source_id, source_type = Actions._parse_relationship_entity(ctx, source_id)
 
@@ -502,7 +502,7 @@ class Actions:
         kind: GuidelineRelationshipKindDto,
         indirect: bool,
     ) -> list[Relationship]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         tag_id = Actions._fetch_tag_id(ctx, tag) if tag else None
 
@@ -520,7 +520,7 @@ class Actions:
         service_name: str,
         tool_name: str,
     ) -> GuidelineWithRelationshipsAndToolAssociations:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.guidelines.update(
             guideline_id,
@@ -541,7 +541,7 @@ class Actions:
         service_name: str,
         tool_name: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         guideline_result = client.guidelines.retrieve(guideline_id)
         associations = guideline_result.tool_associations
@@ -577,7 +577,7 @@ class Actions:
         ctx: click.Context,
         guideline_ids: tuple[str],
     ) -> list[Guideline]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return [
             client.guidelines.update(guideline_id, enabled=True).guideline
@@ -589,7 +589,7 @@ class Actions:
         ctx: click.Context,
         guideline_ids: tuple[str],
     ) -> list[Guideline]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return [
             client.guidelines.update(guideline_id, enabled=False).guideline
@@ -602,7 +602,7 @@ class Actions:
         guideline_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.guidelines.update(guideline_id, tags=GuidelineTagsUpdateParams(add=[tag_id]))
 
@@ -614,7 +614,7 @@ class Actions:
         guideline_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.guidelines.update(guideline_id, tags=GuidelineTagsUpdateParams(remove=[tag_id]))
 
@@ -627,7 +627,7 @@ class Actions:
         key: str,
         value: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.guidelines.update(
             guideline_id,
             metadata=GuidelineMetadataUpdateParams(add={key: value}),
@@ -639,7 +639,7 @@ class Actions:
         guideline_id: str,
         key: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.guidelines.update(
             guideline_id,
             metadata=GuidelineMetadataUpdateParams(remove=[key]),
@@ -650,7 +650,7 @@ class Actions:
         ctx: click.Context,
         tag: Optional[str],
     ) -> list[ContextVariable]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         if tag:
             return client.context_variables.list(tag_id=Actions._fetch_tag_id(ctx, tag))
         else:
@@ -666,7 +666,7 @@ class Actions:
         freshness_rules: Optional[str],
         tags: list[str],
     ) -> ContextVariable:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.context_variables.create(
             name=name,
@@ -688,7 +688,7 @@ class Actions:
         tool_name: Optional[str],
         freshness_rules: Optional[str],
     ) -> ContextVariable:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.context_variables.update(
             variable_id,
@@ -705,7 +705,7 @@ class Actions:
         ctx: click.Context,
         variable_id: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.context_variables.delete(variable_id)
 
     @staticmethod
@@ -715,7 +715,7 @@ class Actions:
         key: str,
         value: str,
     ) -> ContextVariableValue:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         if key.startswith("tag:"):
             tag_spec = key.split(":")[1]
@@ -734,7 +734,7 @@ class Actions:
         variable_id: str,
         include_values: bool,
     ) -> ContextVariableReadResult:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         return client.context_variables.retrieve(
             variable_id,
@@ -747,7 +747,7 @@ class Actions:
         variable_id: str,
         key: str,
     ) -> ContextVariableValue:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         if key.startswith("tag:"):
             tag_spec = key.split(":")[1]
@@ -765,7 +765,7 @@ class Actions:
         variable_id: str,
         key: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.context_variables.delete_value(variable_id, key)
 
     @staticmethod
@@ -774,7 +774,7 @@ class Actions:
         variable_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.context_variables.update(
             variable_id, tags=ContextVariableTagsUpdateParams(add=[tag_id])
@@ -787,7 +787,7 @@ class Actions:
         variable_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.context_variables.update(
             variable_id,
@@ -803,7 +803,7 @@ class Actions:
         url: str,
         source: str,
     ) -> Service:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         if kind == "sdk":
             result = client.services.create_or_update(
@@ -833,12 +833,12 @@ class Actions:
         ctx: click.Context,
         name: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.services.delete(name)
 
     @staticmethod
     def list_services(ctx: click.Context) -> list[Service]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.services.list()
 
     @staticmethod
@@ -846,14 +846,14 @@ class Actions:
         ctx: click.Context,
         service_name: str,
     ) -> Service:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.services.retrieve(service_name)
 
     @staticmethod
     def list_customers(
         ctx: click.Context,
     ) -> list[Customer]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.customers.list()
 
     @staticmethod
@@ -862,7 +862,7 @@ class Actions:
         name: str,
         tags: list[str],
     ) -> Customer:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.customers.create(
             name=name,
             extra={},
@@ -875,7 +875,7 @@ class Actions:
         customer_id: str,
         name: str,
     ) -> Customer:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.customers.update(customer_id=customer_id, name=name)
 
     @staticmethod
@@ -883,7 +883,7 @@ class Actions:
         ctx: click.Context,
         customer_id: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.customers.delete(customer_id)
 
     @staticmethod
@@ -891,7 +891,7 @@ class Actions:
         ctx: click.Context,
         customer_id: str,
     ) -> Customer:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         result = client.customers.retrieve(customer_id=customer_id)
         return result
 
@@ -902,7 +902,7 @@ class Actions:
         key: str,
         value: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.customers.update(
             customer_id=customer_id, extra=CustomerExtraUpdateParams(add={key: value})
         )
@@ -913,7 +913,7 @@ class Actions:
         customer_id: str,
         key: str,
     ) -> None:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         client.customers.update(
             customer_id=customer_id, extra=CustomerExtraUpdateParams(remove=[key])
         )
@@ -924,7 +924,7 @@ class Actions:
         customer_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.customers.update(
@@ -940,7 +940,7 @@ class Actions:
         customer_id: str,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.customers.update(
@@ -952,7 +952,7 @@ class Actions:
 
     @staticmethod
     def list_tags(ctx: click.Context) -> list[Tag]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.tags.list()
 
     @staticmethod
@@ -960,7 +960,7 @@ class Actions:
         ctx: click.Context,
         name: str,
     ) -> Tag:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.tags.create(name=name)
 
     @staticmethod
@@ -970,7 +970,7 @@ class Actions:
     ) -> Tag:
         tag_id = Actions._fetch_tag_id(ctx, tag)
 
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.tags.retrieve(tag_id=tag_id)
 
     @staticmethod
@@ -979,7 +979,7 @@ class Actions:
         tag: str,
         name: str,
     ) -> Tag:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.tags.update(tag_id=Actions._fetch_tag_id(ctx, tag), name=name)
 
     @staticmethod
@@ -987,7 +987,7 @@ class Actions:
         ctx: click.Context,
         tag: str,
     ) -> str:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         tag_id = Actions._fetch_tag_id(ctx, tag)
         client.tags.delete(tag_id=tag_id)
@@ -996,12 +996,12 @@ class Actions:
 
     @staticmethod
     def list_utterances(ctx: click.Context) -> list[Utterance]:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.utterances.list()
 
     @staticmethod
     def view_utterance(ctx: click.Context, utterance_id: str) -> Utterance:
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
         return client.utterances.retrieve(utterance_id=utterance_id)
 
     @staticmethod
@@ -1009,7 +1009,7 @@ class Actions:
         with open(path, "r") as file:
             data = json.load(file)
 
-        client = cast(ParlantClient, ctx.obj.client)
+        client = cast(DaneelClient, ctx.obj.client)
 
         for utterance in client.utterances.list():
             client.utterances.delete(utterance_id=utterance.id)
@@ -2530,7 +2530,7 @@ async def async_main() -> None:
     @dataclass(frozen=True)
     class Config:
         server_address: str
-        client: ParlantClient
+        client: DaneelClient
         log_server_address: str
 
     @click.group()
@@ -2559,7 +2559,7 @@ async def async_main() -> None:
 
             ctx.obj = Config(
                 server_address=server,
-                client=ParlantClient(base_url=server),
+                client=DaneelClient(base_url=server),
                 log_server_address=log_server_address,
             )
 

@@ -15,10 +15,10 @@
 from typing import cast
 from typing_extensions import override
 
-from parlant.core.common import JSONSerializable
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.emissions import EmittedEvent, EventEmitter, EventEmitterFactory
-from parlant.core.sessions import (
+from Daneel.core.common import JSONSerializable
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.emissions import EmittedEvent, EventEmitter, EventEmitterFactory
+from Daneel.core.sessions import (
     EventKind,
     EventSource,
     MessageEventData,

@@ -1,6 +1,6 @@
 # Gerenciamento de Conhecimento
 
-Este documento descreve a funcionalidade de gerenciamento de conhecimento no framework Parlant.
+Este documento descreve a funcionalidade de gerenciamento de conhecimento no framework Daneel.
 
 ## Visão Geral
 
@@ -249,9 +249,9 @@ O módulo de gerenciamento de conhecimento suporta diferentes tipos de itens de 
 - `AUDIO`: Dados de áudio com metadados
 - `VIDEO`: Dados de vídeo com metadados
 
-## Integração com Parlant
+## Integração com Daneel
 
-A funcionalidade de gerenciamento de conhecimento está integrada com o framework Parlant:
+A funcionalidade de gerenciamento de conhecimento está integrada com o framework Daneel:
 
 1. **Sistema de Agente**: Os agentes podem acessar e contribuir para a base de conhecimento
 2. **Processamento de Linguagem Natural**: O conhecimento é indexado e pesquisável usando técnicas de NLP

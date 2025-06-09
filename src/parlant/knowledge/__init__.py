@@ -1,19 +1,19 @@
 """
-Knowledge management module for Parlant.
+Knowledge management module for Daneel.
 
 This module provides functionality for storing, retrieving, and reasoning over knowledge.
 """
 
-from parlant.knowledge.base import (
+from Daneel.knowledge.base import (
     KnowledgeBase,
     KnowledgeItem,
     KnowledgeItemId,
     KnowledgeItemType,
     KnowledgeItemSource,
 )
-from parlant.knowledge.graph import KnowledgeGraph
-from parlant.knowledge.reasoning import KnowledgeReasoner, ReasoningResult
-from parlant.knowledge.manager import KnowledgeManager
+from Daneel.knowledge.graph import KnowledgeGraph
+from Daneel.knowledge.reasoning import KnowledgeReasoner, ReasoningResult
+from Daneel.knowledge.manager import KnowledgeManager
 
 __all__ = [
     # Knowledge base

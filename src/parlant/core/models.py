@@ -16,7 +16,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Any
 
-# from parlant.core.nlp.generation import SchematicGenerator
+# from Daneel.core.nlp.generation import SchematicGenerator
 
 
 @dataclass

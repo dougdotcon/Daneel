@@ -1,5 +1,5 @@
 """
-Data visualization module for Parlant.
+Data visualization module for Daneel.
 
 This module provides functionality for creating visualizations from tabular data,
 including bar charts, line charts, scatter plots, and more.
@@ -17,7 +17,7 @@ matplotlib.use('Agg')  # Use non-interactive backend
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 class ChartType(str, Enum):

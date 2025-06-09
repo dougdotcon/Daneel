@@ -18,11 +18,11 @@ from functools import cached_property
 from typing import Any, Generic, Mapping, TypeVar, cast, get_args
 from typing_extensions import override
 
-from parlant.core.common import DefaultBaseModel
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.nlp.tokenization import EstimatingTokenizer
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.engines.alpha.prompt_builder import PromptBuilder
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.nlp.tokenization import EstimatingTokenizer
 
 T = TypeVar("T", bound=DefaultBaseModel)
 

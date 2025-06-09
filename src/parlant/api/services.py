@@ -18,13 +18,13 @@ from typing import Annotated, Optional, Sequence, TypeAlias, cast
 from fastapi import APIRouter, HTTPException, Path, status
 from pydantic import Field
 
-from parlant.api.common import apigen_config, ExampleJson, ServiceNameField, ToolNameField
-from parlant.core.common import DefaultBaseModel
-from parlant.core.services.tools.plugins import PluginClient
-from parlant.core.tools import Tool, ToolParameterDescriptor
-from parlant.core.services.tools.openapi import OpenAPIClient
-from parlant.core.services.tools.service_registry import ServiceRegistry, ToolServiceKind
-from parlant.core.tools import ToolService
+from Daneel.api.common import apigen_config, ExampleJson, ServiceNameField, ToolNameField
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.services.tools.plugins import PluginClient
+from Daneel.core.tools import Tool, ToolParameterDescriptor
+from Daneel.core.services.tools.openapi import OpenAPIClient
+from Daneel.core.services.tools.service_registry import ServiceRegistry, ToolServiceKind
+from Daneel.core.tools import ToolService
 
 API_GROUP = "services"
 
@@ -34,7 +34,7 @@ class ToolServiceKindDTO(Enum):
     The type of service integration available in the system.
 
     Attributes:
-        "sdk": Native integration using the Parlant SDK protocol. Enables advanced features
+        "sdk": Native integration using the Daneel SDK protocol. Enables advanced features
             like bidirectional communication and streaming results.
         "openapi": Integration via OpenAPI specification. Simpler to set up but limited
             to basic request/response patterns.
@@ -76,7 +76,7 @@ class SDKServiceParamsDTO(
     """
     Configuration parameters for SDK-based service integration.
 
-    SDK services must implement the Parlant SDK protocol for advanced features
+    SDK services must implement the Daneel SDK protocol for advanced features
     like streaming and bidirectional communication.
     """
 
@@ -89,7 +89,7 @@ ServiceOpenAPIParamsSourceField: TypeAlias = Annotated[
         description="""URL or filesystem path to the OpenAPI specification.
         For URLs, must be publicly accessible.
         For filesystem paths, the server must have read permissions.""",
-        examples=["https://api.example.com/openapi.json", "/etc/parlant/specs/example-api.yaml"],
+        examples=["https://api.example.com/openapi.json", "/etc/Daneel/specs/example-api.yaml"],
     ),
 ]
 
@@ -431,7 +431,7 @@ def create_router(service_registry: ServiceRegistry) -> APIRouter:
         Creates a new service or updates an existing one.
 
         For SDK services:
-        - Target server must implement the Parlant SDK protocol
+        - Target server must implement the Daneel SDK protocol
         - Supports bidirectional communication and streaming
 
         For OpenAPI services:

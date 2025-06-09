@@ -19,7 +19,7 @@ import tempfile
 import pytest
 from unittest.mock import MagicMock, patch
 
-from parlant.core.tools.code import (
+from Daneel.core.tools.code import (
     code_search,
     code_semantic_search,
     find_definition,

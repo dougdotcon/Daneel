@@ -1,0 +1,20 @@
+{
+  "metadata": [
+    {
+      "id": "Sicm0Hsx16",
+      "version": "0.3.0"
+    }
+  ],
+  "agents": [
+    {
+      "id": "6AokCqdOpe",
+      "version": "0.3.0",
+      "creation_utc": "2025-05-30T22:39:26.073419+00:00",
+      "name": "Default Agent",
+      "description": null,
+      "max_engine_iterations": 1,
+      "composition_mode": "fluid"
+    }
+  ],
+  "agent_tags": []
+}

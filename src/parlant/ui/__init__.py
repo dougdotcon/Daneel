@@ -12,4 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""UI components and utilities for Parlant."""
+"""UI components and utilities for Daneel."""

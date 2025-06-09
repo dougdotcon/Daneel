@@ -1,5 +1,5 @@
 """
-Data analysis module for Parlant.
+Data analysis module for Daneel.
 
 This module provides functionality for analyzing tabular data, including
 descriptive statistics, correlation analysis, and feature importance.
@@ -11,7 +11,7 @@ from typing import Any, Dict, List, Optional, Union, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 class CorrelationMethod(str, Enum):

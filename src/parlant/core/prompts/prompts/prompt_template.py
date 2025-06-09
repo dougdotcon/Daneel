@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Prompt templating system for Parlant."""
+"""Prompt templating system for Daneel."""
 
 import re
 import json
 from typing import Any, Dict, List, Optional, Set, Union
 from jinja2 import Environment, Template, meta, StrictUndefined
 
-from parlant.core.loggers import Logger
-from parlant.core.prompts.common import (
+from Daneel.core.loggers import Logger
+from Daneel.core.prompts.common import (
     Prompt, PromptMetadata, PromptVariable, 
     PromptType, PromptFormat, PromptCategory
 )

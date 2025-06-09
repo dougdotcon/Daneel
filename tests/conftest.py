@@ -22,58 +22,58 @@ from lagom import Container, Singleton
 from pytest import fixture, Config
 import pytest
 
-from parlant.adapters.loggers.websocket import WebSocketLogger
-from parlant.adapters.nlp.openai_service import OpenAIService
-from parlant.adapters.vector_db.transient import TransientVectorDatabase
-from parlant.api.app import create_api_app, ASGIApplication
-from parlant.core.background_tasks import BackgroundTaskService
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.context_variables import ContextVariableDocumentStore, ContextVariableStore
-from parlant.core.emission.event_publisher import EventPublisherFactory
-from parlant.core.emissions import EventEmitterFactory
-from parlant.core.customers import CustomerDocumentStore, CustomerStore
-from parlant.core.engines.alpha import guideline_matcher
-from parlant.core.engines.alpha import tool_caller
-from parlant.core.engines.alpha import message_generator
-from parlant.core.engines.alpha.hooks import EngineHooks
-from parlant.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
-from parlant.core.engines.alpha.utterance_selector import (
+from Daneel.adapters.loggers.websocket import WebSocketLogger
+from Daneel.adapters.nlp.openai_service import OpenAIService
+from Daneel.adapters.vector_db.transient import TransientVectorDatabase
+from Daneel.api.app import create_api_app, ASGIApplication
+from Daneel.core.background_tasks import BackgroundTaskService
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.context_variables import ContextVariableDocumentStore, ContextVariableStore
+from Daneel.core.emission.event_publisher import EventPublisherFactory
+from Daneel.core.emissions import EventEmitterFactory
+from Daneel.core.customers import CustomerDocumentStore, CustomerStore
+from Daneel.core.engines.alpha import guideline_matcher
+from Daneel.core.engines.alpha import tool_caller
+from Daneel.core.engines.alpha import message_generator
+from Daneel.core.engines.alpha.hooks import EngineHooks
+from Daneel.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
+from Daneel.core.engines.alpha.utterance_selector import (
     UtteranceFieldExtractionSchema,
     UtteranceFieldExtractor,
     UtteranceSelector,
     UtteranceSelectionSchema,
     UtteranceCompositionSchema,
 )
-from parlant.core.evaluations import (
+from Daneel.core.evaluations import (
     EvaluationListener,
     PollingEvaluationListener,
     EvaluationDocumentStore,
     EvaluationStore,
 )
-from parlant.core.utterances import UtteranceDocumentStore, UtteranceStore
-from parlant.core.nlp.embedding import EmbedderFactory
-from parlant.core.nlp.generation import T, SchematicGenerator
-from parlant.core.relationships import (
+from Daneel.core.utterances import UtteranceDocumentStore, UtteranceStore
+from Daneel.core.nlp.embedding import EmbedderFactory
+from Daneel.core.nlp.generation import T, SchematicGenerator
+from Daneel.core.relationships import (
     RelationshipDocumentStore,
     RelationshipStore,
 )
-from parlant.core.guidelines import GuidelineDocumentStore, GuidelineStore
-from parlant.adapters.db.transient import TransientDocumentDatabase
-from parlant.core.nlp.service import NLPService
-from parlant.core.persistence.document_database import DocumentCollection
-from parlant.core.services.tools.service_registry import (
+from Daneel.core.guidelines import GuidelineDocumentStore, GuidelineStore
+from Daneel.adapters.db.transient import TransientDocumentDatabase
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.persistence.document_database import DocumentCollection
+from Daneel.core.services.tools.service_registry import (
     ServiceDocumentRegistry,
     ServiceRegistry,
 )
-from parlant.core.sessions import (
+from Daneel.core.sessions import (
     PollingSessionListener,
     SessionDocumentStore,
     SessionListener,
     SessionStore,
 )
-from parlant.core.engines.alpha.engine import AlphaEngine
-from parlant.core.glossary import GlossaryStore, GlossaryVectorStore
-from parlant.core.engines.alpha.guideline_matcher import (
+from Daneel.core.engines.alpha.engine import AlphaEngine
+from Daneel.core.glossary import GlossaryStore, GlossaryVectorStore
+from Daneel.core.engines.alpha.guideline_matcher import (
     GuidelineMatcher,
     GenericGuidelineMatchingShot,
     GenericGuidelineMatchesSchema,
@@ -81,37 +81,37 @@ from parlant.core.engines.alpha.guideline_matcher import (
     DefaultGuidelineMatchingStrategyResolver,
     GuidelineMatchingStrategyResolver,
 )
-from parlant.core.engines.alpha.message_generator import (
+from Daneel.core.engines.alpha.message_generator import (
     MessageGenerator,
     MessageGeneratorShot,
     MessageSchema,
 )
-from parlant.core.engines.alpha.tool_caller import ToolCallInferenceSchema, ToolCallerInferenceShot
-from parlant.core.engines.alpha.tool_event_generator import ToolEventGenerator
-from parlant.core.engines.types import Engine
-from parlant.core.services.indexing.behavioral_change_evaluation import (
+from Daneel.core.engines.alpha.tool_caller import ToolCallInferenceSchema, ToolCallerInferenceShot
+from Daneel.core.engines.alpha.tool_event_generator import ToolEventGenerator
+from Daneel.core.engines.types import Engine
+from Daneel.core.services.indexing.behavioral_change_evaluation import (
     BehavioralChangeEvaluator,
 )
-from parlant.core.services.indexing.coherence_checker import (
+from Daneel.core.services.indexing.coherence_checker import (
     CoherenceChecker,
     ConditionsEntailmentTestsSchema,
     ActionsContradictionTestsSchema,
 )
-from parlant.core.services.indexing.guideline_connection_proposer import (
+from Daneel.core.services.indexing.guideline_connection_proposer import (
     GuidelineConnectionProposer,
     GuidelineConnectionPropositionsSchema,
 )
-from parlant.core.loggers import LogLevel, Logger, StdoutLogger
-from parlant.core.application import Application
-from parlant.core.agents import AgentDocumentStore, AgentStore
-from parlant.core.guideline_tool_associations import (
+from Daneel.core.loggers import LogLevel, Logger, StdoutLogger
+from Daneel.core.application import Application
+from Daneel.core.agents import AgentDocumentStore, AgentStore
+from Daneel.core.guideline_tool_associations import (
     GuidelineToolAssociationDocumentStore,
     GuidelineToolAssociationStore,
 )
-from parlant.core.shots import ShotCollection
-from parlant.core.entity_cq import EntityQueries, EntityCommands
-from parlant.core.tags import TagDocumentStore, TagStore
-from parlant.core.tools import LocalToolService
+from Daneel.core.shots import ShotCollection
+from Daneel.core.entity_cq import EntityQueries, EntityCommands
+from Daneel.core.tags import TagDocumentStore, TagStore
+from Daneel.core.tools import LocalToolService
 
 from .test_utilities import (
     CachedSchematicGenerator,

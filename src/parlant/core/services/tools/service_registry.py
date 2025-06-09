@@ -22,19 +22,19 @@ import aiofiles
 import httpx
 from typing_extensions import Literal
 
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.emissions import EventEmitterFactory
-from parlant.core.loggers import Logger
-from parlant.core.nlp.moderation import ModerationService
-from parlant.core.nlp.service import NLPService
-from parlant.core.persistence.document_database_helper import DocumentStoreMigrationHelper
-from parlant.core.services.tools.openapi import OpenAPIClient
-from parlant.core.services.tools.plugins import PluginClient
-from parlant.core.tools import LocalToolService, ToolService
-from parlant.core.common import ItemNotFoundError, Version, UniqueId
-from parlant.core.persistence.common import ObjectId
-from parlant.core.persistence.document_database import (
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.emissions import EventEmitterFactory
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.moderation import ModerationService
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.persistence.document_database_helper import DocumentStoreMigrationHelper
+from Daneel.core.services.tools.openapi import OpenAPIClient
+from Daneel.core.services.tools.plugins import PluginClient
+from Daneel.core.tools import LocalToolService, ToolService
+from Daneel.core.common import ItemNotFoundError, Version, UniqueId
+from Daneel.core.persistence.common import ObjectId
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     DocumentCollection,

@@ -19,25 +19,25 @@ from fastapi import HTTPException, Path, Query, status
 from typing import Annotated, Optional, Sequence, TypeAlias, cast
 
 from fastapi import APIRouter
-from parlant.api import common
-from parlant.api.common import (
+from Daneel.api import common
+from Daneel.api.common import (
     ToolIdDTO,
     JSONSerializableDTO,
     apigen_config,
     ExampleJson,
     apigen_skip_config,
 )
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.common import DefaultBaseModel
-from parlant.core.context_variables import (
+from Daneel.core.agents import AgentId, AgentStore
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.context_variables import (
     ContextVariableId,
     ContextVariableStore,
     ContextVariableUpdateParams,
     ContextVariableValueId,
 )
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.tags import TagId, TagStore, Tag
-from parlant.core.tools import ToolId
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.tags import TagId, TagStore, Tag
+from Daneel.core.tools import ToolId
 
 API_GROUP = "context-variables"
 

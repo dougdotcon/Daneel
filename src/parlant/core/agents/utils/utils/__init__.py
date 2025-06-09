@@ -14,7 +14,7 @@
 
 """Utilities for agent systems."""
 
-from parlant.core.agents.utils.message_handler import Message, MessageHandler
+from Daneel.core.agents.utils.message_handler import Message, MessageHandler
 
 __all__ = [
     "Message",

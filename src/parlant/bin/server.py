@@ -31,71 +31,71 @@ from pathlib import Path
 import sys
 import uvicorn
 
-from parlant.bin.prepare_migration import detect_required_migrations
-from parlant.adapters.loggers.websocket import WebSocketLogger
-from parlant.adapters.vector_db.chroma import ChromaDatabase
-from parlant.core.engines.alpha import guideline_matcher
-from parlant.core.engines.alpha import tool_caller
-from parlant.core.engines.alpha import message_generator
-from parlant.core.engines.alpha.hooks import EngineHooks
-from parlant.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
-from parlant.core.engines.alpha.utterance_selector import (
+from Daneel.bin.prepare_migration import detect_required_migrations
+from Daneel.adapters.loggers.websocket import WebSocketLogger
+from Daneel.adapters.vector_db.chroma import ChromaDatabase
+from Daneel.core.engines.alpha import guideline_matcher
+from Daneel.core.engines.alpha import tool_caller
+from Daneel.core.engines.alpha import message_generator
+from Daneel.core.engines.alpha.hooks import EngineHooks
+from Daneel.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
+from Daneel.core.engines.alpha.utterance_selector import (
     UtteranceFieldExtractionSchema,
     UtteranceFieldExtractor,
     UtteranceSelectionSchema,
     UtteranceCompositionSchema,
     UtteranceSelector,
 )
-from parlant.core.utterances import UtteranceDocumentStore, UtteranceStore
-from parlant.core.nlp.service import NLPService
-from parlant.core.persistence.common import MigrationRequired, ServerOutdated
-from parlant.core.shots import ShotCollection
-from parlant.core.tags import TagDocumentStore, TagStore
-from parlant.api.app import create_api_app, ASGIApplication
-from parlant.core.background_tasks import BackgroundTaskService
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.agents import AgentDocumentStore, AgentStore
-from parlant.core.context_variables import ContextVariableDocumentStore, ContextVariableStore
-from parlant.core.emission.event_publisher import EventPublisherFactory
-from parlant.core.emissions import EventEmitterFactory
-from parlant.core.customers import CustomerDocumentStore, CustomerStore
-from parlant.core.evaluations import (
+from Daneel.core.utterances import UtteranceDocumentStore, UtteranceStore
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.persistence.common import MigrationRequired, ServerOutdated
+from Daneel.core.shots import ShotCollection
+from Daneel.core.tags import TagDocumentStore, TagStore
+from Daneel.api.app import create_api_app, ASGIApplication
+from Daneel.core.background_tasks import BackgroundTaskService
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.agents import AgentDocumentStore, AgentStore
+from Daneel.core.context_variables import ContextVariableDocumentStore, ContextVariableStore
+from Daneel.core.emission.event_publisher import EventPublisherFactory
+from Daneel.core.emissions import EventEmitterFactory
+from Daneel.core.customers import CustomerDocumentStore, CustomerStore
+from Daneel.core.evaluations import (
     EvaluationListener,
     PollingEvaluationListener,
     EvaluationDocumentStore,
     EvaluationStatus,
     EvaluationStore,
 )
-from parlant.core.entity_cq import EntityQueries, EntityCommands
-from parlant.core.relationships import (
+from Daneel.core.entity_cq import EntityQueries, EntityCommands
+from Daneel.core.relationships import (
     RelationshipDocumentStore,
     RelationshipStore,
 )
-from parlant.core.guidelines import (
+from Daneel.core.guidelines import (
     GuidelineDocumentStore,
     GuidelineStore,
 )
-from parlant.adapters.db.json_file import JSONFileDocumentDatabase
-from parlant.core.nlp.embedding import EmbedderFactory
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.services.tools.service_registry import (
+from Daneel.adapters.db.json_file import JSONFileDocumentDatabase
+from Daneel.core.nlp.embedding import EmbedderFactory
+from Daneel.core.nlp.generation import SchematicGenerator
+from Daneel.core.services.tools.service_registry import (
     ServiceRegistry,
     ServiceDocumentRegistry,
 )
-from parlant.core.sessions import (
+from Daneel.core.sessions import (
     PollingSessionListener,
     SessionDocumentStore,
     SessionListener,
     SessionStore,
 )
-from parlant.core.glossary import GlossaryStore, GlossaryVectorStore
-from parlant.core.engines.alpha.engine import AlphaEngine
-from parlant.core.guideline_tool_associations import (
+from Daneel.core.glossary import GlossaryStore, GlossaryVectorStore
+from Daneel.core.engines.alpha.engine import AlphaEngine
+from Daneel.core.guideline_tool_associations import (
     GuidelineToolAssociationDocumentStore,
     GuidelineToolAssociationStore,
 )
-from parlant.core.engines.alpha.tool_caller import ToolCallInferenceSchema, ToolCallerInferenceShot
-from parlant.core.engines.alpha.guideline_matcher import (
+from Daneel.core.engines.alpha.tool_caller import ToolCallInferenceSchema, ToolCallerInferenceShot
+from Daneel.core.engines.alpha.guideline_matcher import (
     GenericGuidelineMatching,
     GuidelineMatcher,
     GenericGuidelineMatchingShot,
@@ -103,50 +103,50 @@ from parlant.core.engines.alpha.guideline_matcher import (
     DefaultGuidelineMatchingStrategyResolver,
     GuidelineMatchingStrategyResolver,
 )
-from parlant.core.engines.alpha.message_generator import (
+from Daneel.core.engines.alpha.message_generator import (
     MessageGenerator,
     MessageGeneratorShot,
     MessageSchema,
 )
-from parlant.core.engines.alpha.tool_event_generator import ToolEventGenerator
-from parlant.core.engines.types import Engine
-from parlant.core.services.indexing.behavioral_change_evaluation import (
+from Daneel.core.engines.alpha.tool_event_generator import ToolEventGenerator
+from Daneel.core.engines.types import Engine
+from Daneel.core.services.indexing.behavioral_change_evaluation import (
     BehavioralChangeEvaluator,
 )
-from parlant.core.services.indexing.coherence_checker import (
+from Daneel.core.services.indexing.coherence_checker import (
     CoherenceChecker,
     ConditionsEntailmentTestsSchema,
     ActionsContradictionTestsSchema,
 )
-from parlant.core.services.indexing.guideline_connection_proposer import (
+from Daneel.core.services.indexing.guideline_connection_proposer import (
     GuidelineConnectionProposer,
     GuidelineConnectionPropositionsSchema,
 )
-from parlant.core.loggers import CompositeLogger, FileLogger, LogLevel, Logger
-from parlant.core.application import Application
-from parlant.core.version import VERSION
+from Daneel.core.loggers import CompositeLogger, FileLogger, LogLevel, Logger
+from Daneel.core.application import Application
+from Daneel.core.version import VERSION
 
 
 DEFAULT_PORT = 8800
 SERVER_ADDRESS = "https://localhost"
-CONFIG_FILE_PATH = Path("parlant.toml")
+CONFIG_FILE_PATH = Path("Daneel.toml")
 
 DEFAULT_NLP_SERVICE = "openai"
 
-DEFAULT_HOME_DIR = "runtime-data" if Path("runtime-data").exists() else "parlant-data"
-PARLANT_HOME_DIR = Path(os.environ.get("PARLANT_HOME", DEFAULT_HOME_DIR))
-PARLANT_HOME_DIR.mkdir(parents=True, exist_ok=True)
+DEFAULT_HOME_DIR = "runtime-data" if Path("runtime-data").exists() else "Daneel-data"
+Daneel_HOME_DIR = Path(os.environ.get("Daneel_HOME", DEFAULT_HOME_DIR))
+Daneel_HOME_DIR.mkdir(parents=True, exist_ok=True)
 
 EXIT_STACK: AsyncExitStack
 
 DEFAULT_AGENT_NAME = "Default Agent"
 
-sys.path.append(PARLANT_HOME_DIR.as_posix())
+sys.path.append(Daneel_HOME_DIR.as_posix())
 sys.path.append(".")
 
 CORRELATOR = ContextualCorrelator()
 
-LOGGER = FileLogger(PARLANT_HOME_DIR / "parlant.log", CORRELATOR, LogLevel.INFO)
+LOGGER = FileLogger(Daneel_HOME_DIR / "Daneel.log", CORRELATOR, LogLevel.INFO)
 
 BACKGROUND_TASK_SERVICE = BackgroundTaskService(LOGGER)
 
@@ -173,60 +173,60 @@ def load_nlp_service(name: str, extra_name: str, class_name: str, module_path: s
     except ModuleNotFoundError as exc:
         LOGGER.error(f"Failed to import module: {exc.name}")
         LOGGER.critical(
-            f"{name} support is not installed. Please install it with: pip install parlant[{extra_name}]."
+            f"{name} support is not installed. Please install it with: pip install Daneel[{extra_name}]."
         )
         sys.exit(1)
 
 
 def load_anthropic() -> NLPService:
     return load_nlp_service(
-        "Anthropic", "anthropic", "AnthropicService", "parlant.adapters.nlp.anthropic_service"
+        "Anthropic", "anthropic", "AnthropicService", "Daneel.adapters.nlp.anthropic_service"
     )
 
 
 def load_aws() -> NLPService:
-    return load_nlp_service("AWS", "aws", "BedrockService", "parlant.adapters.nlp.aws_service")
+    return load_nlp_service("AWS", "aws", "BedrockService", "Daneel.adapters.nlp.aws_service")
 
 
 def load_azure() -> NLPService:
-    from parlant.adapters.nlp.azure_service import AzureService
+    from Daneel.adapters.nlp.azure_service import AzureService
 
     return AzureService(LOGGER)
 
 
 def load_cerebras() -> NLPService:
     return load_nlp_service(
-        "Cerebras", "cerebras", "CerebrasService", "parlant.adapters.nlp.cerebras_service"
+        "Cerebras", "cerebras", "CerebrasService", "Daneel.adapters.nlp.cerebras_service"
     )
 
 
 def load_deepseek() -> NLPService:
     return load_nlp_service(
-        "DeepSeek", "deepseek", "DeepSeekService", "parlant.adapters.nlp.deepseek_service"
+        "DeepSeek", "deepseek", "DeepSeekService", "Daneel.adapters.nlp.deepseek_service"
     )
 
 
 def load_gemini() -> NLPService:
     return load_nlp_service(
-        "Gemini", "gemini", "GeminiService", "parlant.adapters.nlp.gemini_service"
+        "Gemini", "gemini", "GeminiService", "Daneel.adapters.nlp.gemini_service"
     )
 
 
 def load_openai() -> NLPService:
-    from parlant.adapters.nlp.openai_service import OpenAIService
+    from Daneel.adapters.nlp.openai_service import OpenAIService
 
     return OpenAIService(LOGGER)
 
 
 def load_together() -> NLPService:
     return load_nlp_service(
-        "Together.ai", "together", "TogetherService", "parlant.adapters.nlp.together_service"
+        "Together.ai", "together", "TogetherService", "Daneel.adapters.nlp.together_service"
     )
 
 
 def load_litellm() -> NLPService:
     return load_nlp_service(
-        "LiteLLM", "litellm", "LiteLLMService", "parlant.adapters.nlp.litellm_service"
+        "LiteLLM", "litellm", "LiteLLMService", "Daneel.adapters.nlp.litellm_service"
     )
 
 
@@ -241,9 +241,9 @@ async def get_module_list_from_config() -> list[str]:
         config = toml.load(CONFIG_FILE_PATH)
         # Expecting the following toml structure:
         #
-        # [parlant]
+        # [Daneel]
         # modules = ["module_1", "module_2"]
-        return list(config.get("parlant", {}).get("modules", []))
+        return list(config.get("Daneel", {}).get("modules", []))
 
     return []
 
@@ -334,40 +334,40 @@ async def initialize_container(
     await c[BackgroundTaskService].start(c[WebSocketLogger].start(), tag="websocket-logger")
 
     agents_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "agents.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "agents.json")
     )
     context_variables_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "context_variables.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "context_variables.json")
     )
     tags_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "tags.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "tags.json")
     )
     customers_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "customers.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "customers.json")
     )
     sessions_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "sessions.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "sessions.json")
     )
     guidelines_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "guidelines.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "guidelines.json")
     )
     guideline_tool_associations_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "guideline_tool_associations.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "guideline_tool_associations.json")
     )
     relationships_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "relationships.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "relationships.json")
     )
     evaluations_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "evaluations.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "evaluations.json")
     )
     services_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "services.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "services.json")
     )
     utterance_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "utterances.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "utterances.json")
     )
     glossary_tags_db = await EXIT_STACK.enter_async_context(
-        JSONFileDocumentDatabase(c[Logger], PARLANT_HOME_DIR / "glossary_tags.json")
+        JSONFileDocumentDatabase(c[Logger], Daneel_HOME_DIR / "glossary_tags.json")
     )
 
     try:
@@ -431,7 +431,7 @@ async def initialize_container(
         c[GlossaryStore] = await EXIT_STACK.enter_async_context(
             GlossaryVectorStore(
                 vector_db=await EXIT_STACK.enter_async_context(
-                    ChromaDatabase(c[Logger], PARLANT_HOME_DIR, embedder_factory),
+                    ChromaDatabase(c[Logger], Daneel_HOME_DIR, embedder_factory),
                 ),
                 document_db=glossary_tags_db,
                 embedder_type=type(await nlp_service.get_embedder()),
@@ -499,9 +499,9 @@ async def recover_server_tasks(
 async def check_required_schema_migrations() -> None:
     if await detect_required_migrations():
         die(
-            "You're running a particularly old version of Parlant.\n"
+            "You're running a particularly old version of Daneel.\n"
             "To upgrade your existing data to the new schema version, please run\n"
-            "`parlant-prepare-migration` and then re-run the server with `--migrate`."
+            "`Daneel-prepare-migration` and then re-run the server with `--migrate`."
         )
 
 
@@ -598,15 +598,15 @@ async def start_server(params: CLIParams) -> None:
         }[params.log_level],
     )
 
-    LOGGER.info(f"Parlant server version {VERSION}")
-    LOGGER.info(f"Using home directory '{PARLANT_HOME_DIR.absolute()}'")
+    LOGGER.info(f"Daneel server version {VERSION}")
+    LOGGER.info(f"Using home directory '{Daneel_HOME_DIR.absolute()}'")
 
-    if "PARLANT_HOME" not in os.environ and DEFAULT_HOME_DIR == "runtime-data":
+    if "Daneel_HOME" not in os.environ and DEFAULT_HOME_DIR == "runtime-data":
         LOGGER.warning(
-            "'runtime-data' is deprecated as the name of the default PARLANT_HOME directory"
+            "'runtime-data' is deprecated as the name of the default Daneel_HOME directory"
         )
         LOGGER.warning(
-            "Please rename 'runtime-data' to 'parlant-data' to avoid this warning in the future."
+            "Please rename 'runtime-data' to 'Daneel-data' to avoid this warning in the future."
         )
 
     async with load_app(params) as app:
@@ -659,13 +659,13 @@ def main() -> None:
     @click.option(
         "--anthropic",
         is_flag=True,
-        help="Run with Anthropic. The environment variable ANTHROPIC_API_KEY must be set and install the extra package parlant[anthropic].",
+        help="Run with Anthropic. The environment variable ANTHROPIC_API_KEY must be set and install the extra package Daneel[anthropic].",
         default=False,
     )
     @click.option(
         "--aws",
         is_flag=True,
-        help="Run with AWS Bedrock. The following environment variables must be set: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION and install the extra package parlant[aws].",
+        help="Run with AWS Bedrock. The following environment variables must be set: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION and install the extra package Daneel[aws].",
         default=False,
     )
     @click.option(
@@ -677,25 +677,25 @@ def main() -> None:
     @click.option(
         "--cerebras",
         is_flag=True,
-        help="Run with Cerebras. The environment variable CEREBRAS_API_KEY must be set and install the extra package parlant[cerebras].",
+        help="Run with Cerebras. The environment variable CEREBRAS_API_KEY must be set and install the extra package Daneel[cerebras].",
         default=False,
     )
     @click.option(
         "--deepseek",
         is_flag=True,
-        help="Run with DeepSeek. You must set the DEEPSEEK_API_KEY environment variable and install the extra package parlant[deepseek].",
+        help="Run with DeepSeek. You must set the DEEPSEEK_API_KEY environment variable and install the extra package Daneel[deepseek].",
         default=False,
     )
     @click.option(
         "--gemini",
         is_flag=True,
-        help="Run with Gemini. The environment variable GEMINI_API_KEY must be set and install the extra package parlant[gemini].",
+        help="Run with Gemini. The environment variable GEMINI_API_KEY must be set and install the extra package Daneel[gemini].",
         default=False,
     )
     @click.option(
         "--together",
         is_flag=True,
-        help="Run with Together AI. The environment variable TOGETHER_API_KEY must be set and install the extra package parlant[together].",
+        help="Run with Together AI. The environment variable TOGETHER_API_KEY must be set and install the extra package Daneel[together].",
         default=False,
     )
     @click.option(
@@ -703,7 +703,7 @@ def main() -> None:
         is_flag=True,
         help="""Run with LiteLLM. The following environment variables must be set: LITELLM_PROVIDER_MODEL_NAME, LITELLM_PROVIDER_API_KEY.
                 Check this link https://docs.litellm.ai/docs/providers for additional environment variables required for your provider,
-                set them and install the extra package parlant[litellm].""",
+                set them and install the extra package Daneel[litellm].""",
         default=False,
     )
     @click.option(
@@ -719,7 +719,7 @@ def main() -> None:
         metavar="MODULE",
         help=(
             "Specify a module to load. To load multiple modules, pass this argument multiple times. "
-            "If parlant.toml exists in the working directory, any additional modules specified "
+            "If Daneel.toml exists in the working directory, any additional modules specified "
             "in it will also be loaded."
         ),
     )
@@ -755,7 +755,7 @@ def main() -> None:
         migrate: bool,
     ) -> None:
         if version:
-            print(f"Parlant v{VERSION}")
+            print(f"Daneel v{VERSION}")
             sys.exit(0)
 
         if sum([openai, aws, azure, deepseek, gemini, anthropic, cerebras, together, litellm]) > 2:
@@ -816,10 +816,10 @@ def main() -> None:
             return
 
         if not CONFIG_FILE_PATH.exists():
-            CONFIG_FILE_PATH.write_text(toml.dumps({"parlant": {"modules": [name]}}))
+            CONFIG_FILE_PATH.write_text(toml.dumps({"Daneel": {"modules": [name]}}))
         else:
             content = toml.loads(CONFIG_FILE_PATH.read_text())
-            enabled_modules = cast(list[str], content["parlant"]["modules"])
+            enabled_modules = cast(list[str], content["Daneel"]["modules"])
 
             if name not in enabled_modules:
                 enabled_modules.append(name)
@@ -869,7 +869,7 @@ from contextlib import AsyncExitStack
 from lagom import Container
 from typing import Annotated
 
-from parlant.sdk import (
+from Daneel.sdk import (
     PluginServer,
     ServiceRegistry,
     ToolContext,
@@ -944,7 +944,7 @@ async def shutdown_module() -> None:
             return
         else:
             content = toml.loads(CONFIG_FILE_PATH.read_text())
-            enabled_modules = cast(list[str], content["parlant"]["modules"])
+            enabled_modules = cast(list[str], content["Daneel"]["modules"])
 
             if module_name in enabled_modules:
                 enabled_modules.remove(module_name)
@@ -960,7 +960,7 @@ async def shutdown_module() -> None:
             return
         else:
             content = toml.loads(CONFIG_FILE_PATH.read_text())
-            enabled_modules = cast(list[str], content["parlant"]["modules"])
+            enabled_modules = cast(list[str], content["Daneel"]["modules"])
             print(", ".join(enabled_modules))
 
     try:

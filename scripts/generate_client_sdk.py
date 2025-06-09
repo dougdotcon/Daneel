@@ -26,12 +26,12 @@ import time
 DIR_SCRIPT_ROOT = Path(__file__).parent
 DIR_FERN = DIR_SCRIPT_ROOT / "fern"
 DIR_SDKS = DIR_SCRIPT_ROOT / "sdks"
-DIR_PROJECTS_WORKSPACE = DIR_SCRIPT_ROOT / ".." / ".." / "parlant-sdks"
+DIR_PROJECTS_WORKSPACE = DIR_SCRIPT_ROOT / ".." / ".." / "Daneel-sdks"
 
 
 PATHDICT_SDK_REPO_TARGETS = {
-    "python": DIR_PROJECTS_WORKSPACE / "parlant-client-python" / "src" / "parlant" / "client",
-    "typescript": DIR_PROJECTS_WORKSPACE / "parlant-client-typescript" / "src",
+    "python": DIR_PROJECTS_WORKSPACE / "Daneel-client-python" / "src" / "Daneel" / "client",
+    "typescript": DIR_PROJECTS_WORKSPACE / "Daneel-client-typescript" / "src",
 }
 
 
@@ -43,7 +43,7 @@ def replace_in_files(rootdir: Path, search: str, replace: str) -> None:
 
             with open(file_path, "r") as current_file:
                 current_file_content = current_file.read()
-                if "from parlant import" not in current_file_content:
+                if "from Daneel import" not in current_file_content:
                     continue
 
                 current_file_content = re.sub(search, replace, current_file_content)
@@ -62,10 +62,10 @@ if __name__ == "__main__":
 
     print(f"The script will now try to fetch the latest openapi.json from http://localhost:{port}.")
     input(
-        f"Ensure that parlant-server is running on port {port} and then press any key to continue..."
+        f"Ensure that Daneel-server is running on port {port} and then press any key to continue..."
     )
 
-    output_openapi_json = DIR_FERN / "openapi/parlant.openapi.json"
+    output_openapi_json = DIR_FERN / "openapi/Daneel.openapi.json"
     output_openapi_json.parent.mkdir(exist_ok=True)
     output_openapi_json.touch()
 
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
     if status != 0:
         print(f"Failed to fetch openapi.json from http://localhost:{port}", file=sys.stderr)
-        print("Please ensure that the desired Parlant server is accessible there.", file=sys.stderr)
+        print("Please ensure that the desired Daneel server is accessible there.", file=sys.stderr)
         sys.exit(1)
 
     for sdk, repo in PATHDICT_SDK_REPO_TARGETS.items():
@@ -107,8 +107,8 @@ if __name__ == "__main__":
     if exit_code != os.EX_OK:
         raise Exception(generate_output)
 
-    print("Renaming `parlant` to `parlant.client` in python imports")
-    replace_in_files(DIR_SDKS / "python", "from parlant import", "from parlant.client import")
+    print("Renaming `Daneel` to `Daneel.client` in python imports")
+    replace_in_files(DIR_SDKS / "python", "from Daneel import", "from Daneel.client import")
 
     print("touching python typing")
 

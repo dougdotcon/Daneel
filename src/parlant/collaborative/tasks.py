@@ -1,5 +1,5 @@
 """
-Task delegation and coordination for Parlant.
+Task delegation and coordination for Daneel.
 
 This module provides functionality for delegating and coordinating tasks between agents.
 """
@@ -12,19 +12,19 @@ from typing import Any, Dict, List, Optional, Set, Tuple, Union
 import uuid
 import json
 
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.loggers import Logger
-from parlant.core.async_utils import ReaderWriterLock
+from Daneel.core.common import JSONSerializable, generate_id
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.loggers import Logger
+from Daneel.core.async_utils import ReaderWriterLock
 
-from parlant.collaborative.protocol import (
+from Daneel.collaborative.protocol import (
     AgentCommunicator,
     AgentMessage,
     MessageBus,
     MessageType,
     MessagePriority,
 )
-from parlant.collaborative.team import Team, TeamId, TeamManager, TeamRole
+from Daneel.collaborative.team import Team, TeamId, TeamManager, TeamRole
 
 
 class TaskStatus(str, Enum):

@@ -1,5 +1,5 @@
 """
-Knowledge base module for Parlant.
+Knowledge base module for Daneel.
 
 This module provides a knowledge base for storing and retrieving knowledge items.
 """
@@ -12,13 +12,13 @@ from typing import Any, Dict, List, Optional, Sequence, Set, Tuple, Union, cast
 from dataclasses import dataclass, field
 from uuid import uuid4
 
-from parlant.core.common import JSONSerializable, Version, generate_id, md5_checksum
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.loggers import Logger
-from parlant.core.nlp.embedding import Embedder, EmbedderFactory
-from parlant.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId, Where
-from parlant.core.persistence.document_database import DocumentCollection, DocumentDatabase
-from parlant.core.persistence.vector_database import (
+from Daneel.core.common import JSONSerializable, Version, generate_id, md5_checksum
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.embedding import Embedder, EmbedderFactory
+from Daneel.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId, Where
+from Daneel.core.persistence.document_database import DocumentCollection, DocumentDatabase
+from Daneel.core.persistence.vector_database import (
     BaseDocument,
     SimilarDocumentResult,
     VectorCollection,

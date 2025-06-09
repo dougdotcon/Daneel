@@ -1,7 +1,7 @@
 set dotenv-load
 set positional-arguments
 
-PARLANT_HOME := "./parlant-data"
+Daneel_HOME := "./Daneel-data"
 LOGS_DIR := "./logs"
 SERVER_ADDRESS := env("SERVER_ADDRESS", "http://localhost:8800")
 
@@ -10,20 +10,20 @@ SERVER_ADDRESS := env("SERVER_ADDRESS", "http://localhost:8800")
 
 
 setup-cache:
-  mkdir -p {{PARLANT_HOME}}
+  mkdir -p {{Daneel_HOME}}
 
 setup-logdir:
   mkdir -p {{LOGS_DIR}}
 
 
 @server *args: setup-cache
-  PARLANT_HOME={{PARLANT_HOME}} poetry run parlant-server {{args}}
+  Daneel_HOME={{Daneel_HOME}} poetry run Daneel-server {{args}}
 
 @client *args='':
-  poetry run parlant -s {{SERVER_ADDRESS}} "$@"
+  poetry run Daneel -s {{SERVER_ADDRESS}} "$@"
 
 @chat *args='':
-  poetry run parlant -s {{SERVER_ADDRESS}} agent chat "$@"
+  poetry run Daneel -s {{SERVER_ADDRESS}} agent chat "$@"
 
 
 @kill-server:

@@ -16,7 +16,7 @@ from contextlib import contextmanager
 import contextvars
 from typing import Iterator
 
-from parlant.core.common import generate_id
+from Daneel.core.common import generate_id
 
 _UNINITIALIZED = 0xC0FFEE
 

@@ -995,7 +995,7 @@
 ### 🎯 **Foco Principal: Substituir CLI por Web**
 
 O objetivo é transformar completamente a experiência:
-- **ANTES**: `parlant-server --openai --port 8800`
+- **ANTES**: `Daneel-server --openai --port 8800`
 - **DEPOIS**: Acessar `http://localhost:8800/admin` e configurar tudo visualmente
 
 ### 🔄 **Compatibilidade**
@@ -1096,7 +1096,7 @@ O objetivo é transformar completamente a experiência:
 ### 📁 **Estrutura de Arquivos Criada**
 
 ```
-src/parlant/api/chat/src/components/
+src/Daneel/api/chat/src/components/
 ├── chat-input/
 │   └── advanced-chat-input.tsx          # Input avançado
 ├── message/
@@ -1110,7 +1110,7 @@ src/parlant/api/chat/src/components/
 └── demo/
     └── chat-improvements-demo.tsx       # Demonstração
 
-src/parlant/api/chat/src/hooks/
+src/Daneel/api/chat/src/hooks/
 └── useEnhancedChat.ts                   # Hook personalizado
 ```
 

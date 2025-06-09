@@ -14,10 +14,10 @@
 
 from lagom import Container
 
-from parlant.core.agents import Agent, AgentStore
-from parlant.core.entity_cq import EntityQueries
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.tags import Tag, TagId
+from Daneel.core.agents import Agent, AgentStore
+from Daneel.core.entity_cq import EntityQueries
+from Daneel.core.guidelines import GuidelineStore
+from Daneel.core.tags import Tag, TagId
 
 
 async def test_that_list_guidelines_with_mutual_agent_tag_are_returned(

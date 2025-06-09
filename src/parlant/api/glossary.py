@@ -16,12 +16,12 @@ from fastapi import APIRouter, HTTPException, Path, Query, status
 from typing import Annotated, Optional, Sequence, TypeAlias
 from pydantic import Field
 
-from parlant.api import common
-from parlant.api.common import apigen_config, ExampleJson, apigen_skip_config
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.common import DefaultBaseModel
-from parlant.core.glossary import TermUpdateParams, GlossaryStore, TermId
-from parlant.core.tags import TagId, TagStore, Tag
+from Daneel.api import common
+from Daneel.api.common import apigen_config, ExampleJson, apigen_skip_config
+from Daneel.core.agents import AgentId, AgentStore
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.glossary import TermUpdateParams, GlossaryStore, TermId
+from Daneel.core.tags import TagId, TagStore, Tag
 
 API_GROUP = "glossary"
 

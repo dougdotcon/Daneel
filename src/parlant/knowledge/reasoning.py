@@ -1,5 +1,5 @@
 """
-Knowledge reasoning module for Parlant.
+Knowledge reasoning module for Daneel.
 
 This module provides reasoning capabilities over the knowledge base.
 """
@@ -8,12 +8,12 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional, Sequence, Set, Tuple, Union, cast
 from dataclasses import dataclass, field
 
-from parlant.core.loggers import Logger
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.generation_info import GenerationInfo
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.generation_info import GenerationInfo
 
-from parlant.knowledge.base import KnowledgeBase, KnowledgeItem, KnowledgeItemId, KnowledgeItemType
-from parlant.knowledge.graph import KnowledgeGraph
+from Daneel.knowledge.base import KnowledgeBase, KnowledgeItem, KnowledgeItemId, KnowledgeItemType
+from Daneel.knowledge.graph import KnowledgeGraph
 
 
 @dataclass

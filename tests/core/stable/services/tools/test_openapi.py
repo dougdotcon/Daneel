@@ -15,8 +15,8 @@
 from typing import Any
 from pytest import mark, raises
 
-from parlant.core.tools import ToolContext, ToolError
-from parlant.core.services.tools.openapi import OpenAPIClient
+from Daneel.core.tools import ToolContext, ToolError
+from Daneel.core.services.tools.openapi import OpenAPIClient
 
 from tests.test_utilities import (
     OPENAPI_SERVER_URL,

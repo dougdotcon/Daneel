@@ -18,8 +18,8 @@ from enum import Enum
 import json
 from typing import Optional
 
-from parlant.core.utterances import Utterance
-from parlant.core.tools import ToolResult
+from Daneel.core.utterances import Utterance
+from Daneel.core.tools import ToolResult
 
 
 class Categories(enum.Enum):

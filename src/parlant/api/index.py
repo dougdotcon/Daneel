@@ -17,8 +17,8 @@ from typing import Annotated, Optional, Sequence, TypeAlias, cast
 from fastapi import APIRouter, HTTPException, Path, Query, status
 from pydantic import Field
 
-from parlant.api import common
-from parlant.api.common import (
+from Daneel.api import common
+from Daneel.api.common import (
     CoherenceCheckDTO,
     CoherenceCheckKindDTO,
     ConnectionPropositionDTO,
@@ -35,10 +35,10 @@ from parlant.api.common import (
     apigen_skip_config,
     operation_dto_to_operation,
 )
-from parlant.core.async_utils import Timeout
-from parlant.core.common import DefaultBaseModel
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.evaluations import (
+from Daneel.core.async_utils import Timeout
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.agents import AgentId, AgentStore
+from Daneel.core.evaluations import (
     CoherenceCheckKind,
     EntailmentRelationshipPropositionKind,
     Evaluation,
@@ -53,8 +53,8 @@ from parlant.core.evaluations import (
     PayloadDescriptor,
     PayloadKind,
 )
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.services.indexing.behavioral_change_evaluation import (
+from Daneel.core.guidelines import GuidelineContent
+from Daneel.core.services.indexing.behavioral_change_evaluation import (
     BehavioralChangeEvaluator,
     EvaluationValidationError,
 )

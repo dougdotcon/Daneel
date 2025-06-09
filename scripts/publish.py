@@ -22,7 +22,7 @@ from utils import die, for_each_package, Package, get_packages
 
 
 def get_server_version() -> str:
-    server_package = next(p for p in get_packages() if p.name == "parlant")
+    server_package = next(p for p in get_packages() if p.name == "Daneel")
     project_file = server_package.path / "pyproject.toml"
     pyproject = toml.load(project_file)
     version = str(pyproject["tool"]["poetry"]["version"])
@@ -80,7 +80,7 @@ def publish_docker() -> None:
                 "--platform",
                 ",".join(platforms),
                 "-t",
-                f"ghcr.io/emcie-co/parlant:{version}",
+                f"ghcr.io/emcie-co/Daneel:{version}",
                 "-f",
                 "Dockerfile",
                 "--push",

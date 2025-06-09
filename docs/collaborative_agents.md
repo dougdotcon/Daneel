@@ -1,6 +1,6 @@
 # Agentes Colaborativos
 
-Este documento descreve a funcionalidade de agentes colaborativos no framework Parlant.
+Este documento descreve a funcionalidade de agentes colaborativos no framework Daneel.
 
 ## Visão Geral
 
@@ -251,9 +251,9 @@ has_access = await shared_knowledge_manager.check_access(
 )
 ```
 
-## Integração com Parlant
+## Integração com Daneel
 
-A funcionalidade de agentes colaborativos está integrada com o framework Parlant:
+A funcionalidade de agentes colaborativos está integrada com o framework Daneel:
 
 1. **Sistema de Agente**: Os agentes colaborativos estendem o sistema base de agentes
 2. **Gerenciamento de Conhecimento**: O conhecimento compartilhado é armazenado no sistema de gerenciamento de conhecimento

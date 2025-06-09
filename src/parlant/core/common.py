@@ -37,7 +37,7 @@ def _without_dto_suffix(obj: Any, *args: Any) -> str:
 
 class DefaultBaseModel(BaseModel):
     """
-    Base class for all Parlant Pydantic models.
+    Base class for all Daneel Pydantic models.
     """
 
     model_config = ConfigDict(

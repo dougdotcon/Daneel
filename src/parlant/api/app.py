@@ -23,38 +23,38 @@ from fastapi.staticfiles import StaticFiles
 from starlette.types import Receive, Scope, Send
 from lagom import Container
 
-from parlant.adapters.loggers.websocket import WebSocketLogger
-from parlant.api import agents, index, relationships
-from parlant.api import sessions
-from parlant.api import glossary
-from parlant.api import guidelines
-from parlant.api import context_variables as variables
-from parlant.api import services
-from parlant.api import tags
-from parlant.api import customers
-from parlant.api import logs
-from parlant.api import utterances
-from parlant.api import system_stats
-from parlant.core.context_variables import ContextVariableStore
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.agents import AgentStore
-from parlant.core.common import ItemNotFoundError, generate_id
-from parlant.core.customers import CustomerStore
-from parlant.core.evaluations import EvaluationStore, EvaluationListener
-from parlant.core.utterances import UtteranceStore
-from parlant.core.relationships import RelationshipStore
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.guideline_tool_associations import GuidelineToolAssociationStore
-from parlant.core.nlp.service import NLPService
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.sessions import SessionListener, SessionStore
-from parlant.core.glossary import GlossaryStore
-from parlant.core.services.indexing.behavioral_change_evaluation import (
+from Daneel.adapters.loggers.websocket import WebSocketLogger
+from Daneel.api import agents, index, relationships
+from Daneel.api import sessions
+from Daneel.api import glossary
+from Daneel.api import guidelines
+from Daneel.api import context_variables as variables
+from Daneel.api import services
+from Daneel.api import tags
+from Daneel.api import customers
+from Daneel.api import logs
+from Daneel.api import utterances
+from Daneel.api import system_stats
+from Daneel.core.context_variables import ContextVariableStore
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.agents import AgentStore
+from Daneel.core.common import ItemNotFoundError, generate_id
+from Daneel.core.customers import CustomerStore
+from Daneel.core.evaluations import EvaluationStore, EvaluationListener
+from Daneel.core.utterances import UtteranceStore
+from Daneel.core.relationships import RelationshipStore
+from Daneel.core.guidelines import GuidelineStore
+from Daneel.core.guideline_tool_associations import GuidelineToolAssociationStore
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.sessions import SessionListener, SessionStore
+from Daneel.core.glossary import GlossaryStore
+from Daneel.core.services.indexing.behavioral_change_evaluation import (
     BehavioralChangeEvaluator,
 )
-from parlant.core.loggers import Logger
-from parlant.core.application import Application
-from parlant.core.tags import TagStore
+from Daneel.core.loggers import Logger
+from Daneel.core.application import Application
+from Daneel.core.tags import TagStore
 
 ASGIApplication: TypeAlias = Callable[
     [

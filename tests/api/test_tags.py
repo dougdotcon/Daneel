@@ -17,8 +17,8 @@ import httpx
 from lagom import Container
 from pytest import raises
 
-from parlant.core.common import ItemNotFoundError
-from parlant.core.tags import TagStore
+from Daneel.core.common import ItemNotFoundError
+from Daneel.core.tags import TagStore
 
 
 async def test_that_a_tag_can_be_created(

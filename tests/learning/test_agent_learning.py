@@ -9,17 +9,17 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 from unittest.mock import MagicMock, AsyncMock
 
-from parlant.core.loggers import ConsoleLogger
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.models import Model, ModelManager
-from parlant.core.prompts import Prompt, PromptManager
-from parlant.core.tools import ToolRegistry
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.persistence.document_database import DocumentDatabase, DocumentCollection
-from parlant.core.customers import Customer, CustomerId, CustomerStore
+from Daneel.core.loggers import ConsoleLogger
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.models import Model, ModelManager
+from Daneel.core.prompts import Prompt, PromptManager
+from Daneel.core.tools import ToolRegistry
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.persistence.document_database import DocumentDatabase, DocumentCollection
+from Daneel.core.customers import Customer, CustomerId, CustomerStore
 
-from parlant.learning import (
+from Daneel.learning import (
     InteractionHistoryTracker,
     Interaction,
     InteractionId,

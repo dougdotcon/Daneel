@@ -21,7 +21,7 @@ from typing import Any, Dict, List, Optional, Union, Callable, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 class ImputationStrategy(str, Enum):

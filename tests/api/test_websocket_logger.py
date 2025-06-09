@@ -14,12 +14,12 @@
 
 import asyncio
 from fastapi.testclient import TestClient
-from parlant.api.app import ASGIApplication
+from Daneel.api.app import ASGIApplication
 from lagom import Container
 import pytest
 
-from parlant.adapters.loggers.websocket import WebSocketLogger
-from parlant.core.contextual_correlator import ContextualCorrelator
+from Daneel.adapters.loggers.websocket import WebSocketLogger
+from Daneel.core.contextual_correlator import ContextualCorrelator
 
 
 @pytest.fixture

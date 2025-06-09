@@ -1,5 +1,5 @@
 """
-Video analysis for Parlant.
+Video analysis for Daneel.
 
 This module provides functionality for analyzing video content.
 """
@@ -17,14 +17,14 @@ import os
 from pathlib import Path
 import tempfile
 
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.loggers import Logger
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.generation_info import GenerationInfo
+from Daneel.core.common import JSONSerializable, generate_id
+from Daneel.core.loggers import Logger
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.generation_info import GenerationInfo
 
-from parlant.multimodal.image import Image, ImageId, ImageProcessor, ImageAnalysisResult
-from parlant.multimodal.audio import Audio, AudioId, AudioProcessor, TranscriptionResult
+from Daneel.multimodal.image import Image, ImageId, ImageProcessor, ImageAnalysisResult
+from Daneel.multimodal.audio import Audio, AudioId, AudioProcessor, TranscriptionResult
 
 
 class VideoFormat(str, Enum):

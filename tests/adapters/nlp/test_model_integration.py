@@ -20,12 +20,12 @@ import pytest
 from unittest.mock import AsyncMock, MagicMock, patch
 from typing import Dict, List, Optional
 
-from parlant.adapters.nlp.local.model_manager import LocalModelManager, ModelType, LocalModel
-from parlant.adapters.nlp.local.llama import LlamaService, LlamaSchematicGenerator
-from parlant.adapters.nlp.local.deepseek import DeepSeekService, DeepSeekSchematicGenerator
-from parlant.adapters.nlp.model_switcher import ModelSwitcher, ModelTier, ModelLocation
-from parlant.adapters.nlp.factory import NLPServiceFactory
-from parlant.core.nlp.service import NLPService
+from Daneel.adapters.nlp.local.model_manager import LocalModelManager, ModelType, LocalModel
+from Daneel.adapters.nlp.local.llama import LlamaService, LlamaSchematicGenerator
+from Daneel.adapters.nlp.local.deepseek import DeepSeekService, DeepSeekSchematicGenerator
+from Daneel.adapters.nlp.model_switcher import ModelSwitcher, ModelTier, ModelLocation
+from Daneel.adapters.nlp.factory import NLPServiceFactory
+from Daneel.core.nlp.service import NLPService
 
 
 @pytest.fixture
@@ -125,7 +125,7 @@ async def test_llama_service(mock_logger, mock_model_manager):
     assert service.model.type == ModelType.LLAMA
     
     # Mock the schematic generator
-    with patch("parlant.adapters.nlp.local.llama.LlamaSchematicGenerator") as mock_generator:
+    with patch("Daneel.adapters.nlp.local.llama.LlamaSchematicGenerator") as mock_generator:
         # Set up the mock generator
         mock_generator_instance = MagicMock()
         mock_generator.return_value = mock_generator_instance
@@ -153,7 +153,7 @@ async def test_deepseek_service(mock_logger, mock_model_manager):
     assert service.model.type == ModelType.DEEPSEEK
     
     # Mock the schematic generator
-    with patch("parlant.adapters.nlp.local.deepseek.DeepSeekSchematicGenerator") as mock_generator:
+    with patch("Daneel.adapters.nlp.local.deepseek.DeepSeekSchematicGenerator") as mock_generator:
         # Set up the mock generator
         mock_generator_instance = MagicMock()
         mock_generator.return_value = mock_generator_instance
@@ -222,7 +222,7 @@ async def test_nlp_service_factory(mock_logger, mock_model_manager):
     await factory.initialize()
     
     # Test creating a Llama service
-    with patch("parlant.adapters.nlp.local.llama.LlamaService") as mock_llama_service:
+    with patch("Daneel.adapters.nlp.local.llama.LlamaService") as mock_llama_service:
         # Set up the mock service
         mock_service = MagicMock(spec=NLPService)
         mock_llama_service.return_value = mock_service
@@ -235,7 +235,7 @@ async def test_nlp_service_factory(mock_logger, mock_model_manager):
         assert service == mock_service
         
     # Test creating a DeepSeek service
-    with patch("parlant.adapters.nlp.local.deepseek.DeepSeekService") as mock_deepseek_service:
+    with patch("Daneel.adapters.nlp.local.deepseek.DeepSeekService") as mock_deepseek_service:
         # Set up the mock service
         mock_service = MagicMock(spec=NLPService)
         mock_deepseek_service.return_value = mock_service
@@ -248,7 +248,7 @@ async def test_nlp_service_factory(mock_logger, mock_model_manager):
         assert service == mock_service
         
     # Test creating a model switcher
-    with patch("parlant.adapters.nlp.model_switcher.ModelSwitcher") as mock_switcher:
+    with patch("Daneel.adapters.nlp.model_switcher.ModelSwitcher") as mock_switcher:
         # Set up the mock switcher
         mock_service = MagicMock(spec=NLPService)
         mock_service.initialize = AsyncMock()
@@ -263,7 +263,7 @@ async def test_nlp_service_factory(mock_logger, mock_model_manager):
         assert service == mock_service
         
     # Test creating a default service
-    with patch("parlant.adapters.nlp.model_switcher.ModelSwitcher") as mock_switcher:
+    with patch("Daneel.adapters.nlp.model_switcher.ModelSwitcher") as mock_switcher:
         # Set up the mock switcher
         mock_service = MagicMock(spec=NLPService)
         mock_service.initialize = AsyncMock()

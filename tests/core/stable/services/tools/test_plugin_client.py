@@ -22,24 +22,24 @@ from pydantic import BaseModel
 from pytest import fixture, raises
 import pytest
 
-from parlant.core.loggers import StdoutLogger
-from parlant.core.tools import (
+from Daneel.core.loggers import StdoutLogger
+from Daneel.core.tools import (
     ToolContext,
     ToolError,
     ToolParameterOptions,
     ToolResult,
     ToolResultError,
 )
-from parlant.core.services.tools.plugins import PluginServer, tool
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.emission.event_buffer import EventBuffer, EventBufferFactory
-from parlant.core.emissions import EventEmitter, EventEmitterFactory
-from parlant.core.services.tools.plugins import PluginClient
-from parlant.core.sessions import SessionId, EventKind
-from parlant.core.tools import ToolExecutionError
+from Daneel.core.services.tools.plugins import PluginServer, tool
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.emission.event_buffer import EventBuffer, EventBufferFactory
+from Daneel.core.emissions import EventEmitter, EventEmitterFactory
+from Daneel.core.services.tools.plugins import PluginClient
+from Daneel.core.sessions import SessionId, EventKind
+from Daneel.core.tools import ToolExecutionError
 from tests.test_utilities import run_service_server
-from parlant.core.utterances import Utterance, UtteranceId, UtteranceField
+from Daneel.core.utterances import Utterance, UtteranceId, UtteranceField
 
 
 class SessionBuffers(EventEmitterFactory):

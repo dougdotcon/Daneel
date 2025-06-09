@@ -29,23 +29,23 @@ from typing import (
 )
 from typing_extensions import Literal, override, TypedDict, Self
 
-from parlant.core.agents import AgentId
-from parlant.core.async_utils import ReaderWriterLock, Timeout
-from parlant.core.common import (
+from Daneel.core.agents import AgentId
+from Daneel.core.async_utils import ReaderWriterLock, Timeout
+from Daneel.core.common import (
     ItemNotFoundError,
     JSONSerializable,
     UniqueId,
     Version,
     generate_id,
 )
-from parlant.core.guidelines import GuidelineContent, GuidelineId
-from parlant.core.persistence.common import ObjectId
-from parlant.core.persistence.document_database import (
+from Daneel.core.guidelines import GuidelineContent, GuidelineId
+from Daneel.core.persistence.common import ObjectId
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     DocumentCollection,
 )
-from parlant.core.persistence.document_database_helper import DocumentStoreMigrationHelper
+from Daneel.core.persistence.document_database_helper import DocumentStoreMigrationHelper
 
 EvaluationId = NewType("EvaluationId", str)
 

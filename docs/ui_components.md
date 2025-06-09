@@ -1,10 +1,10 @@
 # Componentes de UI
 
-Este documento descreve os componentes de UI no framework Parlant.
+Este documento descreve os componentes de UI no framework Daneel.
 
 ## Visão Geral
 
-Os componentes de UI fornecem uma maneira de criar interfaces de usuário ricas e interativas para o Parlant. Eles suportam:
+Os componentes de UI fornecem uma maneira de criar interfaces de usuário ricas e interativas para o Daneel. Eles suportam:
 
 1. Realce de código e visualização de diferenças
 2. Interfaces de terminal interativas
@@ -29,8 +29,8 @@ O componente `CodeBlock` fornece realce de sintaxe para trechos de código. Ele 
 Exemplo de uso:
 
 ```python
-from parlant.ui.components.code import CodeBlock, CodeBlockOptions
-from parlant.core.loggers import ConsoleLogger
+from Daneel.ui.components.code import CodeBlock, CodeBlockOptions
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a code block
 code_block = CodeBlock(ConsoleLogger())
@@ -72,8 +72,8 @@ O componente `DiffViewer` visualiza diferenças entre dois trechos de código. E
 Exemplo de uso:
 
 ```python
-from parlant.ui.components.code import DiffViewer, DiffViewerOptions, DiffMode
-from parlant.core.loggers import ConsoleLogger
+from Daneel.ui.components.code import DiffViewer, DiffViewerOptions, DiffMode
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a diff viewer
 diff_viewer = DiffViewer(ConsoleLogger())
@@ -120,8 +120,8 @@ O componente `Terminal` fornece uma interface de terminal interativa. Ele suport
 Exemplo de uso:
 
 ```python
-from parlant.ui.components.terminal import Terminal, TerminalOptions, TerminalState
-from parlant.core.loggers import ConsoleLogger
+from Daneel.ui.components.terminal import Terminal, TerminalOptions, TerminalState
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a terminal
 terminal = Terminal(ConsoleLogger())
@@ -170,8 +170,8 @@ O componente `Inspector` fornece uma maneira de inspecionar variáveis e objetos
 Exemplo de uso:
 
 ```python
-from parlant.ui.components.debug import Inspector, InspectorOptions
-from parlant.core.loggers import ConsoleLogger
+from Daneel.ui.components.debug import Inspector, InspectorOptions
+from Daneel.core.loggers import ConsoleLogger
 
 # Create an inspector
 inspector = Inspector(ConsoleLogger())
@@ -215,8 +215,8 @@ O componente `CallStack` visualiza uma pilha de chamadas para depuração. Ele s
 Exemplo de uso:
 
 ```python
-from parlant.ui.components.debug import CallStack, CallStackOptions, StackFrame
-from parlant.core.loggers import ConsoleLogger
+from Daneel.ui.components.debug import CallStack, CallStackOptions, StackFrame
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a call stack
 call_stack = CallStack(ConsoleLogger())
@@ -253,9 +253,9 @@ frames = [
 html = call_stack.render_html(frames, options)
 ```
 
-## Integração com Parlant
+## Integração com Daneel
 
-Os componentes de UI estão integrados com o framework Parlant:
+Os componentes de UI estão integrados com o framework Daneel:
 
 1. **Sistema de Agente**: Os agentes podem usar os componentes para fornecer feedback visual
 2. **Depuração**: Os componentes de depuração são usados para inspecionar o estado do agente

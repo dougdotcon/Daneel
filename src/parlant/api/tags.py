@@ -15,9 +15,9 @@
 from typing import Annotated, TypeAlias
 from fastapi import APIRouter, Path, status
 
-from parlant.api.common import TagDTO, TagNameField, apigen_config, ExampleJson, tag_example
-from parlant.core.common import DefaultBaseModel
-from parlant.core.tags import TagId, TagStore
+from Daneel.api.common import TagDTO, TagNameField, apigen_config, ExampleJson, tag_example
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.tags import TagId, TagStore
 
 API_GROUP = "tags"
 

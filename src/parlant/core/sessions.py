@@ -29,32 +29,32 @@ from typing import (
 )
 from typing_extensions import override, TypedDict, NotRequired, Self
 
-from parlant.core import async_utils
-from parlant.core.async_utils import ReaderWriterLock, Timeout
-from parlant.core.common import (
+from Daneel.core import async_utils
+from Daneel.core.async_utils import ReaderWriterLock, Timeout
+from Daneel.core.common import (
     ItemNotFoundError,
     JSONSerializable,
     UniqueId,
     Version,
     generate_id,
 )
-from parlant.core.agents import AgentId
-from parlant.core.context_variables import ContextVariableId
-from parlant.core.customers import CustomerId
-from parlant.core.guidelines import GuidelineId
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.persistence.common import (
+from Daneel.core.agents import AgentId
+from Daneel.core.context_variables import ContextVariableId
+from Daneel.core.customers import CustomerId
+from Daneel.core.guidelines import GuidelineId
+from Daneel.core.nlp.generation_info import GenerationInfo, UsageInfo
+from Daneel.core.persistence.common import (
     ObjectId,
     Where,
 )
-from parlant.core.persistence.document_database import (
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     DocumentCollection,
 )
-from parlant.core.glossary import TermId
-from parlant.core.utterances import Utterance, UtteranceId
-from parlant.core.persistence.document_database_helper import (
+from Daneel.core.glossary import TermId
+from Daneel.core.utterances import Utterance, UtteranceId
+from Daneel.core.persistence.document_database_helper import (
     DocumentMigrationHelper,
     DocumentStoreMigrationHelper,
 )

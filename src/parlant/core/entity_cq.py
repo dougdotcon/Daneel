@@ -15,28 +15,28 @@
 from itertools import chain
 from typing import Optional, Sequence
 
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.common import JSONSerializable
-from parlant.core.context_variables import (
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.common import JSONSerializable
+from Daneel.core.context_variables import (
     ContextVariable,
     ContextVariableId,
     ContextVariableStore,
     ContextVariableValue,
 )
-from parlant.core.customers import Customer, CustomerId, CustomerStore
-from parlant.core.guidelines import (
+from Daneel.core.customers import Customer, CustomerId, CustomerStore
+from Daneel.core.guidelines import (
     Guideline,
     GuidelineStore,
 )
-from parlant.core.relationships import (
+from Daneel.core.relationships import (
     RelationshipStore,
 )
-from parlant.core.guideline_tool_associations import (
+from Daneel.core.guideline_tool_associations import (
     GuidelineToolAssociation,
     GuidelineToolAssociationStore,
 )
-from parlant.core.glossary import GlossaryStore, Term
-from parlant.core.sessions import (
+from Daneel.core.glossary import GlossaryStore, Term
+from Daneel.core.sessions import (
     SessionId,
     Session,
     SessionStore,
@@ -45,9 +45,9 @@ from parlant.core.sessions import (
     PreparationIteration,
     SessionUpdateParams,
 )
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.tags import Tag, TagId
-from parlant.core.tools import ToolService
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.tags import Tag, TagId
+from Daneel.core.tools import ToolService
 
 
 class EntityQueries:

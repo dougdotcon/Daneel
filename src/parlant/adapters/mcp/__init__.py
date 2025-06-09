@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""MCP (Model Context Protocol) adapters for Parlant."""
+"""MCP (Model Context Protocol) adapters for Daneel."""
 
-from parlant.adapters.mcp.client import MCPClient
-from parlant.adapters.mcp.server import MCPServer
-from parlant.adapters.mcp.common import MCPMessage, MCPToolCall, MCPToolResult, MCPTool
-from parlant.adapters.mcp.sequential_thinking import SequentialThinkingMCP, SequentialThought, SequentialThinkingSession
+from Daneel.adapters.mcp.client import MCPClient
+from Daneel.adapters.mcp.server import MCPServer
+from Daneel.adapters.mcp.common import MCPMessage, MCPToolCall, MCPToolResult, MCPTool
+from Daneel.adapters.mcp.sequential_thinking import SequentialThinkingMCP, SequentialThought, SequentialThinkingSession
 
 __all__ = [
     "MCPClient",

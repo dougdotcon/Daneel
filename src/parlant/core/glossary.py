@@ -19,27 +19,27 @@ from itertools import chain
 from typing import NewType, Optional, Sequence, TypedDict, cast
 from typing_extensions import override, Self, Required
 
-from parlant.core import async_utils
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.common import ItemNotFoundError, Version, generate_id, UniqueId, md5_checksum
-from parlant.core.persistence.common import ObjectId, Where
-from parlant.core.nlp.embedding import Embedder, EmbedderFactory
-from parlant.core.persistence.vector_database import (
+from Daneel.core import async_utils
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.common import ItemNotFoundError, Version, generate_id, UniqueId, md5_checksum
+from Daneel.core.persistence.common import ObjectId, Where
+from Daneel.core.nlp.embedding import Embedder, EmbedderFactory
+from Daneel.core.persistence.vector_database import (
     BaseDocument as VectorBaseDocument,
     VectorCollection,
     VectorDatabase,
 )
-from parlant.core.persistence.vector_database_helper import (
+from Daneel.core.persistence.vector_database_helper import (
     VectorDocumentMigrationHelper,
     VectorDocumentStoreMigrationHelper,
 )
-from parlant.core.persistence.document_database import (
+from Daneel.core.persistence.document_database import (
     DocumentCollection,
     DocumentDatabase,
     BaseDocument,
 )
-from parlant.core.persistence.document_database_helper import DocumentStoreMigrationHelper
-from parlant.core.tags import TagId
+from Daneel.core.persistence.document_database_helper import DocumentStoreMigrationHelper
+from Daneel.core.tags import TagId
 
 
 TermId = NewType("TermId", str)
@@ -186,7 +186,7 @@ class GlossaryVectorStore(GlossaryStore):
     async def _document_loader(self, document: VectorBaseDocument) -> Optional[_TermDocument]:
         async def v0_1_0_to_v_0_2_0(document: VectorBaseDocument) -> Optional[VectorBaseDocument]:
             raise Exception(
-                "This code should not be reached! Please run the 'parlant-prepare-migration' script."
+                "This code should not be reached! Please run the 'Daneel-prepare-migration' script."
             )
 
         return await VectorDocumentMigrationHelper[_TermDocument](

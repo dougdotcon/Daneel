@@ -19,12 +19,12 @@ from typing import Awaitable, Callable, Generic, Optional, Sequence, cast
 from typing_extensions import override, Self
 import chromadb
 
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.common import JSONSerializable
-from parlant.core.loggers import Logger
-from parlant.core.nlp.embedding import Embedder, EmbedderFactory, NoOpEmbedder
-from parlant.core.persistence.common import Where, ensure_is_total
-from parlant.core.persistence.vector_database import (
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.common import JSONSerializable
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.embedding import Embedder, EmbedderFactory, NoOpEmbedder
+from Daneel.core.persistence.common import Where, ensure_is_total
+from Daneel.core.persistence.vector_database import (
     BaseDocument,
     DeleteResult,
     InsertResult,

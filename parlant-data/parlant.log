@@ -1,0 +1,252 @@
+[2m2025-05-30T22:38:07.601812Z[0m [[32m[1minfo     [0m] [1m[<main>] Parlant server version 2.0.0[0m
+[2m2025-05-30T22:38:07.601812Z[0m [[32m[1minfo     [0m] [1m[<main>] Using home directory 'E:\1. DOCUMENTOS\NAO_E_PRIORIDADE\2. BACKUP\ASIMOV-AGENTS\parlant\parlant-data'[0m
+[2m2025-05-30T22:39:16.806300Z[0m [[32m[1minfo     [0m] [1m[<main>] Parlant server version 2.0.0[0m
+[2m2025-05-30T22:39:16.806300Z[0m [[32m[1minfo     [0m] [1m[<main>] Using home directory 'E:\1. DOCUMENTOS\NAO_E_PRIORIDADE\2. BACKUP\ASIMOV-AGENTS\parlant\parlant-data'[0m
+[2m2025-05-30T22:39:18.013399Z[0m [[32m[1minfo     [0m] [1m[<main>] No external modules selected[0m
+[2m2025-05-30T22:39:18.014708Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'websocket-logger'[0m
+[2m2025-05-30T22:39:19.569220Z[0m [[32m[1minfo     [0m] [1m[<main>] Initialized OpenAIService[0m
+[2m2025-05-30T22:39:26.401429Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2025-05-30T22:39:26.402430Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2025-05-30T22:39:26.402430Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2025-05-30T22:39:26.403434Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8000[0m
+[2m2025-05-30T22:39:35.750746Z[0m [[32m[1minfo     [0m] [1m[RID(sejoC8rk4a)] HTTP Request: GET / started[0m
+[2m2025-05-30T22:39:35.775748Z[0m [[32m[1minfo     [0m] [1m[RID(sejoC8rk4a)] HTTP Request: GET / finished in 0.025 seconds[0m
+[2m2025-05-30T22:39:35.804750Z[0m [[32m[1minfo     [0m] [1m[RID(PHUq8zOiM7)] HTTP Request: GET /chat started[0m
+[2m2025-05-30T22:39:35.807750Z[0m [[32m[1minfo     [0m] [1m[RID(PHUq8zOiM7)] HTTP Request: GET /chat finished in 0.003 seconds[0m
+[2m2025-05-30T22:39:37.779093Z[0m [[32m[1minfo     [0m] [1m[RID(1SZMLLDNb0)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:39:37.782095Z[0m [[32m[1minfo     [0m] [1m[RID(jZ0noVsppR)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:39:37.784094Z[0m [[32m[1minfo     [0m] [1m[RID(DzXmBP7pNE)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:39:37.789097Z[0m [[32m[1minfo     [0m] [1m[RID(1SZMLLDNb0)] HTTP Request: GET /sessions finished in 0.01 seconds[0m
+[2m2025-05-30T22:39:37.795093Z[0m [[32m[1minfo     [0m] [1m[RID(jZ0noVsppR)] HTTP Request: GET /agents finished in 0.013 seconds[0m
+[2m2025-05-30T22:39:37.843095Z[0m [[32m[1minfo     [0m] [1m[RID(DzXmBP7pNE)] HTTP Request: GET /customers finished in 0.059 seconds[0m
+[2m2025-05-30T22:46:08.897982Z[0m [[32m[1minfo     [0m] [1m[<main>] Parlant server version 2.0.0[0m
+[2m2025-05-30T22:46:08.897982Z[0m [[32m[1minfo     [0m] [1m[<main>] Using home directory 'E:\1. DOCUMENTOS\NAO_E_PRIORIDADE\2. BACKUP\ASIMOV-AGENTS\parlant\parlant-data'[0m
+[2m2025-05-30T22:46:09.500361Z[0m [[32m[1minfo     [0m] [1m[<main>] No external modules selected[0m
+[2m2025-05-30T22:46:09.501359Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'websocket-logger'[0m
+[2m2025-05-30T22:46:10.254361Z[0m [[32m[1minfo     [0m] [1m[<main>] Initialized OpenAIService[0m
+[2m2025-05-30T22:46:11.818483Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2025-05-30T22:46:11.818729Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2025-05-30T22:46:11.818729Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2025-05-30T22:46:11.819744Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8000[0m
+[2m2025-05-30T22:46:55.895166Z[0m [[32m[1minfo     [0m] [1m[RID(ddPMuUDLxx)] HTTP Request: GET / started[0m
+[2m2025-05-30T22:46:55.896165Z[0m [[32m[1minfo     [0m] [1m[RID(ddPMuUDLxx)] HTTP Request: GET / finished in 0.001 seconds[0m
+[2m2025-05-30T22:46:55.899166Z[0m [[32m[1minfo     [0m] [1m[RID(2wPXRtxCC7)] HTTP Request: GET /chat started[0m
+[2m2025-05-30T22:46:55.901167Z[0m [[32m[1minfo     [0m] [1m[RID(2wPXRtxCC7)] HTTP Request: GET /chat finished in 0.002 seconds[0m
+[2m2025-05-30T22:47:04.133978Z[0m [[32m[1minfo     [0m] [1m[RID(A-gdHyg8KV)] HTTP Request: GET / started[0m
+[2m2025-05-30T22:47:04.135979Z[0m [[32m[1minfo     [0m] [1m[RID(A-gdHyg8KV)] HTTP Request: GET / finished in 0.002 seconds[0m
+[2m2025-05-30T22:47:04.139978Z[0m [[32m[1minfo     [0m] [1m[RID(vU6q7h5Hsy)] HTTP Request: GET /chat started[0m
+[2m2025-05-30T22:47:04.141978Z[0m [[32m[1minfo     [0m] [1m[RID(vU6q7h5Hsy)] HTTP Request: GET /chat finished in 0.002 seconds[0m
+[2m2025-05-30T22:47:05.618635Z[0m [[32m[1minfo     [0m] [1m[RID(ZF64VjDFM8)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:47:05.620634Z[0m [[32m[1minfo     [0m] [1m[RID(tygkZ1aMOD)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:47:05.623634Z[0m [[32m[1minfo     [0m] [1m[RID(yjpnq-TW8A)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:47:05.625635Z[0m [[32m[1minfo     [0m] [1m[RID(ZF64VjDFM8)] HTTP Request: GET /sessions finished in 0.007 seconds[0m
+[2m2025-05-30T22:47:05.627633Z[0m [[32m[1minfo     [0m] [1m[RID(tygkZ1aMOD)] HTTP Request: GET /agents finished in 0.007 seconds[0m
+[2m2025-05-30T22:47:05.634635Z[0m [[32m[1minfo     [0m] [1m[RID(yjpnq-TW8A)] HTTP Request: GET /customers finished in 0.011 seconds[0m
+[2m2025-05-30T22:48:58.679230Z[0m [[32m[1minfo     [0m] [1m[<main>] Parlant server version 2.0.0[0m
+[2m2025-05-30T22:48:58.680231Z[0m [[32m[1minfo     [0m] [1m[<main>] Using home directory 'E:\1. DOCUMENTOS\NAO_E_PRIORIDADE\2. BACKUP\ASIMOV-AGENTS\parlant\parlant-data'[0m
+[2m2025-05-30T22:48:59.293277Z[0m [[32m[1minfo     [0m] [1m[<main>] No external modules selected[0m
+[2m2025-05-30T22:48:59.294277Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'websocket-logger'[0m
+[2m2025-05-30T22:49:00.350487Z[0m [[32m[1minfo     [0m] [1m[<main>] Initialized OpenAIService[0m
+[2m2025-05-30T22:49:02.012712Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2025-05-30T22:49:02.013713Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2025-05-30T22:49:02.013713Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2025-05-30T22:49:02.013713Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8000[0m
+[2m2025-05-30T22:49:11.695931Z[0m [[32m[1minfo     [0m] [1m[RID(PQdcT7ZoUj)] HTTP Request: GET / started[0m
+[2m2025-05-30T22:49:11.697934Z[0m [[32m[1minfo     [0m] [1m[RID(PQdcT7ZoUj)] HTTP Request: GET / finished in 0.002 seconds[0m
+[2m2025-05-30T22:49:11.703932Z[0m [[32m[1minfo     [0m] [1m[RID(dBki1Mdc9E)] HTTP Request: GET /chat started[0m
+[2m2025-05-30T22:49:11.705932Z[0m [[32m[1minfo     [0m] [1m[RID(dBki1Mdc9E)] HTTP Request: GET /chat finished in 0.002 seconds[0m
+[2m2025-05-30T22:49:13.090803Z[0m [[32m[1minfo     [0m] [1m[RID(HM3tPKyAsm)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:49:13.092807Z[0m [[32m[1minfo     [0m] [1m[RID(0aWuNDp9Cz)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:49:13.094803Z[0m [[32m[1minfo     [0m] [1m[RID(8pp3evJPci)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:49:13.099806Z[0m [[32m[1minfo     [0m] [1m[RID(HM3tPKyAsm)] HTTP Request: GET /sessions finished in 0.009 seconds[0m
+[2m2025-05-30T22:49:13.104809Z[0m [[32m[1minfo     [0m] [1m[RID(0aWuNDp9Cz)] HTTP Request: GET /agents finished in 0.012 seconds[0m
+[2m2025-05-30T22:49:13.108804Z[0m [[32m[1minfo     [0m] [1m[RID(8pp3evJPci)] HTTP Request: GET /customers finished in 0.014 seconds[0m
+[2m2025-05-30T22:49:36.720559Z[0m [[32m[1minfo     [0m] [1m[RID(Tw1P3hERds)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:49:36.729558Z[0m [[32m[1minfo     [0m] [1m[RID(v7K971MOj6)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:49:36.732560Z[0m [[32m[1minfo     [0m] [1m[RID(Tw1P3hERds)] HTTP Request: GET /sessions finished in 0.012 seconds[0m
+[2m2025-05-30T22:49:36.754561Z[0m [[32m[1minfo     [0m] [1m[RID(v7K971MOj6)] HTTP Request: GET /agents finished in 0.025 seconds[0m
+[2m2025-05-30T22:49:36.795347Z[0m [[32m[1minfo     [0m] [1m[RID(BSYGLk1pvH)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:49:36.800347Z[0m [[32m[1minfo     [0m] [1m[RID(BSYGLk1pvH)] HTTP Request: GET /customers finished in 0.005 seconds[0m
+[2m2025-05-30T22:49:38.710383Z[0m [[32m[1minfo     [0m] [1m[RID(cD0iqJ05ih)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:49:38.714384Z[0m [[32m[1minfo     [0m] [1m[RID(XUmY1irc81)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:49:38.718385Z[0m [[32m[1minfo     [0m] [1m[RID(cD0iqJ05ih)] HTTP Request: GET /agents finished in 0.007 seconds[0m
+[2m2025-05-30T22:49:38.728384Z[0m [[32m[1minfo     [0m] [1m[RID(XUmY1irc81)] HTTP Request: GET /sessions finished in 0.014 seconds[0m
+[2m2025-05-30T22:49:38.732386Z[0m [[32m[1minfo     [0m] [1m[RID(f6hu4rHaOV)] HTTP Request: GET /guidelines started[0m
+[2m2025-05-30T22:49:38.747386Z[0m [[32m[1minfo     [0m] [1m[RID(f6hu4rHaOV)] HTTP Request: GET /guidelines finished in 0.015 seconds[0m
+[2m2025-05-30T22:49:38.755385Z[0m [[32m[1minfo     [0m] [1m[RID(KFqg92ULhq)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:49:38.756384Z[0m [[32m[1minfo     [0m] [1m[RID(vDkg7YxHkX)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:49:38.760386Z[0m [[32m[1minfo     [0m] [1m[RID(LsDECxpQ-8)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:49:38.763638Z[0m [[32m[1minfo     [0m] [1m[RID(KFqg92ULhq)] HTTP Request: GET /customers finished in 0.008 seconds[0m
+[2m2025-05-30T22:49:38.765637Z[0m [[32m[1minfo     [0m] [1m[RID(vDkg7YxHkX)] HTTP Request: GET /agents finished in 0.009 seconds[0m
+[2m2025-05-30T22:49:38.766638Z[0m [[32m[1minfo     [0m] [1m[RID(LsDECxpQ-8)] HTTP Request: GET /sessions finished in 0.006 seconds[0m
+[2m2025-05-30T22:49:50.140128Z[0m [[32m[1minfo     [0m] [1m[RID(ID4VYiw50v)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:49:50.248514Z[0m [[32m[1minfo     [0m] [1m[RID(jujEtqMhqx)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:49:50.277514Z[0m [[32m[1minfo     [0m] [1m[RID(hfnHpsYINZ)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:49:50.293515Z[0m [[32m[1minfo     [0m] [1m[RID(ID4VYiw50v)] HTTP Request: GET /sessions finished in 0.152 seconds[0m
+[2m2025-05-30T22:49:50.376358Z[0m [[32m[1minfo     [0m] [1m[RID(jujEtqMhqx)] HTTP Request: GET /agents finished in 0.128 seconds[0m
+[2m2025-05-30T22:49:50.380358Z[0m [[32m[1minfo     [0m] [1m[RID(hfnHpsYINZ)] HTTP Request: GET /customers finished in 0.103 seconds[0m
+[2m2025-05-30T22:49:53.880766Z[0m [[32m[1minfo     [0m] [1m[RID(3FB1mhZIou)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:49:53.882766Z[0m [[32m[1minfo     [0m] [1m[RID(3FB1mhZIou)] HTTP Request: GET /agents finished in 0.002 seconds[0m
+[2m2025-05-30T22:49:53.918045Z[0m [[32m[1minfo     [0m] [1m[RID(FvNr-TOFWp)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:49:53.920044Z[0m [[32m[1minfo     [0m] [1m[RID(XXMtLCpCvj)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:49:53.922043Z[0m [[32m[1minfo     [0m] [1m[RID(d8URkEEn99)] HTTP Request: GET /guidelines started[0m
+[2m2025-05-30T22:49:53.928046Z[0m [[32m[1minfo     [0m] [1m[RID(FvNr-TOFWp)] HTTP Request: GET /sessions finished in 0.01 seconds[0m
+[2m2025-05-30T22:49:53.933044Z[0m [[32m[1minfo     [0m] [1m[RID(XXMtLCpCvj)] HTTP Request: GET /agents finished in 0.013 seconds[0m
+[2m2025-05-30T22:49:53.934045Z[0m [[32m[1minfo     [0m] [1m[RID(d8URkEEn99)] HTTP Request: GET /guidelines finished in 0.012 seconds[0m
+[2m2025-05-30T22:49:53.937044Z[0m [[32m[1minfo     [0m] [1m[RID(HQGugm264Z)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:49:53.940751Z[0m [[32m[1minfo     [0m] [1m[RID(GB-VC0bNas)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:49:53.944758Z[0m [[32m[1minfo     [0m] [1m[RID(HQGugm264Z)] HTTP Request: GET /customers finished in 0.008 seconds[0m
+[2m2025-05-30T22:49:53.948889Z[0m [[32m[1minfo     [0m] [1m[RID(GB-VC0bNas)] HTTP Request: GET /sessions finished in 0.008 seconds[0m
+[2m2025-05-30T22:50:00.711585Z[0m [[32m[1minfo     [0m] [1m[RID(Qx4QuOhiRK)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:50:00.714584Z[0m [[32m[1minfo     [0m] [1m[RID(wOMLFnr4zp)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:50:00.718587Z[0m [[32m[1minfo     [0m] [1m[RID(Qx4QuOhiRK)] HTTP Request: GET /agents finished in 0.007 seconds[0m
+[2m2025-05-30T22:50:00.721585Z[0m [[32m[1minfo     [0m] [1m[RID(wOMLFnr4zp)] HTTP Request: GET /sessions finished in 0.007 seconds[0m
+[2m2025-05-30T22:50:23.789302Z[0m [[32m[1minfo     [0m] [1m[RID(GrJ8TnhFzZ)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:50:23.796300Z[0m [[32m[1minfo     [0m] [1m[RID(tTMqyp-lAw)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:50:23.823301Z[0m [[32m[1minfo     [0m] [1m[RID(x2hmhoK35H)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:50:23.834302Z[0m [[32m[1minfo     [0m] [1m[RID(GrJ8TnhFzZ)] HTTP Request: GET /sessions finished in 0.045 seconds[0m
+[2m2025-05-30T22:50:23.838303Z[0m [[32m[1minfo     [0m] [1m[RID(tTMqyp-lAw)] HTTP Request: GET /agents finished in 0.042 seconds[0m
+[2m2025-05-30T22:50:23.844304Z[0m [[32m[1minfo     [0m] [1m[RID(x2hmhoK35H)] HTTP Request: GET /customers finished in 0.021 seconds[0m
+[2m2025-05-30T22:52:42.459467Z[0m [[32m[1minfo     [0m] [1m[RID(ZU2kaRjF1k)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:52:42.461466Z[0m [[32m[1minfo     [0m] [1m[RID(Kjq3LVmV2x)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:52:42.464469Z[0m [[32m[1minfo     [0m] [1m[RID(5ONy6mGeLx)] HTTP Request: GET /guidelines started[0m
+[2m2025-05-30T22:52:42.465467Z[0m [[32m[1minfo     [0m] [1m[RID(VFkXmoSMst)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:52:42.472471Z[0m [[32m[1minfo     [0m] [1m[RID(ZU2kaRjF1k)] HTTP Request: GET /agents finished in 0.013 seconds[0m
+[2m2025-05-30T22:52:42.476468Z[0m [[32m[1minfo     [0m] [1m[RID(Kjq3LVmV2x)] HTTP Request: GET /sessions finished in 0.015 seconds[0m
+[2m2025-05-30T22:52:42.477469Z[0m [[32m[1minfo     [0m] [1m[RID(5ONy6mGeLx)] HTTP Request: GET /guidelines finished in 0.013 seconds[0m
+[2m2025-05-30T22:52:42.482468Z[0m [[32m[1minfo     [0m] [1m[RID(VFkXmoSMst)] HTTP Request: GET /customers finished in 0.017 seconds[0m
+[2m2025-05-30T22:52:42.486470Z[0m [[32m[1minfo     [0m] [1m[RID(Z8IKJfwxJO)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:52:42.493469Z[0m [[32m[1minfo     [0m] [1m[RID(88MV6tz7-q)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:52:42.498470Z[0m [[32m[1minfo     [0m] [1m[RID(88MV6tz7-q)] HTTP Request: GET /sessions finished in 0.005 seconds[0m
+[2m2025-05-30T22:52:42.500467Z[0m [[32m[1minfo     [0m] [1m[RID(Z8IKJfwxJO)] HTTP Request: GET /agents finished in 0.014 seconds[0m
+[2m2025-05-30T22:53:12.282996Z[0m [[32m[1minfo     [0m] [1m[RID(hTKDhY6nVA)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:53:12.284998Z[0m [[32m[1minfo     [0m] [1m[RID(qAuG-Ck0p4)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:53:12.289001Z[0m [[32m[1minfo     [0m] [1m[RID(hTKDhY6nVA)] HTTP Request: GET /agents finished in 0.006 seconds[0m
+[2m2025-05-30T22:53:12.289997Z[0m [[32m[1minfo     [0m] [1m[RID(qAuG-Ck0p4)] HTTP Request: GET /sessions finished in 0.005 seconds[0m
+[2m2025-05-30T22:53:12.293996Z[0m [[32m[1minfo     [0m] [1m[RID(UgI7YVr6hT)] HTTP Request: GET /guidelines started[0m
+[2m2025-05-30T22:53:12.295997Z[0m [[32m[1minfo     [0m] [1m[RID(d47daHJBKd)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:53:12.298996Z[0m [[32m[1minfo     [0m] [1m[RID(UgI7YVr6hT)] HTTP Request: GET /guidelines finished in 0.005 seconds[0m
+[2m2025-05-30T22:53:12.301999Z[0m [[32m[1minfo     [0m] [1m[RID(d47daHJBKd)] HTTP Request: GET /customers finished in 0.006 seconds[0m
+[2m2025-05-30T22:55:19.078774Z[0m [[32m[1minfo     [0m] [1m[<main>] Parlant server version 2.0.0[0m
+[2m2025-05-30T22:55:19.079774Z[0m [[32m[1minfo     [0m] [1m[<main>] Using home directory 'E:\1. DOCUMENTOS\NAO_E_PRIORIDADE\2. BACKUP\ASIMOV-AGENTS\parlant\parlant-data'[0m
+[2m2025-05-30T22:55:19.629268Z[0m [[32m[1minfo     [0m] [1m[<main>] No external modules selected[0m
+[2m2025-05-30T22:55:19.630269Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'websocket-logger'[0m
+[2m2025-05-30T22:55:20.400303Z[0m [[32m[1minfo     [0m] [1m[<main>] Initialized OpenAIService[0m
+[2m2025-05-30T22:55:22.379540Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2025-05-30T22:55:22.380541Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2025-05-30T22:55:22.380541Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2025-05-30T22:55:22.380541Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8000[0m
+[2m2025-05-30T22:55:41.432722Z[0m [[32m[1minfo     [0m] [1m[RID(Fsg1vWCqjV)] HTTP Request: GET / started[0m
+[2m2025-05-30T22:55:41.435722Z[0m [[32m[1minfo     [0m] [1m[RID(Fsg1vWCqjV)] HTTP Request: GET / finished in 0.003 seconds[0m
+[2m2025-05-30T22:55:41.437723Z[0m [[32m[1minfo     [0m] [1m[RID(UwZu-lrVpr)] HTTP Request: GET /chat started[0m
+[2m2025-05-30T22:55:41.440721Z[0m [[32m[1minfo     [0m] [1m[RID(UwZu-lrVpr)] HTTP Request: GET /chat finished in 0.003 seconds[0m
+[2m2025-05-30T22:55:47.640676Z[0m [[32m[1minfo     [0m] [1m[RID(nZ3cvphWap)] HTTP Request: GET / started[0m
+[2m2025-05-30T22:55:47.663682Z[0m [[32m[1minfo     [0m] [1m[RID(nZ3cvphWap)] HTTP Request: GET / finished in 0.023 seconds[0m
+[2m2025-05-30T22:55:47.713676Z[0m [[32m[1minfo     [0m] [1m[RID(VWOf85lr-O)] HTTP Request: GET /chat started[0m
+[2m2025-05-30T22:55:47.714675Z[0m [[32m[1minfo     [0m] [1m[RID(VWOf85lr-O)] HTTP Request: GET /chat finished in 0.001 seconds[0m
+[2m2025-05-30T22:55:49.097054Z[0m [[32m[1minfo     [0m] [1m[RID(yKsGb6kgm9)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:55:49.099056Z[0m [[32m[1minfo     [0m] [1m[RID(EBrhCxNFVb)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:55:49.103056Z[0m [[32m[1minfo     [0m] [1m[RID(jB9SKCB3gj)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:55:49.109056Z[0m [[32m[1minfo     [0m] [1m[RID(yKsGb6kgm9)] HTTP Request: GET /sessions finished in 0.012 seconds[0m
+[2m2025-05-30T22:55:49.113055Z[0m [[32m[1minfo     [0m] [1m[RID(EBrhCxNFVb)] HTTP Request: GET /agents finished in 0.014 seconds[0m
+[2m2025-05-30T22:55:49.131055Z[0m [[32m[1minfo     [0m] [1m[RID(jB9SKCB3gj)] HTTP Request: GET /customers finished in 0.028 seconds[0m
+[2m2025-05-30T22:55:53.778614Z[0m [[32m[1minfo     [0m] [1m[RID(jiBjqifLU8)] HTTP Request: GET /system/status started[0m
+[2m2025-05-30T22:55:54.817113Z[0m [[32m[1minfo     [0m] [1m[RID(PYXqS0TXFg)] HTTP Request: GET /system/stats started[0m
+[2m2025-05-30T22:55:54.818112Z[0m [[32m[1minfo     [0m] [1m[RID(5oFj4I9XGK)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:55:54.819113Z[0m [[32m[1minfo     [0m] [1m[RID(4aZChBmLEu)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:55:54.822113Z[0m [[32m[1minfo     [0m] [1m[RID(jiBjqifLU8)] HTTP Request: GET /system/status finished in 1.043 seconds[0m
+[2m2025-05-30T22:55:54.828115Z[0m [[32m[1minfo     [0m] [1m[RID(4aZChBmLEu)] HTTP Request: GET /sessions finished in 0.009 seconds[0m
+[2m2025-05-30T22:55:54.832116Z[0m [[32m[1minfo     [0m] [1m[RID(5oFj4I9XGK)] HTTP Request: GET /agents finished in 0.014 seconds[0m
+[2m2025-05-30T22:55:54.835115Z[0m [[32m[1minfo     [0m] [1m[RID(PYXqS0TXFg)] HTTP Request: GET /system/stats finished in 0.018 seconds[0m
+[2m2025-05-30T22:55:59.615144Z[0m [[32m[1minfo     [0m] [1m[RID(oDX1Suq9xi)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:55:59.623139Z[0m [[32m[1minfo     [0m] [1m[RID(7jX-vb0Lzm)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:55:59.624140Z[0m [[32m[1minfo     [0m] [1m[RID(b1hs3APXQh)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:55:59.634141Z[0m [[32m[1minfo     [0m] [1m[RID(oDX1Suq9xi)] HTTP Request: GET /sessions finished in 0.019 seconds[0m
+[2m2025-05-30T22:55:59.641139Z[0m [[32m[1minfo     [0m] [1m[RID(7jX-vb0Lzm)] HTTP Request: GET /agents finished in 0.018 seconds[0m
+[2m2025-05-30T22:55:59.653139Z[0m [[32m[1minfo     [0m] [1m[RID(b1hs3APXQh)] HTTP Request: GET /customers finished in 0.029 seconds[0m
+[2m2025-05-30T22:56:06.561915Z[0m [[32m[1minfo     [0m] [1m[RID(xCVXn6WjSW)] HTTP Request: GET /system/status started[0m
+[2m2025-05-30T22:56:06.563913Z[0m [[32m[1minfo     [0m] [1m[RID(MMdkEB4azI)] HTTP Request: GET /system/stats started[0m
+[2m2025-05-30T22:56:07.586207Z[0m [[32m[1minfo     [0m] [1m[RID(i3vsJ5n7zG)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:56:07.589207Z[0m [[32m[1minfo     [0m] [1m[RID(mh1iqybjEJ)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:56:07.592208Z[0m [[32m[1minfo     [0m] [1m[RID(xCVXn6WjSW)] HTTP Request: GET /system/status finished in 1.03 seconds[0m
+[2m2025-05-30T22:56:07.596209Z[0m [[32m[1minfo     [0m] [1m[RID(i3vsJ5n7zG)] HTTP Request: GET /agents finished in 0.01 seconds[0m
+[2m2025-05-30T22:56:07.598210Z[0m [[32m[1minfo     [0m] [1m[RID(mh1iqybjEJ)] HTTP Request: GET /sessions finished in 0.009 seconds[0m
+[2m2025-05-30T22:56:07.602208Z[0m [[32m[1minfo     [0m] [1m[RID(MMdkEB4azI)] HTTP Request: GET /system/stats finished in 1.038 seconds[0m
+[2m2025-05-30T22:56:16.582392Z[0m [[32m[1minfo     [0m] [1m[RID(TguB5YsPFq)] HTTP Request: GET /favicon.ico started[0m
+[2m2025-05-30T22:56:16.584993Z[0m [[32m[1minfo     [0m] [1m[RID(TguB5YsPFq)] HTTP Request: GET /favicon.ico finished in 0.003 seconds[0m
+[2m2025-05-30T22:56:19.123002Z[0m [[32m[1minfo     [0m] [1m[RID(oz64D9eT4r)] HTTP Request: GET / started[0m
+[2m2025-05-30T22:56:19.124002Z[0m [[32m[1minfo     [0m] [1m[RID(oz64D9eT4r)] HTTP Request: GET / finished in 0.001 seconds[0m
+[2m2025-05-30T22:56:19.129003Z[0m [[32m[1minfo     [0m] [1m[RID(QajkxnS-TH)] HTTP Request: GET /chat started[0m
+[2m2025-05-30T22:56:19.130002Z[0m [[32m[1minfo     [0m] [1m[RID(QajkxnS-TH)] HTTP Request: GET /chat finished in 0.001 seconds[0m
+[2m2025-05-30T22:56:19.572191Z[0m [[32m[1minfo     [0m] [1m[RID(M28vAEkl7L)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:56:19.574193Z[0m [[32m[1minfo     [0m] [1m[RID(m94EC7mp36)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:56:19.576194Z[0m [[32m[1minfo     [0m] [1m[RID(M28vAEkl7L)] HTTP Request: GET /sessions finished in 0.004 seconds[0m
+[2m2025-05-30T22:56:19.578192Z[0m [[32m[1minfo     [0m] [1m[RID(m94EC7mp36)] HTTP Request: GET /agents finished in 0.004 seconds[0m
+[2m2025-05-30T22:56:19.581192Z[0m [[32m[1minfo     [0m] [1m[RID(Og2amB0zez)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:56:19.584193Z[0m [[32m[1minfo     [0m] [1m[RID(Og2amB0zez)] HTTP Request: GET /customers finished in 0.003 seconds[0m
+[2m2025-05-30T22:56:20.770085Z[0m [[32m[1minfo     [0m] [1m[RID(gXDbEjQFSm)] HTTP Request: GET /system/status started[0m
+[2m2025-05-30T22:56:20.772087Z[0m [[32m[1minfo     [0m] [1m[RID(dWZLCqDx2a)] HTTP Request: GET /system/stats started[0m
+[2m2025-05-30T22:56:21.788124Z[0m [[32m[1minfo     [0m] [1m[RID(dBWSx3Lvqz)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:56:21.791120Z[0m [[32m[1minfo     [0m] [1m[RID(xOtfy0hwbO)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:56:21.792122Z[0m [[32m[1minfo     [0m] [1m[RID(gXDbEjQFSm)] HTTP Request: GET /system/status finished in 1.022 seconds[0m
+[2m2025-05-30T22:56:21.794122Z[0m [[32m[1minfo     [0m] [1m[RID(dBWSx3Lvqz)] HTTP Request: GET /agents finished in 0.006 seconds[0m
+[2m2025-05-30T22:56:21.795122Z[0m [[32m[1minfo     [0m] [1m[RID(xOtfy0hwbO)] HTTP Request: GET /sessions finished in 0.004 seconds[0m
+[2m2025-05-30T22:56:21.797124Z[0m [[32m[1minfo     [0m] [1m[RID(dWZLCqDx2a)] HTTP Request: GET /system/stats finished in 1.025 seconds[0m
+[2m2025-05-30T22:56:51.096929Z[0m [[32m[1minfo     [0m] [1m[RID(64A9GBEwiE)] HTTP Request: GET /system/status started[0m
+[2m2025-05-30T22:56:52.112932Z[0m [[32m[1minfo     [0m] [1m[RID(tcyW1LyM1v)] HTTP Request: GET /system/stats started[0m
+[2m2025-05-30T22:56:52.115930Z[0m [[32m[1minfo     [0m] [1m[RID(64A9GBEwiE)] HTTP Request: GET /system/status finished in 1.019 seconds[0m
+[2m2025-05-30T22:56:52.120931Z[0m [[32m[1minfo     [0m] [1m[RID(tcyW1LyM1v)] HTTP Request: GET /system/stats finished in 0.007 seconds[0m
+[2m2025-05-30T22:56:52.975118Z[0m [[32m[1minfo     [0m] [1m[RID(QPGjZL3TMP)] HTTP Request: GET /sessions started[0m
+[2m2025-05-30T22:56:52.982116Z[0m [[32m[1minfo     [0m] [1m[RID(p-0N6p6-wH)] HTTP Request: GET /agents started[0m
+[2m2025-05-30T22:56:52.986119Z[0m [[32m[1minfo     [0m] [1m[RID(naJ4jSF1UA)] HTTP Request: GET /customers started[0m
+[2m2025-05-30T22:56:52.999120Z[0m [[32m[1minfo     [0m] [1m[RID(QPGjZL3TMP)] HTTP Request: GET /sessions finished in 0.024 seconds[0m
+[2m2025-05-30T22:56:53.002116Z[0m [[32m[1minfo     [0m] [1m[RID(p-0N6p6-wH)] HTTP Request: GET /agents finished in 0.02 seconds[0m
+[2m2025-05-30T22:56:53.003117Z[0m [[32m[1minfo     [0m] [1m[RID(naJ4jSF1UA)] HTTP Request: GET /customers finished in 0.017 seconds[0m
+[2m2025-06-01T16:37:52.522290Z[0m [[32m[1minfo     [0m] [1m[<main>] Parlant server version 2.0.0[0m
+[2m2025-06-01T16:37:52.563275Z[0m [[32m[1minfo     [0m] [1m[<main>] Using home directory 'E:\1. DOCUMENTOS\NAO_E_PRIORIDADE\2. BACKUP\ASIMOV-AGENTS\parlant\parlant-data'[0m
+[2m2025-06-01T16:38:01.618655Z[0m [[32m[1minfo     [0m] [1m[<main>] No external modules selected[0m
+[2m2025-06-01T16:38:01.618655Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'websocket-logger'[0m
+[2m2025-06-01T16:38:10.355971Z[0m [[32m[1minfo     [0m] [1m[<main>] Initialized OpenAIService[0m
+[2m2025-06-01T16:38:13.177154Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2025-06-01T16:38:13.178149Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2025-06-01T16:38:13.178149Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2025-06-01T16:38:13.179148Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8800[0m
+[2m2025-06-01T16:41:07.684497Z[0m [[32m[1minfo     [0m] [1m[<main>] Parlant server version 2.0.0[0m
+[2m2025-06-01T16:41:07.685025Z[0m [[32m[1minfo     [0m] [1m[<main>] Using home directory 'E:\1. DOCUMENTOS\NAO_E_PRIORIDADE\2. BACKUP\ASIMOV-AGENTS\parlant\parlant-data'[0m
+[2m2025-06-01T16:41:08.425646Z[0m [[32m[1minfo     [0m] [1m[<main>] No external modules selected[0m
+[2m2025-06-01T16:41:08.426649Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'websocket-logger'[0m
+[2m2025-06-01T16:41:09.489899Z[0m [[32m[1minfo     [0m] [1m[<main>] Initialized OpenAIService[0m
+[2m2025-06-01T16:41:11.281161Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2025-06-01T16:41:11.281161Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2025-06-01T16:41:11.282157Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2025-06-01T16:41:11.282157Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8800[0m
+[2m2025-06-01T16:41:36.662644Z[0m [[32m[1minfo     [0m] [1m[RID(5GnHxObyRl)] HTTP Request: GET / started[0m
+[2m2025-06-01T16:41:36.664644Z[0m [[32m[1minfo     [0m] [1m[RID(5GnHxObyRl)] HTTP Request: GET / finished in 0.002 seconds[0m
+[2m2025-06-01T16:41:36.866675Z[0m [[32m[1minfo     [0m] [1m[RID(UTGmKe6TMW)] HTTP Request: GET /chat started[0m
+[2m2025-06-01T16:41:36.866675Z[0m [[32m[1minfo     [0m] [1m[RID(UTGmKe6TMW)] HTTP Request: GET /chat finished in 0.0 seconds[0m
+[2m2025-06-01T16:41:38.620322Z[0m [[32m[1minfo     [0m] [1m[RID(1ju3XkV5qs)] HTTP Request: GET /sessions started[0m
+[2m2025-06-01T16:41:38.623321Z[0m [[32m[1minfo     [0m] [1m[RID(Q9yejb083e)] HTTP Request: GET /agents started[0m
+[2m2025-06-01T16:41:38.629321Z[0m [[32m[1minfo     [0m] [1m[RID(Y-bhmYQq3A)] HTTP Request: GET /customers started[0m
+[2m2025-06-01T16:41:38.651320Z[0m [[32m[1minfo     [0m] [1m[RID(1ju3XkV5qs)] HTTP Request: GET /sessions finished in 0.031 seconds[0m
+[2m2025-06-01T16:41:38.652618Z[0m [[32m[1minfo     [0m] [1m[RID(Q9yejb083e)] HTTP Request: GET /agents finished in 0.029 seconds[0m
+[2m2025-06-01T16:41:38.654324Z[0m [[32m[1minfo     [0m] [1m[RID(Y-bhmYQq3A)] HTTP Request: GET /customers finished in 0.025 seconds[0m
+[2m2025-06-01T16:41:53.764586Z[0m [[32m[1minfo     [0m] [1m[RID(N2-wExfhNA)] HTTP Request: GET /sessions started[0m
+[2m2025-06-01T16:41:53.769587Z[0m [[32m[1minfo     [0m] [1m[RID(uyfoEgAavz)] HTTP Request: GET /agents started[0m
+[2m2025-06-01T16:41:53.780586Z[0m [[32m[1minfo     [0m] [1m[RID(N2-wExfhNA)] HTTP Request: GET /sessions finished in 0.016 seconds[0m
+[2m2025-06-01T16:41:53.783586Z[0m [[32m[1minfo     [0m] [1m[RID(uyfoEgAavz)] HTTP Request: GET /agents finished in 0.014 seconds[0m
+[2m2025-06-01T16:41:53.806587Z[0m [[32m[1minfo     [0m] [1m[RID(tIaVpILGh5)] HTTP Request: GET /customers started[0m
+[2m2025-06-01T16:41:53.902106Z[0m [[32m[1minfo     [0m] [1m[RID(tIaVpILGh5)] HTTP Request: GET /customers finished in 0.096 seconds[0m
+[2m2025-06-01T16:41:56.006481Z[0m [[32m[1minfo     [0m] [1m[RID(XUd30fElgQ)] HTTP Request: GET /system/status started[0m
+[2m2025-06-01T16:41:57.084269Z[0m [[32m[1minfo     [0m] [1m[RID(EuDmYiSboL)] HTTP Request: GET /system/stats started[0m
+[2m2025-06-01T16:41:57.088267Z[0m [[32m[1minfo     [0m] [1m[RID(qIv5GdHEY5)] HTTP Request: GET /agents started[0m
+[2m2025-06-01T16:41:57.097270Z[0m [[32m[1minfo     [0m] [1m[RID(qBGWJM597l)] HTTP Request: GET /sessions started[0m
+[2m2025-06-01T16:41:57.139268Z[0m [[32m[1minfo     [0m] [1m[RID(XUd30fElgQ)] HTTP Request: GET /system/status finished in 1.133 seconds[0m
+[2m2025-06-01T16:41:57.188269Z[0m [[32m[1minfo     [0m] [1m[RID(qIv5GdHEY5)] HTTP Request: GET /agents finished in 0.1 seconds[0m
+[2m2025-06-01T16:41:57.220269Z[0m [[32m[1minfo     [0m] [1m[RID(qBGWJM597l)] HTTP Request: GET /sessions finished in 0.123 seconds[0m
+[2m2025-06-01T16:41:57.239269Z[0m [[32m[1minfo     [0m] [1m[RID(EuDmYiSboL)] HTTP Request: GET /system/stats finished in 0.155 seconds[0m
+[2m2025-06-01T16:42:04.081867Z[0m [[32m[1minfo     [0m] [1m[RID(soWMZfo9SC)] HTTP Request: GET /sessions started[0m
+[2m2025-06-01T16:42:04.083869Z[0m [[32m[1minfo     [0m] [1m[RID(z6uob67CO7)] HTTP Request: GET /agents started[0m
+[2m2025-06-01T16:42:04.087870Z[0m [[32m[1minfo     [0m] [1m[RID(k4LPTFot2X)] HTTP Request: GET /customers started[0m
+[2m2025-06-01T16:42:04.099868Z[0m [[32m[1minfo     [0m] [1m[RID(soWMZfo9SC)] HTTP Request: GET /sessions finished in 0.018 seconds[0m
+[2m2025-06-01T16:42:04.105867Z[0m [[32m[1minfo     [0m] [1m[RID(z6uob67CO7)] HTTP Request: GET /agents finished in 0.022 seconds[0m
+[2m2025-06-01T16:42:04.113385Z[0m [[32m[1minfo     [0m] [1m[RID(k4LPTFot2X)] HTTP Request: GET /customers finished in 0.026 seconds[0m

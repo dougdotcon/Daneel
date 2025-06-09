@@ -22,7 +22,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 import pandas as pd
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 class DataFormat(str, Enum):

@@ -18,19 +18,19 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from datetime import datetime, timezone
 
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.common import ItemNotFoundError, JSONSerializable, UniqueId, Version, generate_id
-from parlant.core.persistence.common import ObjectId, Where
-from parlant.core.persistence.document_database import (
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.common import ItemNotFoundError, JSONSerializable, UniqueId, Version, generate_id
+from Daneel.core.persistence.common import ObjectId, Where
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     DocumentCollection,
 )
-from parlant.core.persistence.document_database_helper import (
+from Daneel.core.persistence.document_database_helper import (
     DocumentStoreMigrationHelper,
     DocumentMigrationHelper,
 )
-from parlant.core.tags import TagId
+from Daneel.core.tags import TagId
 
 GuidelineId = NewType("GuidelineId", str)
 
@@ -222,7 +222,7 @@ class GuidelineDocumentStore(GuidelineStore):
 
         async def v0_2_0_to_v_0_3_0(doc: BaseDocument) -> Optional[BaseDocument]:
             raise Exception(
-                "This code should not be reached! Please run the 'parlant-prepare-migration' script."
+                "This code should not be reached! Please run the 'Daneel-prepare-migration' script."
             )
 
         return await DocumentMigrationHelper[GuidelineDocument](

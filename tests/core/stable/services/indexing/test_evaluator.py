@@ -17,8 +17,8 @@ import asyncio
 from lagom import Container
 from pytest import raises
 
-from parlant.core.agents import Agent
-from parlant.core.evaluations import (
+from Daneel.core.agents import Agent
+from Daneel.core.evaluations import (
     EntailmentRelationshipPropositionKind,
     EvaluationListener,
     EvaluationStatus,
@@ -28,12 +28,12 @@ from parlant.core.evaluations import (
     PayloadDescriptor,
     PayloadKind,
 )
-from parlant.core.guidelines import GuidelineContent, GuidelineStore
-from parlant.core.services.indexing.behavioral_change_evaluation import (
+from Daneel.core.guidelines import GuidelineContent, GuidelineStore
+from Daneel.core.services.indexing.behavioral_change_evaluation import (
     BehavioralChangeEvaluator,
     EvaluationValidationError,
 )
-from parlant.core.tags import Tag
+from Daneel.core.tags import Tag
 from tests.conftest import NoCachedGenerations
 
 AMOUNT_OF_TIME_TO_WAIT_FOR_EVALUATION_TO_START_RUNNING = 0.3

@@ -18,9 +18,9 @@ from dataclasses import dataclass
 from typing import Awaitable, Callable, Generic, Optional, Sequence, TypeVar, TypedDict
 from typing_extensions import Required
 
-from parlant.core.common import JSONSerializable, Version
-from parlant.core.nlp.embedding import Embedder
-from parlant.core.persistence.common import ObjectId, Where
+from Daneel.core.common import JSONSerializable, Version
+from Daneel.core.nlp.embedding import Embedder
+from Daneel.core.persistence.common import ObjectId, Where
 
 
 class BaseDocument(TypedDict, total=False):

@@ -14,11 +14,11 @@
 
 from lagom import Container
 
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
-from parlant.core.relationships import EntityType, GuidelineRelationshipKind, RelationshipStore
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.tags import TagStore
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.engines.alpha.relational_guideline_resolver import RelationalGuidelineResolver
+from Daneel.core.relationships import EntityType, GuidelineRelationshipKind, RelationshipStore
+from Daneel.core.guidelines import GuidelineStore
+from Daneel.core.tags import TagStore
 
 
 async def test_that_relational_guideline_resolver_prioritizes_indirectly_between_guidelines(

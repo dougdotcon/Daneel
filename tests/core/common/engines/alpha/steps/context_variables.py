@@ -14,16 +14,16 @@
 
 from pytest_bdd import given, parsers
 
-from parlant.core.agents import AgentId
-from parlant.core.context_variables import (
+from Daneel.core.agents import AgentId
+from Daneel.core.context_variables import (
     ContextVariable,
     ContextVariableStore,
     ContextVariableValue,
 )
-from parlant.core.customers import CustomerStore
-from parlant.core.sessions import SessionId, SessionStore
-from parlant.core.tags import Tag, TagStore
-from parlant.core.tools import ToolId
+from Daneel.core.customers import CustomerStore
+from Daneel.core.sessions import SessionId, SessionStore
+from Daneel.core.tags import Tag, TagStore
+from Daneel.core.tools import ToolId
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

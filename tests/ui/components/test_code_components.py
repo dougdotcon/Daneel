@@ -17,7 +17,7 @@
 import pytest
 from unittest.mock import MagicMock
 
-from parlant.ui.components.code import CodeBlock, CodeBlockOptions, DiffViewer, DiffViewerOptions, DiffMode
+from Daneel.ui.components.code import CodeBlock, CodeBlockOptions, DiffViewer, DiffViewerOptions, DiffMode
 
 
 @pytest.fixture
@@ -80,12 +80,12 @@ class TestCodeBlock:
         html = code_block.render_html(code, options)
         
         # Check that the HTML contains the expected elements
-        assert "parlant-code-block-container" in html
-        assert "parlant-code-block-header" in html
-        assert "parlant-code-block-filename" in html
-        assert "parlant-code-block-content" in html
-        assert "parlant-code-block-footer" in html
-        assert "parlant-code-block-copy-button" in html
+        assert "Daneel-code-block-container" in html
+        assert "Daneel-code-block-header" in html
+        assert "Daneel-code-block-filename" in html
+        assert "Daneel-code-block-content" in html
+        assert "Daneel-code-block-footer" in html
+        assert "Daneel-code-block-copy-button" in html
         assert "test.py" in html
         assert "PYTHON" in html
         
@@ -95,12 +95,12 @@ class TestCodeBlock:
         css = code_block.get_css()
         
         # Check that the CSS contains the expected selectors
-        assert ".parlant-code-block-container" in css
-        assert ".parlant-code-block-header" in css
-        assert ".parlant-code-block-filename" in css
-        assert ".parlant-code-block-content" in css
-        assert ".parlant-code-block-footer" in css
-        assert ".parlant-code-block-copy-button" in css
+        assert ".Daneel-code-block-container" in css
+        assert ".Daneel-code-block-header" in css
+        assert ".Daneel-code-block-filename" in css
+        assert ".Daneel-code-block-content" in css
+        assert ".Daneel-code-block-footer" in css
+        assert ".Daneel-code-block-copy-button" in css
 
 
 class TestDiffViewer:
@@ -180,10 +180,10 @@ class TestDiffViewer:
         html = diff_viewer.render_split_view(old_code, new_code, options)
         
         # Check that the HTML contains the expected elements
-        assert "parlant-diff-split-view" in html
-        assert "parlant-diff-old" in html
-        assert "parlant-diff-new" in html
-        assert "parlant-diff-header" in html
+        assert "Daneel-diff-split-view" in html
+        assert "Daneel-diff-old" in html
+        assert "Daneel-diff-new" in html
+        assert "Daneel-diff-header" in html
         assert "Old" in html
         assert "New" in html
         
@@ -202,7 +202,7 @@ class TestDiffViewer:
         html = diff_viewer.render_unified_view(old_code, new_code, options)
         
         # Check that the HTML contains the expected elements
-        assert "parlant-diff-unified-view" in html
+        assert "Daneel-diff-unified-view" in html
         
     def test_render_html(self, mock_logger):
         """Test HTML rendering."""
@@ -221,12 +221,12 @@ class TestDiffViewer:
         html = diff_viewer.render_html(old_code, new_code, options)
         
         # Check that the HTML contains the expected elements
-        assert "parlant-diff-container" in html
-        assert "parlant-diff-top-header" in html
-        assert "parlant-diff-filename" in html
-        assert "parlant-diff-content" in html
-        assert "parlant-diff-mode-selector" in html
-        assert "parlant-diff-copy-button" in html
+        assert "Daneel-diff-container" in html
+        assert "Daneel-diff-top-header" in html
+        assert "Daneel-diff-filename" in html
+        assert "Daneel-diff-content" in html
+        assert "Daneel-diff-mode-selector" in html
+        assert "Daneel-diff-copy-button" in html
         assert "test.py" in html
         assert "PYTHON" in html
         assert "Split View" in html
@@ -238,15 +238,15 @@ class TestDiffViewer:
         css = diff_viewer.get_css()
         
         # Check that the CSS contains the expected selectors
-        assert ".parlant-diff-container" in css
-        assert ".parlant-diff-top-header" in css
-        assert ".parlant-diff-filename" in css
-        assert ".parlant-diff-content" in css
-        assert ".parlant-diff-mode-selector" in css
-        assert ".parlant-diff-copy-button" in css
-        assert ".parlant-diff-split-view" in css
-        assert ".parlant-diff-unified-view" in css
-        assert ".parlant-diff-old" in css
-        assert ".parlant-diff-new" in css
-        assert ".parlant-diff-line-added" in css
-        assert ".parlant-diff-line-removed" in css
+        assert ".Daneel-diff-container" in css
+        assert ".Daneel-diff-top-header" in css
+        assert ".Daneel-diff-filename" in css
+        assert ".Daneel-diff-content" in css
+        assert ".Daneel-diff-mode-selector" in css
+        assert ".Daneel-diff-copy-button" in css
+        assert ".Daneel-diff-split-view" in css
+        assert ".Daneel-diff-unified-view" in css
+        assert ".Daneel-diff-old" in css
+        assert ".Daneel-diff-new" in css
+        assert ".Daneel-diff-line-added" in css
+        assert ".Daneel-diff-line-removed" in css

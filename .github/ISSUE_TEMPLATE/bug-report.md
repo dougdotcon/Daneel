@@ -23,7 +23,7 @@ A clear and concise description of what you expected to happen.
 # Environment
  - OS: [e.g. iOS]
  - Python version [e.g. 3.12]
- - Parlant version [e.g. 1.5.1]
+ - Daneel version [e.g. 1.5.1]
 
 # Discussion
 Add any other context or open questions about the problem here.

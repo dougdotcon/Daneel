@@ -17,18 +17,18 @@ import httpx
 from lagom import Container
 from pytest import raises
 
-from parlant.core.agents import AgentId
-from parlant.core.common import ItemNotFoundError
-from parlant.core.relationships import (
+from Daneel.core.agents import AgentId
+from Daneel.core.common import ItemNotFoundError
+from Daneel.core.relationships import (
     EntityType,
     GuidelineRelationshipKind,
     RelationshipStore,
 )
-from parlant.core.guideline_tool_associations import GuidelineToolAssociationStore
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineStore
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.tags import Tag, TagId, TagStore
-from parlant.core.tools import LocalToolService, ToolId
+from Daneel.core.guideline_tool_associations import GuidelineToolAssociationStore
+from Daneel.core.guidelines import Guideline, GuidelineContent, GuidelineStore
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.tags import Tag, TagId, TagStore
+from Daneel.core.tools import LocalToolService, ToolId
 
 from tests.test_utilities import (
     OPENAPI_SERVER_URL,

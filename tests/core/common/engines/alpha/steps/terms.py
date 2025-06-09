@@ -14,9 +14,9 @@
 
 from pytest_bdd import given, parsers
 
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.glossary import GlossaryStore
-from parlant.core.tags import Tag
+from Daneel.core.agents import AgentId, AgentStore
+from Daneel.core.glossary import GlossaryStore
+from Daneel.core.tags import Tag
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

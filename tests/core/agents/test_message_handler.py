@@ -18,7 +18,7 @@ import json
 import pytest
 from unittest.mock import MagicMock
 
-from parlant.core.agents.utils import Message, MessageHandler
+from Daneel.core.agents.utils import Message, MessageHandler
 
 
 @pytest.fixture

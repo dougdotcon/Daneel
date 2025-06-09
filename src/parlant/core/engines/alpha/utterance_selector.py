@@ -27,26 +27,26 @@ import traceback
 from typing import Any, Mapping, Optional, Sequence, cast
 from typing_extensions import override
 
-from parlant.core.async_utils import safe_gather
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.agents import Agent, CompositionMode
-from parlant.core.context_variables import ContextVariable, ContextVariableValue
-from parlant.core.customers import Customer
-from parlant.core.engines.alpha.message_event_composer import (
+from Daneel.core.async_utils import safe_gather
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.agents import Agent, CompositionMode
+from Daneel.core.context_variables import ContextVariable, ContextVariableValue
+from Daneel.core.customers import Customer
+from Daneel.core.engines.alpha.message_event_composer import (
     MessageCompositionError,
     MessageEventComposer,
     MessageEventComposition,
 )
-from parlant.core.engines.alpha.message_generator import MessageGenerator
-from parlant.core.engines.alpha.tool_caller import ToolInsights
-from parlant.core.utterances import Utterance, UtteranceId, UtteranceStore
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder, BuiltInSection, SectionStatus
-from parlant.core.glossary import Term
-from parlant.core.emissions import EmittedEvent, EventEmitter
-from parlant.core.sessions import (
+from Daneel.core.engines.alpha.message_generator import MessageGenerator
+from Daneel.core.engines.alpha.tool_caller import ToolInsights
+from Daneel.core.utterances import Utterance, UtteranceId, UtteranceStore
+from Daneel.core.nlp.generation import SchematicGenerator
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.engines.alpha.prompt_builder import PromptBuilder, BuiltInSection, SectionStatus
+from Daneel.core.glossary import Term
+from Daneel.core.emissions import EmittedEvent, EventEmitter
+from Daneel.core.sessions import (
     Event,
     EventKind,
     EventSource,
@@ -54,10 +54,10 @@ from parlant.core.sessions import (
     Participant,
     ToolEventData,
 )
-from parlant.core.common import DefaultBaseModel, JSONSerializable
-from parlant.core.loggers import Logger
-from parlant.core.shots import Shot, ShotCollection
-from parlant.core.tools import ToolId
+from Daneel.core.common import DefaultBaseModel, JSONSerializable
+from Daneel.core.loggers import Logger
+from Daneel.core.shots import Shot, ShotCollection
+from Daneel.core.tools import ToolId
 
 DEFAULT_NO_MATCH_UTTERANCE = (
     "Sorry, I couldn't hear you very well due to a hiccup. Could you please repeat that?"

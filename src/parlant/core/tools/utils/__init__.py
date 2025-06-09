@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Utility tools for Parlant."""
+"""Utility tools for Daneel."""
 
-from parlant.core.tools.utils.general import (
+from Daneel.core.tools.utils.general import (
     get_current_time,
     generate_random_string,
     generate_uuid,

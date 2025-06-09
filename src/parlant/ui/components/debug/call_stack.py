@@ -19,8 +19,8 @@ import traceback
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Set, Tuple, Union
 
-from parlant.core.loggers import Logger
-from parlant.ui.components.code.code_block import CodeBlock, CodeBlockOptions
+from Daneel.core.loggers import Logger
+from Daneel.ui.components.code.code_block import CodeBlock, CodeBlockOptions
 
 
 @dataclass
@@ -171,33 +171,33 @@ class CallStack:
         html = []
         
         # Frame container
-        selected_class = "parlant-call-stack-frame-selected" if is_selected else ""
-        library_class = "parlant-call-stack-frame-library" if frame.is_library else ""
-        html.append(f'<div class="parlant-call-stack-frame {selected_class} {library_class}" data-index="{index}">')
+        selected_class = "Daneel-call-stack-frame-selected" if is_selected else ""
+        library_class = "Daneel-call-stack-frame-library" if frame.is_library else ""
+        html.append(f'<div class="Daneel-call-stack-frame {selected_class} {library_class}" data-index="{index}">')
         
         # Frame header
-        html.append('<div class="parlant-call-stack-frame-header">')
+        html.append('<div class="Daneel-call-stack-frame-header">')
         
         # Function name
-        html.append(f'<div class="parlant-call-stack-function-name">{frame.function_name or "<anonymous>"}</div>')
+        html.append(f'<div class="Daneel-call-stack-function-name">{frame.function_name or "<anonymous>"}</div>')
         
         # File and line
         location = f"{file_name}:{frame.line_number}"
         if frame.column_number is not None:
             location += f":{frame.column_number}"
             
-        html.append(f'<div class="parlant-call-stack-location">{location}</div>')
+        html.append(f'<div class="Daneel-call-stack-location">{location}</div>')
         
         html.append('</div>')  # End frame header
         
         # Frame details (only shown if selected)
         if is_selected:
-            html.append('<div class="parlant-call-stack-frame-details">')
+            html.append('<div class="Daneel-call-stack-frame-details">')
             
             # Source code
             if options.show_source and frame.source:
-                html.append('<div class="parlant-call-stack-source">')
-                html.append('<div class="parlant-call-stack-section-title">Source</div>')
+                html.append('<div class="Daneel-call-stack-source">')
+                html.append('<div class="Daneel-call-stack-section-title">Source</div>')
                 
                 # Get the source code with context
                 source = frame.source
@@ -220,33 +220,33 @@ class CallStack:
                     
                     html.append(self.code_block.render_html(source, code_options))
                 else:
-                    html.append('<div class="parlant-call-stack-no-source">Source code not available</div>')
+                    html.append('<div class="Daneel-call-stack-no-source">Source code not available</div>')
                     
                 html.append('</div>')  # End source
                 
             # Variables
             if options.show_variables and frame.variables:
-                html.append('<div class="parlant-call-stack-variables">')
-                html.append('<div class="parlant-call-stack-section-title">Local Variables</div>')
+                html.append('<div class="Daneel-call-stack-variables">')
+                html.append('<div class="Daneel-call-stack-section-title">Local Variables</div>')
                 
-                html.append('<div class="parlant-call-stack-variables-list">')
+                html.append('<div class="Daneel-call-stack-variables-list">')
                 for name, value in frame.variables.items():
-                    html.append('<div class="parlant-call-stack-variable">')
-                    html.append(f'<div class="parlant-call-stack-variable-name">{name}</div>')
+                    html.append('<div class="Daneel-call-stack-variable">')
+                    html.append(f'<div class="Daneel-call-stack-variable-name">{name}</div>')
                     
                     # Format the value based on its type
                     if isinstance(value, str):
                         formatted_value = f'"{value}"'
-                        value_class = "parlant-call-stack-string"
+                        value_class = "Daneel-call-stack-string"
                     elif isinstance(value, (int, float)):
                         formatted_value = str(value)
-                        value_class = "parlant-call-stack-number"
+                        value_class = "Daneel-call-stack-number"
                     elif isinstance(value, bool):
                         formatted_value = str(value).lower()
-                        value_class = "parlant-call-stack-boolean"
+                        value_class = "Daneel-call-stack-boolean"
                     elif value is None:
                         formatted_value = "null"
-                        value_class = "parlant-call-stack-null"
+                        value_class = "Daneel-call-stack-null"
                     elif isinstance(value, list):
                         formatted_value = f"Array({len(value)})"
                         value_class = ""
@@ -257,7 +257,7 @@ class CallStack:
                         formatted_value = str(value)
                         value_class = ""
                         
-                    html.append(f'<div class="parlant-call-stack-variable-value {value_class}">{formatted_value}</div>')
+                    html.append(f'<div class="Daneel-call-stack-variable-value {value_class}">{formatted_value}</div>')
                     html.append('</div>')  # End variable
                     
                 html.append('</div>')  # End variables list
@@ -289,15 +289,15 @@ class CallStack:
         # Add container
         html = []
         
-        theme_class = "parlant-call-stack-dark" if options.theme == "dark" else "parlant-call-stack-light"
-        html.append(f'<div class="parlant-call-stack-container {theme_class}">')
+        theme_class = "Daneel-call-stack-dark" if options.theme == "dark" else "Daneel-call-stack-light"
+        html.append(f'<div class="Daneel-call-stack-container {theme_class}">')
         
         # Add title
-        html.append(f'<div class="parlant-call-stack-title">{options.title}</div>')
+        html.append(f'<div class="Daneel-call-stack-title">{options.title}</div>')
         
         # Add content
         max_height_style = f'style="max-height: {options.max_height}px;"' if options.max_height > 0 else ''
-        html.append(f'<div class="parlant-call-stack-content" {max_height_style}>')
+        html.append(f'<div class="Daneel-call-stack-content" {max_height_style}>')
         
         if frames:
             # Render each frame
@@ -306,7 +306,7 @@ class CallStack:
                 is_selected = i == 0
                 html.append(self.render_frame(frame, i, is_selected, options))
         else:
-            html.append('<div class="parlant-call-stack-empty">No stack frames available</div>')
+            html.append('<div class="Daneel-call-stack-empty">No stack frames available</div>')
             
         html.append('</div>')  # End content
         
@@ -321,7 +321,7 @@ class CallStack:
             CSS for the call stack component
         """
         css = """
-        .parlant-call-stack-container {
+        .Daneel-call-stack-container {
             border: 1px solid #e2e8f0;
             border-radius: 0.375rem;
             margin: 1rem 0;
@@ -330,179 +330,179 @@ class CallStack:
             font-size: 0.875rem;
         }
         
-        .parlant-call-stack-light {
+        .Daneel-call-stack-light {
             background-color: #ffffff;
             color: #1e293b;
         }
         
-        .parlant-call-stack-dark {
+        .Daneel-call-stack-dark {
             background-color: #1e293b;
             color: #e2e8f0;
         }
         
-        .parlant-call-stack-title {
+        .Daneel-call-stack-title {
             padding: 0.5rem 1rem;
             font-weight: 500;
             border-bottom: 1px solid #e2e8f0;
         }
         
-        .parlant-call-stack-light .parlant-call-stack-title {
+        .Daneel-call-stack-light .Daneel-call-stack-title {
             background-color: #f8fafc;
             border-bottom-color: #e2e8f0;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-title {
+        .Daneel-call-stack-dark .Daneel-call-stack-title {
             background-color: #0f172a;
             border-bottom-color: #334155;
         }
         
-        .parlant-call-stack-content {
+        .Daneel-call-stack-content {
             overflow: auto;
         }
         
-        .parlant-call-stack-frame {
+        .Daneel-call-stack-frame {
             border-bottom: 1px solid #e2e8f0;
             cursor: pointer;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-frame {
+        .Daneel-call-stack-dark .Daneel-call-stack-frame {
             border-bottom-color: #334155;
         }
         
-        .parlant-call-stack-frame:last-child {
+        .Daneel-call-stack-frame:last-child {
             border-bottom: none;
         }
         
-        .parlant-call-stack-frame-header {
+        .Daneel-call-stack-frame-header {
             padding: 0.5rem 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
-        .parlant-call-stack-frame:hover .parlant-call-stack-frame-header {
+        .Daneel-call-stack-frame:hover .Daneel-call-stack-frame-header {
             background-color: rgba(100, 116, 139, 0.1);
         }
         
-        .parlant-call-stack-frame-selected .parlant-call-stack-frame-header {
+        .Daneel-call-stack-frame-selected .Daneel-call-stack-frame-header {
             background-color: rgba(59, 130, 246, 0.1);
         }
         
-        .parlant-call-stack-function-name {
+        .Daneel-call-stack-function-name {
             font-weight: 500;
         }
         
-        .parlant-call-stack-location {
+        .Daneel-call-stack-location {
             font-family: monospace;
             font-size: 0.75rem;
             color: #64748b;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-location {
+        .Daneel-call-stack-dark .Daneel-call-stack-location {
             color: #94a3b8;
         }
         
-        .parlant-call-stack-frame-library {
+        .Daneel-call-stack-frame-library {
             opacity: 0.7;
         }
         
-        .parlant-call-stack-frame-details {
+        .Daneel-call-stack-frame-details {
             padding: 0 1rem 1rem 1rem;
             border-top: 1px solid #e2e8f0;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-frame-details {
+        .Daneel-call-stack-dark .Daneel-call-stack-frame-details {
             border-top-color: #334155;
         }
         
-        .parlant-call-stack-section-title {
+        .Daneel-call-stack-section-title {
             font-weight: 500;
             margin: 0.5rem 0;
             font-size: 0.75rem;
             color: #64748b;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-section-title {
+        .Daneel-call-stack-dark .Daneel-call-stack-section-title {
             color: #94a3b8;
         }
         
-        .parlant-call-stack-source {
+        .Daneel-call-stack-source {
             margin-bottom: 1rem;
         }
         
-        .parlant-call-stack-no-source {
+        .Daneel-call-stack-no-source {
             font-style: italic;
             color: #64748b;
             padding: 0.5rem;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-no-source {
+        .Daneel-call-stack-dark .Daneel-call-stack-no-source {
             color: #94a3b8;
         }
         
-        .parlant-call-stack-variables-list {
+        .Daneel-call-stack-variables-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 0.5rem;
         }
         
-        .parlant-call-stack-variable {
+        .Daneel-call-stack-variable {
             padding: 0.25rem;
             border-radius: 0.25rem;
             background-color: rgba(100, 116, 139, 0.1);
         }
         
-        .parlant-call-stack-variable-name {
+        .Daneel-call-stack-variable-name {
             font-weight: 500;
             font-size: 0.75rem;
         }
         
-        .parlant-call-stack-variable-value {
+        .Daneel-call-stack-variable-value {
             font-family: monospace;
             font-size: 0.75rem;
             word-break: break-word;
         }
         
-        .parlant-call-stack-string {
+        .Daneel-call-stack-string {
             color: #10b981;
         }
         
-        .parlant-call-stack-number {
+        .Daneel-call-stack-number {
             color: #3b82f6;
         }
         
-        .parlant-call-stack-boolean {
+        .Daneel-call-stack-boolean {
             color: #8b5cf6;
         }
         
-        .parlant-call-stack-null {
+        .Daneel-call-stack-null {
             color: #64748b;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-string {
+        .Daneel-call-stack-dark .Daneel-call-stack-string {
             color: #34d399;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-number {
+        .Daneel-call-stack-dark .Daneel-call-stack-number {
             color: #60a5fa;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-boolean {
+        .Daneel-call-stack-dark .Daneel-call-stack-boolean {
             color: #a78bfa;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-null {
+        .Daneel-call-stack-dark .Daneel-call-stack-null {
             color: #94a3b8;
         }
         
-        .parlant-call-stack-empty {
+        .Daneel-call-stack-empty {
             padding: 1rem;
             text-align: center;
             color: #64748b;
             font-style: italic;
         }
         
-        .parlant-call-stack-dark .parlant-call-stack-empty {
+        .Daneel-call-stack-dark .Daneel-call-stack-empty {
             color: #94a3b8;
         }
         """

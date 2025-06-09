@@ -2,7 +2,7 @@
 
 ## Motivação
 
-A primeira coisa importante a entender sobre o design da interface Humano/IA no Parlant é que ela foi projetada para facilitar conversas que são naturais não apenas em conteúdo, mas também em seu fluxo.
+A primeira coisa importante a entender sobre o design da interface Humano/IA no Daneel é que ela foi projetada para facilitar conversas que são naturais não apenas em conteúdo, mas também em seu fluxo.
 
 A maioria dos sistemas tradicionais de chatbot (e a maioria das interfaces LLM) depende de um mecanismo de requisição-resposta baseado em uma única última mensagem.
 
@@ -31,13 +31,13 @@ Além disso, o agente pode precisar responder não apenas quando acionado por um
 
 ## Solução
 
-A API e o motor do Parlant foram projetados para funcionar de forma assíncrona em relação à sessão de interação. Em termos simples, isso significa que tanto o cliente humano quanto o agente de IA são livres para adicionar eventos (mensagens) à sessão a qualquer momento e em qualquer número—assim como em uma conversa real por mensagens instantâneas entre duas pessoas.
+A API e o motor do Daneel foram projetados para funcionar de forma assíncrona em relação à sessão de interação. Em termos simples, isso significa que tanto o cliente humano quanto o agente de IA são livres para adicionar eventos (mensagens) à sessão a qualquer momento e em qualquer número—assim como em uma conversa real por mensagens instantâneas entre duas pessoas.
 
 ### Enviando Mensagens
 
 ```mermaid
 graph LR
-    Client(Interaction Client) -->|Event Creation Request| API[Parlant REST API]
+    Client(Interaction Client) -->|Event Creation Request| API[Daneel REST API]
     API -.->|Created Event| Client
     API --> CheckEventType{Check Event Type}
     CheckEventType -->|Is Customer Message| AddToSession[Add message to session and trigger the agent]
@@ -54,11 +54,11 @@ O diagrama acima mostra os fluxos da API para iniciar mudanças em uma sessão.
 
 Como as mensagens são enviadas de forma assíncrona e potencialmente simultânea, recebê-las também deve ser feito de forma assíncrona. Em essência, devemos sempre esperar por novas mensagens, que podem chegar a qualquer momento, de qualquer parte.
 
-O Parlant implementa esta funcionalidade com um endpoint de API de long-polling com timeout restrito para listar novos eventos. Isto é o que ele faz nos bastidores:
+O Daneel implementa esta funcionalidade com um endpoint de API de long-polling com timeout restrito para listar novos eventos. Isto é o que ele faz nos bastidores:
 
 ```mermaid
 graph LR
-    Client[Interaction Client] -->|Await & Fetch New Events| API[Parlant REST API]
+    Client[Interaction Client] -->|Await & Fetch New Events| API[Daneel REST API]
     API -->|"list_events(min_offset,...)"| SessionStore
     API -->|"wait_for_events(min_offset,timeout)"| SessionListener
     SessionListener -.->|true/false| API
@@ -66,4 +66,4 @@ graph LR
 
 Quando recebe uma requisição por novas mensagens, essa requisição geralmente tem 2 componentes importantes: 1) O ID da sessão; e 2) O offset mínimo do evento a retornar. Normalmente, ao fazer uma requisição para este endpoint, espera-se que o cliente frontend passe o ID da sessão em questão e *1 + o offset de seu último evento conhecido*. Isso fará com que este endpoint retorne apenas quando *novas* mensagens chegarem. É normal executar esta requisição de long-polling em um loop, com timeout a cada 60 segundos ou algo assim e renovando a requisição enquanto a sessão estiver aberta na UI. É este loop que mantém continuamente sua UI atualizada com as últimas mensagens, independentemente de quando elas chegam ou o que causou sua chegada.
 
-Em resumo, o Parlant implementa uma API conversacional flexível que suporta interações Humano/IA naturais e modernas.
+Em resumo, o Daneel implementa uma API conversacional flexível que suporta interações Humano/IA naturais e modernas.

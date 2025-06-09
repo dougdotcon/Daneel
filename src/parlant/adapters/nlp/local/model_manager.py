@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Local model manager for Parlant."""
+"""Local model manager for Daneel."""
 
 import os
 import json
@@ -24,7 +24,7 @@ from typing import Dict, List, Optional, Set, Tuple
 import aiohttp
 import requests
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 class ModelType(str, Enum):
@@ -71,7 +71,7 @@ class LocalModelManager:
             models_dir: Directory to store local models
             logger: Logger instance
         """
-        self.models_dir = models_dir or os.path.expanduser("~/.parlant/models")
+        self.models_dir = models_dir or os.path.expanduser("~/.Daneel/models")
         self.logger = logger
         self._models: Dict[str, LocalModel] = {}
         self._ollama_url = os.environ.get("OLLAMA_HOST", "http://localhost:11434")

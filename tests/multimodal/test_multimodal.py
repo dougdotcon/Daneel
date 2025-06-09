@@ -11,12 +11,12 @@ from unittest.mock import MagicMock, AsyncMock
 import tempfile
 import base64
 
-from parlant.core.loggers import ConsoleLogger
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.prompts import PromptBuilder
+from Daneel.core.loggers import ConsoleLogger
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.prompts import PromptBuilder
 
-from parlant.multimodal import (
+from Daneel.multimodal import (
     ImageProcessor,
     Image,
     ImageId,

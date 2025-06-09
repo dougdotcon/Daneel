@@ -15,14 +15,14 @@
 from typing import Any, cast
 from pytest_bdd import given, parsers
 
-from parlant.core.tools import ToolParameterOptions
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.guideline_tool_associations import (
+from Daneel.core.tools import ToolParameterOptions
+from Daneel.core.agents import AgentId, AgentStore
+from Daneel.core.guideline_tool_associations import (
     GuidelineToolAssociation,
     GuidelineToolAssociationStore,
 )
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.tools import LocalToolService, ToolId
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.tools import LocalToolService, ToolId
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

@@ -1,8 +1,8 @@
 """
-Data preprocessing module for Parlant.
+Data preprocessing module for Daneel.
 """
 
-from parlant.data.preprocessing.data_cleaner import (
+from Daneel.data.preprocessing.data_cleaner import (
     DataCleaner,
     DataCleaningOptions,
     ImputationStrategy,

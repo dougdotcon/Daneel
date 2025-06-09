@@ -55,8 +55,8 @@ def set_package_version(version: str, package: Package) -> None:
         )
 
         project_file_content = re.sub(
-            f'\nparlant-(.+?) = "{current_version}"\n',
-            f'\nparlant-\\1 = "{version}"\n',
+            f'\nDaneel-(.+?) = "{current_version}"\n',
+            f'\nDaneel-\\1 = "{version}"\n',
             project_file_content,
         )
 
@@ -70,8 +70,8 @@ def set_package_version(version: str, package: Package) -> None:
 
 
 def update_version_variable_in_code(version: str) -> None:
-    server_package = next(p for p in get_packages() if p.name == "parlant")
-    version_file: Path = server_package.path / "src/parlant/core/version.py"
+    server_package = next(p for p in get_packages() if p.name == "Daneel")
+    version_file: Path = server_package.path / "src/Daneel/core/version.py"
 
     version_file_content = version_file.read_text()
     current_version = get_current_version(server_package)
@@ -94,7 +94,7 @@ def tag_repo(version: str) -> None:
 
 
 def get_current_server_version() -> str:
-    server_package = next(p for p in get_packages() if p.name == "parlant")
+    server_package = next(p for p in get_packages() if p.name == "Daneel")
     return get_current_version(server_package)
 
 

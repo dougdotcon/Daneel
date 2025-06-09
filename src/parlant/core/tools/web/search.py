@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Web search tools for Parlant."""
+"""Web search tools for Daneel."""
 
 import json
 import os
@@ -22,8 +22,8 @@ from typing import Dict, List, Optional, Union
 
 import httpx
 
-from parlant.core.tools import ToolResult
-from parlant.core.tools.tool_registry import ToolCategory, tool
+from Daneel.core.tools import ToolResult
+from Daneel.core.tools.tool_registry import ToolCategory, tool
 
 
 @tool(

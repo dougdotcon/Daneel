@@ -23,25 +23,25 @@ import time
 from typing import Optional, Sequence
 from typing_extensions import override
 
-from parlant.core import async_utils
-from parlant.core.agents import Agent
-from parlant.core.context_variables import ContextVariable, ContextVariableValue
-from parlant.core.customers import Customer
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.engines.alpha.guideline_match import (
+from Daneel.core import async_utils
+from Daneel.core.agents import Agent
+from Daneel.core.context_variables import ContextVariable, ContextVariableValue
+from Daneel.core.customers import Customer
+from Daneel.core.nlp.generation import SchematicGenerator
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.engines.alpha.guideline_match import (
     GuidelineMatch,
     PreviouslyAppliedType,
 )
-from parlant.core.engines.alpha.prompt_builder import BuiltInSection, PromptBuilder, SectionStatus
-from parlant.core.glossary import Term
-from parlant.core.guidelines import Guideline, GuidelineId, GuidelineContent
-from parlant.core.sessions import Event, EventId, EventKind, EventSource
-from parlant.core.emissions import EmittedEvent
-from parlant.core.common import DefaultBaseModel, JSONSerializable
-from parlant.core.loggers import Logger
-from parlant.core.shots import Shot, ShotCollection
-from parlant.core.tags import TagId
+from Daneel.core.engines.alpha.prompt_builder import BuiltInSection, PromptBuilder, SectionStatus
+from Daneel.core.glossary import Term
+from Daneel.core.guidelines import Guideline, GuidelineId, GuidelineContent
+from Daneel.core.sessions import Event, EventId, EventKind, EventSource
+from Daneel.core.emissions import EmittedEvent
+from Daneel.core.common import DefaultBaseModel, JSONSerializable
+from Daneel.core.loggers import Logger
+from Daneel.core.shots import Shot, ShotCollection
+from Daneel.core.tags import TagId
 
 
 class SegmentPreviouslyAppliedRationale(DefaultBaseModel):

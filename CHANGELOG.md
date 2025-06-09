@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Parlant will be documented here.
+All notable changes to Daneel will be documented here.
 
 ## [Unreleased]
 TBD
@@ -98,7 +98,7 @@ TBD
 
 ### Changed
 
-- Change default home dir from runtime-data to parlant-data
+- Change default home dir from runtime-data to Daneel-data
 
 ### Fixed
 

@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Code execution tools for Parlant."""
+"""Code execution tools for Daneel."""
 
 import os
 import subprocess
 import tempfile
 from typing import Dict, List, Optional, Union
 
-from parlant.core.tools import ToolResult
-from parlant.core.tools.tool_registry import ToolCategory, tool
+from Daneel.core.tools import ToolResult
+from Daneel.core.tools.tool_registry import ToolCategory, tool
 
 
 @tool(

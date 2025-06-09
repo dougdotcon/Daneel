@@ -1,6 +1,6 @@
 # Ciclo de Vida do Motor
 
-No Parlant, o **Motor** é a parte responsável pelas respostas do agente de ponta a ponta.
+No Daneel, o **Motor** é a parte responsável pelas respostas do agente de ponta a ponta.
 
 O motor é composto por vários componentes, cada um dedicado a uma missão particular. Como veremos, cada uma dessas missões ajuda a criar uma resposta bem orientada, mas ao mesmo tempo também é bastante complexa por si só.
 
@@ -21,7 +21,7 @@ Cada um desses componentes atua como uma parte do processo completo de resposta 
 
 ```mermaid
 graph TD
-    API(Parlant REST API) -->|React to Session Trigger| Engine
+    API(Daneel REST API) -->|React to Session Trigger| Engine
     Engine -->|Load Terms| GlossaryStore
     Engine -->|Match Guidelines| GuidelineMatcher
     Engine -->|Infer & Call Tools| ToolCaller
@@ -46,9 +46,9 @@ graph LR
 ### Correspondência de Diretrizes
 Antes de explicarmos o que este componente faz, primeiro precisamos entender de onde ele vem.
 
-Como você provavelmente já sabe, o comportamento no Parlant é controlado principalmente usando diretrizes, onde cada diretriz tem uma *condição* e uma *ação*. A condição é a parte que especifica *quando a ação deve ser seguida.*
+Como você provavelmente já sabe, o comportamento no Daneel é controlado principalmente usando diretrizes, onde cada diretriz tem uma *condição* e uma *ação*. A condição é a parte que especifica *quando a ação deve ser seguida.*
 
-O Parlant aproveita este modelo de condição/ação para ajudar o *Gerador de Mensagens* a permanecer focado, fornecendo apenas diretrizes que são realmente relevantes para sua tarefa atual. Por exemplo, se temos uma diretriz com a condição `o cliente acabou de te cumprimentar`, não precisamos considerar a ação desta diretriz se já estivermos bem avançados na conversa neste ponto—ela pode simplesmente ser desconsiderada. Isso ajuda a melhorar a precisão, reduzir a complexidade do mecanismo de orientação e supervisão, e também reduzir o custo e a latência da conclusão do LLM.
+O Daneel aproveita este modelo de condição/ação para ajudar o *Gerador de Mensagens* a permanecer focado, fornecendo apenas diretrizes que são realmente relevantes para sua tarefa atual. Por exemplo, se temos uma diretriz com a condição `o cliente acabou de te cumprimentar`, não precisamos considerar a ação desta diretriz se já estivermos bem avançados na conversa neste ponto—ela pode simplesmente ser desconsiderada. Isso ajuda a melhorar a precisão, reduzir a complexidade do mecanismo de orientação e supervisão, e também reduzir o custo e a latência da conclusão do LLM.
 
 O Correspondente de Diretrizes é o que corresponde às diretrizes apropriadas que precisam ser ativadas na geração da próxima resposta do agente.
 
@@ -59,12 +59,12 @@ graph LR
 ```
 
 ### Chamador de Ferramentas
-Em vez de usar a API de chamada de ferramentas fornecida pelo fornecedor, o Parlant implementa seu próprio mecanismo de chamada de ferramentas.
+Em vez de usar a API de chamada de ferramentas fornecida pelo fornecedor, o Daneel implementa seu próprio mecanismo de chamada de ferramentas.
 
 Existem três razões importantes para isso:
 1. Para suportar o maior número possível de fornecedores, incluindo a capacidade de testar outros fornecedores e alternar entre eles mantendo exatamente a mesma configuração do usuário.
 1. Para suportar **chamada de ferramentas guiada,** ou seja, chamar uma ferramenta no contexto de um conjunto específico de diretrizes que explicam não apenas o "o quê" e "como" da chamada da ferramenta, mas também o "por quê" e "quando".
-1. Para suportar múltiplas iterações de preparação ao trabalhar em uma resposta; por exemplo, onde a primeira iteração corresponde a diretrizes relevantes e executa ferramentas e então, com base na saída das chamadas de ferramentas da primeira iteração, corresponde a um conjunto potencialmente diferente ou mais amplo de diretrizes, que podem vir com suas próprias chamadas de ferramentas, e assim por diante. Isso permite que você especifique diretrizes livremente e naturalmente, onde suas condições podem ser atendidas não apenas com base na própria conversa, mas também em dados vindos dinamicamente de ferramentas. Para mais informações sobre isso, consulte a [página de Otimização](https://www.parlant.io/docs/advanced/optimization) no site de documentação do Parlant.
+1. Para suportar múltiplas iterações de preparação ao trabalhar em uma resposta; por exemplo, onde a primeira iteração corresponde a diretrizes relevantes e executa ferramentas e então, com base na saída das chamadas de ferramentas da primeira iteração, corresponde a um conjunto potencialmente diferente ou mais amplo de diretrizes, que podem vir com suas próprias chamadas de ferramentas, e assim por diante. Isso permite que você especifique diretrizes livremente e naturalmente, onde suas condições podem ser atendidas não apenas com base na própria conversa, mas também em dados vindos dinamicamente de ferramentas. Para mais informações sobre isso, consulte a [página de Otimização](https://www.Daneel.io/docs/advanced/optimization) no site de documentação do Daneel.
 
 O Chamador de Ferramentas recebe uma lista de ferramentas—todas as ferramentas que estão associadas às diretrizes atualmente correspondidas—decide quais precisam ser chamadas e como, e as executa, retornando os resultados para o motor.
 
@@ -91,7 +91,7 @@ Agora que temos um entendimento básico do que cada componente do motor faz, vam
 
 ```mermaid
 sequenceDiagram
-    participant API as Parlant's REST API
+    participant API as Daneel's REST API
     participant Engine
     participant GlossaryStore
     participant GuidelineMatcher

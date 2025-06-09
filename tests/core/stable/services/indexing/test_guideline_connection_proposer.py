@@ -16,13 +16,13 @@ from datetime import datetime, timezone
 from typing import Sequence
 
 
-from parlant.core.agents import Agent, AgentId
-from parlant.core.glossary import GlossaryStore
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.services.indexing.guideline_connection_proposer import (
+from Daneel.core.agents import Agent, AgentId
+from Daneel.core.glossary import GlossaryStore
+from Daneel.core.guidelines import GuidelineContent
+from Daneel.core.services.indexing.guideline_connection_proposer import (
     GuidelineConnectionProposer,
 )
-from parlant.core.tags import Tag
+from Daneel.core.tags import Tag
 from tests.core.common.utils import ContextOfTest
 
 

@@ -1,10 +1,10 @@
 # Segurança e Privacidade
 
-Este documento descreve os recursos de segurança e privacidade no framework Parlant.
+Este documento descreve os recursos de segurança e privacidade no framework Daneel.
 
 ## Visão Geral
 
-O módulo de segurança e privacidade fornece um conjunto abrangente de ferramentas para implementar medidas de segurança e controles de privacidade em aplicações Parlant. Inclui:
+O módulo de segurança e privacidade fornece um conjunto abrangente de ferramentas para implementar medidas de segurança e controles de privacidade em aplicações Daneel. Inclui:
 
 1. Autenticação e autorização para controle seguro de acesso
 2. Criptografia de dados para proteção de informações sensíveis
@@ -250,9 +250,9 @@ request = await compliance_manager.create_data_subject_request(
 )
 ```
 
-## Integração com Parlant
+## Integração com Daneel
 
-Os recursos de segurança e privacidade estão integrados com o framework Parlant:
+Os recursos de segurança e privacidade estão integrados com o framework Daneel:
 
 1. **Integração de API**: Autenticação e autorização para endpoints de API
 2. **Proteção de Dados**: Criptografia para dados sensíveis em armazenamento e transmissão

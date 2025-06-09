@@ -16,8 +16,8 @@ import asyncio
 import os
 import signal
 
-from parlant.core.tools import ToolContext, ToolResult
-from parlant.core.services.tools.plugins import tool
+from Daneel.core.tools import ToolContext, ToolResult
+from Daneel.core.services.tools.plugins import tool
 
 from tests.e2e.test_utilities import (
     ContextOfTest,

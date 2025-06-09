@@ -38,12 +38,12 @@ export default function Chatbot({ onNavigateToAdmin, onNavigateToWelcome }: Chat
 
 	useEffect(() => {
 		if (session?.id) {
-			if (session?.id === NEW_SESSION_ID) setSessionName('Parlant | New Session');
+			if (session?.id === NEW_SESSION_ID) setSessionName('Daneel | New Session');
 			else {
 				const sessionTitle = session?.title;
-				if (sessionTitle) setSessionName(`Parlant | ${sessionTitle}`);
+				if (sessionTitle) setSessionName(`Daneel | ${sessionTitle}`);
 			}
-		} else setSessionName('Parlant');
+		} else setSessionName('Daneel');
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [session?.id]);
 

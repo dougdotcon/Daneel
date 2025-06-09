@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Sequential Thinking MCP implementation for Parlant."""
+"""Sequential Thinking MCP implementation for Daneel."""
 
 import asyncio
 import json
@@ -20,10 +20,10 @@ import uuid
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
 
-from parlant.adapters.mcp.common import MCPTool, MCPToolCall, MCPToolResult
-from parlant.adapters.mcp.server import MCPServer
-from parlant.core.loggers import Logger
-from parlant.core.nlp.common import NLPService
+from Daneel.adapters.mcp.common import MCPTool, MCPToolCall, MCPToolResult
+from Daneel.adapters.mcp.server import MCPServer
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.common import NLPService
 
 
 @dataclass

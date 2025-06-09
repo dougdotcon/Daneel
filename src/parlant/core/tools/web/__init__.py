@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Web tools for Parlant."""
+"""Web tools for Daneel."""
 
-from parlant.core.tools.web.search import web_search, fetch_webpage, search_wikipedia
+from Daneel.core.tools.web.search import web_search, fetch_webpage, search_wikipedia
 
 __all__ = [
     "web_search",

@@ -28,7 +28,7 @@ from types import TracebackType
 from typing import Any, Awaitable, Callable, Mapping, NamedTuple, Optional, Sequence, cast
 from typing_extensions import override
 
-from parlant.core.tools import (
+from Daneel.core.tools import (
     Tool,
     ToolParameterOptions,
     ToolResult,
@@ -37,8 +37,8 @@ from parlant.core.tools import (
     ToolContext,
     validate_tool_arguments,
 )
-from parlant.core.common import ItemNotFoundError, JSONSerializable, UniqueId
-from parlant.core.tools import ToolService
+from Daneel.core.common import ItemNotFoundError, JSONSerializable, UniqueId
+from Daneel.core.tools import ToolService
 
 
 class _ToolSpec(NamedTuple):

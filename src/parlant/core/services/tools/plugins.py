@@ -45,9 +45,9 @@ from urllib.parse import urljoin
 
 import uvicorn
 
-from parlant.core.agents import AgentId
-from parlant.core.loggers import Logger
-from parlant.core.tools import (
+from Daneel.core.agents import AgentId
+from Daneel.core.loggers import Logger
+from Daneel.core.tools import (
     Tool,
     ToolError,
     ToolParameterDescriptor,
@@ -60,11 +60,11 @@ from parlant.core.tools import (
     normalize_tool_arguments,
     validate_tool_arguments,
 )
-from parlant.core.common import DefaultBaseModel, ItemNotFoundError, JSONSerializable, UniqueId
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.emissions import EventEmitterFactory
-from parlant.core.sessions import SessionId, SessionStatus
-from parlant.core.tools import ToolExecutionError, ToolService
+from Daneel.core.common import DefaultBaseModel, ItemNotFoundError, JSONSerializable, UniqueId
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.emissions import EventEmitterFactory
+from Daneel.core.sessions import SessionId, SessionStatus
+from Daneel.core.tools import ToolExecutionError, ToolService
 
 
 ToolFunction = Union[

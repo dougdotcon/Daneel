@@ -20,21 +20,21 @@ import time
 import traceback
 from typing import Any, Mapping, NewType, Optional, Sequence
 
-from parlant.core import async_utils
-from parlant.core.agents import Agent
-from parlant.core.common import JSONSerializable, generate_id, DefaultBaseModel
-from parlant.core.context_variables import ContextVariable, ContextVariableValue
-from parlant.core.emissions import EmittedEvent
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder, BuiltInSection, SectionStatus
-from parlant.core.glossary import Term
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.sessions import Event, ToolResult
-from parlant.core.shots import Shot, ShotCollection
-from parlant.core.tools import (
+from Daneel.core import async_utils
+from Daneel.core.agents import Agent
+from Daneel.core.common import JSONSerializable, generate_id, DefaultBaseModel
+from Daneel.core.context_variables import ContextVariable, ContextVariableValue
+from Daneel.core.emissions import EmittedEvent
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.engines.alpha.prompt_builder import PromptBuilder, BuiltInSection, SectionStatus
+from Daneel.core.glossary import Term
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.generation import SchematicGenerator
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.sessions import Event, ToolResult
+from Daneel.core.shots import Shot, ShotCollection
+from Daneel.core.tools import (
     Tool,
     ToolContext,
     ToolParameterDescriptor,
@@ -43,7 +43,7 @@ from parlant.core.tools import (
     ToolService,
     DEFAULT_PARAMETER_PRECEDENCE,
 )
-from parlant.core.sessions import EventKind
+from Daneel.core.sessions import EventKind
 
 ToolCallId = NewType("ToolCallId", str)
 ToolResultId = NewType("ToolResultId", str)

@@ -20,19 +20,19 @@ from pydantic import Field
 from typing import Annotated, Mapping, Optional, Sequence, Set, TypeAlias, cast
 
 
-from parlant.api.common import GuidelineIdField, ExampleJson, JSONSerializableDTO, apigen_config
-from parlant.api.glossary import TermSynonymsField, TermIdPath, TermNameField, TermDescriptionField
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.application import Application
-from parlant.core.async_utils import Timeout
-from parlant.core.common import DefaultBaseModel
-from parlant.core.customers import CustomerId, CustomerStore
-from parlant.core.engines.types import UtteranceReason, UtteranceRequest
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.nlp.moderation import ModerationService
-from parlant.core.nlp.service import NLPService
-from parlant.core.sessions import (
+from Daneel.api.common import GuidelineIdField, ExampleJson, JSONSerializableDTO, apigen_config
+from Daneel.api.glossary import TermSynonymsField, TermIdPath, TermNameField, TermDescriptionField
+from Daneel.core.agents import AgentId, AgentStore
+from Daneel.core.application import Application
+from Daneel.core.async_utils import Timeout
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.customers import CustomerId, CustomerStore
+from Daneel.core.engines.types import UtteranceReason, UtteranceRequest
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.nlp.moderation import ModerationService
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.sessions import (
     Event,
     EventId,
     EventKind,
@@ -47,7 +47,7 @@ from parlant.core.sessions import (
     SessionUpdateParams,
     ToolEventData,
 )
-from parlant.core.utterances import UtteranceId
+from Daneel.core.utterances import UtteranceId
 
 API_GROUP = "sessions"
 
@@ -1107,7 +1107,7 @@ KindsQuery: TypeAlias = Annotated[
 
 
 def _get_jailbreak_moderation_service(logger: Logger) -> ModerationService:
-    from parlant.adapters.nlp.lakera import LakeraGuard
+    from Daneel.adapters.nlp.lakera import LakeraGuard
 
     return LakeraGuard(logger)
 

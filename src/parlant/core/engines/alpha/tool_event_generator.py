@@ -16,21 +16,21 @@ from dataclasses import dataclass
 from itertools import chain
 from typing import Mapping, Optional, Sequence
 
-from parlant.core.customers import Customer
-from parlant.core.tools import ToolContext
-from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.nlp.generation_info import GenerationInfo
-from parlant.core.loggers import Logger
-from parlant.core.agents import Agent
-from parlant.core.context_variables import ContextVariable, ContextVariableValue
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.sessions import Event, SessionId, ToolEventData
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.glossary import Term
-from parlant.core.engines.alpha.tool_caller import ToolCallInferenceSchema, ToolCaller, ToolInsights
-from parlant.core.emissions import EmittedEvent, EventEmitter
-from parlant.core.tools import ToolId
+from Daneel.core.customers import Customer
+from Daneel.core.tools import ToolContext
+from Daneel.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.nlp.generation import SchematicGenerator
+from Daneel.core.nlp.generation_info import GenerationInfo
+from Daneel.core.loggers import Logger
+from Daneel.core.agents import Agent
+from Daneel.core.context_variables import ContextVariable, ContextVariableValue
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.sessions import Event, SessionId, ToolEventData
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.glossary import Term
+from Daneel.core.engines.alpha.tool_caller import ToolCallInferenceSchema, ToolCaller, ToolInsights
+from Daneel.core.emissions import EmittedEvent, EventEmitter
+from Daneel.core.tools import ToolId
 
 
 @dataclass(frozen=True)

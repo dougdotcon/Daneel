@@ -1,5 +1,5 @@
 """
-Performance metrics and evaluation for Parlant.
+Performance metrics and evaluation for Daneel.
 
 This module provides functionality for measuring agent performance and effectiveness.
 """
@@ -14,14 +14,14 @@ import json
 import statistics
 from collections import Counter
 
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.loggers import Logger
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.persistence.document_database import DocumentCollection, DocumentDatabase
-from parlant.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId, Where
+from Daneel.core.common import JSONSerializable, generate_id
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.loggers import Logger
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.persistence.document_database import DocumentCollection, DocumentDatabase
+from Daneel.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId, Where
 
-from parlant.learning.history import (
+from Daneel.learning.history import (
     InteractionHistoryTracker,
     Interaction,
     InteractionId,

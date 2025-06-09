@@ -16,17 +16,17 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Sequence
 
-from parlant.core.agents import Agent
-from parlant.core.context_variables import ContextVariable, ContextVariableValue
-from parlant.core.customers import Customer
-from parlant.core.emissions import EmittedEvent, EventEmitter
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.tool_caller import ToolInsights
-from parlant.core.engines.types import Context
-from parlant.core.glossary import Term
-from parlant.core.guidelines import Guideline
-from parlant.core.sessions import Event, Session
-from parlant.core.tools import ToolId
+from Daneel.core.agents import Agent
+from Daneel.core.context_variables import ContextVariable, ContextVariableValue
+from Daneel.core.customers import Customer
+from Daneel.core.emissions import EmittedEvent, EventEmitter
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.engines.alpha.tool_caller import ToolInsights
+from Daneel.core.engines.types import Context
+from Daneel.core.glossary import Term
+from Daneel.core.guidelines import Guideline
+from Daneel.core.sessions import Event, Session
+from Daneel.core.tools import ToolId
 
 
 @dataclass(frozen=True)

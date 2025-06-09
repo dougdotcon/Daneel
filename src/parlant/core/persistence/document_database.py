@@ -25,8 +25,8 @@ from typing import (
     TypedDict,
 )
 
-from parlant.core.persistence.common import ObjectId, Where
-from parlant.core.common import Version
+from Daneel.core.persistence.common import ObjectId, Where
+from Daneel.core.common import Version
 
 
 class BaseDocument(TypedDict, total=False):

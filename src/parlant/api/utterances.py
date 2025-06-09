@@ -18,15 +18,15 @@ import dateutil
 from fastapi import APIRouter, HTTPException, Query, status
 from pydantic import Field
 
-from parlant.core.common import DefaultBaseModel
-from parlant.core.utterances import (
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.utterances import (
     UtteranceId,
     UtteranceStore,
     UtteranceUpdateParams,
     UtteranceField,
 )
-from parlant.core.tags import TagId, TagStore
-from parlant.api.common import ExampleJson, apigen_config, example_json_content
+from Daneel.core.tags import TagId, TagStore
+from Daneel.api.common import ExampleJson, apigen_config, example_json_content
 
 
 API_GROUP = "utterances"

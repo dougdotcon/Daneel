@@ -1,5 +1,5 @@
 """
-Collaborative agent system for Parlant.
+Collaborative agent system for Daneel.
 
 This module provides a collaborative agent system that extends the base agent system.
 """
@@ -12,31 +12,31 @@ from typing import Any, Dict, List, Optional, Set, Tuple, Union, cast
 import asyncio
 import json
 
-from parlant.core.common import JSONSerializable
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.loggers import Logger
-from parlant.core.models import Model, ModelManager
-from parlant.core.prompts import Prompt, PromptManager
-from parlant.core.tools import ToolRegistry
-from parlant.core.agent_system import AgentSystem, AgentConfig, AgentContext, AgentState, AgentType
+from Daneel.core.common import JSONSerializable
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.loggers import Logger
+from Daneel.core.models import Model, ModelManager
+from Daneel.core.prompts import Prompt, PromptManager
+from Daneel.core.tools import ToolRegistry
+from Daneel.core.agent_system import AgentSystem, AgentConfig, AgentContext, AgentState, AgentType
 
-from parlant.knowledge import KnowledgeManager
+from Daneel.knowledge import KnowledgeManager
 
-from parlant.collaborative.protocol import (
+from Daneel.collaborative.protocol import (
     AgentCommunicator,
     AgentMessage,
     MessageBus,
     MessageType,
     MessagePriority,
 )
-from parlant.collaborative.team import (
+from Daneel.collaborative.team import (
     Team,
     TeamId,
     TeamMember,
     TeamRole,
     TeamManager,
 )
-from parlant.collaborative.tasks import (
+from Daneel.collaborative.tasks import (
     Task,
     TaskId,
     TaskStatus,
@@ -44,7 +44,7 @@ from parlant.collaborative.tasks import (
     TaskAssignment,
     TaskManager,
 )
-from parlant.collaborative.consensus import (
+from Daneel.collaborative.consensus import (
     Consensus,
     ConsensusId,
     ConsensusStatus,
@@ -53,7 +53,7 @@ from parlant.collaborative.consensus import (
     VoteOption,
     ConsensusManager,
 )
-from parlant.collaborative.knowledge import (
+from Daneel.collaborative.knowledge import (
     SharedKnowledgeAccess,
     SharedKnowledgePermission,
     SharedKnowledgeManager,

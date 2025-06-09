@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Terminal UI components for Parlant."""
+"""Terminal UI components for Daneel."""
 
-from parlant.ui.components.terminal.terminal import Terminal, TerminalOptions, TerminalState, TerminalHistoryEntry
+from Daneel.ui.components.terminal.terminal import Terminal, TerminalOptions, TerminalState, TerminalHistoryEntry
 
 __all__ = [
     "Terminal",

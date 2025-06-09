@@ -1,5 +1,5 @@
 """
-Data encryption for Parlant.
+Data encryption for Daneel.
 
 This module provides functionality for encrypting and decrypting sensitive data.
 """
@@ -25,8 +25,8 @@ from cryptography.hazmat.primitives.serialization import (
     NoEncryption,
 )
 
-from parlant.core.common import JSONSerializable
-from parlant.core.loggers import Logger
+from Daneel.core.common import JSONSerializable
+from Daneel.core.loggers import Logger
 
 
 class EncryptionType(str, Enum):

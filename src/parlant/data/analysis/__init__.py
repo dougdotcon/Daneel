@@ -1,8 +1,8 @@
 """
-Data analysis module for Parlant.
+Data analysis module for Daneel.
 """
 
-from parlant.data.analysis.data_analyzer import (
+from Daneel.data.analysis.data_analyzer import (
     DataAnalyzer,
     DataAnalysisOptions,
     CorrelationMethod,

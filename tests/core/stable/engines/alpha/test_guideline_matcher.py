@@ -22,19 +22,19 @@ from lagom import Container
 from more_itertools import unique
 from pytest import fixture
 
-from parlant.core.agents import Agent, AgentId
-from parlant.core.common import generate_id, JSONSerializable
-from parlant.core.context_variables import (
+from Daneel.core.agents import Agent, AgentId
+from Daneel.core.common import generate_id, JSONSerializable
+from Daneel.core.context_variables import (
     ContextVariable,
     ContextVariableId,
     ContextVariableValue,
     ContextVariableValueId,
 )
-from parlant.core.customers import Customer
-from parlant.core.emissions import EmittedEvent
-from parlant.core.glossary import Term
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.engines.alpha.guideline_matcher import (
+from Daneel.core.customers import Customer
+from Daneel.core.emissions import EmittedEvent
+from Daneel.core.glossary import Term
+from Daneel.core.nlp.generation import SchematicGenerator
+from Daneel.core.engines.alpha.guideline_matcher import (
     DefaultGuidelineMatchingStrategyResolver,
     GuidelineMatcher,
     GenericGuidelineMatchesSchema,
@@ -44,17 +44,17 @@ from parlant.core.engines.alpha.guideline_matcher import (
     GuidelineMatchingContext,
     GuidelineMatchingStrategyResolver,
 )
-from parlant.core.engines.alpha.guideline_match import (
+from Daneel.core.engines.alpha.guideline_match import (
     GuidelineMatch,
     PreviouslyAppliedType,
 )
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineId
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.sessions import EventKind, EventSource
-from parlant.core.loggers import Logger
-from parlant.core.glossary import TermId
+from Daneel.core.guidelines import Guideline, GuidelineContent, GuidelineId
+from Daneel.core.nlp.generation_info import GenerationInfo, UsageInfo
+from Daneel.core.sessions import EventKind, EventSource
+from Daneel.core.loggers import Logger
+from Daneel.core.glossary import TermId
 
-from parlant.core.tags import TagId, Tag
+from Daneel.core.tags import TagId, Tag
 from tests.core.common.utils import create_event_message
 from tests.test_utilities import SyncAwaiter
 

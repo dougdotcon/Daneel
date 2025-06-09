@@ -70,7 +70,7 @@ const SystemSettingsPage: React.FC = () => {
     database: {
       host: 'localhost',
       port: 5432,
-      name: 'parlant',
+      name: 'Daneel',
       maxConnections: 20,
       timeout: 30
     },
@@ -153,7 +153,7 @@ const SystemSettingsPage: React.FC = () => {
         database: {
           host: 'localhost',
           port: 5432,
-          name: 'parlant',
+          name: 'Daneel',
           maxConnections: 20,
           timeout: 30
         },
@@ -374,7 +374,7 @@ const SystemSettingsPage: React.FC = () => {
               id="db-name"
               value={settings.database.name}
               onChange={(e) => updateSetting('database', 'name', e.target.value)}
-              placeholder="parlant"
+              placeholder="Daneel"
             />
           </div>
           <div>

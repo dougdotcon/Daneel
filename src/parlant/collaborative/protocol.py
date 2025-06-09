@@ -1,5 +1,5 @@
 """
-Agent communication protocol for Parlant.
+Agent communication protocol for Daneel.
 
 This module provides a protocol for communication between agents.
 """
@@ -12,8 +12,8 @@ from typing import Any, Dict, List, Optional, Union
 import uuid
 import json
 
-from parlant.core.common import JSONSerializable
-from parlant.core.agents import AgentId
+from Daneel.core.common import JSONSerializable
+from Daneel.core.agents import AgentId
 
 
 class MessageType(str, Enum):

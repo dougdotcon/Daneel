@@ -16,14 +16,14 @@ from collections import defaultdict
 from itertools import chain
 from typing import Sequence, cast
 
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.relationships import (
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.relationships import (
     EntityType,
     GuidelineRelationshipKind,
     RelationshipStore,
 )
-from parlant.core.guidelines import Guideline, GuidelineId, GuidelineStore
-from parlant.core.tags import TagId
+from Daneel.core.guidelines import Guideline, GuidelineId, GuidelineStore
+from Daneel.core.tags import TagId
 
 
 class RelationalGuidelineResolver:

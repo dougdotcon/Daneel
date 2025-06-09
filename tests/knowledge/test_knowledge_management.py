@@ -9,15 +9,15 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 from unittest.mock import MagicMock, AsyncMock
 
-from parlant.core.loggers import ConsoleLogger
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.embedding import Embedder, EmbedderFactory
-from parlant.core.persistence.document_database import DocumentDatabase
-from parlant.core.persistence.vector_database import VectorDatabase
-from parlant.adapters.db.transient import TransientDocumentDatabase
-from parlant.adapters.vector_db.transient import TransientVectorDatabase
+from Daneel.core.loggers import ConsoleLogger
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.embedding import Embedder, EmbedderFactory
+from Daneel.core.persistence.document_database import DocumentDatabase
+from Daneel.core.persistence.vector_database import VectorDatabase
+from Daneel.adapters.db.transient import TransientDocumentDatabase
+from Daneel.adapters.vector_db.transient import TransientVectorDatabase
 
-from parlant.knowledge import (
+from Daneel.knowledge import (
     KnowledgeManager,
     KnowledgeItem,
     KnowledgeItemId,

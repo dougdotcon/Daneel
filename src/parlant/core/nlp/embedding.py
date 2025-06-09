@@ -19,7 +19,7 @@ from lagom import Container
 from typing import Any, Sequence
 from typing_extensions import override
 
-from parlant.core.nlp.tokenization import EstimatingTokenizer, ZeroEstimatingTokenizer
+from Daneel.core.nlp.tokenization import EstimatingTokenizer, ZeroEstimatingTokenizer
 
 
 @dataclass(frozen=True)

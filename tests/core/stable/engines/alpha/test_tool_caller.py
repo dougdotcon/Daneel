@@ -19,22 +19,22 @@ from typing import Annotated, Any, Optional
 from lagom import Container
 from pytest import fixture
 
-from parlant.core.agents import Agent
-from parlant.core.common import generate_id
-from parlant.core.customers import Customer, CustomerStore, CustomerId
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.engines.alpha.tool_caller import (
+from Daneel.core.agents import Agent
+from Daneel.core.common import generate_id
+from Daneel.core.customers import Customer, CustomerStore, CustomerId
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.engines.alpha.tool_caller import (
     ToolCallInferenceSchema,
     ToolCaller,
 )
-from parlant.core.guidelines import Guideline, GuidelineId, GuidelineContent
-from parlant.core.loggers import Logger
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.services.tools.plugins import tool
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.sessions import Event, EventSource
-from parlant.core.tags import TagId, Tag
-from parlant.core.tools import (
+from Daneel.core.guidelines import Guideline, GuidelineId, GuidelineContent
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.generation import SchematicGenerator
+from Daneel.core.services.tools.plugins import tool
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.sessions import Event, EventSource
+from Daneel.core.tags import TagId, Tag
+from Daneel.core.tools import (
     LocalToolService,
     Tool,
     ToolContext,

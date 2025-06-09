@@ -1,8 +1,8 @@
 """
-Machine learning module for Parlant.
+Machine learning module for Daneel.
 """
 
-from parlant.data.ml.model_trainer import (
+from Daneel.data.ml.model_trainer import (
     ModelTrainer,
     ModelTrainingOptions,
     ModelType,

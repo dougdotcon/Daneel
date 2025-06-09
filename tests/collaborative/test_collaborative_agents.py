@@ -9,29 +9,29 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 from unittest.mock import MagicMock, AsyncMock
 
-from parlant.core.loggers import ConsoleLogger
-from parlant.core.agents import Agent, AgentId, AgentStore
-from parlant.core.models import Model, ModelManager
-from parlant.core.prompts import Prompt, PromptManager
-from parlant.core.tools import ToolRegistry
+from Daneel.core.loggers import ConsoleLogger
+from Daneel.core.agents import Agent, AgentId, AgentStore
+from Daneel.core.models import Model, ModelManager
+from Daneel.core.prompts import Prompt, PromptManager
+from Daneel.core.tools import ToolRegistry
 
-from parlant.knowledge import KnowledgeManager
+from Daneel.knowledge import KnowledgeManager
 
-from parlant.collaborative.protocol import (
+from Daneel.collaborative.protocol import (
     AgentCommunicator,
     AgentMessage,
     MessageBus,
     MessageType,
     MessagePriority,
 )
-from parlant.collaborative.team import (
+from Daneel.collaborative.team import (
     Team,
     TeamId,
     TeamMember,
     TeamRole,
     TeamManager,
 )
-from parlant.collaborative.tasks import (
+from Daneel.collaborative.tasks import (
     Task,
     TaskId,
     TaskStatus,
@@ -39,7 +39,7 @@ from parlant.collaborative.tasks import (
     TaskAssignment,
     TaskManager,
 )
-from parlant.collaborative.consensus import (
+from Daneel.collaborative.consensus import (
     Consensus,
     ConsensusId,
     ConsensusStatus,
@@ -48,12 +48,12 @@ from parlant.collaborative.consensus import (
     VoteOption,
     ConsensusManager,
 )
-from parlant.collaborative.knowledge import (
+from Daneel.collaborative.knowledge import (
     SharedKnowledgeAccess,
     SharedKnowledgePermission,
     SharedKnowledgeManager,
 )
-from parlant.collaborative.agent import CollaborativeAgent, CollaborativeAgentConfig
+from Daneel.collaborative.agent import CollaborativeAgent, CollaborativeAgentConfig
 
 
 class MockAgent(Agent):

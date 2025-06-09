@@ -1,5 +1,5 @@
 """
-Knowledge manager module for Parlant.
+Knowledge manager module for Daneel.
 
 This module provides a unified interface for knowledge management.
 """
@@ -8,21 +8,21 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional, Sequence, Set, Tuple, Union, cast
 from dataclasses import dataclass
 
-from parlant.core.loggers import Logger
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.embedding import Embedder, EmbedderFactory
-from parlant.core.persistence.document_database import DocumentDatabase
-from parlant.core.persistence.vector_database import VectorDatabase
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.embedding import Embedder, EmbedderFactory
+from Daneel.core.persistence.document_database import DocumentDatabase
+from Daneel.core.persistence.vector_database import VectorDatabase
 
-from parlant.knowledge.base import (
+from Daneel.knowledge.base import (
     KnowledgeBase,
     KnowledgeItem,
     KnowledgeItemId,
     KnowledgeItemType,
     KnowledgeItemSource,
 )
-from parlant.knowledge.graph import KnowledgeGraph
-from parlant.knowledge.reasoning import KnowledgeReasoner, ReasoningResult
+from Daneel.knowledge.graph import KnowledgeGraph
+from Daneel.knowledge.reasoning import KnowledgeReasoner, ReasoningResult
 
 
 class KnowledgeManager:

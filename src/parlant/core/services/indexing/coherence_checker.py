@@ -21,16 +21,16 @@ from typing import Optional, Sequence
 from more_itertools import chunked
 from dataclasses import dataclass
 
-from parlant.core import async_utils
-from parlant.core.common import DefaultBaseModel
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder
-from parlant.core.nlp.generation import SchematicGenerator
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.loggers import Logger
-from parlant.core.glossary import GlossaryStore
-from parlant.core.agents import Agent
-from parlant.core.services.indexing.common import ProgressReport
-from parlant.core.tags import Tag
+from Daneel.core import async_utils
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.engines.alpha.prompt_builder import PromptBuilder
+from Daneel.core.nlp.generation import SchematicGenerator
+from Daneel.core.guidelines import GuidelineContent
+from Daneel.core.loggers import Logger
+from Daneel.core.glossary import GlossaryStore
+from Daneel.core.agents import Agent
+from Daneel.core.services.indexing.common import ProgressReport
+from Daneel.core.tags import Tag
 
 
 EVALUATION_BATCH_SIZE = 5

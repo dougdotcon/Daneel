@@ -16,11 +16,11 @@ from enum import Enum
 from pydantic import Field
 from typing import Annotated, Any, Mapping, Optional, Sequence, TypeAlias
 
-from parlant.core.common import DefaultBaseModel
-from parlant.core.evaluations import GuidelinePayloadOperation
-from parlant.core.relationships import RelationshipId, GuidelineRelationshipKind
-from parlant.core.guidelines import GuidelineId
-from parlant.core.tags import TagId
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.evaluations import GuidelinePayloadOperation
+from Daneel.core.relationships import RelationshipId, GuidelineRelationshipKind
+from Daneel.core.guidelines import GuidelineId
+from Daneel.core.tags import TagId
 
 
 def apigen_config(group_name: str, method_name: str) -> Mapping[str, Any]:

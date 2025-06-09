@@ -9,12 +9,12 @@ import numpy as np
 import tempfile
 from unittest.mock import MagicMock
 
-from parlant.core.loggers import ConsoleLogger
-from parlant.data.loaders import DataLoader, DataLoaderOptions, DataFormat
-from parlant.data.preprocessing import DataCleaner, DataCleaningOptions
-from parlant.data.analysis import DataAnalyzer, DataAnalysisOptions
-from parlant.data.visualization import DataVisualizer, VisualizationOptions, ChartType
-from parlant.data.ml import ModelTrainer, ModelTrainingOptions, ModelType
+from Daneel.core.loggers import ConsoleLogger
+from Daneel.data.loaders import DataLoader, DataLoaderOptions, DataFormat
+from Daneel.data.preprocessing import DataCleaner, DataCleaningOptions
+from Daneel.data.analysis import DataAnalyzer, DataAnalysisOptions
+from Daneel.data.visualization import DataVisualizer, VisualizationOptions, ChartType
+from Daneel.data.ml import ModelTrainer, ModelTrainingOptions, ModelType
 
 
 @pytest.fixture

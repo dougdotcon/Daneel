@@ -1,10 +1,10 @@
 # Sistema de Gerenciamento de Prompts
 
-Este documento descreve o sistema de gerenciamento de prompts no framework Parlant.
+Este documento descreve o sistema de gerenciamento de prompts no framework Daneel.
 
 ## Visão Geral
 
-O sistema de gerenciamento de prompts fornece uma maneira de criar, gerenciar e usar prompts no Parlant. Ele suporta:
+O sistema de gerenciamento de prompts fornece uma maneira de criar, gerenciar e usar prompts no Daneel. Ele suporta:
 
 1. Carregamento e salvamento de prompts em vários formatos (JSON, YAML, texto)
 2. Gerenciamento de metadados e variáveis de prompts
@@ -25,7 +25,7 @@ A classe `Prompt` representa um prompt com metadados e conteúdo. Ela suporta:
 Exemplo de uso:
 
 ```python
-from parlant.core.prompts import Prompt, PromptMetadata, PromptVariable, PromptType
+from Daneel.core.prompts import Prompt, PromptMetadata, PromptVariable, PromptType
 
 # Create a prompt
 prompt = Prompt(
@@ -34,7 +34,7 @@ prompt = Prompt(
         name="Greeting Prompt",
         description="A prompt for greeting users",
         version="1.0.0",
-        author="Parlant",
+        author="Daneel",
         created_at="2025-01-01T00:00:00Z",
         updated_at="2025-01-01T00:00:00Z",
         prompt_type=PromptType.SYSTEM
@@ -49,7 +49,7 @@ prompt = Prompt(
         PromptVariable(
             name="service",
             description="Service name",
-            default_value="Parlant",
+            default_value="Daneel",
             required=False
         )
     ]
@@ -57,7 +57,7 @@ prompt = Prompt(
 
 # Render the prompt
 rendered = prompt.render({"name": "John"})
-print(rendered)  # Output: Hello, John! Welcome to Parlant.
+print(rendered)  # Output: Hello, John! Welcome to Daneel.
 ```
 
 ### PromptManager
@@ -72,8 +72,8 @@ A classe `PromptManager` lida com o carregamento, salvamento e gerenciamento de 
 Exemplo de uso:
 
 ```python
-from parlant.core.prompts import PromptManager, PromptType, PromptCategory
-from parlant.core.loggers import ConsoleLogger
+from Daneel.core.prompts import PromptManager, PromptType, PromptCategory
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a prompt manager
 manager = PromptManager(logger=ConsoleLogger())
@@ -116,8 +116,8 @@ A classe `PromptTemplate` fornece templating avançado usando Jinja2. Ela suport
 Exemplo de uso:
 
 ```python
-from parlant.core.prompts import Prompt, PromptMetadata, PromptTemplate
-from parlant.core.loggers import ConsoleLogger
+from Daneel.core.prompts import Prompt, PromptMetadata, PromptTemplate
+from Daneel.core.loggers import ConsoleLogger
 
 # Create a prompt
 prompt = Prompt(
@@ -126,7 +126,7 @@ prompt = Prompt(
         name="Greeting Template",
         description="A template for greeting users",
         version="1.0.0",
-        author="Parlant",
+        author="Daneel",
         created_at="2025-01-01T00:00:00Z",
         updated_at="2025-01-01T00:00:00Z"
     ),
@@ -140,9 +140,9 @@ template = PromptTemplate(prompt, logger=ConsoleLogger())
 rendered = template.render({
     "name": "John",
     "show_service": True,
-    "service": "Parlant"
+    "service": "Daneel"
 })
-print(rendered)  # Output: Hello, John! Welcome to Parlant.
+print(rendered)  # Output: Hello, John! Welcome to Daneel.
 ```
 
 ### PromptTemplateManager
@@ -157,7 +157,7 @@ A classe `PromptTemplateManager` gerencia templates de prompt. Ela suporta:
 Exemplo de uso:
 
 ```python
-from parlant.core.prompts import PromptTemplateManager
+from Daneel.core.prompts import PromptTemplateManager
 from parlat.core.loggers import ConsoleLogger
 
 # Create a template manager
@@ -176,7 +176,7 @@ templates = manager.list_templates()
 rendered = manager.render_template("greeting_template", {
     "name": "John",
     "show_service": True,
-    "service": "Parlant"
+    "service": "Daneel"
 })
 ```
 
@@ -215,7 +215,7 @@ Os prompts podem ser armazenados em vários formatos:
     "name": "Greeting Prompt",
     "description": "A prompt for greeting users",
     "version": "1.0.0",
-    "author": "Parlant",
+    "author": "Daneel",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "prompt_type": "system",
@@ -232,7 +232,7 @@ Os prompts podem ser armazenados em vários formatos:
     {
       "name": "service",
       "description": "Service name",
-      "default_value": "Parlant",
+      "default_value": "Daneel",
       "required": false
     }
   ]
@@ -247,7 +247,7 @@ metadata:
   name: Greeting Prompt
   description: A prompt for greeting users
   version: 1.0.0
-  author: Parlant
+  author: Daneel
   created_at: 2025-01-01T00:00:00Z
   updated_at: 2025-01-01T00:00:00Z
   prompt_type: system
@@ -260,13 +260,13 @@ variables:
     required: true
   - name: service
     description: Service name
-    default_value: Parlant
+    default_value: Daneel
     required: false
 ```
 
-## Integração com Parlant
+## Integração com Daneel
 
-O sistema de gerenciamento de prompts está integrado com o framework Parlant:
+O sistema de gerenciamento de prompts está integrado com o framework Daneel:
 
 1. **Modelos**: Os prompts são usados para guiar o comportamento dos modelos
 2. **Agentes**: Os agentes usam prompts para suas interações

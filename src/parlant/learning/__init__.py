@@ -1,5 +1,5 @@
 """
-Agent learning and adaptation module for Parlant.
+Agent learning and adaptation module for Daneel.
 
 This module provides functionality for agent learning and adaptation, including:
 - Interaction history tracking
@@ -9,7 +9,7 @@ This module provides functionality for agent learning and adaptation, including:
 - Personalization based on user interactions
 """
 
-from parlant.learning.history import (
+from Daneel.learning.history import (
     InteractionHistoryTracker,
     Interaction,
     InteractionId,
@@ -19,7 +19,7 @@ from parlant.learning.history import (
     Feedback,
 )
 
-from parlant.learning.metrics import (
+from Daneel.learning.metrics import (
     PerformanceMetricsTracker,
     MetricType,
     MetricId,
@@ -28,21 +28,21 @@ from parlant.learning.metrics import (
     Evaluation,
 )
 
-from parlant.learning.feedback import (
+from Daneel.learning.feedback import (
     FeedbackLearner,
     FeedbackPattern,
     FeedbackPatternId,
     LearningStrategy,
 )
 
-from parlant.learning.adaptation import (
+from Daneel.learning.adaptation import (
     BehaviorAdapter,
     BehaviorAdaptation,
     AdaptationId,
     AdaptationType,
 )
 
-from parlant.learning.personalization import (
+from Daneel.learning.personalization import (
     PersonalizationManager,
     UserPreference,
     PreferenceId,

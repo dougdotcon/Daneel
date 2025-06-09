@@ -15,11 +15,11 @@
 import asyncio
 from typing import Any, Iterable, Optional, OrderedDict, Sequence, cast
 
-from parlant.core import async_utils
-from parlant.core.agents import Agent, AgentStore
-from parlant.core.background_tasks import BackgroundTaskService
-from parlant.core.common import md5_checksum
-from parlant.core.evaluations import (
+from Daneel.core import async_utils
+from Daneel.core.agents import Agent, AgentStore
+from Daneel.core.background_tasks import BackgroundTaskService
+from Daneel.core.common import md5_checksum
+from Daneel.core.evaluations import (
     CoherenceCheck,
     CoherenceCheckKind,
     EntailmentRelationshipProposition,
@@ -35,16 +35,16 @@ from parlant.core.evaluations import (
     PayloadDescriptor,
     PayloadKind,
 )
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineId
-from parlant.core.services.indexing.coherence_checker import (
+from Daneel.core.guidelines import Guideline, GuidelineContent, GuidelineId
+from Daneel.core.services.indexing.coherence_checker import (
     CoherenceChecker,
 )
-from parlant.core.services.indexing.common import ProgressReport
-from parlant.core.services.indexing.guideline_connection_proposer import (
+from Daneel.core.services.indexing.common import ProgressReport
+from Daneel.core.services.indexing.guideline_connection_proposer import (
     GuidelineConnectionProposer,
 )
-from parlant.core.loggers import Logger
-from parlant.core.entity_cq import EntityQueries
+from Daneel.core.loggers import Logger
+from Daneel.core.entity_cq import EntityQueries
 
 
 class EvaluationError(Exception):

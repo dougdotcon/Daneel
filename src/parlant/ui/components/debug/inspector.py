@@ -22,7 +22,7 @@ from dataclasses import dataclass, field, is_dataclass, asdict
 from enum import Enum
 from typing import Any, Dict, List, Optional, Set, Tuple, Union, get_type_hints
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 @dataclass
@@ -265,7 +265,7 @@ class Inspector:
             HTML representation of the object
         """
         if depth > options.max_depth:
-            return f'<div class="parlant-inspector-property parlant-inspector-max-depth">Maximum depth reached</div>'
+            return f'<div class="Daneel-inspector-property Daneel-inspector-max-depth">Maximum depth reached</div>'
             
         value_type = self.get_value_type(value)
         is_expandable = self.is_expandable(value_type)
@@ -277,27 +277,27 @@ class Inspector:
         html = []
         
         # Property container
-        html.append(f'<div class="parlant-inspector-property" data-path="{path}">')
+        html.append(f'<div class="Daneel-inspector-property" data-path="{path}">')
         
         # Property header
-        html.append('<div class="parlant-inspector-property-header">')
+        html.append('<div class="Daneel-inspector-property-header">')
         
         # Expand/collapse button
         if is_expandable:
             if is_expanded:
-                html.append('<button class="parlant-inspector-expand-button parlant-inspector-expanded" aria-label="Collapse">▼</button>')
+                html.append('<button class="Daneel-inspector-expand-button Daneel-inspector-expanded" aria-label="Collapse">▼</button>')
             else:
-                html.append('<button class="parlant-inspector-expand-button" aria-label="Expand">▶</button>')
+                html.append('<button class="Daneel-inspector-expand-button" aria-label="Expand">▶</button>')
         else:
-            html.append('<span class="parlant-inspector-expand-placeholder"></span>')
+            html.append('<span class="Daneel-inspector-expand-placeholder"></span>')
             
         # Property name
         if name is not None:
-            html.append(f'<span class="parlant-inspector-property-name">{name}:</span>')
+            html.append(f'<span class="Daneel-inspector-property-name">{name}:</span>')
             
         # Property value
         formatted_value = self.format_value(value, value_type, options)
-        html.append(f'<span class="parlant-inspector-property-value {color_class}">{formatted_value}</span>')
+        html.append(f'<span class="Daneel-inspector-property-value {color_class}">{formatted_value}</span>')
         
         html.append('</div>')  # End property header
         
@@ -306,7 +306,7 @@ class Inspector:
             properties = self.get_object_properties(value, value_type, options)
             
             if properties:
-                html.append('<div class="parlant-inspector-property-children">')
+                html.append('<div class="Daneel-inspector-property-children">')
                 
                 for prop_name, prop_value in properties.items():
                     child_path = f"{path}.{prop_name}"
@@ -314,7 +314,7 @@ class Inspector:
                     
                 html.append('</div>')  # End property children
             else:
-                html.append('<div class="parlant-inspector-property-empty">No properties</div>')
+                html.append('<div class="Daneel-inspector-property-empty">No properties</div>')
                 
         html.append('</div>')  # End property container
         
@@ -330,21 +330,21 @@ class Inspector:
             Color class for the type
         """
         if value_type == ValueType.STRING:
-            return "parlant-inspector-string"
+            return "Daneel-inspector-string"
         elif value_type == ValueType.NUMBER or value_type == ValueType.BIGINT:
-            return "parlant-inspector-number"
+            return "Daneel-inspector-number"
         elif value_type == ValueType.BOOLEAN:
-            return "parlant-inspector-boolean"
+            return "Daneel-inspector-boolean"
         elif value_type == ValueType.NULL or value_type == ValueType.UNDEFINED:
-            return "parlant-inspector-null"
+            return "Daneel-inspector-null"
         elif value_type == ValueType.FUNCTION:
-            return "parlant-inspector-function"
+            return "Daneel-inspector-function"
         elif value_type == ValueType.SYMBOL:
-            return "parlant-inspector-symbol"
+            return "Daneel-inspector-symbol"
         elif value_type == ValueType.DATE or value_type == ValueType.REGEXP:
-            return "parlant-inspector-date"
+            return "Daneel-inspector-date"
         elif value_type == ValueType.ERROR:
-            return "parlant-inspector-error"
+            return "Daneel-inspector-error"
         else:
             return ""
             
@@ -364,15 +364,15 @@ class Inspector:
         # Add container
         html = []
         
-        theme_class = "parlant-inspector-dark" if options.theme == "dark" else "parlant-inspector-light"
-        html.append(f'<div class="parlant-inspector-container {theme_class}">')
+        theme_class = "Daneel-inspector-dark" if options.theme == "dark" else "Daneel-inspector-light"
+        html.append(f'<div class="Daneel-inspector-container {theme_class}">')
         
         # Add title if specified
         if options.title:
-            html.append(f'<div class="parlant-inspector-title">{options.title}</div>')
+            html.append(f'<div class="Daneel-inspector-title">{options.title}</div>')
             
         # Add content
-        html.append('<div class="parlant-inspector-content">')
+        html.append('<div class="Daneel-inspector-content">')
         html.append(self.render_object(None, data, 0, options))
         html.append('</div>')  # End content
         
@@ -387,7 +387,7 @@ class Inspector:
             CSS for the inspector component
         """
         css = """
-        .parlant-inspector-container {
+        .Daneel-inspector-container {
             border: 1px solid #e2e8f0;
             border-radius: 0.375rem;
             margin: 1rem 0;
@@ -396,49 +396,49 @@ class Inspector:
             font-size: 0.875rem;
         }
         
-        .parlant-inspector-light {
+        .Daneel-inspector-light {
             background-color: #ffffff;
             color: #1e293b;
         }
         
-        .parlant-inspector-dark {
+        .Daneel-inspector-dark {
             background-color: #1e293b;
             color: #e2e8f0;
         }
         
-        .parlant-inspector-title {
+        .Daneel-inspector-title {
             padding: 0.5rem 1rem;
             font-weight: 500;
             border-bottom: 1px solid #e2e8f0;
         }
         
-        .parlant-inspector-light .parlant-inspector-title {
+        .Daneel-inspector-light .Daneel-inspector-title {
             background-color: #f8fafc;
             border-bottom-color: #e2e8f0;
         }
         
-        .parlant-inspector-dark .parlant-inspector-title {
+        .Daneel-inspector-dark .Daneel-inspector-title {
             background-color: #0f172a;
             border-bottom-color: #334155;
         }
         
-        .parlant-inspector-content {
+        .Daneel-inspector-content {
             padding: 0.5rem;
             overflow: auto;
             max-height: 500px;
         }
         
-        .parlant-inspector-property {
+        .Daneel-inspector-property {
             margin-bottom: 0.25rem;
         }
         
-        .parlant-inspector-property-header {
+        .Daneel-inspector-property-header {
             display: flex;
             align-items: center;
         }
         
-        .parlant-inspector-expand-button,
-        .parlant-inspector-expand-placeholder {
+        .Daneel-inspector-expand-button,
+        .Daneel-inspector-expand-placeholder {
             width: 1rem;
             height: 1rem;
             margin-right: 0.25rem;
@@ -453,33 +453,33 @@ class Inspector:
             color: inherit;
         }
         
-        .parlant-inspector-expand-placeholder {
+        .Daneel-inspector-expand-placeholder {
             visibility: hidden;
         }
         
-        .parlant-inspector-property-name {
+        .Daneel-inspector-property-name {
             margin-right: 0.5rem;
             font-weight: 500;
         }
         
-        .parlant-inspector-property-children {
+        .Daneel-inspector-property-children {
             margin-left: 1.25rem;
             border-left: 1px solid #e2e8f0;
             padding-left: 0.5rem;
         }
         
-        .parlant-inspector-dark .parlant-inspector-property-children {
+        .Daneel-inspector-dark .Daneel-inspector-property-children {
             border-left-color: #334155;
         }
         
-        .parlant-inspector-property-empty {
+        .Daneel-inspector-property-empty {
             margin-left: 1.25rem;
             padding-left: 0.5rem;
             font-style: italic;
             color: #64748b;
         }
         
-        .parlant-inspector-max-depth {
+        .Daneel-inspector-max-depth {
             margin-left: 1.25rem;
             padding-left: 0.5rem;
             font-style: italic;
@@ -487,68 +487,68 @@ class Inspector:
         }
         
         /* Value colors */
-        .parlant-inspector-string {
+        .Daneel-inspector-string {
             color: #10b981;
         }
         
-        .parlant-inspector-number {
+        .Daneel-inspector-number {
             color: #3b82f6;
         }
         
-        .parlant-inspector-boolean {
+        .Daneel-inspector-boolean {
             color: #8b5cf6;
         }
         
-        .parlant-inspector-null {
+        .Daneel-inspector-null {
             color: #64748b;
         }
         
-        .parlant-inspector-function {
+        .Daneel-inspector-function {
             color: #f59e0b;
         }
         
-        .parlant-inspector-symbol {
+        .Daneel-inspector-symbol {
             color: #ec4899;
         }
         
-        .parlant-inspector-date {
+        .Daneel-inspector-date {
             color: #ef4444;
         }
         
-        .parlant-inspector-error {
+        .Daneel-inspector-error {
             color: #ef4444;
         }
         
         /* Dark mode value colors */
-        .parlant-inspector-dark .parlant-inspector-string {
+        .Daneel-inspector-dark .Daneel-inspector-string {
             color: #34d399;
         }
         
-        .parlant-inspector-dark .parlant-inspector-number {
+        .Daneel-inspector-dark .Daneel-inspector-number {
             color: #60a5fa;
         }
         
-        .parlant-inspector-dark .parlant-inspector-boolean {
+        .Daneel-inspector-dark .Daneel-inspector-boolean {
             color: #a78bfa;
         }
         
-        .parlant-inspector-dark .parlant-inspector-null {
+        .Daneel-inspector-dark .Daneel-inspector-null {
             color: #94a3b8;
         }
         
-        .parlant-inspector-dark .parlant-inspector-function {
+        .Daneel-inspector-dark .Daneel-inspector-function {
             color: #fbbf24;
         }
         
-        .parlant-inspector-dark .parlant-inspector-symbol {
+        .Daneel-inspector-dark .Daneel-inspector-symbol {
             color: #f472b6;
         }
         
-        .parlant-inspector-dark .parlant-inspector-date {
+        .Daneel-inspector-dark .Daneel-inspector-date {
             color: #f87171;
         }
         
-        .parlant-inspector-dark .parlant-inspector-error {
+        .Daneel-inspector-dark .Daneel-inspector-error {
             color: #f87171;
         }
         """

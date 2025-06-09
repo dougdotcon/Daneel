@@ -15,9 +15,9 @@
 from typing import Any, Awaitable, Callable, Optional, Sequence
 from bson import CodecOptions
 from typing_extensions import Self
-from parlant.core.loggers import Logger
-from parlant.core.persistence.common import Where
-from parlant.core.persistence.document_database import (
+from Daneel.core.loggers import Logger
+from Daneel.core.persistence.common import Where
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DeleteResult,
     DocumentCollection,

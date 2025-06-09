@@ -21,13 +21,13 @@ import pytest
 from unittest.mock import MagicMock
 from datetime import datetime
 
-from parlant.core.prompts.common import (
+from Daneel.core.prompts.common import (
     Prompt, PromptMetadata, PromptVariable, 
     PromptType, PromptFormat, PromptCategory,
     extract_variables_from_template
 )
-from parlant.core.prompts.prompt_manager import PromptManager
-from parlant.core.prompts.prompt_template import PromptTemplate, PromptTemplateManager
+from Daneel.core.prompts.prompt_manager import PromptManager
+from Daneel.core.prompts.prompt_template import PromptTemplate, PromptTemplateManager
 
 
 @pytest.fixture
@@ -131,7 +131,7 @@ def test_prompt():
         PromptVariable(
             name="service",
             description="Service name",
-            default_value="Parlant",
+            default_value="Daneel",
             required=False,
         ),
     ]
@@ -156,7 +156,7 @@ def test_prompt():
     
     # Test render
     rendered = prompt.render({"name": "John"})
-    assert rendered == "Hello, John! Welcome to Parlant."
+    assert rendered == "Hello, John! Welcome to Daneel."
     
     # Test render with all variables
     rendered = prompt.render({"name": "John", "service": "TestService"})
@@ -252,15 +252,15 @@ def test_prompt_template(mock_logger):
     rendered = template.render({
         "name": "John",
         "show_service": True,
-        "service": "Parlant"
+        "service": "Daneel"
     })
-    assert rendered == "Hello, John! Welcome to Parlant."
+    assert rendered == "Hello, John! Welcome to Daneel."
     
     # Test render with show_service=False
     rendered = template.render({
         "name": "John",
         "show_service": False,
-        "service": "Parlant"
+        "service": "Daneel"
     })
     assert rendered == "Hello, John! "
     
@@ -307,9 +307,9 @@ def test_prompt_template_manager(mock_logger):
     rendered = manager.render_template("test_template", {
         "name": "John",
         "show_service": True,
-        "service": "Parlant"
+        "service": "Daneel"
     })
-    assert rendered == "Hello, John! Welcome to Parlant."
+    assert rendered == "Hello, John! Welcome to Daneel."
     
     # Test deleting a template
     result = manager.delete_template("test_template")

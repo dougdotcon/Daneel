@@ -19,13 +19,13 @@ from typing import Any, Awaitable, Callable, Mapping, Optional, Sequence, cast
 from typing_extensions import override, Self
 import aiofiles
 
-from parlant.core.persistence.common import (
+from Daneel.core.persistence.common import (
     Where,
     matches_filters,
     ensure_is_total,
 )
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.persistence.document_database import (
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DeleteResult,
     DocumentCollection,
@@ -35,7 +35,7 @@ from parlant.core.persistence.document_database import (
     UpdateResult,
     identity_loader,
 )
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 class JSONFileDocumentDatabase(DocumentDatabase):

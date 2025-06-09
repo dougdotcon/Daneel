@@ -19,26 +19,26 @@ from typing_extensions import TypedDict, override, Self
 from datetime import datetime, timezone
 from dataclasses import dataclass
 
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.common import (
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.common import (
     ItemNotFoundError,
     JSONSerializable,
     UniqueId,
     Version,
     generate_id,
 )
-from parlant.core.persistence.common import ObjectId, Where
-from parlant.core.persistence.document_database import (
+from Daneel.core.persistence.common import ObjectId, Where
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     DocumentCollection,
 )
-from parlant.core.persistence.document_database_helper import (
+from Daneel.core.persistence.document_database_helper import (
     DocumentMigrationHelper,
     DocumentStoreMigrationHelper,
 )
-from parlant.core.tags import TagId
-# from parlant.core.tools import ToolId
+from Daneel.core.tags import TagId
+# from Daneel.core.tools import ToolId
 ToolId = str  # Temporary fix for circular import
 
 ContextVariableId = NewType("ContextVariableId", str)
@@ -220,7 +220,7 @@ class ContextVariableDocumentStore(ContextVariableStore):
     ) -> Optional[_ContextVariableDocument]:
         async def v0_1_0_to_v_0_2_0(doc: BaseDocument) -> Optional[BaseDocument]:
             raise Exception(
-                "This code should not be reached! Please run the 'parlant-prepare-migration' script."
+                "This code should not be reached! Please run the 'Daneel-prepare-migration' script."
             )
 
         return await DocumentMigrationHelper[_ContextVariableDocument](

@@ -14,14 +14,14 @@
 
 from typing import Awaitable, Callable, Generic, Mapping, Optional, cast
 from typing_extensions import TypedDict, Self
-from parlant.core.common import Version, generate_id
-from parlant.core.persistence.common import (
+from Daneel.core.common import Version, generate_id
+from Daneel.core.persistence.common import (
     MigrationRequired,
     ObjectId,
     ServerOutdated,
     VersionedStore,
 )
-from parlant.core.persistence.document_database import (
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DocumentDatabase,
     TDocument,

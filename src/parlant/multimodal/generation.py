@@ -1,5 +1,5 @@
 """
-Multi-modal content generation for Parlant.
+Multi-modal content generation for Daneel.
 
 This module provides functionality for generating multi-modal content.
 """
@@ -17,15 +17,15 @@ import os
 from pathlib import Path
 import tempfile
 
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.loggers import Logger
-from parlant.core.async_utils import ReaderWriterLock
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.generation_info import GenerationInfo
+from Daneel.core.common import JSONSerializable, generate_id
+from Daneel.core.loggers import Logger
+from Daneel.core.async_utils import ReaderWriterLock
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.generation_info import GenerationInfo
 
-from parlant.multimodal.image import Image, ImageId, ImageProcessor, ImageMetadata, ImageFormat
-from parlant.multimodal.audio import Audio, AudioId, AudioProcessor, AudioMetadata, AudioFormat
-from parlant.multimodal.video import Video, VideoId, VideoProcessor, VideoMetadata, VideoFormat
+from Daneel.multimodal.image import Image, ImageId, ImageProcessor, ImageMetadata, ImageFormat
+from Daneel.multimodal.audio import Audio, AudioId, AudioProcessor, AudioMetadata, AudioFormat
+from Daneel.multimodal.video import Video, VideoId, VideoProcessor, VideoMetadata, VideoFormat
 
 
 class GenerationMode(str, Enum):

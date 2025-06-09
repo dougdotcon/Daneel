@@ -1,5 +1,5 @@
 """
-Knowledge graph module for Parlant.
+Knowledge graph module for Daneel.
 
 This module provides a knowledge graph for representing relationships between knowledge items.
 """
@@ -9,11 +9,11 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Sequence, Set, Tuple, Union, cast
 import networkx as nx
 
-from parlant.core.common import JSONSerializable, generate_id
-from parlant.core.loggers import Logger
-from parlant.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId
+from Daneel.core.common import JSONSerializable, generate_id
+from Daneel.core.loggers import Logger
+from Daneel.core.persistence.common import ItemNotFoundError, ObjectId, UniqueId
 
-from parlant.knowledge.base import KnowledgeBase, KnowledgeItem, KnowledgeItemId
+from Daneel.knowledge.base import KnowledgeBase, KnowledgeItem, KnowledgeItemId
 
 
 class KnowledgeGraph:

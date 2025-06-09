@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Agent system for Parlant."""
+"""Agent system for Daneel."""
 
-from parlant.core.agent_system import (
+from Daneel.core.agent_system import (
     AgentConfig,
     AgentContext,
     AgentState,

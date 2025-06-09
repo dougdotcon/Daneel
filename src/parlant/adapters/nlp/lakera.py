@@ -17,8 +17,8 @@ import os
 from typing_extensions import override
 import httpx
 
-from parlant.core.loggers import Logger
-from parlant.core.nlp.moderation import ModerationCheck, ModerationService, ModerationTag
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.moderation import ModerationCheck, ModerationService, ModerationTag
 
 
 class LakeraGuard(ModerationService):

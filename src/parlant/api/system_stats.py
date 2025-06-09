@@ -10,10 +10,10 @@ from typing import Dict, Any, List
 from fastapi import APIRouter, status
 from pydantic import BaseModel
 
-from parlant.core.agents import AgentStore
-from parlant.core.sessions import SessionStore
-from parlant.core.customers import CustomerStore
-from parlant.core.guidelines import GuidelineStore
+from Daneel.core.agents import AgentStore
+from Daneel.core.sessions import SessionStore
+from Daneel.core.customers import CustomerStore
+from Daneel.core.guidelines import GuidelineStore
 
 
 class SystemStatus(BaseModel):

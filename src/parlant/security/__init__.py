@@ -1,10 +1,10 @@
 """
-Security and privacy module for Parlant.
+Security and privacy module for Daneel.
 
 This module provides functionality for security and privacy features.
 """
 
-from parlant.security.auth import (
+from Daneel.security.auth import (
     AuthManager,
     User,
     UserId,
@@ -16,13 +16,13 @@ from parlant.security.auth import (
     AuthorizationError,
 )
 
-from parlant.security.encryption import (
+from Daneel.security.encryption import (
     EncryptionManager,
     EncryptionType,
     EncryptionError,
 )
 
-from parlant.security.privacy import (
+from Daneel.security.privacy import (
     PrivacyManager,
     PrivacyEntity,
     PrivacyEntityType,
@@ -30,7 +30,7 @@ from parlant.security.privacy import (
     PrivacyError,
 )
 
-from parlant.security.audit import (
+from Daneel.security.audit import (
     AuditLogger,
     AuditEvent,
     AuditEventId,
@@ -38,7 +38,7 @@ from parlant.security.audit import (
     AuditEventSeverity,
 )
 
-from parlant.security.compliance import (
+from Daneel.security.compliance import (
     ComplianceManager,
     ComplianceFramework,
     ComplianceRequirement,

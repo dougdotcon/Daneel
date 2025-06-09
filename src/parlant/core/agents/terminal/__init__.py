@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Terminal agent implementation for Parlant."""
+"""Terminal agent implementation for Daneel."""
 
-from parlant.core.agents.terminal.terminal_agent import TerminalAgent
+from Daneel.core.agents.terminal.terminal_agent import TerminalAgent
 
 __all__ = [
     "TerminalAgent",

@@ -15,7 +15,7 @@
 from typing import cast
 from pytest_bdd import given, parsers
 
-from parlant.core.agents import AgentId, AgentStore, CompositionMode
+from Daneel.core.agents import AgentId, AgentStore, CompositionMode
 
 from tests.core.common.engines.alpha.utils import step
 from tests.core.common.utils import ContextOfTest

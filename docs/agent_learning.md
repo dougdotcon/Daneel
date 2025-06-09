@@ -1,6 +1,6 @@
 # Aprendizado e Adaptação de Agentes
 
-Este documento descreve a funcionalidade de aprendizado e adaptação de agentes no framework Parlant.
+Este documento descreve a funcionalidade de aprendizado e adaptação de agentes no framework Daneel.
 
 ## Visão Geral
 
@@ -26,7 +26,7 @@ O componente de rastreamento de histórico de interações fornece uma maneira d
 Exemplo de uso:
 
 ```python
-from parlant.learning import InteractionHistoryTracker, InteractionType, FeedbackType
+from Daneel.learning import InteractionHistoryTracker, InteractionType, FeedbackType
 
 # Create an interaction tracker
 tracker = InteractionHistoryTracker(document_db, agent_store, logger)
@@ -66,7 +66,7 @@ O componente de métricas de desempenho e avaliação permite medir e analisar o
 Exemplo de uso:
 
 ```python
-from parlant.learning import PerformanceMetricsTracker, MetricType
+from Daneel.learning import PerformanceMetricsTracker, MetricType
 
 # Create a metrics tracker
 tracker = PerformanceMetricsTracker(document_db, agent_store, interaction_tracker, logger)
@@ -108,7 +108,7 @@ O componente de aprendizado baseado em feedback permite que os agentes aprendam 
 Exemplo de uso:
 
 ```python
-from parlant.learning import FeedbackLearner, LearningStrategy
+from Daneel.learning import FeedbackLearner, LearningStrategy
 
 # Create a feedback learner
 learner = FeedbackLearner(
@@ -148,7 +148,7 @@ O componente de adaptação de comportamento permite que os agentes ajustem seu 
 Exemplo de uso:
 
 ```python
-from parlant.learning import BehaviorAdapter, AdaptationType
+from Daneel.learning import BehaviorAdapter, AdaptationType
 
 # Create a behavior adapter
 adapter = BehaviorAdapter(
@@ -186,7 +186,7 @@ O componente de personalização permite adaptar as respostas do agente a usuár
 Exemplo de uso:
 
 ```python
-from parlant.learning import PersonalizationManager, PreferenceType
+from Daneel.learning import PersonalizationManager, PreferenceType
 
 # Create a personalization manager
 manager = PersonalizationManager(
@@ -218,9 +218,9 @@ personalized_prompt = await manager.create_personalized_prompt(
 )
 ```
 
-## Integração com Parlant
+## Integração com Daneel
 
-A funcionalidade de aprendizado e adaptação de agentes está integrada com o framework Parlant:
+A funcionalidade de aprendizado e adaptação de agentes está integrada com o framework Daneel:
 
 1. **Sistema de Agente**: O aprendizado e adaptação aprimoram o sistema de agentes com capacidades de melhoria contínua
 2. **Gerenciamento de Conhecimento**: Padrões aprendidos e adaptações podem ser armazenados no sistema de gerenciamento de conhecimento

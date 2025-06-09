@@ -16,14 +16,14 @@ from pprint import pformat
 from typing import Optional, cast
 from pytest_bdd import given, then, parsers, when
 
-from parlant.core.agents import AgentId, AgentStore
-from parlant.core.common import JSONSerializable
-from parlant.core.customers import CustomerStore
-from parlant.core.emissions import EmittedEvent
-from parlant.core.engines.alpha.utterance_selector import DEFAULT_NO_MATCH_UTTERANCE
-from parlant.core.nlp.moderation import ModerationTag
+from Daneel.core.agents import AgentId, AgentStore
+from Daneel.core.common import JSONSerializable
+from Daneel.core.customers import CustomerStore
+from Daneel.core.emissions import EmittedEvent
+from Daneel.core.engines.alpha.utterance_selector import DEFAULT_NO_MATCH_UTTERANCE
+from Daneel.core.nlp.moderation import ModerationTag
 
-from parlant.core.sessions import (
+from Daneel.core.sessions import (
     EventKind,
     EventSource,
     MessageEventData,

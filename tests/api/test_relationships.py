@@ -18,10 +18,10 @@ import httpx
 from lagom import Container
 from pytest import raises
 
-from parlant.core.relationships import EntityType, GuidelineRelationshipKind, RelationshipStore
-from parlant.core.guidelines import GuidelineStore
-from parlant.core.tags import TagStore
-from parlant.core.common import ItemNotFoundError
+from Daneel.core.relationships import EntityType, GuidelineRelationshipKind, RelationshipStore
+from Daneel.core.guidelines import GuidelineStore
+from Daneel.core.tags import TagStore
+from Daneel.core.common import ItemNotFoundError
 
 
 async def test_that_relationship_can_be_created_between_two_guidelines(

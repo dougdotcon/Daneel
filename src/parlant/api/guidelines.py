@@ -20,8 +20,8 @@ from typing import Annotated, Optional, Sequence, TypeAlias, cast, get_args
 from fastapi import APIRouter, HTTPException, Path, status, Query
 from pydantic import Field
 
-from parlant.api import agents, common
-from parlant.api.common import (
+from Daneel.api import agents, common
+from Daneel.api.common import (
     CoherenceCheckKindDTO,
     ConnectionPropositionKindDTO,
     GuidelineDTO,
@@ -40,17 +40,17 @@ from parlant.api.common import (
     guideline_relationship_kind_to_dto,
     operation_dto_to_operation,
 )
-from parlant.api.index import InvoiceDTO
-from parlant.core.agents import AgentStore, AgentId
-from parlant.core.common import (
+from Daneel.api.index import InvoiceDTO
+from Daneel.core.agents import AgentStore, AgentId
+from Daneel.core.common import (
     DefaultBaseModel,
 )
-from parlant.api.common import (
+from Daneel.api.common import (
     ExampleJson,
     GuidelineConditionField,
     GuidelineActionField,
 )
-from parlant.core.evaluations import (
+from Daneel.core.evaluations import (
     CoherenceCheck,
     CoherenceCheckKind,
     EntailmentRelationshipProposition,
@@ -60,27 +60,27 @@ from parlant.core.evaluations import (
     InvoiceGuidelineData,
     PayloadKind,
 )
-from parlant.core.relationships import (
+from Daneel.core.relationships import (
     EntityType,
     RelationshipId,
     GuidelineRelationshipKind,
     RelationshipStore,
 )
-from parlant.core.guidelines import (
+from Daneel.core.guidelines import (
     Guideline,
     GuidelineContent,
     GuidelineId,
     GuidelineStore,
     GuidelineUpdateParams,
 )
-from parlant.core.guideline_tool_associations import (
+from Daneel.core.guideline_tool_associations import (
     GuidelineToolAssociationId,
     GuidelineToolAssociationStore,
 )
-from parlant.core.application import Application
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.tags import TagId, TagStore, Tag
-from parlant.core.tools import ToolId
+from Daneel.core.application import Application
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.tags import TagId, TagStore, Tag
+from Daneel.core.tools import ToolId
 
 API_GROUP = "guidelines"
 
@@ -643,7 +643,7 @@ def create_legacy_router(
 
         Invoices are obtained by calling the `create_evaluation` method of the client.
         (Equivalent to making a POST request to `/index/evaluations`)
-        See the [documentation](https://parlant.io/docs/concepts/customization/guidelines) for more information.
+        See the [documentation](https://Daneel.io/docs/concepts/customization/guidelines) for more information.
 
         The guidelines are created in the specified agent's guideline set.
         Tool associations and connections are automatically handled.
@@ -1390,7 +1390,7 @@ def create_router(
         """
         Creates a new guideline.
 
-        See the [documentation](https://parlant.io/docs/concepts/customization/guidelines) for more information.
+        See the [documentation](https://Daneel.io/docs/concepts/customization/guidelines) for more information.
         """
         tags = []
         if params.tags:

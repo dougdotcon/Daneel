@@ -15,9 +15,9 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
-from parlant.core.agents import AgentId
-from parlant.core.common import JSONSerializable
-from parlant.core.sessions import (
+from Daneel.core.agents import AgentId
+from Daneel.core.common import JSONSerializable
+from Daneel.core.sessions import (
     EventKind,
     EventSource,
     MessageEventData,

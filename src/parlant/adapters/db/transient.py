@@ -17,8 +17,8 @@ from typing import Awaitable, Callable, Optional, Sequence, cast
 from typing_extensions import override
 from typing_extensions import get_type_hints
 
-from parlant.core.persistence.common import matches_filters, Where, ObjectId, ensure_is_total
-from parlant.core.persistence.document_database import (
+from Daneel.core.persistence.common import matches_filters, Where, ObjectId, ensure_is_total
+from Daneel.core.persistence.document_database import (
     BaseDocument,
     DeleteResult,
     DocumentCollection,

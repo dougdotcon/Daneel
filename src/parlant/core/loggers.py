@@ -25,8 +25,8 @@ import traceback
 from typing import Any, Iterator, Sequence
 from typing_extensions import override
 
-from parlant.core.common import generate_id
-from parlant.core.contextual_correlator import ContextualCorrelator
+from Daneel.core.common import generate_id
+from Daneel.core.contextual_correlator import ContextualCorrelator
 
 
 class LogLevel(Enum):
@@ -82,7 +82,7 @@ class CorrelationalLogger(Logger):
         logger_id: str | None = None,
     ) -> None:
         self._correlator = correlator
-        self.raw_logger = logging.getLogger(logger_id or "parlant")
+        self.raw_logger = logging.getLogger(logger_id or "Daneel")
         self.raw_logger.setLevel(log_level.to_logging_level())
 
         # Wrap it with structlog configuration

@@ -1,11 +1,11 @@
 """
-Multi-modal capabilities module for Parlant.
+Multi-modal capabilities module for Daneel.
 
 This module provides functionality for working with different types of data beyond text,
 such as images, audio, and video.
 """
 
-from parlant.multimodal.image import (
+from Daneel.multimodal.image import (
     ImageProcessor,
     Image,
     ImageId,
@@ -14,7 +14,7 @@ from parlant.multimodal.image import (
     ImageAnalysisResult,
 )
 
-from parlant.multimodal.audio import (
+from Daneel.multimodal.audio import (
     AudioProcessor,
     Audio,
     AudioId,
@@ -24,7 +24,7 @@ from parlant.multimodal.audio import (
     AudioAnalysisResult,
 )
 
-from parlant.multimodal.video import (
+from Daneel.multimodal.video import (
     VideoProcessor,
     Video,
     VideoId,
@@ -34,7 +34,7 @@ from parlant.multimodal.video import (
     VideoAnalysisResult,
 )
 
-from parlant.multimodal.context import (
+from Daneel.multimodal.context import (
     MultiModalContextManager,
     MultiModalContext,
     MultiModalContent,
@@ -42,7 +42,7 @@ from parlant.multimodal.context import (
     ContentType,
 )
 
-from parlant.multimodal.generation import (
+from Daneel.multimodal.generation import (
     MultiModalGenerator,
     GenerationOptions,
     GenerationResult,

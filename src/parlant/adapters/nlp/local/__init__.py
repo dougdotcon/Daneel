@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Local model adapters for Parlant."""
+"""Local model adapters for Daneel."""
 
-from parlant.adapters.nlp.local.llama import LlamaService
-from parlant.adapters.nlp.local.deepseek import DeepSeekService
-from parlant.adapters.nlp.local.model_manager import LocalModelManager
+from Daneel.adapters.nlp.local.llama import LlamaService
+from Daneel.adapters.nlp.local.deepseek import DeepSeekService
+from Daneel.adapters.nlp.local.model_manager import LocalModelManager
 
 __all__ = ["LlamaService", "DeepSeekService", "LocalModelManager"]

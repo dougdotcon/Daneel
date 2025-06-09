@@ -16,12 +16,12 @@
 
 from typing import Dict, Optional, Type
 
-from parlant.adapters.nlp.local.model_manager import LocalModelManager, ModelType
-from parlant.adapters.nlp.local.llama import LlamaService
-from parlant.adapters.nlp.local.deepseek import DeepSeekService
-from parlant.adapters.nlp.model_switcher import ModelSwitcher
-from parlant.core.loggers import Logger
-from parlant.core.nlp.service import NLPService
+from Daneel.adapters.nlp.local.model_manager import LocalModelManager, ModelType
+from Daneel.adapters.nlp.local.llama import LlamaService
+from Daneel.adapters.nlp.local.deepseek import DeepSeekService
+from Daneel.adapters.nlp.model_switcher import ModelSwitcher
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.service import NLPService
 
 
 class NLPServiceFactory:
@@ -59,10 +59,10 @@ class NLPServiceFactory:
         await self.initialize()
         
         if service_type == "openai":
-            from parlant.adapters.nlp.openai_service import OpenAIService
+            from Daneel.adapters.nlp.openai_service import OpenAIService
             return OpenAIService(logger=self._logger, **kwargs)
         elif service_type == "anthropic":
-            from parlant.adapters.nlp.anthropic_service import AnthropicService
+            from Daneel.adapters.nlp.anthropic_service import AnthropicService
             return AnthropicService(logger=self._logger, **kwargs)
         elif service_type == "llama":
             return LlamaService(
@@ -127,14 +127,14 @@ class NLPServiceFactory:
             
         # Fall back to OpenAI
         try:
-            from parlant.adapters.nlp.openai_service import OpenAIService
+            from Daneel.adapters.nlp.openai_service import OpenAIService
             return OpenAIService(logger=self._logger)
         except Exception as e:
             self._logger.warning(f"Failed to create OpenAI service: {e}")
             
         # Fall back to Anthropic
         try:
-            from parlant.adapters.nlp.anthropic_service import AnthropicService
+            from Daneel.adapters.nlp.anthropic_service import AnthropicService
             return AnthropicService(logger=self._logger)
         except Exception as e:
             self._logger.warning(f"Failed to create Anthropic service: {e}")

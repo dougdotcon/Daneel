@@ -14,16 +14,16 @@
 
 from datetime import datetime, timezone
 
-from parlant.core.agents import Agent, AgentId
-from parlant.core.guidelines import GuidelineContent
-from parlant.core.glossary import GlossaryStore
-from parlant.core.services.indexing.coherence_checker import (
+from Daneel.core.agents import Agent, AgentId
+from Daneel.core.guidelines import GuidelineContent
+from Daneel.core.glossary import GlossaryStore
+from Daneel.core.services.indexing.coherence_checker import (
     CoherenceChecker,
     IncoherenceKind,
     IncoherenceTest,
 )
 
-from parlant.core.tags import Tag
+from Daneel.core.tags import Tag
 from tests.core.common.utils import ContextOfTest
 from tests.test_utilities import nlp_test
 

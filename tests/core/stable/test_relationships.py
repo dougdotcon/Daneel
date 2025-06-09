@@ -15,16 +15,16 @@
 from typing import AsyncIterator, Sequence
 from pytest import fixture, raises
 
-from parlant.core.relationships import (
+from Daneel.core.relationships import (
     EntityType,
     GuidelineRelationshipKind,
     Relationship,
     RelationshipDocumentStore,
     RelationshipStore,
 )
-from parlant.core.guidelines import GuidelineId
-from parlant.core.persistence.document_database import DocumentDatabase
-from parlant.adapters.db.transient import TransientDocumentDatabase
+from Daneel.core.guidelines import GuidelineId
+from Daneel.core.persistence.document_database import DocumentDatabase
+from Daneel.adapters.db.transient import TransientDocumentDatabase
 
 
 @fixture

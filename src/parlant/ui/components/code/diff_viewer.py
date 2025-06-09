@@ -27,8 +27,8 @@ from pygments.lexers import get_lexer_by_name, guess_lexer
 from pygments.formatters import HtmlFormatter
 from pygments.styles import get_style_by_name
 
-from parlant.core.loggers import Logger
-from parlant.ui.components.code.code_block import CodeBlock
+from Daneel.core.loggers import Logger
+from Daneel.ui.components.code.code_block import CodeBlock
 
 
 class DiffMode(str, Enum):
@@ -193,7 +193,7 @@ class DiffViewer:
         formatter = HtmlFormatter(
             style=style,
             linenos="table",
-            cssclass="parlant-diff-code",
+            cssclass="Daneel-diff-code",
             wrapcode=True,
         )
         
@@ -219,7 +219,7 @@ class DiffViewer:
                 # This is a code line
                 if line_index < len(diff_lines):
                     diff_type = diff_lines[line_index].type
-                    line_class = f"parlant-diff-line-{diff_type}"
+                    line_class = f"Daneel-diff-line-{diff_type}"
                     html_line = html_line.replace("<tr>", f'<tr class="{line_class}">')
                     line_index += 1
                 result_lines.append(html_line)
@@ -248,17 +248,17 @@ class DiffViewer:
         
         # Combine into a split view
         html = []
-        html.append('<div class="parlant-diff-split-view">')
+        html.append('<div class="Daneel-diff-split-view">')
         
         # Old code side
-        html.append('<div class="parlant-diff-old">')
-        html.append('<div class="parlant-diff-header">Old</div>')
+        html.append('<div class="Daneel-diff-old">')
+        html.append('<div class="Daneel-diff-header">Old</div>')
         html.append(old_html)
         html.append('</div>')
         
         # New code side
-        html.append('<div class="parlant-diff-new">')
-        html.append('<div class="parlant-diff-header">New</div>')
+        html.append('<div class="Daneel-diff-new">')
+        html.append('<div class="Daneel-diff-header">New</div>')
         html.append(new_html)
         html.append('</div>')
         
@@ -285,7 +285,7 @@ class DiffViewer:
         
         # Wrap in a container
         html = []
-        html.append('<div class="parlant-diff-unified-view">')
+        html.append('<div class="Daneel-diff-unified-view">')
         html.append(unified_html)
         html.append('</div>')
         
@@ -310,41 +310,41 @@ class DiffViewer:
         
         # Add container with file name and buttons
         html = []
-        html.append('<div class="parlant-diff-container">')
+        html.append('<div class="Daneel-diff-container">')
         
         # Add header with file name and language
-        html.append('<div class="parlant-diff-top-header">')
+        html.append('<div class="Daneel-diff-top-header">')
         
         if options.file_name:
-            html.append(f'<div class="parlant-diff-filename">{options.file_name}</div>')
+            html.append(f'<div class="Daneel-diff-filename">{options.file_name}</div>')
         
-        html.append(f'<div class="parlant-diff-language">{language.upper()}</div>')
+        html.append(f'<div class="Daneel-diff-language">{language.upper()}</div>')
         
         html.append('</div>')  # End header
         
         # Add the diff view mode selector
-        html.append('<div class="parlant-diff-mode-selector">')
-        html.append('<label class="parlant-diff-mode-label">')
-        html.append('<input type="radio" name="diff-mode" value="split" class="parlant-diff-mode-radio"')
+        html.append('<div class="Daneel-diff-mode-selector">')
+        html.append('<label class="Daneel-diff-mode-label">')
+        html.append('<input type="radio" name="diff-mode" value="split" class="Daneel-diff-mode-radio"')
         if options.diff_mode == DiffMode.SPLIT:
             html.append(' checked')
         html.append('> Split View')
         html.append('</label>')
         
-        html.append('<label class="parlant-diff-mode-label">')
-        html.append('<input type="radio" name="diff-mode" value="unified" class="parlant-diff-mode-radio"')
+        html.append('<label class="Daneel-diff-mode-label">')
+        html.append('<input type="radio" name="diff-mode" value="unified" class="Daneel-diff-mode-radio"')
         if options.diff_mode == DiffMode.UNIFIED:
             html.append(' checked')
         html.append('> Unified View')
         html.append('</label>')
         
         if options.show_copy_button:
-            html.append('<button class="parlant-diff-copy-button">Copy New</button>')
+            html.append('<button class="Daneel-diff-copy-button">Copy New</button>')
         
         html.append('</div>')  # End mode selector
         
         # Add the diff content
-        html.append('<div class="parlant-diff-content">')
+        html.append('<div class="Daneel-diff-content">')
         
         if options.diff_mode == DiffMode.SPLIT:
             html.append(self.render_split_view(old_code, new_code, options))
@@ -364,14 +364,14 @@ class DiffViewer:
             CSS for the diff viewer component
         """
         css = """
-        .parlant-diff-container {
+        .Daneel-diff-container {
             border: 1px solid #e2e8f0;
             border-radius: 0.375rem;
             margin: 1rem 0;
             overflow: hidden;
         }
         
-        .parlant-diff-top-header {
+        .Daneel-diff-top-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -380,18 +380,18 @@ class DiffViewer:
             border-bottom: 1px solid #e2e8f0;
         }
         
-        .parlant-diff-filename {
+        .Daneel-diff-filename {
             font-family: monospace;
             font-size: 0.875rem;
             font-weight: 500;
         }
         
-        .parlant-diff-language {
+        .Daneel-diff-language {
             font-size: 0.75rem;
             color: #64748b;
         }
         
-        .parlant-diff-mode-selector {
+        .Daneel-diff-mode-selector {
             display: flex;
             align-items: center;
             padding: 0.5rem 1rem;
@@ -399,18 +399,18 @@ class DiffViewer:
             border-bottom: 1px solid #e2e8f0;
         }
         
-        .parlant-diff-mode-label {
+        .Daneel-diff-mode-label {
             margin-right: 1rem;
             font-size: 0.875rem;
             display: flex;
             align-items: center;
         }
         
-        .parlant-diff-mode-radio {
+        .Daneel-diff-mode-radio {
             margin-right: 0.25rem;
         }
         
-        .parlant-diff-copy-button {
+        .Daneel-diff-copy-button {
             background-color: transparent;
             border: 1px solid #e2e8f0;
             border-radius: 0.25rem;
@@ -420,31 +420,31 @@ class DiffViewer:
             cursor: pointer;
         }
         
-        .parlant-diff-copy-button:hover {
+        .Daneel-diff-copy-button:hover {
             background-color: #e2e8f0;
         }
         
-        .parlant-diff-content {
+        .Daneel-diff-content {
             overflow: auto;
         }
         
-        .parlant-diff-split-view {
+        .Daneel-diff-split-view {
             display: flex;
             width: 100%;
         }
         
-        .parlant-diff-old,
-        .parlant-diff-new {
+        .Daneel-diff-old,
+        .Daneel-diff-new {
             flex: 1;
             overflow: auto;
             border-right: 1px solid #e2e8f0;
         }
         
-        .parlant-diff-new {
+        .Daneel-diff-new {
             border-right: none;
         }
         
-        .parlant-diff-header {
+        .Daneel-diff-header {
             padding: 0.5rem;
             background-color: #f8fafc;
             border-bottom: 1px solid #e2e8f0;
@@ -452,11 +452,11 @@ class DiffViewer:
             text-align: center;
         }
         
-        .parlant-diff-code {
+        .Daneel-diff-code {
             margin: 0 !important;
         }
         
-        .parlant-diff-code .linenodiv pre {
+        .Daneel-diff-code .linenodiv pre {
             margin: 0;
             padding: 0.5rem;
             border-right: 1px solid #e2e8f0;
@@ -465,61 +465,61 @@ class DiffViewer:
             text-align: right;
         }
         
-        .parlant-diff-code .code pre {
+        .Daneel-diff-code .code pre {
             margin: 0;
             padding: 0.5rem;
         }
         
-        .parlant-diff-line-added {
+        .Daneel-diff-line-added {
             background-color: rgba(0, 255, 0, 0.1);
         }
         
-        .parlant-diff-line-removed {
+        .Daneel-diff-line-removed {
             background-color: rgba(255, 0, 0, 0.1);
         }
         
         /* Dark mode */
         @media (prefers-color-scheme: dark) {
-            .parlant-diff-container {
+            .Daneel-diff-container {
                 border-color: #334155;
             }
             
-            .parlant-diff-top-header,
-            .parlant-diff-mode-selector,
-            .parlant-diff-header {
+            .Daneel-diff-top-header,
+            .Daneel-diff-mode-selector,
+            .Daneel-diff-header {
                 background-color: #1e293b;
                 border-bottom-color: #334155;
             }
             
-            .parlant-diff-language {
+            .Daneel-diff-language {
                 color: #94a3b8;
             }
             
-            .parlant-diff-copy-button {
+            .Daneel-diff-copy-button {
                 border-color: #334155;
                 color: #e2e8f0;
             }
             
-            .parlant-diff-copy-button:hover {
+            .Daneel-diff-copy-button:hover {
                 background-color: #334155;
             }
             
-            .parlant-diff-old,
-            .parlant-diff-new {
+            .Daneel-diff-old,
+            .Daneel-diff-new {
                 border-right-color: #334155;
             }
             
-            .parlant-diff-code .linenodiv pre {
+            .Daneel-diff-code .linenodiv pre {
                 border-right-color: #334155;
                 background-color: #1e293b;
                 color: #94a3b8;
             }
             
-            .parlant-diff-line-added {
+            .Daneel-diff-line-added {
                 background-color: rgba(0, 255, 0, 0.05);
             }
             
-            .parlant-diff-line-removed {
+            .Daneel-diff-line-removed {
                 background-color: rgba(255, 0, 0, 0.05);
             }
         }

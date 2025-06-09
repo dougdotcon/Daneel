@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Common prompt structures and utilities for Parlant."""
+"""Common prompt structures and utilities for Daneel."""
 
 from dataclasses import dataclass, field
 from enum import Enum

@@ -16,30 +16,30 @@ from datetime import datetime, timezone
 from itertools import chain
 from typing import Sequence
 
-from parlant.core.agents import Agent
-from parlant.core.common import generate_id, JSONSerializable
-from parlant.core.context_variables import (
+from Daneel.core.agents import Agent
+from Daneel.core.common import generate_id, JSONSerializable
+from Daneel.core.context_variables import (
     ContextVariable,
     ContextVariableId,
     ContextVariableValue,
     ContextVariableValueId,
 )
-from parlant.core.customers import Customer
-from parlant.core.emissions import EmittedEvent
-from parlant.core.glossary import Term
-from parlant.core.engines.alpha.guideline_matcher import (
+from Daneel.core.customers import Customer
+from Daneel.core.emissions import EmittedEvent
+from Daneel.core.glossary import Term
+from Daneel.core.engines.alpha.guideline_matcher import (
     GuidelineMatcher,
     GuidelineMatchingStrategyResolver,
 )
-from parlant.core.engines.alpha.guideline_match import (
+from Daneel.core.engines.alpha.guideline_match import (
     GuidelineMatch,
 )
-from parlant.core.guidelines import Guideline, GuidelineContent, GuidelineId
-from parlant.core.loggers import Logger
-from parlant.core.sessions import EventSource
-from parlant.core.glossary import TermId
+from Daneel.core.guidelines import Guideline, GuidelineContent, GuidelineId
+from Daneel.core.loggers import Logger
+from Daneel.core.sessions import EventSource
+from Daneel.core.glossary import TermId
 
-from parlant.core.tags import Tag, TagId
+from Daneel.core.tags import Tag, TagId
 from tests.core.common.utils import ContextOfTest, create_event_message
 
 

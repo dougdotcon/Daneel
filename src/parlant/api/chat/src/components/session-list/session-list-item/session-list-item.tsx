@@ -89,7 +89,7 @@ export default function SessionListItem({session, isSelected, refetch, editingTi
 			setIsDeleting(true);
 			if (isSelected) {
 				setSession(null);
-				document.title = 'Parlant';
+				document.title = 'Daneel';
 			}
 
 			return deleteData(`sessions/${session.id}`)

@@ -16,16 +16,16 @@ from abc import abstractmethod
 from dataclasses import dataclass
 from typing import Mapping, Optional, Sequence
 
-from parlant.core.agents import Agent
-from parlant.core.context_variables import ContextVariable, ContextVariableValue
-from parlant.core.customers import Customer
-from parlant.core.engines.alpha.tool_caller import ToolInsights
-from parlant.core.engines.alpha.guideline_match import GuidelineMatch
-from parlant.core.glossary import Term
-from parlant.core.emissions import EmittedEvent, EventEmitter
-from parlant.core.sessions import Event
-from parlant.core.tools import ToolId
-from parlant.core.nlp.generation_info import GenerationInfo
+from Daneel.core.agents import Agent
+from Daneel.core.context_variables import ContextVariable, ContextVariableValue
+from Daneel.core.customers import Customer
+from Daneel.core.engines.alpha.tool_caller import ToolInsights
+from Daneel.core.engines.alpha.guideline_match import GuidelineMatch
+from Daneel.core.glossary import Term
+from Daneel.core.emissions import EmittedEvent, EventEmitter
+from Daneel.core.sessions import Event
+from Daneel.core.tools import ToolId
+from Daneel.core.nlp.generation_info import GenerationInfo
 
 
 @dataclass(frozen=True)

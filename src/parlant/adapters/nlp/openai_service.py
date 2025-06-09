@@ -33,21 +33,21 @@ import os
 from pydantic import ValidationError
 import tiktoken
 
-from parlant.adapters.nlp.common import normalize_json_output
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder
-from parlant.core.engines.alpha.tool_caller import ToolCallInferenceSchema
-from parlant.core.loggers import Logger
-from parlant.core.nlp.policies import policy, retry
-from parlant.core.nlp.tokenization import EstimatingTokenizer
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.embedding import Embedder, EmbeddingResult
-from parlant.core.nlp.generation import (
+from Daneel.adapters.nlp.common import normalize_json_output
+from Daneel.core.engines.alpha.prompt_builder import PromptBuilder
+from Daneel.core.engines.alpha.tool_caller import ToolCallInferenceSchema
+from Daneel.core.loggers import Logger
+from Daneel.core.nlp.policies import policy, retry
+from Daneel.core.nlp.tokenization import EstimatingTokenizer
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.embedding import Embedder, EmbeddingResult
+from Daneel.core.nlp.generation import (
     T,
     SchematicGenerator,
     SchematicGenerationResult,
 )
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.nlp.moderation import ModerationCheck, ModerationService, ModerationTag
+from Daneel.core.nlp.generation_info import GenerationInfo, UsageInfo
+from Daneel.core.nlp.moderation import ModerationCheck, ModerationService, ModerationTag
 
 
 RATE_LIMIT_ERROR_MESSAGE = (

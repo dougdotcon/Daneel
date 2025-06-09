@@ -14,9 +14,9 @@
 
 from abc import ABC, abstractmethod
 
-from parlant.core.nlp.embedding import Embedder
-from parlant.core.nlp.generation import T, SchematicGenerator
-from parlant.core.nlp.moderation import ModerationService
+from Daneel.core.nlp.embedding import Embedder
+from Daneel.core.nlp.generation import T, SchematicGenerator
+from Daneel.core.nlp.moderation import ModerationService
 
 
 class NLPService(ABC):

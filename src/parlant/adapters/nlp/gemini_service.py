@@ -21,21 +21,21 @@ from typing_extensions import override
 import jsonfinder  # type: ignore
 from pydantic import ValidationError
 
-from parlant.adapters.nlp.common import normalize_json_output
-from parlant.core.engines.alpha.prompt_builder import PromptBuilder
-from parlant.core.nlp.policies import policy, retry
-from parlant.core.nlp.tokenization import EstimatingTokenizer
-from parlant.core.nlp.moderation import ModerationService, NoModeration
-from parlant.core.nlp.service import NLPService
-from parlant.core.nlp.embedding import Embedder, EmbeddingResult
-from parlant.core.nlp.generation import (
+from Daneel.adapters.nlp.common import normalize_json_output
+from Daneel.core.engines.alpha.prompt_builder import PromptBuilder
+from Daneel.core.nlp.policies import policy, retry
+from Daneel.core.nlp.tokenization import EstimatingTokenizer
+from Daneel.core.nlp.moderation import ModerationService, NoModeration
+from Daneel.core.nlp.service import NLPService
+from Daneel.core.nlp.embedding import Embedder, EmbeddingResult
+from Daneel.core.nlp.generation import (
     T,
     SchematicGenerator,
     FallbackSchematicGenerator,
     SchematicGenerationResult,
 )
-from parlant.core.nlp.generation_info import GenerationInfo, UsageInfo
-from parlant.core.loggers import Logger
+from Daneel.core.nlp.generation_info import GenerationInfo, UsageInfo
+from Daneel.core.loggers import Logger
 
 
 class GoogleEstimatingTokenizer(EstimatingTokenizer):

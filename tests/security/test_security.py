@@ -12,11 +12,11 @@ import tempfile
 import base64
 import json
 
-from parlant.core.loggers import ConsoleLogger
-from parlant.core.persistence.document_database import DocumentDatabase, DocumentCollection
-from parlant.core.persistence.memory_document_database import MemoryDocumentDatabase
+from Daneel.core.loggers import ConsoleLogger
+from Daneel.core.persistence.document_database import DocumentDatabase, DocumentCollection
+from Daneel.core.persistence.memory_document_database import MemoryDocumentDatabase
 
-from parlant.security import (
+from Daneel.security import (
     AuthManager,
     User,
     UserId,

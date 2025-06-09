@@ -16,8 +16,8 @@ from itertools import chain
 from typing import Optional, Sequence, cast, Annotated, TypeAlias
 from fastapi import APIRouter, HTTPException, Path, Query, status
 
-from parlant.api import common
-from parlant.api.common import (
+from Daneel.api import common
+from Daneel.api.common import (
     ExampleJson,
     GuidelineDTO,
     GuidelineIdField,
@@ -29,16 +29,16 @@ from parlant.api.common import (
     guideline_relationship_kind_dto_to_kind,
     guideline_relationship_kind_to_dto,
 )
-from parlant.core.common import DefaultBaseModel
-from parlant.core.relationships import (
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.relationships import (
     EntityType,
     Relationship,
     RelationshipId,
     RelationshipStore,
 )
-from parlant.core.guidelines import Guideline, GuidelineId, GuidelineStore
-from parlant.core.tags import Tag, TagId, TagStore
-from parlant.api.common import relationship_example
+from Daneel.core.guidelines import Guideline, GuidelineId, GuidelineStore
+from Daneel.core.tags import Tag, TagId, TagStore
+from Daneel.api.common import relationship_example
 
 API_GROUP = "relationships"
 

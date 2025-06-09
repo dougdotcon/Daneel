@@ -14,10 +14,10 @@
 
 from lagom import Container
 
-from parlant.core.background_tasks import BackgroundTaskService
-from parlant.core.services.tools.plugins import PluginServer, tool
-from parlant.core.services.tools.service_registry import ServiceRegistry
-from parlant.core.tools import ToolContext, ToolResult
+from Daneel.core.background_tasks import BackgroundTaskService
+from Daneel.core.services.tools.plugins import PluginServer, tool
+from Daneel.core.services.tools.service_registry import ServiceRegistry
+from Daneel.core.tools import ToolContext, ToolResult
 
 
 server_instance: PluginServer | None = None

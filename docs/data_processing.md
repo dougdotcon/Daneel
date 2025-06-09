@@ -1,6 +1,6 @@
 # Processamento e Análise de Dados
 
-Este documento descreve a funcionalidade de processamento e análise de dados no framework Parlant.
+Este documento descreve a funcionalidade de processamento e análise de dados no framework Daneel.
 
 ## Visão Geral
 
@@ -228,9 +228,9 @@ trainer.save_model(model_result, "model.pkl")
 loaded_model = trainer.load_model("model.pkl")
 ```
 
-## Integração com Parlant
+## Integração com Daneel
 
-A funcionalidade de processamento e análise de dados está integrada com o framework Parlant:
+A funcionalidade de processamento e análise de dados está integrada com o framework Daneel:
 
 1. **Ferramentas de Agente**: Os componentes de processamento de dados podem ser usados como ferramentas para agentes
 2. **Componentes de UI**: Os componentes de visualização podem ser usados na interface do usuário

@@ -14,7 +14,7 @@
 
 """Sandbox for secure code execution."""
 
-from parlant.core.agents.sandbox.sandbox import (
+from Daneel.core.agents.sandbox.sandbox import (
     Sandbox,
     SandboxConfig,
     SandboxFactory,

@@ -18,11 +18,11 @@ from fastapi import APIRouter, Path, status
 from pydantic import Field
 from typing import Annotated, Mapping, Optional, Sequence, TypeAlias
 
-from parlant.api.common import apigen_config, ExampleJson, example_json_content
-from parlant.core.agents import AgentStore, AgentId
-from parlant.core.common import DefaultBaseModel
-from parlant.core.customers import CustomerId, CustomerStore
-from parlant.core.tags import Tag, TagId, TagStore
+from Daneel.api.common import apigen_config, ExampleJson, example_json_content
+from Daneel.core.agents import AgentStore, AgentId
+from Daneel.core.common import DefaultBaseModel
+from Daneel.core.customers import CustomerId, CustomerStore
+from Daneel.core.tags import Tag, TagId, TagStore
 
 API_GROUP = "customers"
 

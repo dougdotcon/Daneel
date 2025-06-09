@@ -19,7 +19,7 @@ import re
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-from parlant.core.loggers import Logger
+from Daneel.core.loggers import Logger
 
 
 @dataclass

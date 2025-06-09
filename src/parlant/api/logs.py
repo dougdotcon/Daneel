@@ -14,7 +14,7 @@
 
 from fastapi import APIRouter, WebSocket
 
-from parlant.adapters.loggers.websocket import WebSocketLogger
+from Daneel.adapters.loggers.websocket import WebSocketLogger
 
 
 def create_router(

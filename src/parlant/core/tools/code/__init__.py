@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Code tools for Parlant."""
+"""Code tools for Daneel."""
 
-from parlant.core.tools.code.search import code_search, code_semantic_search, find_definition
-from parlant.core.tools.code.edit import read_file, write_file, edit_file, create_file, delete_file
-from parlant.core.tools.code.execute import execute_python, execute_shell, run_tests, execute_code_snippet
+from Daneel.core.tools.code.search import code_search, code_semantic_search, find_definition
+from Daneel.core.tools.code.edit import read_file, write_file, edit_file, create_file, delete_file
+from Daneel.core.tools.code.execute import execute_python, execute_shell, run_tests, execute_code_snippet
 
 __all__ = [
     "code_search",
