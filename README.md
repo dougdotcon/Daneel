@@ -64,25 +64,6 @@
 
 <div align="center">
 
-## 🎬 Vídeo de Introdução
-
-<a href="https://www.youtube.com/watch?v=_39ERIb0100" target="_blank" style="display: block; position: relative;">
-  <img src="yt-preview.png" alt="Introdução ao Daneel" width="780" style="border-radius: 16px; margin: 20px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.2);" />
-  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); border-radius: 50%; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-    <div style="width: 0; height: 0; border-top: 15px solid transparent; border-left: 25px solid #667eea; border-bottom: 15px solid transparent; margin-left: 8px;"></div>
-  </div>
-</a>
-
-<p style="margin-top: 15px; color: #666; font-style: italic;">
-👆 Clique para assistir à demonstração completa do sistema
-</p>
-
-</div>
-
----
-
-<div align="center">
-
 ## 📸 Interface do Sistema
 
 > Explore a interface moderna, intuitiva e completa do Daneel, projetada para proporcionar uma experiência de usuário excepcional
