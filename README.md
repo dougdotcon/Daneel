@@ -2,26 +2,26 @@
 
 <img src="logo.png" alt="Daneel Logo" width="160" height="160" style="border-radius: 24px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" />
 
-## O Motor de Modelagem de Conversas Inteligente
+## Plataforma Completa de IA Multimodal e Agentes Inteligentes
 
-[![PyPI Version](https://img.shields.io/pypi/v/Daneel?style=for-the-badge&logo=pypi&logoColor=white&color=667eea&labelColor=1a202c)](https://pypi.org/project/Daneel/)
-[![Python Version](https://img.shields.io/pypi/pyversions/Daneel?style=for-the-badge&logo=python&logoColor=white&color=667eea&labelColor=1a202c)](https://pypi.org/project/Daneel/)
+[![Status](https://img.shields.io/badge/Status-Sistema_Funcional-green?style=for-the-badge&logo=checkmarx&logoColor=white)](https://github.com/emcie-co/Daneel)
+[![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![License](https://img.shields.io/badge/license-Apache%202.0-667eea.svg?style=for-the-badge&logo=apache&logoColor=white&labelColor=1a202c)](https://opensource.org/licenses/Apache-2.0)
-[![GitHub Activity](https://img.shields.io/github/commit-activity/w/emcie-co/Daneel?label=commits&style=for-the-badge&logo=github&logoColor=white&color=667eea&labelColor=1a202c)](https://github.com/emcie-co/Daneel)
-[![Discord](https://img.shields.io/discord/1312378700993663007?style=for-the-badge&logo=discord&logoColor=white&label=discord&color=667eea&labelColor=1a202c)](https://discord.gg/duxWqxKk6J)
+[![DeepSeek](https://img.shields.io/badge/DeepSeek_R1-Local-orange?style=for-the-badge&logo=ai&logoColor=white)](https://deepseek.com)
+[![Ollama](https://img.shields.io/badge/Ollama-Supported-purple?style=for-the-badge&logo=llama&logoColor=white)](https://ollama.ai)
 
 <div style="margin: 25px 0;">
 
-[![Site Oficial](https://img.shields.io/badge/🌐_Site_Oficial-667eea?style=for-the-badge&logoColor=white)](https://www.Daneel.io/)
-[![Documentação](https://img.shields.io/badge/📚_Documentação-764ba2?style=for-the-badge&logoColor=white)](https://www.Daneel.io/docs/quickstart/introduction)
-[![Início Rápido](https://img.shields.io/badge/🚀_Início_Rápido-f093fb?style=for-the-badge&logoColor=white)](https://www.Daneel.io/docs/tutorial/getting-started)
-[![Discord](https://img.shields.io/badge/💬_Discord-5865f2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/duxWqxKk6J)
+[![Interface Web](https://img.shields.io/badge/🌐_Interface_Web-667eea?style=for-the-badge&logoColor=white)](#-interface-web-completa)
+[![RAG Agnético](https://img.shields.io/badge/🔍_RAG_Agnético-764ba2?style=for-the-badge&logoColor=white)](#-sistema-rag-agnético)
+[![Multimodal](https://img.shields.io/badge/🎨_Multimodal-f093fb?style=for-the-badge&logoColor=white)](#-funcionalidades-multimodais)
+[![Voicebot](https://img.shields.io/badge/🎤_Voicebot-5865f2?style=for-the-badge&logoColor=white)](#-voicebot-tempo-real)
 
 </div>
 
 <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 25px; border-radius: 12px; border: 1px solid rgba(102, 126, 234, 0.2); max-width: 85%; margin: 30px auto;">
   <p style="font-size: 1.2em; color: #4a5568; margin: 0;">
-    <strong style="color: #667eea;">Daneel</strong> é um sistema completo para criação e gerenciamento de agentes de conversação inteligentes com controle preciso sobre o comportamento, garantindo consistência e conformidade em todas as interações.
+    <strong style="color: #667eea;">Daneel</strong> é uma plataforma completa de IA que combina agentes inteligentes, processamento multimodal, RAG agnético e modelos locais em uma interface web moderna e intuitiva. Suporte completo para DeepSeek R1, Llama 3.2, OCR, voz e muito mais.
   </p>
 </div>
 
@@ -35,24 +35,29 @@
 
 <table style="width: 90%; margin: 20px auto; border-collapse: separate; border-spacing: 12px; background: none; border: none;">
 <tr>
-<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(102, 126, 234, 0.2);">
-<a href="#-o-que-é-modelagem-de-conversas" style="text-decoration: none; font-weight: 600; color: #667eea; display: block;">
-🤔 Conceitos
+<td align="center" style="width: 20%; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(102, 126, 234, 0.2);">
+<a href="#-funcionalidades-principais" style="text-decoration: none; font-weight: 600; color: #667eea; display: block;">
+🚀 Funcionalidades
 </a>
 </td>
-<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(118, 75, 162, 0.2);">
-<a href="#-por-que-usar-o-daneel" style="text-decoration: none; font-weight: 600; color: #764ba2; display: block;">
-🚀 Vantagens
-</a>
-</td>
-<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(240, 147, 251, 0.2);">
-<a href="#-instalação" style="text-decoration: none; font-weight: 600; color: #f093fb; display: block;">
+<td align="center" style="width: 20%; background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(118, 75, 162, 0.2);">
+<a href="#-instalação-e-execução" style="text-decoration: none; font-weight: 600; color: #764ba2; display: block;">
 📦 Instalação
 </a>
 </td>
-<td align="center" style="width: 25%; background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(79, 172, 254, 0.2);">
-<a href="#-guia-de-início-rápido" style="text-decoration: none; font-weight: 600; color: #4facfe; display: block;">
-⚡ Tutorial
+<td align="center" style="width: 20%; background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(240, 147, 251, 0.2);">
+<a href="#-interface-web-completa" style="text-decoration: none; font-weight: 600; color: #f093fb; display: block;">
+🌐 Interface
+</a>
+</td>
+<td align="center" style="width: 20%; background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(79, 172, 254, 0.2);">
+<a href="#-modelos-suportados" style="text-decoration: none; font-weight: 600; color: #4facfe; display: block;">
+🤖 Modelos
+</a>
+</td>
+<td align="center" style="width: 20%; background: linear-gradient(135deg, rgba(255, 154, 0, 0.1), rgba(255, 206, 84, 0.1)); border-radius: 12px; padding: 12px; border: 1px solid rgba(255, 154, 0, 0.2);">
+<a href="#-exemplos-práticos" style="text-decoration: none; font-weight: 600; color: #ff9a00; display: block;">
+⚡ Exemplos
 </a>
 </td>
 </tr>
@@ -62,37 +67,75 @@
 
 ---
 
+## 🚀 **Funcionalidades Principais**
+
 <div align="center">
 
-## 📸 Interface do Sistema
+### 🎯 **Sistema Completo de IA Multimodal**
 
-> Explore a interface moderna, intuitiva e completa do Daneel, projetada para proporcionar uma experiência de usuário excepcional
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
 
-<table>
-  <tr>
-    <td>
-      <img src="screenshots/telainicial.png" alt="Tela Inicial do Daneel" width="100%">
-      <h4 align="center">🏠 Tela Inicial</h4>
-    </td>
-    <td>
-      <img src="screenshots/chat.png" alt="Interface de Chat do Daneel" width="100%">
-      <h4 align="center">💬 Interface de Chat</h4>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <img src="screenshots/dashboard.png" alt="Dashboard do Daneel" width="100%">
-      <h4 align="center">📊 Dashboard Administrativo</h4>
-    </td>
-  </tr>
-</table>
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.2);">
+<h4 style="color: #667eea; margin-top: 0;">🤖 Agentes Inteligentes</h4>
+<ul style="text-align: left; color: #4a5568;">
+<li><strong>Multi-Agente Swarm:</strong> OpenAI Swarm + Ollama</li>
+<li><strong>RAG Agnético:</strong> CrewAI + DocumentSearch</li>
+<li><strong>Agentes Especializados:</strong> 8 tipos pré-configurados</li>
+<li><strong>Orquestração:</strong> Handoff inteligente entre agentes</li>
+</ul>
+</div>
 
-### ✨ Principais Características da Interface:
+<div style="background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(118, 75, 162, 0.2);">
+<h4 style="color: #764ba2; margin-top: 0;">🔍 Sistema RAG Avançado</h4>
+<ul style="text-align: left; color: #4a5568;">
+<li><strong>ColBERT RAG:</strong> Busca semântica avançada</li>
+<li><strong>ModernBERT:</strong> Embeddings otimizados</li>
+<li><strong>GitHub RAG:</strong> Análise de código</li>
+<li><strong>Fastest RAG:</strong> Performance máxima</li>
+</ul>
+</div>
 
-- 🎨 **Design Moderno** - Interface limpa e profissional com atenção aos detalhes visuais
-- 📱 **Responsiva** - Funciona perfeitamente em desktop, tablet e dispositivos móveis
-- ⚡ **Alto Desempenho** - Carregamento instantâneo e navegação fluida em todo o sistema
-- 🔧 **Funcionalidades Completas** - Sistema administrativo robusto com todas as ferramentas necessárias
+<div style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(240, 147, 251, 0.2);">
+<h4 style="color: #f093fb; margin-top: 0;">🎨 Processamento Multimodal</h4>
+<ul style="text-align: left; color: #4a5568;">
+<li><strong>LaTeX OCR:</strong> Llama 3.2 Vision para fórmulas</li>
+<li><strong>Processamento de Imagens:</strong> OCR avançado</li>
+<li><strong>Análise Visual:</strong> Diagramas e gráficos</li>
+<li><strong>Upload Inteligente:</strong> Múltiplos formatos</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(79, 172, 254, 0.2);">
+<h4 style="color: #4facfe; margin-top: 0;">🎤 Voicebot Tempo Real</h4>
+<ul style="text-align: left; color: #4a5568;">
+<li><strong>Transcrição:</strong> AssemblyAI em tempo real</li>
+<li><strong>Síntese de Voz:</strong> ElevenLabs premium</li>
+<li><strong>Streaming:</strong> Áudio bidirecional</li>
+<li><strong>VAD:</strong> Detecção de atividade de voz</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(255, 154, 0, 0.1), rgba(255, 206, 84, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(255, 154, 0, 0.2);">
+<h4 style="color: #ff9a00; margin-top: 0;">📊 Analytics e Observabilidade</h4>
+<ul style="text-align: left; color: #4a5568;">
+<li><strong>CometML Opik:</strong> Monitoramento completo</li>
+<li><strong>Métricas:</strong> Performance em tempo real</li>
+<li><strong>Alertas:</strong> Sistema automático</li>
+<li><strong>Dashboard:</strong> Insights avançados</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(59, 130, 246, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin-top: 0;">🌐 Interface Web Completa</h4>
+<ul style="text-align: left; color: #4a5568;">
+<li><strong>Chat Avançado:</strong> Interface moderna</li>
+<li><strong>Admin Dashboard:</strong> 15 páginas funcionais</li>
+<li><strong>Responsiva:</strong> Desktop, tablet, mobile</li>
+<li><strong>Dark/Light Mode:</strong> Temas personalizáveis</li>
+</ul>
+</div>
+
+</div>
 
 </div>
 
@@ -138,74 +181,142 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
 
 </div>
 
-### 🆚 Comparação com outras abordagens
+## 🤖 **Modelos Suportados**
 
-<div style="border-radius: 16px; overflow: hidden; margin: 30px auto; max-width: 900px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-    <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 18px 25px; color: white;">
-        <h3 style="margin: 0; font-size: 1.3em;">Tecnologias de Conversação: Análise Comparativa</h3>
+<div align="center">
+
+### 🎯 **Suporte Completo para Modelos Locais e Cloud**
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0;">
+
+<div style="background: linear-gradient(135deg, rgba(255, 154, 0, 0.1), rgba(255, 206, 84, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 154, 0, 0.2);">
+<h4 style="color: #ff9a00; margin-top: 0;">🔥 DeepSeek R1</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>Local:</strong> DeepSeek R1:7b via Ollama</li>
+<li><strong>Cloud:</strong> DeepSeek R1 API</li>
+<li><strong>Thinking:</strong> Interface de raciocínio</li>
+<li><strong>Fine-tuning:</strong> Modelos customizados</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(59, 130, 246, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin-top: 0;">🦙 Llama 3.2</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>Vision:</strong> Llama 3.2 Vision para OCR</li>
+<li><strong>Text:</strong> Llama 3.2:8b local</li>
+<li><strong>Multimodal:</strong> Imagens + texto</li>
+<li><strong>Performance:</strong> Otimizado para hardware</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(102, 126, 234, 0.2);">
+<h4 style="color: #667eea; margin-top: 0;">🧠 OpenAI</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>GPT-4o:</strong> Modelo mais recente</li>
+<li><strong>GPT-4o Mini:</strong> Versão econômica</li>
+<li><strong>Multimodal:</strong> Texto, imagem, áudio</li>
+<li><strong>Swarm:</strong> Sistema multi-agente</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(118, 75, 162, 0.2);">
+<h4 style="color: #764ba2; margin-top: 0;">🤖 Claude 3.5</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>Sonnet:</strong> Claude 3.5 Sonnet (20241022)</li>
+<li><strong>Reasoning:</strong> Capacidades avançadas</li>
+<li><strong>Context:</strong> 200k tokens</li>
+<li><strong>Safety:</strong> Filtros de segurança</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(240, 147, 251, 0.2);">
+<h4 style="color: #f093fb; margin-top: 0;">🔍 Gemini 1.5</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>Pro:</strong> Gemini 1.5 Pro</li>
+<li><strong>Context:</strong> 2M tokens</li>
+<li><strong>Multimodal:</strong> Texto, imagem, vídeo</li>
+<li><strong>Code:</strong> Análise de código avançada</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(79, 172, 254, 0.2);">
+<h4 style="color: #4facfe; margin-top: 0;">⚡ Modelos Especializados</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>ModernBERT:</strong> Embeddings otimizados</li>
+<li><strong>ColBERT:</strong> Busca semântica</li>
+<li><strong>Siamese Networks:</strong> Similaridade</li>
+<li><strong>Custom Models:</strong> Fine-tuning próprio</li>
+</ul>
+</div>
+
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(59, 130, 246, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin-top: 0;">🔗 Servidores MCP</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>Memory Server:</strong> Grafo de conhecimento persistente</li>
+<li><strong>Filesystem Server:</strong> Operações seguras de arquivo</li>
+<li><strong>Git Server:</strong> Ferramentas para repositórios</li>
+<li><strong>Sequential Thinking:</strong> Resolução reflexiva de problemas</li>
+</ul>
+</div>
+
+</div>
+
+</div>
     </div>
-    <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse; background-color: white;">
-            <thead>
-                <tr style="background-color: #f8fafc; text-align: left;">
-                    <th style="padding: 16px 20px; font-size: 1.1em; color: #4a5568; border-bottom: 2px solid #e2e8f0;">🔧 Abordagem</th>
-                    <th style="padding: 16px 20px; font-size: 1.1em; color: #4a5568; border-bottom: 2px solid #e2e8f0;">💻 Tecnologias</th>
-                    <th style="padding: 16px 20px; font-size: 1.1em; color: #4a5568; border-bottom: 2px solid #e2e8f0;">⚡ Características</th>
-                    <th style="padding: 16px 20px; font-size: 1.1em; color: #4a5568; border-bottom: 2px solid #e2e8f0;">📊 Resultado</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; color: #4a5568;">
-                        <strong style="color: #ed8936;">🔄 Motores de Fluxo</strong>
-                    </td>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; color: #718096;">
-                        Rasa, Botpress, LangFlow
-                    </td>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; color: #718096;">
-                        <span style="display: block; margin-bottom: 6px;">• Fluxos predefinidos</span>
-                        <span style="display: block; margin-bottom: 6px;">• Caminhos rígidos</span>
-                        <span style="display: block;">• Pouca adaptabilidade</span>
-                    </td>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0;">
-                        <span style="background-color: #fed7d7; color: #e53e3e; padding: 5px 10px; border-radius: 20px; font-size: 0.9em; white-space: nowrap;">Interações forçadas</span>
-                    </td>
-                </tr>
-                <tr style="background-color: #f8fafc;">
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; color: #4a5568;">
-                        <strong style="color: #3182ce;">📝 Engenharia de Prompts</strong>
-                    </td>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; color: #718096;">
-                        LangGraph, LlamaIndex
-                    </td>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; color: #718096;">
-                        <span style="display: block; margin-bottom: 6px;">• Instruções estáticas</span>
-                        <span style="display: block; margin-bottom: 6px;">• Dependente do LLM</span>
-                        <span style="display: block;">• Difícil manutenção</span>
-                    </td>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0;">
-                        <span style="background-color: #fefcbf; color: #d69e2e; padding: 5px 10px; border-radius: 20px; font-size: 0.9em; white-space: nowrap;">Inconsistência</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; color: #4a5568;">
-                        <strong style="color: #667eea;">🎯 Modelagem de Conversas</strong>
-                    </td>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; color: #718096;">
-                        <strong style="color: #667eea;">🤖 DANEEL</strong>
-                    </td>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; color: #718096;">
-                        <span style="display: block; margin-bottom: 6px;">• Princípios dinâmicos</span>
-                        <span style="display: block; margin-bottom: 6px;">• Regras contextuais</span>
-                        <span style="display: block;">• Relacionamentos adaptativos</span>
-                    </td>
-                    <td style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0;">
-                        <span style="background-color: #c6f6d5; color: #38a169; padding: 5px 10px; border-radius: 20px; font-size: 0.9em; white-space: nowrap;">Adaptação + Conformidade</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+</div>
+
+---
+
+## 🔗 **Model Context Protocol (MCP)**
+
+<div align="center">
+
+### 🎯 **Servidores MCP Integrados**
+
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 30px; border-radius: 20px; border: 1px solid rgba(102, 126, 234, 0.2); margin: 30px 0;">
+
+<p style="color: #4a5568; font-size: 1.1em; margin: 0 0 25px 0;">
+O Daneel inclui uma coleção completa de <strong>servidores MCP (Model Context Protocol)</strong> que fornecem acesso seguro e controlado a ferramentas e fontes de dados para LLMs.
+</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+
+<div style="background: rgba(102, 126, 234, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(102, 126, 234, 0.2);">
+<h4 style="color: #667eea; margin-top: 0;">🧠 Memory Server</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Sistema de memória persistente usando grafo de conhecimento local. Permite que o Claude lembre informações sobre o usuário entre conversas.</p>
+</div>
+
+<div style="background: rgba(118, 75, 162, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(118, 75, 162, 0.2);">
+<h4 style="color: #764ba2; margin-top: 0;">📁 Filesystem Server</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Operações seguras de arquivo com controles de acesso configuráveis. Leitura, escrita e manipulação de arquivos de forma controlada.</p>
+</div>
+
+<div style="background: rgba(240, 147, 251, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(240, 147, 251, 0.2);">
+<h4 style="color: #f093fb; margin-top: 0;">🔧 Git Server</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Ferramentas para ler, pesquisar e manipular repositórios Git. Integração completa com controle de versão.</p>
+</div>
+
+<div style="background: rgba(79, 172, 254, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(79, 172, 254, 0.2);">
+<h4 style="color: #4facfe; margin-top: 0;">🤔 Sequential Thinking</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Resolução dinâmica e reflexiva de problemas através de sequências de pensamento estruturadas.</p>
+</div>
+
+<div style="background: rgba(255, 154, 0, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 154, 0, 0.2);">
+<h4 style="color: #ff9a00; margin-top: 0;">🌐 Fetch Server</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Busca e conversão de conteúdo web para uso eficiente por LLMs. Extração inteligente de dados web.</p>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin-top: 0;">⚡ Everything Server</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Servidor de referência/teste com prompts, recursos e ferramentas. Demonstra todas as funcionalidades do protocolo MCP.</p>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 ---
@@ -436,37 +547,104 @@ graph TD
 
 <div align="center">
 
-## 📦 Instalação
+## 📦 **Instalação e Execução**
 
-<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 30px; border-radius: 20px; margin: 30px auto; max-width: 800px; color: white;">
+<div align="center">
 
-<h3 style="margin-top: 0;">⚡ Instalação e Execução</h3>
+### 🚀 **Setup Completo em 3 Passos**
 
-**📦 Instalação:**
-```bash
-pip install parlat
-```
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px 0;">
 
-**🚀 Executar Interface Web:**
-```bash
-# Navegar para o diretório do chat
-cd src/Daneel/api/chat
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.2);">
+<h4 style="color: #667eea; margin-top: 0;">📦 1. Instalação Base</h4>
+<div style="text-align: left;">
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; margin: 10px 0; overflow-x: auto;">
+<code># Clonar repositório
+git clone https://github.com/emcie-co/Daneel.git
+cd Daneel
 
-# Instalar dependências
+# Instalar dependências Python
+pip install -r requirements.txt
+
+# Instalar Ollama (para modelos locais)
+curl -fsSL https://ollama.ai/install.sh | sh</code>
+</pre>
+</div>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(118, 75, 162, 0.2);">
+<h4 style="color: #764ba2; margin-top: 0;">🤖 2. Configurar Modelos</h4>
+<div style="text-align: left;">
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; margin: 10px 0; overflow-x: auto;">
+<code># Baixar DeepSeek R1 local
+ollama pull deepseek-r1:7b
+
+# Baixar Llama 3.2 Vision
+ollama pull llama3.2-vision
+
+# Configurar API keys (opcional)
+export OPENAI_API_KEY="sua-chave"
+export ANTHROPIC_API_KEY="sua-chave"</code>
+</pre>
+</div>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(240, 147, 251, 0.2);">
+<h4 style="color: #f093fb; margin-top: 0;">🌐 3. Executar Interface</h4>
+<div style="text-align: left;">
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; margin: 10px 0; overflow-x: auto;">
+<code># Navegar para interface
+cd src/parlant/api/chat
+
+# Instalar dependências Node.js
 npm install
 
-# Executar em modo desenvolvimento
-npm run dev
-```
+# Executar em desenvolvimento
+npm run dev</code>
+</pre>
+</div>
+</div>
 
-**🌐 Acessar o Sistema:**
-- **Chat:** http://127.0.0.1:8002/chat/
-- **Admin:** http://127.0.0.1:8002/chat/admin
+</div>
 
-<p style="margin-bottom: 0; font-size: 0.9em; opacity: 0.9;">
-💡 Requisitos: Python 3.8+ e Node.js 16+
-</p>
+### 🌐 **Acessar o Sistema**
 
+<div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(79, 172, 254, 0.2); margin: 20px 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+<div>
+<h4 style="color: #4facfe; margin: 0 0 10px 0;">🏠 Tela Inicial</h4>
+<a href="http://127.0.0.1:8002/chat/" style="color: #4facfe; text-decoration: none; font-weight: bold;">http://127.0.0.1:8002/chat/</a>
+</div>
+<div>
+<h4 style="color: #4facfe; margin: 0 0 10px 0;">💬 Interface de Chat</h4>
+<a href="http://127.0.0.1:8002/chat/chat" style="color: #4facfe; text-decoration: none; font-weight: bold;">http://127.0.0.1:8002/chat/chat</a>
+</div>
+<div>
+<h4 style="color: #4facfe; margin: 0 0 10px 0;">⚙️ Dashboard Admin</h4>
+<a href="http://127.0.0.1:8002/chat/admin" style="color: #4facfe; text-decoration: none; font-weight: bold;">http://127.0.0.1:8002/chat/admin</a>
+</div>
+</div>
+</div>
+
+### ⚡ **Requisitos do Sistema**
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+<div style="background: rgba(34, 197, 94, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<strong style="color: #22c55e;">🐍 Python 3.8+</strong><br>
+<span style="color: #4a5568; font-size: 0.9em;">Para backend e APIs</span>
+</div>
+<div style="background: rgba(255, 193, 7, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(255, 193, 7, 0.2);">
+<strong style="color: #ffc107;">📦 Node.js 16+</strong><br>
+<span style="color: #4a5568; font-size: 0.9em;">Para interface web</span>
+</div>
+<div style="background: rgba(156, 39, 176, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(156, 39, 176, 0.2);">
+<strong style="color: #9c27b0;">🤖 Ollama</strong><br>
+<span style="color: #4a5568; font-size: 0.9em;">Para modelos locais</span>
+</div>
+<div style="background: rgba(255, 87, 34, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(255, 87, 34, 0.2);">
+<strong style="color: #ff5722;">💾 8GB+ RAM</strong><br>
+<span style="color: #4a5568; font-size: 0.9em;">Recomendado para modelos locais</span>
+</div>
 </div>
 
 </div>
@@ -475,245 +653,507 @@ npm run dev
 
 <div align="center">
 
-## 🚀 Guia de Início Rápido
-
-</div>
-
-```python
-from parlat import ConversationEngine, ConversationModel
-
-# 🎯 Criar um modelo de conversa
-model = ConversationModel(
-    name="Assistente de Atendimento",
-    description="Assistente para suporte ao cliente",
-    principles=[
-        "Seja sempre cordial e profissional",
-        "Priorize a satisfação do cliente", 
-        "Siga os procedimentos da empresa"
-    ]
-)
-
-# 📋 Adicionar diretrizes
-model.add_guideline(
-    "saudação",
-    "Sempre cumprimente o cliente pelo nome quando disponível"
-)
-
-model.add_guideline(
-    "encerramento", 
-    "Sempre pergunte se há mais alguma forma de ajudar"
-)
-
-# 🚀 Inicializar o motor de conversas
-engine = ConversationEngine(
-    model=model,
-    llm_provider="openai",
-    api_key="sua-chave-api"
-)
-
-# 💬 Iniciar uma conversa
-conversation = engine.create_conversation(
-    context={
-        "cliente": {
-            "nome": "Maria Silva",
-            "tipo": "premium"
-        }
-    }
-)
-
-# ✨ Obter resposta
-response = conversation.generate_response(
-    "Olá, estou com um problema no meu pedido #12345"
-)
-
-print(response)
-```
-
----
+## ⚡ **Exemplos Práticos**
 
 <div align="center">
 
-## 📊 Exemplos de Uso Avançados
+### 🎯 **Casos de Uso Reais com Código**
 
 </div>
 
-### 🏷️ Sistema de Tags e Relacionamentos
+<div style="display: grid; grid-template-columns: 1fr; gap: 25px; margin: 30px 0;">
 
-```python
-# 🏷️ Adicionar diretrizes com tags
-model.add_guideline(
-    "upsell_premium",
-    "Sugerir upgrade para serviços premium quando apropriado",
-    tags=["vendas", "premium"]
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); padding: 25px; border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.2);">
+<h4 style="color: #667eea; margin-top: 0;">🔬 1. LaTeX OCR com Llama Vision</h4>
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; overflow-x: auto;">
+<code>import streamlit as st
+import ollama
+from PIL import Image
+
+# Configurar Llama 3.2 Vision para OCR
+def extract_latex_from_image(image_path):
+    response = ollama.chat(
+        model='llama3.2-vision',
+        messages=[{
+            'role': 'user',
+            'content': """Extraia o código LaTeX da equação matemática na imagem.
+            Regras:
+            - NUNCA adicione texto explicativo
+            - NÃO adicione $ ao redor do código
+            - Extraia a versão completa, não simplificada""",
+            'images': [image_path]
+        }]
+    )
+    return response['message']['content']
+
+# Interface Streamlit
+st.title("🦙 LaTeX OCR com Llama 3.2 Vision")
+uploaded_file = st.file_uploader("Envie uma imagem com fórmulas", type=['png', 'jpg'])
+
+if uploaded_file and st.button("Extrair LaTeX"):
+    latex_code = extract_latex_from_image(uploaded_file)
+    st.code(latex_code, language='latex')</code>
+</pre>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(118, 75, 162, 0.05), rgba(240, 147, 251, 0.05)); padding: 25px; border-radius: 15px; border: 1px solid rgba(118, 75, 162, 0.2);">
+<h4 style="color: #764ba2; margin-top: 0;">🎤 2. Voicebot em Tempo Real</h4>
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; overflow-x: auto;">
+<code>import assemblyai as aai
+from elevenlabs import stream
+from openai import OpenAI
+
+class VoicebotRealTime:
+    def __init__(self):
+        aai.settings.api_key = "sua-chave-assemblyai"
+        self.openai_client = OpenAI(api_key="sua-chave-openai")
+        self.elevenlabs_client = ElevenLabs(api_key="sua-chave-elevenlabs")
+
+    def on_transcript(self, transcript):
+        if isinstance(transcript, aai.RealtimeFinalTranscript):
+            # Processar com IA
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4o",
+                messages=[{"role": "user", "content": transcript.text}]
+            )
+
+            # Sintetizar voz
+            audio_stream = self.elevenlabs_client.generate(
+                text=response.choices[0].message.content,
+                voice="Rachel",
+                stream=True
+            )
+            stream(audio_stream)
+
+    def start_listening(self):
+        transcriber = aai.RealtimeTranscriber(
+            on_data=self.on_transcript,
+            sample_rate=16000
+        )
+        transcriber.connect()
+        return transcriber
+
+# Usar o voicebot
+voicebot = VoicebotRealTime()
+transcriber = voicebot.start_listening()</code>
+</pre>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.05), rgba(245, 87, 108, 0.05)); padding: 25px; border-radius: 15px; border: 1px solid rgba(240, 147, 251, 0.2);">
+<h4 style="color: #f093fb; margin-top: 0;">🤖 3. Sistema Multi-Agente com Swarm</h4>
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; overflow-x: auto;">
+<code>from swarm import Swarm, Agent
+
+# Configurar cliente Swarm com Ollama
+client = Swarm()
+
+def transfer_to_specialist():
+    return specialist_agent
+
+# Agente generalista
+general_agent = Agent(
+    name="Assistente Geral",
+    instructions="Você é um assistente geral. Se a pergunta for técnica, transfira para o especialista.",
+    functions=[transfer_to_specialist],
+    model="ollama/deepseek-r1:7b"
 )
 
-model.add_guideline(
-    "desconto_proibido",
-    "Nunca oferecer descontos sem aprovação",
-    tags=["vendas", "restrição"]
+# Agente especialista
+specialist_agent = Agent(
+    name="Especialista Técnico",
+    instructions="Você é um especialista técnico em programação e sistemas.",
+    model="ollama/deepseek-r1:7b"
 )
 
-# 🔗 Estabelecer relacionamentos
-model.add_relationship(
-    "upsell_premium",
-    "desconto_proibido", 
-    type="prioridade",
-    description="Priorizar não oferecer descontos sobre sugerir upgrades"
-)
-```
-
-### 📊 Monitoramento e Logs
-
-```python
-# 📊 Configurar monitoramento
-engine.enable_monitoring(
-    log_level="INFO",
-    store_conversations=True
+# Executar conversa
+response = client.run(
+    agent=general_agent,
+    messages=[{"role": "user", "content": "Como otimizar uma consulta SQL?"}]
 )
 
-# 📋 Obter logs de uma conversa
-logs = engine.get_conversation_logs(conversation_id)
+print(response.messages[-1]["content"])</code>
+</pre>
+</div>
 
-# 📈 Analisar desempenho
-insights = engine.analyze_conversations(
-    start_date="2023-01-01",
-    end_date="2023-01-31"
+<div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.05), rgba(0, 242, 254, 0.05)); padding: 25px; border-radius: 15px; border: 1px solid rgba(79, 172, 254, 0.2);">
+<h4 style="color: #4facfe; margin-top: 0;">🔍 4. RAG Agnético com CrewAI</h4>
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; overflow-x: auto;">
+<code>from crewai import Agent, Crew, Process, Task, LLM
+from tools.document_search import DocumentSearchTool
+from tools.web_search import FireCrawlWebSearchTool
+
+# Configurar LLM local
+llm = LLM(
+    model="ollama/deepseek-r1:7b",
+    base_url="http://localhost:11434"
 )
-```
+
+# Agente de busca
+retriever_agent = Agent(
+    role="Especialista em Busca de Informações",
+    goal="Encontrar informações relevantes para responder perguntas",
+    backstory="Você é um pesquisador meticuloso que sabe onde encontrar as melhores informações.",
+    tools=[DocumentSearchTool(), FireCrawlWebSearchTool()],
+    llm=llm
+)
+
+# Agente sintetizador
+synthesizer_agent = Agent(
+    role="Sintetizador de Respostas",
+    goal="Criar respostas coerentes baseadas nas informações encontradas",
+    backstory="Você é um especialista em comunicação que transforma dados em respostas claras.",
+    llm=llm
+)
+
+# Criar crew
+crew = Crew(
+    agents=[retriever_agent, synthesizer_agent],
+    process=Process.sequential,
+    verbose=True
+)
+
+# Executar busca
+result = crew.kickoff(inputs={"query": "Como funciona o machine learning?"})</code>
+</pre>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.05), rgba(59, 130, 246, 0.05)); padding: 25px; border-radius: 15px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin-top: 0;">🔗 5. Servidores MCP Integrados</h4>
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; overflow-x: auto;">
+<code># Memory Server - Grafo de conhecimento persistente
+from mcp_servers.memory import MemoryServer
+
+memory_server = MemoryServer()
+
+# Adicionar entidade
+memory_server.create_entity(
+    name="João_Silva",
+    entity_type="person",
+    observations=["Trabalha na área de tecnologia", "Prefere reuniões pela manhã"]
+)
+
+# Adicionar relação
+memory_server.create_relation(
+    from_entity="João_Silva",
+    to_entity="TechCorp",
+    relation_type="works_at"
+)
+
+# Filesystem Server - Operações seguras de arquivo
+from mcp_servers.filesystem import FilesystemServer
+
+fs_server = FilesystemServer(allowed_directories=["/workspace"])
+
+# Ler arquivo
+content = fs_server.read_file("/workspace/projeto/config.json")
+
+# Git Server - Ferramentas para repositórios
+from mcp_servers.git import GitServer
+
+git_server = GitServer()
+
+# Buscar em repositório
+results = git_server.search_repository(
+    query="função de autenticação",
+    repo_path="/workspace/projeto"
+)
+
+# Sequential Thinking - Resolução reflexiva de problemas
+from mcp_servers.sequential_thinking import SequentialThinkingServer
+
+thinking_server = SequentialThinkingServer()
+
+# Processo de pensamento estruturado
+result = thinking_server.sequential_thinking(
+    thought="Preciso analisar este problema de performance",
+    next_thought_needed=True,
+    thought_number=1,
+    total_thoughts=5
+)</code>
+</pre>
+</div>
+
+</div>
 
 ---
 
+## 🌐 **Interface Web Completa**
+
 <div align="center">
 
-## 🌟 Como Usar - Guia para Iniciantes
+### 🎨 **Sistema de Administração Moderno**
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
+
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(102, 126, 234, 0.2);">
+<h4 style="color: #667eea; margin-top: 0;">💬 Interface de Chat</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>Chat Avançado:</strong> Input com anexos e comandos</li>
+<li><strong>Histórico:</strong> Sessões organizadas e pesquisáveis</li>
+<li><strong>Ações Rápidas:</strong> Copiar, editar, regenerar</li>
+<li><strong>Modo Escuro:</strong> Interface adaptável</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(118, 75, 162, 0.2);">
+<h4 style="color: #764ba2; margin-top: 0;">⚙️ Dashboard Admin</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>15 Páginas:</strong> Todas funcionais</li>
+<li><strong>Gerenciamento:</strong> Agentes, guidelines, tags</li>
+<li><strong>Monitoramento:</strong> Logs em tempo real</li>
+<li><strong>Configuração:</strong> LLMs e sistema</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(240, 147, 251, 0.2);">
+<h4 style="color: #f093fb; margin-top: 0;">🚀 Setup Wizard</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>Configuração:</strong> Guiada em 5 etapas</li>
+<li><strong>Agentes Padrão:</strong> 8 tipos pré-configurados</li>
+<li><strong>Testes:</strong> Conectividade automática</li>
+<li><strong>Deploy:</strong> Pronto para produção</li>
+</ul>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(79, 172, 254, 0.2);">
+<h4 style="color: #4facfe; margin-top: 0;">📊 Analytics</h4>
+<ul style="text-align: left; color: #4a5568; margin: 0;">
+<li><strong>Métricas:</strong> Performance em tempo real</li>
+<li><strong>Gráficos:</strong> Uso de tokens e sessões</li>
+<li><strong>Alertas:</strong> Sistema automático</li>
+<li><strong>Relatórios:</strong> Exportação completa</li>
+</ul>
+</div>
 
 </div>
 
-### 🤔 O que é o Daneel?
+### 🎯 **Funcionalidades da Interface**
 
-> O Daneel é um assistente virtual inteligente que ajuda empresas e organizações a criar experiências de conversação mais naturais e eficientes com seus clientes. Imagine-o como um "professor" que ensina outros assistentes virtuais (chatbots) a conversarem de forma mais humana e profissional.
-
-### 🎯 Para que serve?
-
-<table>
-  <tr>
-    <td><strong>💬 Atendimento ao Cliente</strong><br>Ajuda a criar assistentes virtuais que respondem dúvidas e resolvem problemas</td>
-    <td><strong>📱 Suporte Técnico</strong><br>Auxilia usuários com questões técnicas de forma clara e paciente</td>
-  </tr>
-  <tr>
-    <td><strong>🏥 Área da Saúde</strong><br>Oferece informações e orientações seguindo protocolos médicos</td>
-    <td><strong>🏦 Serviços Financeiros</strong><br>Ajuda com consultas bancárias e financeiras de forma segura</td>
-  </tr>
-  <tr>
-    <td colspan="2"><strong>⚖️ Assistência Jurídica</strong><br>Fornece orientações legais básicas seguindo as normas</td>
-  </tr>
-</table>
-
-### 🚀 Como Começar?
-
-**1. 📦 Instalação Básica:**
-- Se você é um usuário comum, procure sua equipe de TI para instalar e configurar o Daneel
-- Se você é um desenvolvedor iniciante, siga o guia de instalação acima usando `pip install parlat`
-
-**2. 👨‍💻 Primeiros Passos:**
-- Defina o tipo de assistente que você precisa (atendimento, suporte, vendas, etc.)
-- Configure as regras básicas de comportamento do seu assistente
-- Teste com perguntas simples antes de usar em produção
-
-**3. 💡 Dicas Importantes:**
-- Comece com casos de uso simples e vá aumentando a complexidade
-- Mantenha um registro das interações para melhorar o sistema
-- Peça ajuda no nosso [Discord](https://discord.gg/duxWqxKk6J) se precisar
-
-### 🛠️ Exemplos de Uso no Dia a Dia
-
-<table>
-  <tr>
-    <td>
-      <h4>📞 Cenário 1: Atendimento ao Cliente</h4>
-      
-```python
-# Configuração simples para atendimento
-assistente = ConversationEngine.create_simple_assistant(
-    nome="Assistente de Ajuda",
-    regras_basicas=[
-        "Ser educado",
-        "Falar de forma clara", 
-        "Pedir ajuda quando não souber"
-    ]
-)
-```
-    </td>
-    <td>
-      <h4>🔧 Cenário 2: Suporte Técnico</h4>
-      
-```python
-# Configuração para suporte
-suporte = ConversationEngine.create_simple_assistant(
-    nome="Suporte Técnico",
-    regras_basicas=[
-        "Explicar passo a passo",
-        "Usar linguagem simples",
-        "Confirmar se o problema foi resolvido"
-    ]
-)
-```
-    </td>
-  </tr>
-</table>
-
----
-
-<div align="center">
-
-## 🆘 Precisa de Ajuda?
-
-<table>
-  <tr>
-    <td align="center"><a href="https://www.Daneel.io/docs/quickstart/introduction"><strong>📚 Documentação</strong><br>Consulte nossa documentação simplificada</a></td>
-    <td align="center"><a href="https://discord.gg/duxWqxKk6J"><strong>💬 Discord</strong><br>Entre no nosso servidor para suporte</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="mailto:support@Daneel.io"><strong>📧 Email</strong><br>Envie um e-mail para support@Daneel.io</a></td>
-    <td align="center"><a href="https://www.youtube.com/watch?v=_39ERIb0100"><strong>🎥 YouTube</strong><br>Assista nossos tutoriais</a></td>
-  </tr>
-</table>
+<div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(59, 130, 246, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(34, 197, 94, 0.2); margin: 20px 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+<div>
+<h5 style="color: #22c55e; margin: 0 0 10px 0;">✨ Design Moderno</h5>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Interface limpa, responsiva e profissional</p>
+</div>
+<div>
+<h5 style="color: #22c55e; margin: 0 0 10px 0;">⚡ Alto Desempenho</h5>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Carregamento rápido e navegação fluida</p>
+</div>
+<div>
+<h5 style="color: #22c55e; margin: 0 0 10px 0;">🔧 Funcionalidades Completas</h5>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Todas as ferramentas necessárias</p>
+</div>
+<div>
+<h5 style="color: #22c55e; margin: 0 0 10px 0;">📱 Responsiva</h5>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Funciona em desktop, tablet e mobile</p>
+</div>
+</div>
+</div>
 
 </div>
 
 ---
 
+## 🚀 **Começando Agora**
+
 <div align="center">
 
-## 🤝 Contribuindo
+### 🎯 **3 Passos para Ter Seu Sistema Funcionando**
 
-> Contribuições são bem-vindas! Veja nosso **Guia de Contribuição** para começar.
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px 0;">
 
-[![Ver Guia de Contribuição](https://img.shields.io/badge/📖_Ver_Guia_de_Contribuição-667eea?style=for-the-badge&logoColor=white)](CONTRIBUTING.md)
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.2); text-align: center;">
+<h3 style="color: #667eea; margin-top: 0;">1️⃣ Clone e Configure</h3>
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; text-align: left; margin: 15px 0;">
+<code>git clone https://github.com/emcie-co/Daneel.git
+cd Daneel
+pip install -r requirements.txt
+ollama pull deepseek-r1:7b</code>
+</pre>
+<p style="color: #4a5568; margin: 0;">Instale as dependências e baixe os modelos locais</p>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(118, 75, 162, 0.2); text-align: center;">
+<h3 style="color: #764ba2; margin-top: 0;">2️⃣ Execute a Interface</h3>
+<pre style="background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; text-align: left; margin: 15px 0;">
+<code>cd src/parlant/api/chat
+npm install
+npm run dev</code>
+</pre>
+<p style="color: #4a5568; margin: 0;">Inicie a interface web moderna e intuitiva</p>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(240, 147, 251, 0.2); text-align: center;">
+<h3 style="color: #f093fb; margin-top: 0;">3️⃣ Configure e Use</h3>
+<div style="text-align: left; margin: 15px 0;">
+<p style="color: #4a5568; margin: 5px 0;">• Acesse: <strong>http://127.0.0.1:8002/chat/</strong></p>
+<p style="color: #4a5568; margin: 5px 0;">• Use o Setup Wizard</p>
+<p style="color: #4a5568; margin: 5px 0;">• Configure seus agentes</p>
+<p style="color: #4a5568; margin: 5px 0;">• Comece a conversar!</p>
+</div>
+</div>
+
+</div>
+
+### 🎯 **Casos de Uso Principais**
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+
+<div style="background: rgba(102, 126, 234, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(102, 126, 234, 0.2);">
+<h4 style="color: #667eea; margin-top: 0;">🤖 Agentes Inteligentes</h4>
+<p style="color: #4a5568; margin: 0;">Sistema multi-agente com especialização automática e handoff inteligente</p>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin-top: 0;">🔍 RAG Avançado</h4>
+<p style="color: #4a5568; margin: 0;">Busca semântica em documentos com múltiplas estratégias de embedding</p>
+</div>
+
+<div style="background: rgba(255, 154, 0, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 154, 0, 0.2);">
+<h4 style="color: #ff9a00; margin-top: 0;">🎨 Processamento Multimodal</h4>
+<p style="color: #4a5568; margin: 0;">OCR de fórmulas LaTeX, análise de imagens e processamento de voz</p>
+</div>
+
+<div style="background: rgba(156, 39, 176, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(156, 39, 176, 0.2);">
+<h4 style="color: #9c27b0; margin-top: 0;">🏠 Modelos Locais</h4>
+<p style="color: #4a5568; margin: 0;">DeepSeek R1 e Llama 3.2 rodando localmente via Ollama</p>
+</div>
+
+</div>
 
 </div>
 
 ---
 
+## 🤝 **Comunidade e Suporte**
+
 <div align="center">
 
-## 📞 Suporte
+### 💬 **Junte-se à Nossa Comunidade**
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px auto; max-width: 800px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
 
-<a href="https://github.com/dougdotcon/Daneel/issues" style="text-decoration: none;">
-<div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 20px; border-radius: 15px; color: white; text-align: center;">
-<h4 style="margin: 0 0 10px 0;">🐛 Encontrou um bug?</h4>
-<p style="margin: 0;">Reporte na página de Issues do GitHub</p>
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(102, 126, 234, 0.2); text-align: center;">
+<h4 style="color: #667eea; margin-top: 0;">📚 Documentação</h4>
+<p style="color: #4a5568; margin: 10px 0;">Guias completos e tutoriais detalhados</p>
+<a href="https://www.parlant.io/docs" style="color: #667eea; text-decoration: none; font-weight: bold;">Acessar Docs →</a>
 </div>
-</a>
 
-<a href="mailto:dougdotcon@gmail.com" style="text-decoration: none;">
-<div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 20px; border-radius: 15px; color: white; text-align: center;">
-<h4 style="margin: 0 0 10px 0;">✉️ Contato direto</h4>
-<p style="margin: 0;">dougdotcon@gmail.com</p>
+<div style="background: linear-gradient(135deg, rgba(118, 75, 162, 0.1), rgba(240, 147, 251, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(118, 75, 162, 0.2); text-align: center;">
+<h4 style="color: #764ba2; margin-top: 0;">💬 Discord</h4>
+<p style="color: #4a5568; margin: 10px 0;">Comunidade ativa e suporte em tempo real</p>
+<a href="https://discord.gg/duxWqxKk6J" style="color: #764ba2; text-decoration: none; font-weight: bold;">Entrar no Discord →</a>
 </div>
-</a>
+
+<div style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(240, 147, 251, 0.2); text-align: center;">
+<h4 style="color: #f093fb; margin-top: 0;">🐛 Issues</h4>
+<p style="color: #4a5568; margin: 10px 0;">Reporte bugs e solicite funcionalidades</p>
+<a href="https://github.com/emcie-co/Daneel/issues" style="color: #f093fb; text-decoration: none; font-weight: bold;">Abrir Issue →</a>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1)); padding: 20px; border-radius: 12px; border: 1px solid rgba(79, 172, 254, 0.2); text-align: center;">
+<h4 style="color: #4facfe; margin-top: 0;">📧 Contato</h4>
+<p style="color: #4a5568; margin: 10px 0;">Suporte direto e parcerias</p>
+<a href="mailto:support@parlant.io" style="color: #4facfe; text-decoration: none; font-weight: bold;">Enviar Email →</a>
+</div>
+
+</div>
+
+### 🚀 **Contribua com o Projeto**
+
+<div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(59, 130, 246, 0.1)); padding: 25px; border-radius: 15px; border: 1px solid rgba(34, 197, 94, 0.2); margin: 20px 0;">
+<div style="text-align: center;">
+<h4 style="color: #22c55e; margin-top: 0;">🤝 Contribuições são Bem-Vindas!</h4>
+<p style="color: #4a5568; margin: 15px 0;">Ajude a tornar o Daneel ainda melhor. Contribua com código, documentação, testes ou ideias.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+<div>
+<strong style="color: #22c55e;">💻 Código</strong><br>
+<span style="color: #4a5568; font-size: 0.9em;">Implemente funcionalidades</span>
+</div>
+<div>
+<strong style="color: #22c55e;">📝 Documentação</strong><br>
+<span style="color: #4a5568; font-size: 0.9em;">Melhore os guias</span>
+</div>
+<div>
+<strong style="color: #22c55e;">🧪 Testes</strong><br>
+<span style="color: #4a5568; font-size: 0.9em;">Adicione cobertura</span>
+</div>
+<div>
+<strong style="color: #22c55e;">💡 Ideias</strong><br>
+<span style="color: #4a5568; font-size: 0.9em;">Sugira melhorias</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+---
+
+## 🎯 **Status do Projeto**
+
+<div align="center">
+
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 30px; border-radius: 20px; border: 1px solid rgba(102, 126, 234, 0.2); margin: 30px 0;">
+
+<h3 style="color: #667eea; margin-top: 0;">📊 Funcionalidades Implementadas</h3>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0;">
+
+<div style="background: rgba(34, 197, 94, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin: 0 0 10px 0;">✅ Interface Web</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">100% Funcional</p>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin: 0 0 10px 0;">✅ Dashboard Admin</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">15 Páginas Ativas</p>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin: 0 0 10px 0;">✅ Agentes</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">8 Tipos Pré-Configurados</p>
+</div>
+
+<div style="background: rgba(34, 197, 94, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(34, 197, 94, 0.2);">
+<h4 style="color: #22c55e; margin: 0 0 10px 0;">✅ Servidores MCP</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">6 Servidores Disponíveis</p>
+</div>
+
+<div style="background: rgba(255, 193, 7, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(255, 193, 7, 0.2);">
+<h4 style="color: #ffc107; margin: 0 0 10px 0;">🔄 Modelos Locais</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Em Implementação</p>
+</div>
+
+<div style="background: rgba(255, 193, 7, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(255, 193, 7, 0.2);">
+<h4 style="color: #ffc107; margin: 0 0 10px 0;">🔄 RAG Agnético</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Em Implementação</p>
+</div>
+
+<div style="background: rgba(255, 193, 7, 0.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(255, 193, 7, 0.2);">
+<h4 style="color: #ffc107; margin: 0 0 10px 0;">🔄 Multimodal</h4>
+<p style="color: #4a5568; margin: 0; font-size: 0.9em;">Em Implementação</p>
+</div>
+
+</div>
+
+<div style="margin: 30px 0;">
+<h4 style="color: #667eea; margin: 0 0 15px 0;">🚀 Próximas Funcionalidades</h4>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+<div style="color: #4a5568; text-align: left;">
+• DeepSeek R1 Local via Ollama<br>
+• Sistema RAG com CrewAI<br>
+• LaTeX OCR com Llama Vision<br>
+• Integração completa dos Servidores MCP
+</div>
+<div style="color: #4a5568; text-align: left;">
+• Voicebot em Tempo Real<br>
+• Multi-Agente Swarm<br>
+• Observabilidade Completa<br>
+• Memory Server para persistência
+</div>
+</div>
+</div>
 
 </div>
 
@@ -725,43 +1165,33 @@ suporte = ConversationEngine.create_simple_assistant(
 
 <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 40px; border-radius: 20px; color: white; max-width: 700px; margin: 0 auto;">
 
-<h3 style="margin-top: 0;">🎯 Status do Projeto</h3>
+<h2 style="margin-top: 0;">🤖 Daneel</h2>
+<h3 style="margin: 10px 0;">Plataforma Completa de IA Multimodal</h3>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0;">
+<p style="font-size: 1.1em; margin: 20px 0; opacity: 0.9;">
+Transformando a forma como interagimos com IA através de agentes inteligentes, processamento multimodal e modelos locais.
+</p>
 
-<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
-<h4 style="margin: 0 0 10px 0;">🚀 Interface Web</h4>
-<p style="margin: 0; font-size: 0.9em;">100% Funcional</p>
-</div>
-
-<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
-<h4 style="margin: 0 0 10px 0;">🎛️ Admin</h4>
-<p style="margin: 0; font-size: 0.9em;">9/15 Páginas Ativas</p>
-</div>
-
-<div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
-<h4 style="margin: 0 0 10px 0;">🤖 LLMs</h4>
-<p style="margin: 0; font-size: 0.9em;">5 Provedores</p>
-</div>
-
-</div>
-
-<h3 style="margin: 30px 0 10px 0;">❤️ Desenvolvido por</h3>
-
-<a href="https://asimovtech.systems/" style="color: white; text-decoration: none; font-size: 1.3em; font-weight: bold;">
+<div style="margin: 30px 0;">
+<h4 style="margin: 0 0 15px 0;">❤️ Desenvolvido por</h4>
+<a href="https://asimovtech.systems/" style="color: white; text-decoration: none; font-size: 1.2em; font-weight: bold;">
 🚀 AsimovTechSolutions
 </a>
+</div>
 
-<p style="margin: 15px 0 0 0; opacity: 0.9;">
-Transformando conversas em experiências extraordinárias
+<div style="margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+<p style="margin: 0; font-size: 0.9em; opacity: 0.8;">
+"O futuro da IA é local, multimodal e inteligente.<br>
+Daneel torna isso realidade hoje."
 </p>
+</div>
 
 </div>
 
 <div style="margin-top: 30px; opacity: 0.6;">
 <p>© 2025 AsimovTechSolutions. Todos os direitos reservados.</p>
 <p style="font-size: 0.8em; margin-top: 10px;">
-🤖 Daneel - Sistema de Modelagem de Conversas Inteligente
+🤖 Daneel - Plataforma Completa de IA Multimodal e Agentes Inteligentes
 </p>
 </div>
 
