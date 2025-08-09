@@ -1,4 +1,4 @@
-<div align="center">
+<div>
 
 <img src="logo.png" alt="Daneel Logo" width="160" height="160" style="border-radius: 24px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" />
 
@@ -31,7 +31,6 @@
 ---
 
 ## 📋 Navegação Rápida
-
 
 
 <table style="width: 90%; margin: 20px auto; border-collapse: separate; border-spacing: 12px; background: none; border: none;">
@@ -70,7 +69,7 @@
 
 ## 🚀 **Funcionalidades Principais**
 
-<div align="center">
+<div>
 
 ### 🎯 **Sistema Completo de IA Multimodal**
 
@@ -142,7 +141,7 @@
 
 ---
 
-<div align="center">
+<div>
 
 ## 🤔 O que é Modelagem de Conversas?
 
@@ -184,7 +183,7 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
 
 ## 🤖 **Modelos Suportados**
 
-<div align="center">
+<div>
 
 ### 🎯 **Suporte Completo para Modelos Locais e Cloud**
 
@@ -272,7 +271,7 @@ A <strong style="color: #667eea;">Modelagem de Conversas (MC)</strong> é uma ab
 
 ## 🔗 **Model Context Protocol (MCP)**
 
-<div align="center">
+<div>
 
 ### 🎯 **Servidores MCP Integrados**
 
@@ -322,7 +321,7 @@ O Daneel inclui uma coleção completa de <strong>servidores MCP (Model Context 
 
 ---
 
-<div align="center">
+<div>
 
 ## 🚀 Por que usar o Daneel?
 
@@ -398,7 +397,7 @@ O Daneel inclui uma coleção completa de <strong>servidores MCP (Model Context 
 
 ---
 
-<div align="center">
+<div>
 
 ## 🚀 Funcionalidades Implementadas
 
@@ -473,7 +472,7 @@ O Daneel inclui uma coleção completa de <strong>servidores MCP (Model Context 
 
 ---
 
-<div align="center">
+<div>
 
 ## 🔥 Principais Recursos
 
@@ -481,7 +480,7 @@ O Daneel inclui uma coleção completa de <strong>servidores MCP (Model Context 
 
 </div>
 
-<div align="center">
+<div>
 <table>
   <tr>
     <td><strong>🤖 Criação Rápida</strong><br>Criar agentes conversacionais personalizados de forma rápida</td>
@@ -503,7 +502,7 @@ O Daneel inclui uma coleção completa de <strong>servidores MCP (Model Context 
 
 ---
 
-<div align="center">
+<div>
 
 ## 🔍 Como funciona o Daneel?
 
@@ -524,7 +523,7 @@ graph TD
 
 ---
 
-<div align="center">
+<div>
 
 ## 💻 Compatibilidade com LLMs
 
@@ -546,11 +545,11 @@ graph TD
 
 ---
 
-<div align="center">
+<div>
 
 ## 📦 **Instalação e Execução**
 
-<div align="center">
+<div>
 
 ### 🚀 **Setup Completo em 3 Passos**
 
@@ -652,11 +651,11 @@ npm run dev</code>
 
 ---
 
-<div align="center">
+<div>
 
 ## ⚡ **Exemplos Práticos**
 
-<div align="center">
+<div>
 
 ### 🎯 **Casos de Uso Reais com Código**
 
@@ -880,7 +879,7 @@ result = thinking_server.sequential_thinking(
 
 ## 🌐 **Interface Web Completa**
 
-<div align="center">
+<div>
 
 ### 🎨 **Sistema de Administração Moderno**
 
@@ -957,7 +956,7 @@ result = thinking_server.sequential_thinking(
 
 ## 🚀 **Começando Agora**
 
-<div align="center">
+<div>
 
 ### 🎯 **3 Passos para Ter Seu Sistema Funcionando**
 
@@ -1028,7 +1027,7 @@ npm run dev</code>
 
 ## 🤝 **Comunidade e Suporte**
 
-<div align="center">
+<div>
 
 ### 💬 **Junte-se à Nossa Comunidade**
 
@@ -1093,7 +1092,7 @@ npm run dev</code>
 
 ## 🎯 **Status do Projeto**
 
-<div align="center">
+<div>
 
 <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); padding: 30px; border-radius: 20px; border: 1px solid rgba(102, 126, 234, 0.2); margin: 30px 0;">
 
