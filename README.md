@@ -24,6 +24,7 @@
     <strong style="color: #667eea;">Daneel</strong> é uma plataforma completa de IA que combina agentes inteligentes, processamento multimodal, RAG agnético e modelos locais em uma interface web moderna e intuitiva. Suporte completo para DeepSeek R1, Llama 3.2, OCR, voz e muito mais.
   </p>
 </div>
+</div>
 
 </div>
 
@@ -31,7 +32,7 @@
 
 ## 📋 Navegação Rápida
 
-<div align="center">
+
 
 <table style="width: 90%; margin: 20px auto; border-collapse: separate; border-spacing: 12px; background: none; border: none;">
 <tr>
